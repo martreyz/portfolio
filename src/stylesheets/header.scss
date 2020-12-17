@@ -1,0 +1,33 @@
+.header__menu {
+  padding: 10px 20px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9;
+  &-lang {
+    background: transparent;
+    border: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #465559;
+    text-decoration: underline;
+  }
+  &-pages {
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+    color: #465559;
+  }
+  &-about,
+  &-projects,
+  &-contact,
+  &-home {
+    list-style-type: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-left: 10px;
+    text-decoration: underline;
+    color: #465559;
+  }
+}

@@ -1,0 +1,35 @@
+.landing {
+  padding: 0px 180px;
+  &__title {
+    color: #bfd1c5;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 150px;
+    text-align: right;
+    line-height: 1.4;
+  }
+  &__textOne {
+    color: #a6afaf;
+    font-weight: 700;
+    font-size: 90px;
+    display: block;
+    line-height: 1.3;
+  }
+  &__textTwo {
+    color: #778b8b;
+    font-weight: 700;
+    font-size: 90px;
+    display: block;
+    line-height: 0.4;
+    margin-left: 50px;
+  }
+  &__textThree {
+    color: #484b4b;
+    font-weight: 600;
+    font-size: 40px;
+    display: block;
+    line-height: 2.5;
+    text-align: right;
+    opacity: 0.5;
+  }
+}

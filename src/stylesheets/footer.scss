@@ -1,0 +1,62 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-top: 1.3px solid #465559;
+  height: auto;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+
+  &__menuList {
+    display: flex;
+    &-github {
+      background-image: url("../images/github-alt-brands.svg");
+      background-repeat: no-repeat;
+      text-decoration: none;
+      list-style-type: none;
+      width: 15px;
+      height: 15px;
+      margin-right: 10px;
+    }
+    &-linkedin {
+      background-image: url("../images/linkedin-in-brands.svg");
+      background-repeat: no-repeat;
+      text-decoration: none;
+      list-style-type: none;
+      width: 15px;
+      height: 15px;
+      margin-right: 10px;
+    }
+    &-mail {
+      background-image: url("../images/envelope-solid.svg");
+      background-repeat: no-repeat;
+      text-decoration: none;
+      list-style-type: none;
+      width: 15px;
+      height: 15px;
+      margin-right: 10px;
+    }
+    &-twitter {
+      background-image: url("../images/twitter-brands.svg");
+      background-repeat: no-repeat;
+      text-decoration: none;
+      list-style-type: none;
+      width: 15px;
+      height: 15px;
+      margin-right: 10px;
+    }
+  }
+  &__small {
+    color: #465559;
+    font-size: 15px;
+    display: flex;
+    line-height: 1.2;
+    &Logo {
+      background-image: url(../images/cat-solid.svg);
+      background-repeat: no-repeat;
+      width: 15px;
+      margin: 0px 5px;
+    }
+  }
+}

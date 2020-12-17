@@ -1,0 +1,20 @@
+.decorativePolygon {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  left: -50px;
+  border-top: 100vh solid #dfe0e0;
+  border-left: 150vw solid transparent;
+  border-right: 70vh solid transparent;
+  z-index: -1;
+}
+
+.decorativePolygonTwo {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-top: 55vh solid transparent;
+  border-left: 60vw solid #ffd6d4;
+  border-bottom: 45vh solid transparent;
+  z-index: -1;
+}
