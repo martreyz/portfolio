@@ -10,4 +10,9 @@ body {
   width: 100%;
   overflow: hidden;
   background-color: #ecf0f1;
+  display: flex;
+  flex-direction: column;
+}
+html {
+  overflow: hidden;
 }

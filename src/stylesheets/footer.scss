@@ -18,6 +18,10 @@
       width: 15px;
       height: 15px;
       margin-right: 10px;
+      transition: all ease 1s;
+      &:hover {
+        transform: scale(1.2);
+      }
     }
     &-linkedin {
       background-image: url("../images/linkedin-in-brands.svg");
@@ -27,6 +31,10 @@
       width: 15px;
       height: 15px;
       margin-right: 10px;
+      transition: all ease 1s;
+      &:hover {
+        transform: scale(1.2);
+      }
     }
     &-mail {
       background-image: url("../images/envelope-solid.svg");
@@ -36,6 +44,10 @@
       width: 15px;
       height: 15px;
       margin-right: 10px;
+      transition: all ease 1s;
+      &:hover {
+        transform: scale(1.2);
+      }
     }
     &-twitter {
       background-image: url("../images/twitter-brands.svg");
@@ -45,6 +57,13 @@
       width: 15px;
       height: 15px;
       margin-right: 10px;
+      transition: all ease 1s;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+    &-access {
+      padding: 10px;
     }
   }
   &__small {

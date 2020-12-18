@@ -1,32 +1,22 @@
 .about {
+  padding: 30px 0px 40px 0px;
   width: 100%;
-  height: 100%;
-
   display: flex;
-  flex-direction: column;
-  align-content: center;
+  height: 100vh;
+  flex-wrap: wrap;
   justify-content: center;
-}
-
-.about__image {
-  height: 130vh;
-  position: absolute;
-  overflow: hidden;
-  top: -50px;
-  right: 0px;
-  opacity: 0.36;
-  z-index: -1;
 }
 
 .about__title {
   color: #bfd1c5;
   font-weight: 900;
   text-transform: uppercase;
-  font-size: 100px;
+  font-size: 130px;
   text-align: left;
-  line-height: 1.4;
   width: 100%;
-  margin-left: 10%;
+  line-height: 1;
+  padding-left: 10%;
+  align-self: center;
 }
 
 .about__text {
@@ -34,7 +24,6 @@
   max-width: 90%;
   font-weight: 400;
   font-size: 25px;
-  margin: auto;
   color: #465559;
 }
 
