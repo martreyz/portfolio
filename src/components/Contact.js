@@ -12,15 +12,49 @@ const Contact = () => {
           crees que podemos compartir y colaborar, no dudes en contactarme:
         </p>
         <ul className="contact__list">
-          <li className="contact__listItem contact__listGithub">martreyz</li>
+          <li className="contact__listItem contact__listGithub">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              className="contact__menuList-access"
+              href="https://github.com/martreyz"
+              title="Access GitHub"
+            >
+              martreyz
+            </a>
+          </li>
           <li className="contact__listItem contact__listLinkedin">
-            marta.rey.rodriguez
+            <a
+              target="_blank"
+              rel="noreferrer"
+              className="contact__menuList-access"
+              href="https://www.linkedin.com/in/martareyrodriguez/"
+              title="Access Linkedin"
+            >
+              marta.rey.rodriguez
+            </a>
           </li>
           <li className="contact__listItem contact__listMail">
-            martreyz@gmail.com
+            <a
+              target="_blank"
+              rel="noreferrer"
+              className="contact__menuList-access"
+              href="mailto: martreyz@gmail.com"
+              title="Send email"
+            >
+              martreyz@gmail.com
+            </a>
           </li>
           <li className="contact__listItem contact__listTwitter">
-            im_martreyz
+            <a
+              target="_blank"
+              rel="noreferrer"
+              className="contact__menuList-access"
+              href="https://twitter.com/im_martreyz"
+              title="Access Twitter"
+            >
+              im_martreyz
+            </a>
           </li>
         </ul>
       </section>

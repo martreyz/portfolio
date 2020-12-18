@@ -97,3 +97,11 @@
     justify-self: left;
   }
 }
+
+.contact__menuList-access {
+  text-decoration: none;
+  color: #465559;
+  &:hover {
+    color: #91aab1;
+  }
+}
