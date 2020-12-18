@@ -1,19 +1,230 @@
 .decorativePolygon {
-  width: 0px;
-  height: 0px;
+  background-image: url("../images/hexagonoverde.svg");
+  width: 600px;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: contain;
   position: absolute;
-  border-top: 70vh solid #dfe0e0;
-  border-left: 100vw solid transparent;
-  border-right: 0px solid transparent;
+  opacity: 0;
+  animation: move 24s ease infinite;
+  z-index: -1;
+}
+
+.decorativePolygonFour {
+  background-image: url("../images/hexagonoverde.svg");
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  opacity: 0;
+  animation: move 18s ease infinite;
   z-index: -1;
 }
 
 .decorativePolygonTwo {
-  width: 0px;
-  height: 0px;
+  background-image: url("../images/hexagonorosa.svg");
+  width: 600px;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: contain;
   position: absolute;
-  border-top: 55vh solid transparent;
-  border-left: 60vw solid #bfd1c5;
-  border-bottom: 45vh solid transparent;
+  opacity: 0;
+  animation: moveTwo 22s ease infinite;
   z-index: -1;
+}
+
+.decorativePolygonFive {
+  background-image: url("../images/hexagonorosa.svg");
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  opacity: 0;
+  animation: moveTwo 19s ease infinite;
+  z-index: -1;
+}
+
+.decorativePolygonThree {
+  background-image: url("../images/hexagonogris.svg");
+  width: 600px;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  opacity: 0;
+  animation: moveThree 22s ease infinite;
+  z-index: -1;
+}
+
+.decorativePolygonSix {
+  background-image: url("../images/hexagonogris.svg");
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: 30vw;
+  opacity: 0;
+  animation: moveTwo 15s ease infinite;
+  z-index: -1;
+}
+
+@keyframes move {
+  0% {
+    opacity: 0.2;
+    top: -10%;
+    left: -10%;
+    transform: rotate(120deg);
+  }
+  10% {
+    opacity: 0.7;
+    top: -10%;
+    left: -10%;
+  }
+  25% {
+    opacity: 0.2;
+    top: -10%;
+    left: -10%;
+  }
+  35% {
+    opacity: 0.2;
+    top: 23%;
+    left: 50%;
+    transform: rotate(1240deg);
+  }
+  50% {
+    opacity: 0.7;
+    top: 23%;
+    left: 50%;
+  }
+  60% {
+    opacity: 0.2;
+    top: 23%;
+    left: 50%;
+  }
+  75% {
+    opacity: 0.2;
+    top: -20%;
+    left: 53%;
+    transform: rotate(360deg);
+  }
+  85% {
+    opacity: 0.7;
+    top: -20%;
+    left: 53%;
+  }
+  95% {
+    opacity: 0.2;
+    top: -20%;
+    left: 53%;
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes moveTwo {
+  0% {
+    opacity: 0.2;
+    top: 30%;
+    left: 0%;
+    transform: rotate(700deg);
+  }
+  10% {
+    opacity: 0.7;
+    top: 30%;
+    left: 0%;
+  }
+  25% {
+    opacity: 0.2;
+    top: 30%;
+    left: 0%;
+  }
+  35% {
+    opacity: 0.2;
+    top: 0%;
+    left: 40%;
+    transform: rotate(120deg);
+  }
+  50% {
+    opacity: 0.7;
+    top: 0%;
+    left: 40%;
+  }
+  60% {
+    opacity: 0.2;
+    top: 0%;
+    left: 40%;
+  }
+  75% {
+    opacity: 0.2;
+    top: 10vh;
+    left: 10%;
+    transform: rotate(240deg);
+  }
+  85% {
+    opacity: 0.7;
+    top: 10vh;
+    left: 10%;
+  }
+  100% {
+    opacity: 0.2;
+    top: 10vh;
+    left: 10%;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moveThree {
+  0% {
+    opacity: 0.2;
+    top: -30%;
+    left: 43%;
+    transform: rotate(120deg);
+  }
+  10% {
+    opacity: 0.7;
+    top: -30%;
+    left: 43%;
+  }
+  25% {
+    opacity: 0.2;
+    top: -30%;
+    left: 43%;
+  }
+  35% {
+    opacity: 0.2;
+    top: 20%;
+    left: -20%;
+    transform: rotate(240deg);
+  }
+  50% {
+    opacity: 0.7;
+    top: 20%;
+    left: -20%;
+  }
+  60% {
+    opacity: 0.2;
+    top: 10%;
+    left: -10%;
+  }
+  75% {
+    opacity: 0.2;
+    top: 0%;
+    left: 0%;
+    transform: rotate(360deg);
+  }
+  85% {
+    opacity: 0.7;
+    top: 0%;
+    left: 0%;
+  }
+  100% {
+    opacity: 0.2;
+    top: 0%;
+    left: 0%;
+    transform: rotate(-180deg);
+  }
 }

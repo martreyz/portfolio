@@ -17,11 +17,6 @@ const Header = () => {
               Proyectos
             </Link>
           </li>
-          <li className="header__menu-about">
-            <Link to="/about" className="header__menu-about">
-              Sobre mí
-            </Link>
-          </li>
           <li className="header__menu-contact">
             <Link to="/contact" className="header__menu-contact">
               Contacto

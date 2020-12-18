@@ -2,12 +2,11 @@
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
-  border-top: 1.3px solid #465559;
+  border-top: 1.3px solid rgba(70, 85, 89, 0.2);
   height: auto;
   width: 100%;
   position: absolute;
   bottom: 0px;
-
   &__menuList {
     display: flex;
     &-github {
