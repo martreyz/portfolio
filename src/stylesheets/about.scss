@@ -1,22 +1,22 @@
 .about {
-  width: 100%;
-  height: 100vh;
   padding: 30px 0px 40px 0px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 20% 80%;
+  width: 100%;
+  display: flex;
+  height: 100vh;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .about__title {
   color: #bfd1c5;
   font-weight: 900;
   text-transform: uppercase;
-  font-size: 100px;
+  font-size: 130px;
   text-align: left;
-  line-height: 1.4;
   width: 100%;
-  margin-left: 10%;
-  grid-row: 1/2;
+  line-height: 1;
+  padding-left: 10%;
+  align-self: center;
 }
 
 .about__text {
@@ -24,10 +24,7 @@
   max-width: 90%;
   font-weight: 400;
   font-size: 25px;
-  margin: auto;
   color: #465559;
-  grid-row: 2/3;
-  align-self: center;
 }
 
 .about__parr {

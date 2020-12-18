@@ -19,6 +19,11 @@
     font-size: 20px;
     color: #465559;
     text-decoration: underline;
+    transition: all ease 1s;
+    &:hover {
+      transform: scale(1.2);
+      color: #97b3b9;
+    }
   }
   &-pages {
     display: flex;
@@ -36,5 +41,10 @@
     margin-left: 10px;
     text-decoration: underline;
     color: #465559;
+    transition: all ease 1s;
+    &:hover {
+      transform: scale(1.2);
+      color: #97b3b9;
+    }
   }
 }

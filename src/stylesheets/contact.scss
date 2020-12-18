@@ -23,7 +23,7 @@
     color: #bfd1c5;
     font-weight: 900;
     text-transform: uppercase;
-    font-size: 100px;
+    font-size: 130px;
     text-align: left;
     line-height: 1.4;
     width: 100%;
@@ -33,19 +33,19 @@
     text-align: center;
     font-weight: 700;
     color: #465559;
-    font-size: 30px;
+    font-size: 40px;
     margin-bottom: 20px;
   }
   &__text {
     text-align: center;
     font-weight: 400;
     color: #465559;
-    font-size: 18px;
+    font-size: 22px;
     margin-bottom: 30px;
-    width: 60%;
+    width: 85%;
   }
   &__list {
-    width: 300px;
+    width: auto;
     height: 150px;
     background-color: #ffd6d4;
     border-radius: 45px;
@@ -55,35 +55,35 @@
     align-items: flex-start;
     padding: 10px 70px;
     list-style-type: none;
-    font-size: 18px;
+    font-size: 22px;
     color: #465559;
     &Github {
       padding-left: 30px;
       background-image: url("../images/github-alt-brands.svg");
       background-repeat: no-repeat;
       background-size: 18px;
-      background-position-y: 5px;
+      background-position-y: 10px;
     }
     &Linkedin {
       padding-left: 30px;
       background-image: url("../images/linkedin-in-brands.svg");
       background-repeat: no-repeat;
       background-size: 18px;
-      background-position-y: 3px;
+      background-position-y: 7px;
     }
     &Mail {
       padding-left: 30px;
       background-image: url("../images/envelope-solid.svg");
       background-repeat: no-repeat;
       background-size: 18px;
-      background-position-y: 6px;
+      background-position-y: 9px;
     }
     &Twitter {
       padding-left: 30px;
       background-image: url("../images/twitter-brands.svg");
       background-repeat: no-repeat;
       background-size: 18px;
-      background-position-y: 6px;
+      background-position-y: 8px;
     }
   }
   &__image {
