@@ -1,21 +1,9 @@
 .about {
   width: 100%;
-  height: 100%;
-
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-}
-
-.about__image {
-  height: 130vh;
-  position: absolute;
-  overflow: hidden;
-  top: -50px;
-  right: 0px;
-  opacity: 0.36;
-  z-index: -1;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20% 80%;
 }
 
 .about__title {
@@ -27,6 +15,7 @@
   line-height: 1.4;
   width: 100%;
   margin-left: 10%;
+  grid-row: 1/2;
 }
 
 .about__text {
@@ -36,6 +25,8 @@
   font-size: 25px;
   margin: auto;
   color: #465559;
+  grid-row: 2/3;
+  align-self: center;
 }
 
 .about__parr {

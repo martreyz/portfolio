@@ -1,5 +1,4 @@
 import "../stylesheets/about.scss";
-import PHOTO from "../images/marta.png";
 
 const About = () => {
   return (
@@ -27,12 +26,6 @@ const About = () => {
           aplicar las habilidades que he adquirido en mi carrera profesional.
         </span>
       </p>
-      <img
-        className="about__image"
-        src={PHOTO}
-        title="Photo Marta Rey"
-        alt="Marta Rey"
-      />
     </main>
   );
 };
