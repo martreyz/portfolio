@@ -38,10 +38,10 @@
     list-style-type: none;
     text-transform: uppercase;
     font-size: 20px;
-    margin-left: 10px;
     text-decoration: underline;
     color: #465559;
     transition: all ease 1s;
+    padding: 5px;
     &:hover {
       transform: scale(1.2);
       color: #97b3b9;
