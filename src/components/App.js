@@ -5,28 +5,58 @@ import Footer from "./Footer";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import { Route } from "react-router-dom";
+import ProjectsData from "../data/projects.json";
+import ProjectsDataEN from "../data/projectsEn.json";
+import { useState } from "react";
 
 function App() {
+  const [projectsData] = useState(ProjectsData);
+  const [projectsDataEN] = useState(ProjectsDataEN);
+  const [counter, setCounter] = useState(0);
+  const [translated, setTranslated] = useState(false);
+
+  const handleButtonClick = (clicked) => {
+    console.log(counter);
+    if (clicked === "next") {
+      if (counter !== 4) {
+        console.log("holi");
+        setCounter(counter + 1);
+      } else {
+        setCounter(0);
+      }
+    } else if (clicked === "previous") {
+      if (counter !== 0) {
+        setCounter(counter - 1);
+      } else {
+        setCounter(4);
+      }
+    }
+  };
+
+  const handleLangClick = () => {
+    setTranslated(!translated);
+  };
+
   return (
     <>
+      <Background />
+      <Header translated={translated} handleLangClick={handleLangClick} />
       <Route exact path="/">
-        <Background />
-        <Header />
-        <Landing />
-        <Footer />
+        <Landing translated={translated} />
       </Route>
       <Route exact path="/projects">
-        <Background />
-        <Header />
-        <Projects />
-        <Footer />
+        <Projects
+          projectsDataEN={projectsDataEN}
+          translated={translated}
+          projectsData={projectsData}
+          counter={counter}
+          handleButtonClick={handleButtonClick}
+        />
       </Route>
       <Route exact path="/contact">
-        <Background />
-        <Header />
-        <Contact />
-        <Footer />
+        <Contact translated={translated} />
       </Route>
+      <Footer translated={translated} />
     </>
   );
 }

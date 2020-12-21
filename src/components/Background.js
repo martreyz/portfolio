@@ -20,6 +20,7 @@ const Background = () => {
     };
     return (
       <div
+        key={id}
         aria-label="decoration"
         style={stylePolygons}
         className={"decorativeMiniPolygonsPink decorativeMiniPolygonsPink" + id}
@@ -35,6 +36,7 @@ const Background = () => {
     };
     return (
       <div
+        key={id}
         aria-label="decoration"
         style={stylePolygons}
         className={

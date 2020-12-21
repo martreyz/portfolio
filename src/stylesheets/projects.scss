@@ -1,5 +1,5 @@
 .projects {
-  padding: 30px 180px 40px 180px;
+  padding: 0px 180px 30px 180px;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -15,26 +15,28 @@
     margin-left: -50px;
   }
   &__previewImage {
-    width: 100%;
+    width: 96%;
     height: 25%;
     background-image: url("../images/preview.png");
     background-size: cover;
     border-radius: 5px;
     background-repeat: no-repeat;
+    background-position-x: center;
+    position: absolute;
+    top: 10px;
+    z-index: 10;
     filter: grayscale(80%);
     transition: all ease-out 1s;
-    transition-timing-function: step-start;
     &:hover {
+      filter: none;
       height: 94%;
       width: 96%;
-      position: absolute;
-      z-index: 10;
     }
   }
   &__decoration {
     box-sizing: border-box;
     background-color: #ebcaca5b;
-    padding: 10px;
+    padding: 25% 10px 10px 10px;
     width: 90%;
     height: 350px;
     border-radius: 5px;
@@ -49,7 +51,7 @@
   &__previewTitle {
     color: #87a0a0;
     font-weight: 600;
-    font-size: 38px;
+    font-size: 45px;
     line-height: 1.2;
     text-transform: uppercase;
     z-index: 9;
@@ -68,8 +70,16 @@
     width: 30px;
     height: 30px;
     position: absolute;
+    background-color: transparent;
+    border: none;
     left: -45px;
     top: 45%;
+    transition: all ease 1s;
+    outline: none;
+    &:hover {
+      transform: scale(1.2);
+      filter: brightness(130%);
+    }
   }
   &__previewNext {
     background-image: url("../images/arrow-alt-circle-right-solid.svg");
@@ -77,8 +87,16 @@
     width: 30px;
     height: 30px;
     position: absolute;
+    background-color: transparent;
+    border: none;
+    outline: none;
     right: -45px;
     top: 45%;
+    transition: all ease 1s;
+    &:hover {
+      transform: scale(1.2);
+      filter: brightness(130%);
+    }
   }
 }
 

@@ -1,6 +1,5 @@
 .header {
   height: 30px;
-  width: 100%;
   position: absolute;
   top: 0px;
 }
@@ -20,6 +19,9 @@
     color: #87a0a0;
     text-decoration: underline;
     transition: all ease 1s;
+    outline: none;
+    cursor: hand;
+    cursor: pointer;
     &:hover {
       transform: scale(1.2);
       color: #97b3b9;

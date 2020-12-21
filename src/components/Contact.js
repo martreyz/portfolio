@@ -6,15 +6,22 @@ import Linkedin from "../images/linkedin-white.svg";
 import Twitter from "../images/twitter-white.svg";
 import Mail from "../images/envelope-white.svg";
 
-const Contact = () => {
+const Contact = (props) => {
   return (
     <main className="contact">
       <section className="contact__section">
-        <h1 className="contact__title">Contacto</h1>
-        <h2 className="contact__subtitle">¿Nos ponemos en contacto? </h2>
+        <h1 className="contact__title">
+          {props.translated ? "Contact" : "Contacto"}
+        </h1>
+        <h2 className="contact__subtitle">
+          {props.translated
+            ? "Shall we get in touch?"
+            : "¿Nos ponemos en contacto?"}
+        </h2>
         <p className="contact__text">
-          Si estás buscando un perfil de desarrolladora front-end junior, o
-          crees que podemos compartir y colaborar, no dudes en contactarme:
+          {props.translated
+            ? "If you are hiring a junior front end developer profile, or you think we can share and collaborate, do not hesitate to contact me:"
+            : "Si estás buscando un perfil de desarrolladora front-end junior, o crees que podemos compartir y colaborar, no dudes en contactarme:"}
         </p>
         <ul className="contact__list">
           <li className="contact__listItem contact__listGithub">
@@ -95,7 +102,7 @@ const Contact = () => {
       </section>
       <nav className="contact__menu-home">
         <Link to="/" className="contactLink__menu-home">
-          Inicio
+          {props.translated ? "Home" : "Inicio"}
         </Link>
       </nav>
     </main>
