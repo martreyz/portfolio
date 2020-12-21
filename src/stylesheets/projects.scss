@@ -4,8 +4,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @media all and (max-width: 1054px) {
+    justify-content: flex-end;
+  }
   &__container {
     width: 60%;
+    @media all and (max-width: 1054px) {
+      width: 80%;
+    }
   }
   &__title {
     color: #bfd1c5;
@@ -47,6 +53,11 @@
     position: relative;
     right: -50px;
     flex-wrap: wrap-reverse;
+    @media all and (max-width: 1054px) {
+      width: 100%;
+      height: 400px;
+      padding: 35% 10px 10px 10px;
+    }
   }
   &__previewTitle {
     color: #87a0a0;
@@ -76,6 +87,10 @@
     top: 45%;
     transition: all ease 1s;
     outline: none;
+    @media all and (max-width: 1054px) {
+      left: 0px;
+      top: 105%;
+    }
     &:hover {
       transform: scale(1.2);
       filter: brightness(130%);
@@ -93,6 +108,10 @@
     right: -45px;
     top: 45%;
     transition: all ease 1s;
+    @media all and (max-width: 1054px) {
+      right: 0px;
+      top: 105%;
+    }
     &:hover {
       transform: scale(1.2);
       filter: brightness(130%);
