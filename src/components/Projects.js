@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 const Projects = (props) => {
   const handleButtonClick = (ev) => {
     const clicked = ev.target.id;
-    console.log(clicked);
     props.handleButtonClick(clicked);
   };
 

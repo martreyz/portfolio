@@ -6,16 +6,16 @@ const Landing = (props) => {
   return (
     <main className="landing">
       <section className="landing__container">
+        <h1 className="landing__title">
+          {" "}
+          {props.translated ? "Hello world!" : "¡Hola mundo!"}{" "}
+        </h1>
         <img
           className="landing__photo"
           src={photo}
           alt="Marta Rey"
           title="Marta Rey"
         />
-        <h1 className="landing__title">
-          {" "}
-          {props.translated ? "Hello world!" : "¡Hola mundo!"}{" "}
-        </h1>
         <p className="landing__text">
           <span className="landing__textOne">
             {props.translated ? "This is Marta," : "Soy Marta,"}

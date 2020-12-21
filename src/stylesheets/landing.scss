@@ -15,12 +15,16 @@
     position: absolute;
     right: 0px;
     top: 0px;
+    @media all and (max-width: 1054px) {
+      top: 100px;
+    }
   }
   &__title {
     color: #bfd1c5;
     font-weight: 900;
     font-size: 80px;
     line-height: 1.4;
+    max-width: 80%;
   }
   &__textOne {
     color: #87a0a0;

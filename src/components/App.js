@@ -16,10 +16,8 @@ function App() {
   const [translated, setTranslated] = useState(false);
 
   const handleButtonClick = (clicked) => {
-    console.log(counter);
     if (clicked === "next") {
       if (counter !== 4) {
-        console.log("holi");
         setCounter(counter + 1);
       } else {
         setCounter(0);
