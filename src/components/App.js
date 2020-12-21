@@ -1,7 +1,6 @@
 import Background from "./Background";
 import Header from "./Header";
 import Landing from "./Landing";
-import BackgroundProjects from "./BackgroundProjects";
 import Footer from "./Footer";
 import Projects from "./Projects";
 import Contact from "./Contact";
@@ -14,15 +13,16 @@ function App() {
         <Background />
         <Header />
         <Landing />
+        <Footer />
       </Route>
       <Route exact path="/projects">
-        <BackgroundProjects />
+        <Background />
         <Header />
         <Projects />
         <Footer />
       </Route>
       <Route exact path="/contact">
-        <BackgroundProjects />
+        <Background />
         <Header />
         <Contact />
         <Footer />

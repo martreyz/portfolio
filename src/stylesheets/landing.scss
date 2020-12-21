@@ -45,28 +45,27 @@
     margin-left: -5%;
     font-weight: 400;
     font-size: 19px;
-    color: #92a2a6;
+    color: #87a0a0;
   }
   &__menu-projects {
     list-style-type: none;
     text-transform: uppercase;
     font-size: 20px;
-    text-decoration: underline;
+
     transition: all ease 1s;
     position: absolute;
-    color: #92a2a6;
+
     right: 70px;
     &:hover {
       transform: scale(1.2);
-      color: #97b3b9;
+      color: #bfd1c5;
     }
     &::after {
       background-image: url("../images/angle-right-solid.svg");
       background-size: contain;
       background-repeat: no-repeat;
       position: absolute;
-      top: -21px;
-      display: inline-block;
+      top: -24px;
       width: 40px;
       height: 100px;
       content: "";
@@ -74,11 +73,28 @@
     }
   }
   &__menu-contact {
-    position: absolute;
     list-style-type: none;
-    text-decoration: underline;
-    color: #778b8b;
-    left: 40px;
+    text-transform: uppercase;
+    font-size: 20px;
+    transition: all ease 1s;
+    position: absolute;
+    left: 70px;
+    &:hover {
+      transform: scale(1.2);
+      color: #bfd1c5;
+    }
+    &::before {
+      background-image: url("../images/angle-left-solid.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: -24px;
+      left: -40px;
+      width: 40px;
+      height: 100px;
+      content: "";
+      transform: scaleX(0.8);
+    }
   }
 }
 
@@ -89,5 +105,17 @@
 }
 
 .landingLink__menu-projects {
-  color: #9ac4c1;
+  color: white;
+  text-decoration: none;
+  background-color: rgba(191, 209, 197, 0.5);
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.landingLink__menu-contact {
+  color: white;
+  text-decoration: none;
+  background-color: rgba(191, 209, 197, 0.5);
+  border-radius: 15px;
+  padding: 10px;
 }

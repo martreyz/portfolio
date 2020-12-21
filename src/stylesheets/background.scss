@@ -180,51 +180,101 @@
 @keyframes moveThree {
   0% {
     opacity: 0.2;
-    top: -30%;
-    left: 43%;
-    transform: rotate(120deg);
+    transform: translate(-30vw, 43vh) rotate(120deg);
   }
   10% {
     opacity: 0.7;
-    top: -30%;
-    left: 43%;
+    transform: translate(-30vw, 43vh);
   }
   25% {
     opacity: 0.2;
-    top: -30%;
-    left: 43%;
+    transform: translate(-30vw, 43vh);
   }
   35% {
     opacity: 0.2;
-    top: 20%;
-    left: -20%;
-    transform: rotate(240deg);
+    transform: translate(-20vw, 20vh) rotate(240deg);
   }
   50% {
     opacity: 0.7;
-    top: 20%;
-    left: -20%;
+    transform: translate(-20vw, 20vh);
   }
   60% {
     opacity: 0.2;
-    top: 10%;
-    left: -10%;
+    transform: translate(10vw, -10vh);
   }
   75% {
     opacity: 0.2;
-    top: 0%;
-    left: 0%;
-    transform: rotate(360deg);
+    transform: translate(0vw, 0vh) rotate(360deg);
   }
   85% {
     opacity: 0.7;
-    top: 0%;
-    left: 0%;
+    transform: translate(0vw, 0vh);
   }
   100% {
     opacity: 0.2;
-    top: 0%;
-    left: 0%;
-    transform: rotate(-180deg);
+    transform: translate(0vw, 0vh) rotate(-180deg);
   }
+}
+
+@keyframes moveMini {
+  0% {
+    opacity: 0.2;
+    transform: translate(-30vw, 43vh) rotate(120deg);
+  }
+  10% {
+    opacity: 0.5;
+    transform: translate(-30vw, 43vh);
+  }
+  25% {
+    opacity: 0.2;
+    transform: translate(-30vw, 43vh);
+  }
+  35% {
+    opacity: 0.2;
+    transform: translate(-20vw, 20vh) rotate(240deg);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translate(-20vw, 20vh);
+  }
+  60% {
+    opacity: 0.2;
+    transform: translate(10vw, -10vh);
+  }
+  75% {
+    opacity: 0.2;
+    transform: translate(0vw, 0vh) rotate(360deg);
+  }
+  85% {
+    opacity: 0.5;
+    transform: translate(0vw, 0vh);
+  }
+  100% {
+    opacity: 0.2;
+    transform: translate(0vw, 0vh) rotate(-180deg);
+  }
+}
+
+.decorativeMiniPolygonsPink {
+  background-image: url("../images/hexagonorosa.svg");
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  opacity: 0;
+  animation: moveMini 40s ease alternate infinite;
+  z-index: -1;
+}
+
+.decorativeMiniPolygonsGreen {
+  background-image: url("../images/hexagonoverde.svg");
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  opacity: 0;
+  animation: moveMini 40s ease alternate infinite;
+  z-index: -1;
 }

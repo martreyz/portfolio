@@ -49,7 +49,7 @@ const Landing = () => {
             </Link>
           </li>
           <li className="landing__menu-contact">
-            <Link to="/contact" className="header__menu-contact">
+            <Link to="/contact" className="landingLink__menu-contact">
               Contacto
             </Link>
           </li>
