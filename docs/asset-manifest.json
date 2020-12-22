@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "./static/css/main.2a461f53.chunk.css",
-    "main.js": "./static/js/main.e8672757.chunk.js",
-    "main.js.map": "./static/js/main.e8672757.chunk.js.map",
+    "main.js": "./static/js/main.32fcb825.chunk.js",
+    "main.js.map": "./static/js/main.32fcb825.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.f04f0858.js",
     "runtime-main.js.map": "./static/js/runtime-main.f04f0858.js.map",
     "static/js/2.a0987b47.chunk.js": "./static/js/2.a0987b47.chunk.js",
@@ -16,21 +16,17 @@
     "static/media/projects.scss": "./static/media/preview.e4bf530e.png",
     "static/media/contact.scss": "./static/media/angle-right-solid.c58fc33c.svg",
     "static/media/footer.scss": "./static/media/twitter-brands.ddd526ee.svg",
-    "static/media/emyem.86cd2738.png": "./static/media/emyem.86cd2738.png",
     "static/media/envelope-white.a07d1a30.svg": "./static/media/envelope-white.a07d1a30.svg",
     "static/media/github-white.4142f6b7.svg": "./static/media/github-white.4142f6b7.svg",
     "static/media/background.scss": "./static/media/hexagonoverde.02b85f36.svg",
     "static/media/linkedin-white.90723578.svg": "./static/media/linkedin-white.90723578.svg",
-    "static/media/mareacoders.866b3aa2.png": "./static/media/mareacoders.866b3aa2.png",
     "static/media/marta.480e0dd4.png": "./static/media/marta.480e0dd4.png",
-    "static/media/pokedex.4223bb08.png": "./static/media/pokedex.4223bb08.png",
-    "static/media/rickmorty.204cdad4.png": "./static/media/rickmorty.204cdad4.png",
     "static/media/twitter-white.ddd526ee.svg": "./static/media/twitter-white.ddd526ee.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.f04f0858.js",
     "static/js/2.a0987b47.chunk.js",
     "static/css/main.2a461f53.chunk.css",
-    "static/js/main.e8672757.chunk.js"
+    "static/js/main.32fcb825.chunk.js"
   ]
 }
