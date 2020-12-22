@@ -1,27 +1,32 @@
 {
   "files": {
-    "main.css": "./static/css/main.8dea4ce1.chunk.css",
-    "main.js": "./static/js/main.9bdd6f5a.chunk.js",
-    "main.js.map": "./static/js/main.9bdd6f5a.chunk.js.map",
+    "main.css": "./static/css/main.2a461f53.chunk.css",
+    "main.js": "./static/js/main.12f33ff3.chunk.js",
+    "main.js.map": "./static/js/main.12f33ff3.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.f04f0858.js",
     "runtime-main.js.map": "./static/js/runtime-main.f04f0858.js.map",
-    "static/js/2.8986ab72.chunk.js": "./static/js/2.8986ab72.chunk.js",
-    "static/js/2.8986ab72.chunk.js.map": "./static/js/2.8986ab72.chunk.js.map",
+    "static/js/2.a0987b47.chunk.js": "./static/js/2.a0987b47.chunk.js",
+    "static/js/2.a0987b47.chunk.js.map": "./static/js/2.a0987b47.chunk.js.map",
     "static/js/3.b49a5229.chunk.js": "./static/js/3.b49a5229.chunk.js",
     "static/js/3.b49a5229.chunk.js.map": "./static/js/3.b49a5229.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.8dea4ce1.chunk.css.map": "./static/css/main.8dea4ce1.chunk.css.map",
-    "static/js/2.8986ab72.chunk.js.LICENSE.txt": "./static/js/2.8986ab72.chunk.js.LICENSE.txt",
+    "static/css/main.2a461f53.chunk.css.map": "./static/css/main.2a461f53.chunk.css.map",
+    "static/js/2.a0987b47.chunk.js.LICENSE.txt": "./static/js/2.a0987b47.chunk.js.LICENSE.txt",
     "static/media/IMG_0566.349dac32.PNG": "./static/media/IMG_0566.349dac32.PNG",
     "static/media/projects.scss": "./static/media/preview.e4bf530e.png",
-    "static/media/footer.scss": "./static/media/cat-solid.9b0b51da.svg",
-    "static/media/contact.scss": "./static/media/twitter-brands.1df01c9f.svg",
-    "static/media/marta.480e0dd4.png": "./static/media/marta.480e0dd4.png"
+    "static/media/contact.scss": "./static/media/angle-right-solid.c58fc33c.svg",
+    "static/media/footer.scss": "./static/media/twitter-brands.ddd526ee.svg",
+    "static/media/envelope-white.a07d1a30.svg": "./static/media/envelope-white.a07d1a30.svg",
+    "static/media/github-white.4142f6b7.svg": "./static/media/github-white.4142f6b7.svg",
+    "static/media/background.scss": "./static/media/hexagonoverde.02b85f36.svg",
+    "static/media/linkedin-white.90723578.svg": "./static/media/linkedin-white.90723578.svg",
+    "static/media/marta.480e0dd4.png": "./static/media/marta.480e0dd4.png",
+    "static/media/twitter-white.ddd526ee.svg": "./static/media/twitter-white.ddd526ee.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.f04f0858.js",
-    "static/js/2.8986ab72.chunk.js",
-    "static/css/main.8dea4ce1.chunk.css",
-    "static/js/main.9bdd6f5a.chunk.js"
+    "static/js/2.a0987b47.chunk.js",
+    "static/css/main.2a461f53.chunk.css",
+    "static/js/main.12f33ff3.chunk.js"
   ]
 }
