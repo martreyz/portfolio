@@ -1,15 +1,27 @@
 import "../stylesheets/contact.scss";
 import Illustration from "../images/IMG_0566.PNG";
+import { Link } from "react-router-dom";
+import Github from "../images/github-white.svg";
+import Linkedin from "../images/linkedin-white.svg";
+import Twitter from "../images/twitter-white.svg";
+import Mail from "../images/envelope-white.svg";
 
-const Contact = () => {
+const Contact = (props) => {
   return (
     <main className="contact">
-      <h1 className="contact__title">Contacto</h1>
       <section className="contact__section">
-        <h2 className="contact__subtitle">¿Nos ponemos en contacto? </h2>
+        <h1 className="contact__title">
+          {props.translated ? "Contact" : "Contacto"}
+        </h1>
+        <h2 className="contact__subtitle">
+          {props.translated
+            ? "Shall we get in touch?"
+            : "¿Nos ponemos en contacto?"}
+        </h2>
         <p className="contact__text">
-          Si estás buscando un perfil de desarrolladora front-end junior, o
-          crees que podemos compartir y colaborar, no dudes en contactarme:
+          {props.translated
+            ? "If you are hiring a junior front end developer profile, or you think we can share and collaborate, do not hesitate to contact me:"
+            : "Si estás buscando un perfil de desarrolladora front-end junior, o crees que podemos compartir y colaborar, no dudes en contactarme:"}
         </p>
         <ul className="contact__list">
           <li className="contact__listItem contact__listGithub">
@@ -20,6 +32,12 @@ const Contact = () => {
               href="https://github.com/martreyz"
               title="Access GitHub"
             >
+              <img
+                className="contact__logoImg"
+                src={Github}
+                alt="View GitHub"
+                title="Logo GitHub"
+              />
               martreyz
             </a>
           </li>
@@ -31,6 +49,12 @@ const Contact = () => {
               href="https://www.linkedin.com/in/martareyrodriguez/"
               title="Access Linkedin"
             >
+              <img
+                className="contact__logoImg"
+                src={Linkedin}
+                alt="View Linkedin"
+                title="Logo Linkedin"
+              />
               marta.rey.rodriguez
             </a>
           </li>
@@ -42,6 +66,12 @@ const Contact = () => {
               href="mailto: martreyz@gmail.com"
               title="Send email"
             >
+              <img
+                className="contact__logoImg"
+                src={Mail}
+                alt="Send e-mail"
+                title="Logo email"
+              />
               martreyz@gmail.com
             </a>
           </li>
@@ -53,17 +83,28 @@ const Contact = () => {
               href="https://twitter.com/im_martreyz"
               title="Access Twitter"
             >
+              <img
+                className="contact__logoImg"
+                src={Twitter}
+                alt="View Twitter"
+                title="Logo Twitter"
+              />
               im_martreyz
             </a>
           </li>
         </ul>
+        <img
+          className="contact__image"
+          src={Illustration}
+          title="martreyz illustration"
+          alt="Selfillustration martreyz"
+        />
       </section>
-      <img
-        className="contact__image"
-        src={Illustration}
-        title="martreyz illustration"
-        alt="Selfillustration martreyz"
-      />
+      <nav className="contact__menu-home">
+        <Link to="/" className="contactLink__menu-home">
+          {props.translated ? "Home" : "Inicio"}
+        </Link>
+      </nav>
     </main>
   );
 };

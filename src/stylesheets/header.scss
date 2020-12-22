@@ -1,6 +1,5 @@
 .header {
   height: 30px;
-  width: 100%;
   position: absolute;
   top: 0px;
 }
@@ -17,31 +16,12 @@
     border: none;
     text-transform: uppercase;
     font-size: 20px;
-    color: #465559;
+    color: #87a0a0;
     text-decoration: underline;
     transition: all ease 1s;
-    &:hover {
-      transform: scale(1.2);
-      color: #97b3b9;
-    }
-  }
-  &-pages {
-    display: flex;
-    width: auto;
-    justify-content: space-between;
-    color: #465559;
-  }
-  &-about,
-  &-projects,
-  &-contact,
-  &-home {
-    list-style-type: none;
-    text-transform: uppercase;
-    font-size: 20px;
-    text-decoration: underline;
-    color: #465559;
-    transition: all ease 1s;
-    padding: 5px;
+    outline: none;
+    cursor: hand;
+    cursor: pointer;
     &:hover {
       transform: scale(1.2);
       color: #97b3b9;

@@ -1,6 +1,6 @@
 import "../stylesheets/footer.scss";
 
-const Footer = () => {
+const Footer = (props) => {
   return (
     <footer className="footer">
       <nav className="footer__menu">
@@ -52,9 +52,13 @@ const Footer = () => {
         </ul>
       </nav>
       <small className="footer__small">
-        <span className="footer__smallCopy">2020 © hecho con</span>
+        <span className="footer__smallCopy">
+          {props.translated ? "2020 © made with" : "2020 © hecho con"}
+        </span>
         <div className="footer__smallLogo"></div>
-        <span className="footer__smallAuthor">por martreyz</span>
+        <span className="footer__smallAuthor">
+          {props.translated ? "by martreyz" : "por martreyz"}
+        </span>
       </small>
     </footer>
   );

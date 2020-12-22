@@ -1,13 +1,12 @@
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px;
-  border-top: 1.3px solid #465559;
-  height: auto;
+  padding: 5px 20px;
+  border-top: 1.3px solid #87a0a050;
+  height: 30px;
   width: 100%;
   position: absolute;
   bottom: 0px;
-
   &__menuList {
     display: flex;
     &-github {
@@ -67,7 +66,7 @@
     }
   }
   &__small {
-    color: #465559;
+    color: #87a0a0;
     font-size: 15px;
     display: flex;
     line-height: 1.2;
