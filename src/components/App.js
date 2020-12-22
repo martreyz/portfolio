@@ -7,13 +7,19 @@ import Contact from "./Contact";
 import { Route } from "react-router-dom";
 import ProjectsData from "../data/projects.json";
 import ProjectsDataEN from "../data/projectsEn.json";
+import ImagesData from "./ImagesData";
 import { useState } from "react";
 
 function App() {
-  const [projectsData] = useState(ProjectsData);
-  const [projectsDataEN] = useState(ProjectsDataEN);
+  const [projectsData, setProjectsData] = useState(ProjectsData);
+  const [projectsDataEN, setProjectsDataEN] = useState(ProjectsDataEN);
   const [counter, setCounter] = useState(0);
   const [translated, setTranslated] = useState(false);
+
+  for (let i = 0; i < ImagesData.lenght; i++) {
+    setProjectsData((projectsData[i].preview = ImagesData[i]));
+    setProjectsDataEN((projectsDataEN[i].preview = ImagesData[i]));
+  }
 
   const handleButtonClick = (clicked) => {
     if (clicked === "next") {

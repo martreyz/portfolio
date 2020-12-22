@@ -4,7 +4,7 @@
         "name": "Rick and Morty",
         "webpage": "https://martreyz.github.io/modulo-3-evaluacion-final-martreyz/#/",
         "repository": "https://github.com/martreyz/modulo-3-evaluacion-final-martreyz",
-        "preview": "'/images/rickmorty.png'",
+        "preview": "'../images/rickmorty.png'",
         "description": "Web app for Rick and Morty's characters management, using React, JavaScript, HTML5, CSS3 and SASS. Git and GitHub were used as a version control system."
     },
     {
@@ -12,7 +12,7 @@
         "name": "<em>y</em>",
         "webpage": "https://martreyz.github.io/Project-promo-k-module-2-team-1/",
         "repository": "https://github.com/martreyz/Project-promo-k-module-2-team-1",
-        "preview": "/images/emyem.png",
+        "preview": "../images/emyem.png",
         "description": "Web App of bussiness cards creation, responsive layout, mobile first, using JavaScript, HTML5, CSS3, SASS, Flexbox and CSS Grid. Gulp was used as a task authomation tool and Git and GitHub as a version control system."
     },
     {
@@ -20,7 +20,7 @@
         "name": "Manage your series",
         "webpage": "https://martreyz.github.io/modulo-2-evaluacion-final-martreyz/",
         "repository": "https://github.com/martreyz/modulo-2-evaluacion-final-martreyz",
-        "preview": "/images/preview.png",
+        "preview": "../images/preview.png",
         "description": "Web application for series' management, using JavaScript, HTML5, CSS3 y SASS. Gulp was used as a task authomation tool and Git and GitHub as a version control system."
     },
     {
@@ -28,7 +28,7 @@
         "name": "Pokedex",
         "webpage": "https://martreyz.github.io/modulo-3-evaluacion-intermedia-martreyz/",
         "repository": "https://github.com/martreyz/modulo-3-evaluacion-intermedia-martreyz",
-        "preview": "/images/pokedex.png",
+        "preview": "../images/pokedex.png",
         "description": "Web application for the display and bookmark of pokemons (Pokedex), using React, JavaScript, HTML5, CSS3 y SASS. Git and GitHub were used as a version control system."
     },
     {
@@ -36,7 +36,7 @@
         "name": "Marea Coders",
         "webpage": "https://martreyz.github.io/project-promo-k-module-1-team-7/",
         "repository": "https://github.com/martreyz/project-promo-k-module-1-team-7",
-        "preview": "/images/mareacoders.png",
+        "preview": "../images/mareacoders.png",
         "description": "Webpage of presentation and contact of the team, responsive layout and mobile first, using HTML5, CSS3, SASS, Flexbox and CSS Grid. Gulp was used as a task authomation tool and Git and GitHub as a version control system."
     }
 ]
