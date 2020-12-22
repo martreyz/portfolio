@@ -16,10 +16,12 @@ function App() {
   const [counter, setCounter] = useState(0);
   const [translated, setTranslated] = useState(false);
 
-  for (let i = 0; i < ImagesData.lenght; i++) {
-    setProjectsData((projectsData[i].preview = ImagesData[i]));
-    setProjectsDataEN((projectsDataEN[i].preview = ImagesData[i]));
-  }
+  const setPics = () => {
+    for (let i = 0; i < ImagesData.lenght; i++) {
+      setProjectsData((projectsData[i].preview = ImagesData[i]));
+      setProjectsDataEN((projectsDataEN[i].preview = ImagesData[i]));
+    }
+  };
 
   const handleButtonClick = (clicked) => {
     if (clicked === "next") {
@@ -40,6 +42,8 @@ function App() {
   const handleLangClick = () => {
     setTranslated(!translated);
   };
+
+  setPics();
 
   return (
     <>
