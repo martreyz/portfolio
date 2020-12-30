@@ -142,8 +142,14 @@
   color: #4a524d;
   display: block;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
   &:hover {
     color: #465559;
+  }
+  @media all and (min-width: 768px) {
+    align-items: center;
   }
 }
 
