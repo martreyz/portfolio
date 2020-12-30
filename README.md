@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Portfolio martreyz
+## Portfolio Marta Rey Rodríguez, desarrolladora front end junior
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Descripción
 
-In the project directory, you can run:
+Realización de un portfolio personal para la presentación de proyectos:
 
-### `npm start`
+	• Uso de Sass para los estilos
+	• Uso de ES6 y React para la estructuración del JS de la aplicación
+	• Uso de mediaqueries para que el diseño sea adaptable al dispositivo
+	• Desarrollo usando la estrategia mobile first
+	• Uso de git para el control de versiones del proyecto, con ramas.
+	• Uso de react-router para navegar en la página entre las secciones de contacto, proyectos e inicio.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Para la realización de este proyecto se han seguido las siguientes fases:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+	• Diseño de la apariencia del portfolio y organización de contenidos en secciones.
+	• Desarrollo del código JS dentro de React para las funcionalidades requeridas en el portfolio.
+	• Maquetación de la web.
+	• Creación de las animaciones CSS necesarias para el diseño decorativo del fondo. 
+	• Creación de un diseño alternativo de alto contraste y mejora de accesibilidad.
+	• Creación de un botón toggle de traducción a inglés y traducción de todos los contenidos.
+	
+#### Landing
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Portfoliolanding](https://user-images.githubusercontent.com/69849664/103347111-55cd4d80-4a96-11eb-9e31-f479495b7f29.png)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Proyectos
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![portfolioproyectos](https://user-images.githubusercontent.com/69849664/103347126-6251a600-4a96-11eb-8739-95347a86a9cc.png)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Contacto
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![portfoliocontacto](https://user-images.githubusercontent.com/69849664/103347143-709fc200-4a96-11eb-9bd3-3f28fa48eaef.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Composición del código:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Components: Contiene todos los componentes de la aplicación:
+	- App.js: Componente raíz de la aplicación.
+	- Footer.js: Componente con el código correspondiente al footer.
+	- Header.js: Componente con el código correspondiente al header.
+	- Background.js: Componente con el código correspondiente al contenido decorativo del fondo.
+	- Contact.js: Contienen el código referente a la sección de contacto
+	- Projects.js: Contiene el código referente a la sección de proyectos.
+	- Landing.js: Contiene el código referente a la sección de la página de landing.
+	
+- Data: Contiene los .json de datos requeridos para la aplicación:
+	- Projects.json: Información de los proyectos en español.
+	- projectsEn.json: información de los proyectos en inglés.
+	
+- Stylesheets: Dividido en partials, cada uno correspondiendo a los estilos de su componente homónimo.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  
+## Arranque del proyecto:
 
-### Analyzing the Bundle Size
+- npm install: Para instalar las dependencias
+<img width="624" alt="install" src="https://user-images.githubusercontent.com/69849664/101142786-61a02e00-3616-11eb-877a-cff3666ceee5.PNG">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- npm start: Para arrancar el proyecto y probarlo en desarrollo a través de la URL '//localhost:3000/#/'
+<img width="625" alt="start" src="https://user-images.githubusercontent.com/69849664/101142795-649b1e80-3616-11eb-9c46-ea5a31cef5a2.PNG">
 
-### Making a Progressive Web App
+- npm run build/mv build docs: Para publicar el proyecto a producción
+<img width="628" alt="docs" src="https://user-images.githubusercontent.com/69849664/101142807-66fd7880-3616-11eb-9b84-2c1ecd7a9672.PNG">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Hecho con :cat: por martreyz
