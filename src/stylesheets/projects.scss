@@ -78,14 +78,14 @@
       justify-content: space-between;
       align-items: center;
       right: -20px;
-      flex-wrap: wrap-reverse;
+      flex-wrap: nowrap;
       box-sizing: border-box;
     }
     @media all and (min-width: 1054px) {
       padding: 25% 10px 10px 10px;
       width: 90%;
       right: -50px;
-      height: 350px;
+      height: auto;
     }
   }
   &__previewTitle {
