@@ -73,3 +73,82 @@ Para la realización de este proyecto se han seguido las siguientes fases:
 
 
 Hecho con :cat: por martreyz
+
+
+
+
+# Portfolio martreyz
+## Marta Rey Rodríguez's personal portfolio, junior front end developer
+
+
+### Description
+
+Personal portfolio for projects presentation:
+
+	• Use of SASS for the styles
+	• Use of ES6 y React for the app's JS structure. 
+	• Use of mediaqueries for the design to be responsive.
+	• Mobile first development.
+	• Use of git for the versions' control and branches management.
+	• Use of react-router for the internal navigation. 
+
+The different steps for the realization of this portfolio have been:
+
+	• Design of the portfolio's appearance
+	• Development of JS in React to activate all the portfolio's functionalities.
+	• Layout
+	• Creation of the background's CSS animations. 
+	• Creation of an alternative design more accesible and hight contrast.
+	• Creation of a toggle button to translate the content.
+	
+#### Landing
+
+
+![landing](https://user-images.githubusercontent.com/69849664/103347822-6b437700-4a98-11eb-98b7-77013d9adf0e.png)
+
+
+#### Projects
+
+
+![projects](https://user-images.githubusercontent.com/69849664/103347823-6b437700-4a98-11eb-9b95-521684a605dc.png)
+
+
+#### Contact
+
+
+![contact](https://user-images.githubusercontent.com/69849664/103347821-6aaae080-4a98-11eb-893f-0553cca54a09.png)
+
+
+
+## Code composition:
+
+- Components: 
+	- App.js: Root component.
+	- Footer.js: Contains the footer's code.
+	- Header.js: Contains the header's code.
+	- Background.js: Contains the background's code.
+	- Contact.js: Contains the code of the contact section.
+	- Projects.js: Contains the code of the projects section.
+	- Landing.js: Contains the code of the landing section.
+	
+- Data: Contains all .json with the necessary data to run the application.
+	- projects.json: Spanish projects information.
+	- projectsEn.json: English projects information.
+	
+- Stylesheets: Dividided in partials, each of them corresponding to its homonym comoponent. 
+
+
+  
+## How to start the proyect:
+
+- npm install: To install dependencies
+<img width="624" alt="install" src="https://user-images.githubusercontent.com/69849664/101142786-61a02e00-3616-11eb-877a-cff3666ceee5.PNG">
+
+- npm start: To start the project and try it in development server through URL '//localhost:3000/#/'
+<img width="625" alt="start" src="https://user-images.githubusercontent.com/69849664/101142795-649b1e80-3616-11eb-9c46-ea5a31cef5a2.PNG">
+
+- npm run docs: To publish project to production
+<img width="628" alt="docs" src="https://user-images.githubusercontent.com/69849664/101142807-66fd7880-3616-11eb-9b84-2c1ecd7a9672.PNG">
+
+
+Made with :cat: by martreyz
