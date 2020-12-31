@@ -9,6 +9,7 @@
   }
   &__container {
     display: flex;
+    height: 100%;
     flex-direction: column;
     align-items: center;
     @media all and (min-width: 768px) {
@@ -42,24 +43,24 @@
     z-index: 10;
     margin-bottom: 10px;
     filter: grayscale(80%);
-    transition: all ease-out 1s;
     @media all and (min-width: 768px) {
       height: 45%;
       margin-bottom: 0px;
       width: 96%;
+    }
+    @media all and (min-width: 1054px) {
       position: absolute;
       top: 10px;
       z-index: 10;
-      filter: grayscale(80%);
+      height: 25%;
       transition: all ease-out 1s;
     }
-    @media all and (min-width: 1054px) {
-      height: 25%;
-    }
     &:hover {
-      filter: none;
-      height: 94%;
-      width: 96%;
+      @media all and (min-width: 1054px) {
+        filter: none;
+        height: 94%;
+        width: 96%;
+      }
     }
   }
   &__decoration {
@@ -70,8 +71,8 @@
     position: relative;
     @media all and (min-width: 768px) {
       width: 120%;
-      height: 550px;
-      padding: 80% 10px 10px 10px;
+      height: 70%;
+      padding: 10px;
       border-radius: 5px;
       display: flex;
       flex-direction: column;
@@ -81,7 +82,7 @@
       flex-wrap: nowrap;
       box-sizing: border-box;
     }
-    @media all and (min-width: 1054px) {
+    @media all and (min-width: 934px) {
       padding: 25% 10px 10px 10px;
       width: 90%;
       right: -50px;

@@ -81,7 +81,7 @@ const Landing = (props) => {
                 ? "front end development"
                 : "desarrollo front end"}
             </strong>
-            {props.translated ? ", which I find " : ", que me resulta "},
+            {props.translated ? ", which I find " : ", que me resulta "}
             <strong>
               {props.translated
                 ? "exciting, dynamic and infinite"
