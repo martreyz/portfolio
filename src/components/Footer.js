@@ -49,6 +49,17 @@ const Footer = (props) => {
               {" "}
             </a>
           </li>
+          <li className="footer__menuList-codepen">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              className="footer__menuList-access"
+              href="https://codepen.io/martreyz"
+              title="Access Codepen"
+            >
+              {" "}
+            </a>
+          </li>
         </ul>
       </nav>
       <small className="footer__small">

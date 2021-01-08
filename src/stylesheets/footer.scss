@@ -61,6 +61,19 @@
         transform: scale(1.2);
       }
     }
+    &-codepen {
+      background-image: url("../images/codepen-brands.svg");
+      background-repeat: no-repeat;
+      text-decoration: none;
+      list-style-type: none;
+      width: 15px;
+      height: 15px;
+      margin-right: 10px;
+      transition: all ease 1s;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
     &-access {
       padding: 10px;
     }
