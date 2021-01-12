@@ -15,6 +15,7 @@ function App() {
   const [projectsDataEN] = useState(ProjectsDataEN);
   const [counter, setCounter] = useState(0);
   const [translated, setTranslated] = useState(false);
+  const [accesible, setAccesible] = useState(false);
 
   const handleButtonClick = (clicked) => {
     if (clicked === "next") {
@@ -36,15 +37,25 @@ function App() {
     setTranslated(!translated);
   };
 
+  const handleAccClick = () => {
+    setAccesible(!accesible);
+  };
+
   return (
     <>
-      <Background />
-      <Header translated={translated} handleLangClick={handleLangClick} />
+      <Background accesible={accesible} />
+      <Header
+        translated={translated}
+        handleLangClick={handleLangClick}
+        handleAccClick={handleAccClick}
+        accesible={accesible}
+      />
       <Route exact path="/">
-        <Landing translated={translated} />
+        <Landing translated={translated} accesible={accesible} />
       </Route>
       <Route exact path="/projects">
         <Projects
+          accesible={accesible}
           projectsDataEN={projectsDataEN}
           translated={translated}
           projectsData={projectsData}
@@ -53,9 +64,9 @@ function App() {
         />
       </Route>
       <Route exact path="/contact">
-        <Contact translated={translated} />
+        <Contact accesible={accesible} translated={translated} />
       </Route>
-      <Footer translated={translated} />
+      <Footer accesible={accesible} translated={translated} />
     </>
   );
 }

@@ -65,6 +65,9 @@
       margin-right: 180px;
       text-align: right;
     }
+    &ACC {
+      color: #537070;
+    }
   }
   &__textTwo {
     color: #778b8b;
@@ -79,6 +82,9 @@
       text-align: right;
       margin-bottom: 30px;
     }
+    &ACC {
+      color: #384d4d;
+    }
   }
   &__aboutText {
     font-weight: 400;
@@ -90,6 +96,9 @@
       width: 120%;
       margin-left: -5%;
       font-size: 19px;
+    }
+    &ACC {
+      color: #506464;
     }
   }
   &__menu-projects {
@@ -111,6 +120,11 @@
       content: "";
       transform: scaleX(0.8);
     }
+    &ACC {
+      &::after {
+        background-image: url("../images/angle-right-ACC.svg");
+      }
+    }
     @media all and (min-width: 768px) {
       list-style-type: none;
       text-transform: uppercase;
@@ -129,6 +143,11 @@
         height: 100px;
         content: "";
         transform: scaleX(0.8);
+      }
+    }
+    &ACC {
+      &::after {
+        background-image: url("../images/angle-right-ACC.svg");
       }
     }
   }
@@ -151,6 +170,11 @@
       height: 50px;
       content: "";
       transform: scaleX(0.8);
+    }
+    &ACC {
+      &::before {
+        background-image: url("../images/angle-left-ACC.svg");
+      }
     }
     @media all and (min-width: 768px) {
       list-style-type: none;
@@ -177,6 +201,11 @@
         transform: scaleX(0.8);
       }
     }
+    &ACC {
+      &::before {
+        background-image: url("../images/angle-left-ACC.svg");
+      }
+    }
   }
 }
 
@@ -197,6 +226,9 @@
   @media all and (min-width: 768px) {
     padding: 10px;
   }
+  &ACC {
+    background-color: rgba(51, 66, 56, 0.5);
+  }
 }
 
 .landingLink__menu-contact {
@@ -208,4 +240,11 @@
   @media all and (min-width: 768px) {
     padding: 10px;
   }
+  &ACC {
+    background-color: rgba(51, 66, 56, 0.5);
+  }
+}
+
+.landing__titleACC {
+  color: #37493d;
 }

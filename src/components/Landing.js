@@ -6,7 +6,13 @@ const Landing = (props) => {
   return (
     <main className="landing">
       <section className="landing__container">
-        <h1 className="landing__title">
+        <h1
+          className={
+            props.accesible
+              ? "landing__title landing__titleACC"
+              : "landing__title"
+          }
+        >
           {" "}
           {props.translated ? "Hello world!" : "¡Hola mundo!"}{" "}
         </h1>
@@ -17,16 +23,34 @@ const Landing = (props) => {
           title="Marta Rey"
         />
         <p className="landing__text">
-          <span className="landing__textOne">
+          <span
+            className={
+              props.accesible
+                ? "landing__textOne landing__textOneACC"
+                : "landing__textOne"
+            }
+          >
             {props.translated ? "This is Marta," : "Soy Marta,"}
           </span>
-          <span className="landing__textTwo">
+          <span
+            className={
+              props.accesible
+                ? "landing__textTwo landing__textTwoACC"
+                : "landing__textTwo"
+            }
+          >
             {props.translated
               ? "junior front end developer"
               : "desarrolladora front end jr"}
           </span>
         </p>
-        <p className="landing__aboutText">
+        <p
+          className={
+            props.accesible
+              ? "landing__aboutText landing__aboutTextACC"
+              : "landing__aboutText"
+          }
+        >
           <span className="about__parr">
             {props.translated ? "Graduated in" : "Graduada en"}{" "}
             <strong>{props.translated ? "Tourism" : "Turismo"}</strong>{" "}
@@ -95,13 +119,39 @@ const Landing = (props) => {
       </section>
       <nav>
         <ul>
-          <li className="landing__menu-projects">
-            <Link to="/projects" className="landingLink__menu-projects">
+          <li
+            className={
+              props.accesible
+                ? "landing__menu-projects landing__menu-projectsACC"
+                : "landing__menu-projects"
+            }
+          >
+            <Link
+              to="/projects"
+              className={
+                props.accesible
+                  ? "landingLink__menu-projects landingLink__menu-projectsACC"
+                  : "landingLink__menu-projects"
+              }
+            >
               {props.translated ? "Projects" : "Proyectos"}
             </Link>
           </li>
-          <li className="landing__menu-contact">
-            <Link to="/contact" className="landingLink__menu-contact">
+          <li
+            className={
+              props.accesible
+                ? "landing__menu-contact landing__menu-contactACC"
+                : "landing__menu-contact"
+            }
+          >
+            <Link
+              to="/contact"
+              className={
+                props.accesible
+                  ? "landingLink__menu-contact landingLink__menu-contactACC"
+                  : "landingLink__menu-contact"
+              }
+            >
               {props.translated ? "Contact" : "Contacto"}
             </Link>
           </li>

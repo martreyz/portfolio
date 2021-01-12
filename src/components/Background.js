@@ -1,6 +1,6 @@
 import "../stylesheets/background.scss";
 
-const Background = () => {
+const Background = (props) => {
   const idPolygons = [];
   for (let i = 0; i < 20; i++) {
     idPolygons.push(i);
@@ -45,19 +45,22 @@ const Background = () => {
       ></div>
     );
   });
-
   return (
     <>
-      <section className="decorativeBackground">
-        {backgroundPolygonsPink}
-        {backgroundPolygonsGreen}
-        <div aria-label="decoration" className="decorativePolygon"></div>
-        <div aria-label="decoration" className="decorativePolygonTwo"></div>
-        <div aria-label="decoration" className="decorativePolygonThree"></div>
-        <div aria-label="decoration" className="decorativePolygonFour"></div>
-        <div aria-label="decoration" className="decorativePolygonFive"></div>
-        <div aria-label="decoration" className="decorativePolygonSix"></div>
-      </section>
+      {props.accesible ? (
+        <section></section>
+      ) : (
+        <section className="decorativeBackground">
+          {backgroundPolygonsPink}
+          {backgroundPolygonsGreen}
+          <div aria-label="decoration" className="decorativePolygon"></div>
+          <div aria-label="decoration" className="decorativePolygonTwo"></div>
+          <div aria-label="decoration" className="decorativePolygonThree"></div>
+          <div aria-label="decoration" className="decorativePolygonFour"></div>
+          <div aria-label="decoration" className="decorativePolygonFive"></div>
+          <div aria-label="decoration" className="decorativePolygonSix"></div>
+        </section>
+      )}
     </>
   );
 };

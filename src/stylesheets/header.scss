@@ -1,6 +1,7 @@
 .header {
   height: 30px;
   position: absolute;
+  width: 100%;
   top: 0px;
 }
 
@@ -8,6 +9,7 @@
   padding: 10px 20px;
   height: 30px;
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   z-index: 9;
@@ -25,6 +27,38 @@
     &:hover {
       transform: scale(1.2);
       color: #97b3b9;
+    }
+    &ACC {
+      color: #4c7272;
+      &:hover {
+        transform: scale(1.2);
+        color: #364a4e;
+      }
+    }
+  }
+  &-acc {
+    background-image: url("../images/toggle-off-solid.svg");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 25px;
+    width: 35px;
+    outline: none;
+    border: none;
+    cursor: hand;
+    cursor: pointer;
+
+    &Active {
+      background-image: url("../images/toggle-on-solid.svg");
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 25px;
+      width: 35px;
+      outline: none;
+      border: none;
+      cursor: hand;
+      cursor: pointer;
     }
   }
 }
