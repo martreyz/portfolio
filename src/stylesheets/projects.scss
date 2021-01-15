@@ -36,6 +36,9 @@
       line-height: 1.4;
       margin: 0px 0px 40px -50%;
     }
+    &ACC {
+      color: #37493d;
+    }
   }
   &__previewImage {
     width: 100%;
@@ -104,6 +107,9 @@
       z-index: 9;
       margin-bottom: 10px;
     }
+    &ACC {
+      color: #364a4e;
+    }
   }
   &__previewDescription {
     color: #465a5a;
@@ -134,6 +140,9 @@
       transform: scale(1.2);
       filter: brightness(130%);
     }
+    &ACC {
+      background-image: url("../images/arrow-circleLeft-ACC.svg");
+    }
   }
   &__previewNext {
     transition: all ease 1s;
@@ -154,6 +163,9 @@
     &:hover {
       transform: scale(1.2);
       filter: brightness(130%);
+    }
+    &ACC {
+      background-image: url("../images/arrow-circleRight-ACC.svg");
     }
   }
 }
@@ -176,6 +188,11 @@
     height: 50px;
     content: "";
     transform: scaleX(0.8);
+  }
+  &ACC {
+    &::before {
+      background-image: url("../images/angle-left-ACC.svg");
+    }
   }
   @media all and (min-width: 768px) {
     font-size: 20px;
@@ -203,6 +220,9 @@
   @media all and (min-width: 768px) {
     padding: 10px;
   }
+  &ACC {
+    background-color: rgba(51, 66, 56, 0.5);
+  }
 }
 
 .projects__previewMenuLink {
@@ -220,6 +240,9 @@
   @media all and (min-width: 768px) {
     width: 40px;
     height: 40px;
+  }
+  &ACC {
+    background-color: #364a4e;
   }
   &Page {
     background-image: url("../images/laptop-solid.svg");

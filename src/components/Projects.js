@@ -10,19 +10,33 @@ const Projects = (props) => {
   return (
     <main className="projects">
       <section className="projects__container">
-        <h1 className="projects__title">
+        <h1
+          className={
+            props.accesible
+              ? "projects__title projects__titleACC"
+              : "projects__title"
+          }
+        >
           {props.translated ? "Projects" : "Proyectos"}
         </h1>
         <div className="projects__decoration">
           <button
             onClick={handleButtonClick}
             id="previous"
-            className="projects__previewPrevious"
+            className={
+              props.accesible
+                ? "projects__previewPrevious projects__previewPreviousACC"
+                : "projects__previewPrevious"
+            }
           ></button>
           <button
             onClick={handleButtonClick}
             id="next"
-            className="projects__previewNext"
+            className={
+              props.accesible
+                ? "projects__previewNext projects__previewNextACC"
+                : "projects__previewNext"
+            }
           ></button>
           <div
             title={
@@ -43,7 +57,11 @@ const Projects = (props) => {
             <ul className="projects__previewMenuList">
               <li className="projects__previewMenuItem">
                 <a
-                  className="projects__previewMenuLink projects__previewMenuLinkPage"
+                  className={
+                    props.accesible
+                      ? "projects__previewMenuLink projects__previewMenuLinkACC projects__previewMenuLinkPage projects__previewMenuLinkPageACC"
+                      : "projects__previewMenuLink projects__previewMenuLinkPage"
+                  }
                   href={
                     props.translated
                       ? props.projectsDataEN[props.counter].webpage
@@ -58,7 +76,11 @@ const Projects = (props) => {
               </li>
               <li className="projects__previewMenuItem">
                 <a
-                  className="projects__previewMenuLink projects__previewMenuLinkRepo"
+                  className={
+                    props.accesible
+                      ? "projects__previewMenuLink projects__previewMenuLinkACC projects__previewMenuLinkRepo projects__previewMenuLinkRepoACC"
+                      : "projects__previewMenuLink projects__previewMenuLinkRepo"
+                  }
                   href={
                     props.translated
                       ? props.projectsDataEN[props.counter].repository
@@ -74,7 +96,13 @@ const Projects = (props) => {
               </li>
             </ul>
           </nav>
-          <h2 className="projects__previewTitle">
+          <h2
+            className={
+              props.accesible
+                ? "projects__previewTitle projects__previewTitleACC"
+                : "projects__previewTitle"
+            }
+          >
             {props.translated
               ? props.projectsDataEN[props.counter].name
               : props.projectsData[props.counter].name}
@@ -86,8 +114,21 @@ const Projects = (props) => {
           </p>
         </div>
       </section>
-      <nav className="projects__menu-home">
-        <Link to="/" className="projectsLink__menu-home">
+      <nav
+        className={
+          props.accesible
+            ? "projects__menu-home projects__menu-homeACC"
+            : "projects__menu-home"
+        }
+      >
+        <Link
+          to="/"
+          className={
+            props.accesible
+              ? "projectsLink__menu-home projectsLink__menu-homeACC"
+              : "projectsLink__menu-home"
+          }
+        >
           {props.translated ? "Home" : "Inicio"}
         </Link>
       </nav>
