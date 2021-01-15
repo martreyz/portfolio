@@ -5,25 +5,49 @@ import Github from "../images/github-white.svg";
 import Linkedin from "../images/linkedin-white.svg";
 import Twitter from "../images/twitter-white.svg";
 import Mail from "../images/envelope-white.svg";
+import GithubACC from "../images/github-ACC.svg";
+import LinkedinACC from "../images/linkedin-ACC.svg";
+import TwitterACC from "../images/twitter-ACC.svg";
+import MailACC from "../images/envelope-ACC.svg";
 
 const Contact = (props) => {
   return (
     <main className="contact">
       <section className="contact__section">
-        <h1 className="contact__title">
+        <h1
+          className={
+            props.accesible
+              ? "contact__title contact__titleACC"
+              : "contact__title"
+          }
+        >
           {props.translated ? "Contact" : "Contacto"}
         </h1>
-        <h2 className="contact__subtitle">
+        <h2
+          className={
+            props.accesible
+              ? "contact__subtitle contact__subtitleACC"
+              : "contact__subtitle"
+          }
+        >
           {props.translated
             ? "Shall we get in touch?"
             : "¿Nos ponemos en contacto?"}
         </h2>
-        <p className="contact__text">
+        <p
+          className={
+            props.accesible ? "contact__text contact__textACC" : "contact__text"
+          }
+        >
           {props.translated
             ? "If you are hiring a junior front end developer profile, or you think we can share and collaborate, do not hesitate to contact me:"
             : "Si estás buscando un perfil de desarrolladora front-end junior, o crees que podemos compartir y colaborar, no dudes en contactarme:"}
         </p>
-        <ul className="contact__list">
+        <ul
+          className={
+            props.accesible ? "contact__list contact__listACC" : "contact__list"
+          }
+        >
           <li className="contact__listItem contact__listGithub">
             <a
               target="_blank"
@@ -34,7 +58,7 @@ const Contact = (props) => {
             >
               <img
                 className="contact__logoImg"
-                src={Github}
+                src={props.accesible ? GithubACC : Github}
                 alt="View GitHub"
                 title="Logo GitHub"
               />
@@ -51,7 +75,7 @@ const Contact = (props) => {
             >
               <img
                 className="contact__logoImg"
-                src={Linkedin}
+                src={props.accesible ? LinkedinACC : Linkedin}
                 alt="View Linkedin"
                 title="Logo Linkedin"
               />
@@ -68,14 +92,14 @@ const Contact = (props) => {
             >
               <img
                 className="contact__logoImg"
-                src={Mail}
+                src={props.accesible ? MailACC : Mail}
                 alt="Send e-mail"
                 title="Logo email"
               />
               martreyz@gmail.com
             </a>
           </li>
-          <li className="contact__listItem contact__listTwitter">
+          <li className={"contact__listItem contact__listTwitter"}>
             <a
               target="_blank"
               rel="noreferrer"
@@ -85,7 +109,7 @@ const Contact = (props) => {
             >
               <img
                 className="contact__logoImg"
-                src={Twitter}
+                src={props.accesible ? TwitterACC : Twitter}
                 alt="View Twitter"
                 title="Logo Twitter"
               />
@@ -100,8 +124,21 @@ const Contact = (props) => {
           alt="Selfillustration martreyz"
         />
       </section>
-      <nav className="contact__menu-home">
-        <Link to="/" className="contactLink__menu-home">
+      <nav
+        className={
+          props.accesible
+            ? "contact__menu-home contact__menu-homeACC"
+            : "contact__menu-home"
+        }
+      >
+        <Link
+          to="/"
+          className={
+            props.accesible
+              ? "contactLink__menu-home contactLink__menu-homeACC"
+              : "contactLink__menu-home"
+          }
+        >
           {props.translated ? "Home" : "Inicio"}
         </Link>
       </nav>

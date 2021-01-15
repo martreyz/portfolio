@@ -33,6 +33,9 @@
       line-height: 1.4;
       align-self: flex-start;
     }
+    &ACC {
+      color: #37493d;
+    }
   }
   &__subtitle {
     color: #87a0a0;
@@ -44,6 +47,9 @@
       line-height: 1.5;
       align-self: flex-start;
       margin-left: 20px;
+    }
+    &ACC {
+      color: #537070;
     }
   }
   &__text {
@@ -58,6 +64,9 @@
       line-height: 1;
       width: 70%;
       align-self: flex-end;
+    }
+    &ACC {
+      color: #506464;
     }
   }
   &__list {
@@ -80,6 +89,9 @@
     @media all and (min-width: 1054px) {
       margin-left: 5%;
       width: 90%;
+    }
+    &ACC {
+      color: #506464;
     }
     &Item {
       margin-top: 5px;
@@ -151,6 +163,9 @@
   @media all and (min-width: 768px) {
     align-items: center;
   }
+  &ACC {
+    color: #506464;
+  }
 }
 
 .contact__menu-home {
@@ -184,6 +199,11 @@
     transform: scale(1.2);
     color: #bfd1c5;
   }
+  &ACC {
+    &::after {
+      background-image: url("../images/angle-right-ACC.svg");
+    }
+  }
 }
 
 .contactLink__menu-home {
@@ -194,5 +214,8 @@
   padding: 5px;
   @media all and (min-width: 768px) {
     padding: 10px;
+  }
+  &ACC {
+    background-color: rgba(51, 66, 56, 0.5);
   }
 }
