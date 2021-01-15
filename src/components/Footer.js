@@ -5,7 +5,13 @@ const Footer = (props) => {
     <footer className="footer">
       <nav className="footer__menu">
         <ul className="footer__menuList">
-          <li className="footer__menuList-github">
+          <li
+            className={
+              props.accesible
+                ? "footer__menuList-github footer__menuList-githubACC"
+                : "footer__menuList-github"
+            }
+          >
             <a
               target="_blank"
               rel="noreferrer"
@@ -16,7 +22,13 @@ const Footer = (props) => {
               {" "}
             </a>
           </li>
-          <li className="footer__menuList-linkedin">
+          <li
+            className={
+              props.accesible
+                ? "footer__menuList-linkedin footer__menuList-linkedinACC"
+                : "footer__menuList-linkedin"
+            }
+          >
             <a
               target="_blank"
               rel="noreferrer"
@@ -27,7 +39,13 @@ const Footer = (props) => {
               {" "}
             </a>
           </li>
-          <li className="footer__menuList-mail">
+          <li
+            className={
+              props.accesible
+                ? "footer__menuList-mail footer__menuList-mailACC"
+                : "footer__menuList-mail"
+            }
+          >
             <a
               target="_blank"
               rel="noreferrer"
@@ -38,7 +56,13 @@ const Footer = (props) => {
               {" "}
             </a>
           </li>
-          <li className="footer__menuList-twitter">
+          <li
+            className={
+              props.accesible
+                ? "footer__menuList-twitter footer__menuList-twitterACC"
+                : "footer__menuList-twitter"
+            }
+          >
             <a
               target="_blank"
               rel="noreferrer"
@@ -49,7 +73,13 @@ const Footer = (props) => {
               {" "}
             </a>
           </li>
-          <li className="footer__menuList-codepen">
+          <li
+            className={
+              props.accesible
+                ? "footer__menuList-codepen footer__menuList-codepenACC"
+                : "footer__menuList-codepen"
+            }
+          >
             <a
               target="_blank"
               rel="noreferrer"
@@ -62,12 +92,34 @@ const Footer = (props) => {
           </li>
         </ul>
       </nav>
-      <small className="footer__small">
-        <span className="footer__smallCopy">
+      <small
+        className={
+          props.accesible ? "footer__small footer__smallACC" : "footer__small"
+        }
+      >
+        <span
+          className={
+            props.accesible
+              ? "footer__smallCopy footer_smallCopyACC"
+              : "footer_smallCopy"
+          }
+        >
           {props.translated ? "2020 © made with" : "2020 © hecho con"}
         </span>
-        <div className="footer__smallLogo"></div>
-        <span className="footer__smallAuthor">
+        <div
+          className={
+            props.accesible
+              ? "footer__smallLogo footer__smallLogoACC"
+              : "footer__smallLogo"
+          }
+        ></div>
+        <span
+          className={
+            props.accesible
+              ? "footer__smallAuthor footer__smallAuthorACC"
+              : "footer__smallAuthor"
+          }
+        >
           {props.translated ? "by martreyz" : "por martreyz"}
         </span>
       </small>

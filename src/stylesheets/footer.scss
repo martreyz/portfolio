@@ -21,6 +21,9 @@
       &:hover {
         transform: scale(1.2);
       }
+      &ACC {
+        background-image: url("../images/github-ACC.svg");
+      }
     }
     &-linkedin {
       background-image: url("../images/linkedin-in-brands.svg");
@@ -33,6 +36,9 @@
       transition: all ease 1s;
       &:hover {
         transform: scale(1.2);
+      }
+      &ACC {
+        background-image: url("../images/linkedin-ACC.svg");
       }
     }
     &-mail {
@@ -47,6 +53,9 @@
       &:hover {
         transform: scale(1.2);
       }
+      &ACC {
+        background-image: url("../images/envelope-ACC.svg");
+      }
     }
     &-twitter {
       background-image: url("../images/twitter-brands.svg");
@@ -60,6 +69,9 @@
       &:hover {
         transform: scale(1.2);
       }
+      &ACC {
+        background-image: url("../images/twitter-ACC.svg");
+      }
     }
     &-codepen {
       background-image: url("../images/codepen-brands.svg");
@@ -72,6 +84,9 @@
       transition: all ease 1s;
       &:hover {
         transform: scale(1.2);
+      }
+      &ACC {
+        background-image: url("../images/codepen-ACC.svg");
       }
     }
     &-access {
@@ -88,6 +103,12 @@
       background-repeat: no-repeat;
       width: 15px;
       margin: 0px 5px;
+      &ACC {
+        background-image: url(../images/cat-ACC.svg);
+      }
+    }
+    &ACC {
+      color: #334238;
     }
   }
 }
