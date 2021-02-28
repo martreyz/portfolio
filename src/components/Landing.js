@@ -6,6 +6,12 @@ const Landing = (props) => {
   return (
     <main className="landing">
       <section className="landing__container">
+        <img
+          className="landing__photo"
+          src={photo}
+          alt="Marta Rey"
+          title="Marta Rey"
+        />
         <h1
           className={
             props.accesible
@@ -14,14 +20,9 @@ const Landing = (props) => {
           }
         >
           {" "}
-          {props.translated ? "Hello world!" : "¡Hola mundo!"}{" "}
+          {props.translated ? "Hi!" : "¡Hola!"}{" "}
         </h1>
-        <img
-          className="landing__photo"
-          src={photo}
-          alt="Marta Rey"
-          title="Marta Rey"
-        />
+
         <p className="landing__text">
           <span
             className={
@@ -44,81 +45,9 @@ const Landing = (props) => {
               : "desarrolladora front end jr"}
           </span>
         </p>
-        <p
-          className={
-            props.accesible
-              ? "landing__aboutText landing__aboutTextACC"
-              : "landing__aboutText"
-          }
-        >
-          <span className="about__parr">
-            {props.translated ? "Graduated in" : "Graduada en"}{" "}
-            <strong>{props.translated ? "Tourism" : "Turismo"}</strong>{" "}
-            {props.translated
-              ? "and passionate about knowing the world and its different"
-              : "y apasionada por conocer mundo y sus diferentes"}{" "}
-            <strong>
-              {props.translated ? "cultures and people" : "culturas y personas"}
-            </strong>
-            .
-          </span>
-          <span className="about__parr">
-            {props.translated ? "My" : "Mi"}{" "}
-            <strong>
-              {props.translated ? "perseverance" : "perseverancia"}
-            </strong>{" "}
-            {props.translated ? "and " : "y "}
-            <strong>
-              {props.translated
-                ? "ease of learning"
-                : "facilidad de aprendizaje"}
-            </strong>{" "}
-            {props.translated
-              ? " have been a key in my professional career."
-              : "han sido clave en mi trayectoria profesional."}
-          </span>
-          <span className="about__parr">
-            {props.translated
-              ? "I have been a team coordinator in IT projects, which has given me experience in"
-              : "He sido coordinadora de equipo en proyectos IT, lo que me ha aportado experiencia en"}{" "}
-            <strong>
-              {props.translated
-                ? "problem resolution"
-                : "resolución de problemas"}
-            </strong>
-            ,{" "}
-            <strong>
-              {props.translated ? "organization" : "organización"}
-            </strong>
-            , <strong>{props.translated ? "empathy" : "empatía"}</strong>{" "}
-            {props.translated ? "and" : "y"}
-            <strong>
-              {" "}
-              {props.translated ? "team motivation" : "motivación de equipos"}
-            </strong>
-            .
-          </span>
-          <span className="about__parr">
-            {props.translated ? "I reinvent myself in" : "Me reinvento en"}{" "}
-            <strong>
-              {props.translated
-                ? "front end development"
-                : "desarrollo front end"}
-            </strong>
-            {props.translated ? ", which I find " : ", que me resulta "}
-            <strong>
-              {props.translated
-                ? "exciting, dynamic and infinite"
-                : "apasionante, dinámico e infinito"}
-            </strong>
-            {props.translated
-              ? ", and where I can apply the skills that I have acquired in my professional career."
-              : ", y donde puedo aplicar las habilidades que he adquirido en mi carrera profesional."}
-          </span>
-        </p>
       </section>
-      <nav>
-        <ul>
+      <nav className="nav__menu">
+        <ul className="menu">
           <li
             className={
               props.accesible
@@ -152,7 +81,7 @@ const Landing = (props) => {
                   : "landingLink__menu-contact"
               }
             >
-              {props.translated ? "Contact" : "Contacto"}
+              {props.translated ? "About me" : "Sobre mí"}
             </Link>
           </li>
         </ul>

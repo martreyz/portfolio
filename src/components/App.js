@@ -7,6 +7,7 @@ import Contact from "./Contact";
 import { Route } from "react-router-dom";
 import ProjectsData from "../data/projects.json";
 import ProjectsDataEN from "../data/projectsEn.json";
+import Trajectory from "../data/trajectory.json";
 
 import { useState } from "react";
 
@@ -16,6 +17,7 @@ function App() {
   const [counter, setCounter] = useState(0);
   const [translated, setTranslated] = useState(false);
   const [accesible, setAccesible] = useState(false);
+  const [trajectory] = useState(Trajectory);
 
   const handleButtonClick = (clicked) => {
     if (clicked === "next") {
@@ -64,7 +66,11 @@ function App() {
         />
       </Route>
       <Route exact path="/contact">
-        <Contact accesible={accesible} translated={translated} />
+        <Contact
+          accesible={accesible}
+          translated={translated}
+          trajectory={trajectory}
+        />
       </Route>
       <Footer accesible={accesible} translated={translated} />
     </>

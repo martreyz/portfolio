@@ -1,8 +1,10 @@
+@import "../stylesheets/variables.scss";
+
 .footer {
   display: flex;
   justify-content: space-between;
   padding: 5px 20px;
-  border-top: 1.3px solid #87a0a050;
+  border-top: 1.3px solid $color-secondary;
   height: 30px;
   width: 100%;
   position: absolute;
@@ -94,7 +96,7 @@
     }
   }
   &__small {
-    color: #87a0a0;
+    color: $color-secondary;
     font-size: 15px;
     display: flex;
     line-height: 1.2;

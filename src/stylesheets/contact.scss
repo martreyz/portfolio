@@ -1,95 +1,63 @@
+@import "./variables.scss";
+
 .contact {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 100px 15px 200px 15px;
-  @media all and (min-width: 768px) {
-    padding: 0px 10% 30px 10%;
-  }
+  width: 100vw;
   &__section {
-    width: 90%;
-    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    @media all and (min-width: 768px) {
-      width: 70%;
-    }
-    @media all and (min-width: 1054px) {
-      width: 50%;
-    }
+    background-color: $color-tertiary;
+    padding: 15px;
+    width: 25%;
+    position: absolute;
+    right: 30px;
+    bottom: 50px;
+    z-index: 99;
+    border-radius: 10px;
   }
   &__title {
-    color: #bfd1c5;
+    color: $color-secondary;
     font-weight: 900;
-    font-size: 60px;
+    font-size: 6em;
+    line-height: 1.4;
     align-self: flex-start;
-    @media all and (min-width: 768px) {
-      font-size: 80px;
-      line-height: 1.4;
-      align-self: flex-start;
-    }
+    width: 100%;
+    z-index: 99;
+    margin-left: 10%;
     &ACC {
       color: #37493d;
     }
   }
   &__subtitle {
-    color: #87a0a0;
+    color: $color-secondary;
     font-weight: 700;
-    font-size: 30px;
     display: block;
-    align-self: flex-end;
-    @media all and (min-width: 768px) {
-      line-height: 1.5;
-      align-self: flex-start;
-      margin-left: 20px;
-    }
+    line-height: 1.5;
+    font-size: 2em;
+    text-align: right;
+    margin-bottom: 10px;
+
     &ACC {
       color: #537070;
     }
   }
   &__text {
-    color: #778b8b;
+    color: $color-secondary;
     font-weight: 600;
-    font-size: 18px;
-    text-align: right;
-    margin-bottom: 30px;
-    @media all and (min-width: 768px) {
-      margin-bottom: 10px;
-      display: block;
-      line-height: 1;
-      width: 70%;
-      align-self: flex-end;
-    }
+    display: block;
+    line-height: 1;
+    margin-bottom: 20px;
     &ACC {
       color: #506464;
     }
   }
   &__list {
-    align-self: flex-start;
     list-style-type: none;
-    color: #465559;
-    width: 50%;
+    color: $color-secondary;
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
-    align-items: flex-start;
-    @media all and (min-width: 768px) {
-      width: 110%;
-      margin-left: -4%;
-      border-radius: 45px;
-      flex-direction: row;
-      height: 80px;
-      padding: 10px;
-    }
-    @media all and (min-width: 1054px) {
-      margin-left: 5%;
-      width: 90%;
-    }
+    width: 100%;
+    flex-direction: row;
     &ACC {
       color: #506464;
     }
@@ -123,35 +91,22 @@
   }
   &__logoImg {
     width: 30px;
-    height: 20px;
-    @media all and (min-width: 768px) {
-      width: 50px;
-      height: 40px;
-      transition: all linear 2s;
-    }
+    height: 40px;
+    transition: all linear 2s;
     &:hover {
       transform: rotateY(180deg);
     }
   }
   &__image {
-    width: 150px;
-    align-self: flex-end;
-    position: absolute;
-    bottom: -2%;
-    @media all and (min-width: 768px) {
-      width: 200px;
-      bottom: initial;
-      top: -20%;
-    }
-    @media all and (min-width: 1054px) {
-      top: -10%;
-    }
+    width: 180px;
+    grid-column: 2/3;
+    grid-row: 1/4;
   }
 }
 
 .contact__menuList-access {
   text-decoration: none;
-  color: #4a524d;
+  color: $color-secondary;
   display: block;
   text-align: center;
   display: flex;
@@ -169,53 +124,229 @@
 }
 
 .contact__menu-home {
+  list-style-type: none;
   text-transform: uppercase;
-  font-size: 18px;
-  transition: all ease 1s;
   position: absolute;
-  bottom: 60px;
-  &::after {
-    background-image: url("../images/angle-right-solid.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: -10px;
-    width: 40px;
-    height: 50px;
-    content: "";
-    transform: scaleX(0.8);
-  }
-  @media all and (min-width: 768px) {
-    font-size: 20px;
-    right: 70px;
-    bottom: initial;
-    &::after {
-      top: -24px;
-      width: 40px;
-      height: 100px;
-    }
-  }
+  right: 30px;
+  top: 41vh;
+  transition: all ease 1s;
+  align-self: center;
+  z-index: 99;
   &:hover {
     transform: scale(1.2);
-    color: #bfd1c5;
-  }
-  &ACC {
-    &::after {
-      background-image: url("../images/angle-right-ACC.svg");
-    }
   }
 }
 
 .contactLink__menu-home {
-  color: white;
   text-decoration: none;
-  background-color: rgba(191, 209, 197, 0.5);
-  border-radius: 15px;
-  padding: 5px;
-  @media all and (min-width: 768px) {
+  color: $color-secondary;
+  font-weight: 700;
+  font-size: 25px;
+  background-image: url("../images/long-arrow-alt-right-solid.svg");
+  background-repeat: no-repeat;
+  background-position-x: 43px;
+  background-position-y: 25px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  background-size: 27px;
+}
+
+.contact_trajectory {
+  width: 90%;
+  padding: 20px 0px 20px 15%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &Container {
+    display: flex;
+  }
+  &Item {
+    list-style-type: none;
+    color: $color-primary;
+    transition: all ease 1s;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.2);
+      filter: brightness(120%);
+    }
+  }
+  &Content {
+    width: 62%;
+    height: auto;
+    border: 10px solid $color-tertiary;
+    font-size: 20px;
+    background-color: #b0d9cd;
+    color: #836067;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+  }
+  &University {
+    background-image: url("../images/hexagon.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 80px;
+    height: 70px;
     padding: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    margin-top: -35px;
   }
-  &ACC {
-    background-color: rgba(51, 66, 56, 0.5);
+  &NH {
+    background-image: url("../images/hexagon2.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 80px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-weight: bold;
+    align-self: flex-end;
+    justify-content: center;
+    text-align: center;
+    margin-left: -10px;
   }
+  &EurostarsPraga {
+    background-image: url("../images/hexagon2 copy.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 80px;
+    height: 70px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    margin-top: -35px;
+    margin-left: -10px;
+  }
+  &EurostarsMadrid {
+    background-image: url("../images/hexagon.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 80px;
+    height: 70px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    align-self: flex-end;
+    justify-content: center;
+    text-align: center;
+    margin-top: -35px;
+    margin-left: -10px;
+  }
+  &EurostarsMadridRevenue {
+    background-image: url("../images/hexagon2.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 80px;
+    height: 70px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-align: center;
+    margin-top: -35px;
+    margin-left: -10px;
+  }
+  &EurostarsMadridTMS {
+    background-image: url("../images/hexagon2 copy.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 80px;
+    height: 70px;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    font-weight: bold;
+    align-self: flex-end;
+    justify-content: center;
+    text-align: center;
+    margin-top: -35px;
+    margin-left: -10px;
+  }
+  &GoldcarMadrid {
+    background-image: url("../images/hexagon.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 80px;
+    height: 70px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+    margin-top: -35px;
+    margin-left: -10px;
+  }
+  &Adalab {
+    background-image: url("../images/hexagon2.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 80px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-weight: bold;
+    align-self: flex-end;
+    justify-content: center;
+    text-align: center;
+    margin-top: -35px;
+    margin-left: -10px;
+  }
+  &postAdalab {
+    background-image: url("../images/hexagon2 copy.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 80px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-weight: bold;
+    justify-content: center;
+    text-align: center;
+    margin-top: -35px;
+    margin-left: -10px;
+  }
+  &Perspectives {
+    background-image: url("../images/hexagon.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 80px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-weight: bold;
+    align-self: flex-end;
+    justify-content: center;
+    text-align: center;
+    margin-top: -35px;
+    margin-left: -10px;
+  }
+}
+
+.bg_yellow {
+  background-color: #f2e0d5;
+}
+
+.bg_red {
+  background-color: #a65b698e;
+  color: #f2e0d5;
+}
+
+.item_hovered {
+  transform: scale(1.2);
+  filter: brightness(120%);
 }

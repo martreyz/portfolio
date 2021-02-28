@@ -1,250 +1,117 @@
+@import "./variables.scss";
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
 .landing {
   height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 70px 15px 100px 15px;
-  @media all and (min-width: 768px) {
-    flex-direction: row;
-    padding: 0px 180px 30px 180px;
-  }
-
   &__container {
-    width: 95%;
-    @media all and (min-width: 768px) {
-      position: relative;
-      padding-top: 90px;
-      width: 80%;
-    }
-    @media all and (min-width: 1054px) {
-      width: 60%;
-    }
+    height: 60vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
   }
   &__photo {
-    width: 150px;
-    border-radius: 75px;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    @media all and (min-width: 768px) {
-      right: 0px;
-      top: 90px;
-    }
-    @media all and (min-width: 918px) {
-      top: -10px;
-    }
+    border-radius: 30%;
+    width: 40%;
+    opacity: 0.8;
+  }
+  &__text {
+    margin-top: -80px;
+    margin-left: 60px;
+    z-index: 99;
   }
   &__title {
-    color: #bfd1c5;
-    font-weight: 900;
-    font-size: 60px;
-    max-width: 50%;
-    line-height: 1;
-    @media all and (min-width: 768px) {
-      font-size: 80px;
-      line-height: 1.4;
-      max-width: 70%;
-      font-size: 75px;
-    }
-    @media all and (min-width: 1054px) {
-      max-width: 80%;
-    }
+    color: $color-secondary;
+    line-height: 1.4;
+    font-size: 16em;
+    margin-top: -80px;
+    z-index: 99;
   }
+
   &__textOne {
-    color: #87a0a0;
+    color: $color-secondary;
     font-weight: 700;
-    font-size: 30px;
-    width: 50%;
-    margin-left: 20px;
-    @media all and (min-width: 768px) {
-      width: auto;
-      margin-left: 0px;
-      display: block;
-      line-height: 1.3;
-      margin-right: 180px;
-      text-align: right;
-    }
+    line-height: 1.3;
+    display: block;
+    font-size: 5em;
+    width: 150%;
     &ACC {
       color: #537070;
     }
   }
   &__textTwo {
-    color: #778b8b;
+    color: $color-secondary;
     font-weight: 700;
-    font-size: 30px;
-    display: block;
     line-height: 0.4;
-    margin-left: 35px;
-    @media all and (min-width: 768px) {
-      margin-left: 0px;
-      line-height: 0.4;
-      text-align: right;
-      margin-bottom: 30px;
-    }
+    display: block;
+    font-size: 3em;
+    margin-left: 20px;
+    z-index: 99;
     &ACC {
       color: #384d4d;
-    }
-  }
-  &__aboutText {
-    font-weight: 400;
-    font-size: 16px;
-    color: #87a0a0;
-    margin-top: 30px;
-    @media all and (min-width: 768px) {
-      margin-top: 0px;
-      width: 120%;
-      margin-left: -5%;
-      font-size: 19px;
-    }
-    &ACC {
-      color: #506464;
     }
   }
   &__menu-projects {
     list-style-type: none;
     text-transform: uppercase;
-    font-size: 18px;
+    background-image: url("../images/long-arrow-alt-right-solid.svg");
+    background-repeat: no-repeat;
+    background-size: 27px;
+    background-position: 85px;
+    padding-right: 30px;
     transition: all ease 1s;
-    position: absolute;
-    right: 50px;
-    bottom: 60px;
-    &::after {
-      background-image: url("../images/angle-right-solid.svg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      position: absolute;
-      top: -10px;
-      width: 40px;
-      height: 50px;
-      content: "";
-      transform: scaleX(0.8);
-    }
-    &ACC {
-      &::after {
-        background-image: url("../images/angle-right-ACC.svg");
-      }
-    }
-    @media all and (min-width: 768px) {
-      list-style-type: none;
-      text-transform: uppercase;
-      font-size: 20px;
-      transition: all ease 1s;
-      position: absolute;
-      right: 70px;
-      bottom: initial;
-      &:hover {
-        transform: scale(1.2);
-        color: #bfd1c5;
-      }
-      &::after {
-        top: -24px;
-        width: 40px;
-        height: 100px;
-        content: "";
-        transform: scaleX(0.8);
-      }
-    }
-    &ACC {
-      &::after {
-        background-image: url("../images/angle-right-ACC.svg");
-      }
+    &:hover {
+      transform: scale(1.2);
     }
   }
   &__menu-contact {
     list-style-type: none;
     text-transform: uppercase;
-    font-size: 18px;
+    background-image: url("../images/long-arrow-alt-left-solid.svg");
+    background-repeat: no-repeat;
+    background-size: 27px;
+    background-position: 6px;
+    padding-left: 30px;
     transition: all ease 1s;
-    position: absolute;
-    left: 50px;
-    bottom: 60px;
-    &::before {
-      background-image: url("../images/angle-left-solid.svg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      position: absolute;
-      top: -10px;
-      left: -27px;
-      width: 40px;
-      height: 50px;
-      content: "";
-      transform: scaleX(0.8);
-    }
-    &ACC {
-      &::before {
-        background-image: url("../images/angle-left-ACC.svg");
-      }
-    }
-    @media all and (min-width: 768px) {
-      list-style-type: none;
-      text-transform: uppercase;
-      font-size: 20px;
-      transition: all ease 1s;
-      position: absolute;
-      left: 70px;
-      bottom: initial;
-      &:hover {
-        transform: scale(1.2);
-        color: #bfd1c5;
-      }
-      &::before {
-        background-image: url("../images/angle-left-solid.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        position: absolute;
-        top: -24px;
-        left: -40px;
-        width: 40px;
-        height: 100px;
-        content: "";
-        transform: scaleX(0.8);
-      }
-    }
-    &ACC {
-      &::before {
-        background-image: url("../images/angle-left-ACC.svg");
-      }
+    &:hover {
+      transform: scale(1.2);
     }
   }
 }
 
-.about__parr {
-  @media all and (min-width: 768px) {
-    display: block;
-    line-height: 1.3;
-    margin-bottom: 10px;
-  }
-}
-
-.landingLink__menu-projects {
-  color: white;
-  text-decoration: none;
-  background-color: rgba(191, 209, 197, 0.5);
-  border-radius: 15px;
-  padding: 5px;
-  @media all and (min-width: 768px) {
-    padding: 10px;
-  }
-  &ACC {
-    background-color: rgba(51, 66, 56, 0.5);
-  }
-}
-
+.landingLink__menu-projects,
 .landingLink__menu-contact {
-  color: white;
   text-decoration: none;
-  background-color: rgba(191, 209, 197, 0.5);
-  border-radius: 15px;
-  padding: 5px;
-  @media all and (min-width: 768px) {
-    padding: 10px;
-  }
-  &ACC {
-    background-color: rgba(51, 66, 56, 0.5);
-  }
+  color: $color-secondary;
+  font-weight: 700;
+  font-size: 25px;
 }
 
 .landing__titleACC {
   color: #37493d;
+}
+
+.nav__menu {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu {
+  width: 97%;
+  height: 80px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
 }

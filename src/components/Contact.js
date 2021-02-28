@@ -1,28 +1,189 @@
 import "../stylesheets/contact.scss";
-import Illustration from "../images/IMG_0566.PNG";
 import { Link } from "react-router-dom";
-import Github from "../images/github-white.svg";
-import Linkedin from "../images/linkedin-white.svg";
-import Twitter from "../images/twitter-white.svg";
-import Mail from "../images/envelope-white.svg";
+import { useEffect } from "react";
+import Github from "../images/github-alt-brands.svg";
+import Linkedin from "../images/linkedin-in-brands.svg";
+import Twitter from "../images/twitter-brands.svg";
+import Mail from "../images/envelope-solid.svg";
 import GithubACC from "../images/github-ACC.svg";
 import LinkedinACC from "../images/linkedin-ACC.svg";
 import TwitterACC from "../images/twitter-ACC.svg";
 import MailACC from "../images/envelope-ACC.svg";
 
 const Contact = (props) => {
+  useEffect(() => {
+    const trajectoryArray = document.querySelectorAll(
+      ".contact_trajectoryItem"
+    );
+
+    const trajectoryContent = document.querySelector(
+      ".contact_trajectoryContent"
+    );
+
+    let isHovered = false;
+    let counter = 1;
+
+    const showTrajectoryContentOnClick = (ev) => {
+      if (trajectoryArray[counter - 1]) {
+        trajectoryArray[counter - 1].classList.remove("item_hovered");
+      }
+
+      const infoToShow = props.trajectory[ev.currentTarget.id];
+      trajectoryContent.innerHTML = infoToShow;
+      if (
+        ev.currentTarget.id === "0" ||
+        parseInt(ev.currentTarget.id) % 3 === 0
+      ) {
+        trajectoryContent.classList.add("bg_yellow");
+        trajectoryContent.classList.remove("bg_red");
+      } else if (
+        ev.currentTarget.id === "1" ||
+        (parseInt(ev.currentTarget.id) - 1) % 3 === 0
+      ) {
+        trajectoryContent.classList.add("bg_red");
+        trajectoryContent.classList.remove("bg_yellow");
+      } else {
+        trajectoryContent.classList.remove("bg_red");
+        trajectoryContent.classList.remove("bg_yellow");
+      }
+    };
+
+    const showTrajectoryContentOnHover = (ev) => {
+      isHovered = true;
+      if (trajectoryArray[counter - 1]) {
+        trajectoryArray[counter - 1].classList.remove("item_hovered");
+      }
+
+      const infoToShow = props.trajectory[ev.currentTarget.id];
+      trajectoryContent.innerHTML = infoToShow;
+      if (
+        ev.currentTarget.id === "0" ||
+        parseInt(ev.currentTarget.id) % 3 === 0
+      ) {
+        trajectoryContent.classList.add("bg_yellow");
+        trajectoryContent.classList.remove("bg_red");
+      } else if (
+        ev.currentTarget.id === "1" ||
+        (parseInt(ev.currentTarget.id) - 1) % 3 === 0
+      ) {
+        trajectoryContent.classList.add("bg_red");
+        trajectoryContent.classList.remove("bg_yellow");
+      } else {
+        trajectoryContent.classList.remove("bg_red");
+        trajectoryContent.classList.remove("bg_yellow");
+      }
+    };
+
+    for (let i = 0; i < trajectoryArray.length; i++) {
+      trajectoryArray[i].addEventListener(
+        "mouseover",
+        showTrajectoryContentOnHover
+      );
+      trajectoryArray[i].addEventListener(
+        "click",
+        showTrajectoryContentOnClick
+      );
+    }
+
+    const changeHover = () => {
+      if (!isHovered) {
+        if (counter !== 9) {
+          trajectoryArray[counter].classList.add("item_hovered");
+          if (counter !== 0) {
+            trajectoryArray[counter - 1].classList.remove("item_hovered");
+          } else {
+            trajectoryArray[9].classList.remove("item_hovered");
+          }
+          trajectoryArray[counter].click();
+          counter++;
+        } else {
+          trajectoryArray[counter].classList.add("item_hovered");
+          trajectoryArray[counter - 1].classList.remove("item_hovered");
+          trajectoryArray[counter].click();
+          counter = 0;
+        }
+      }
+    };
+
+    setInterval(changeHover, 8000);
+  }, []);
+
   return (
     <main className="contact">
+      <h1
+        className={
+          props.accesible
+            ? "contact__title contact__titleACC"
+            : "contact__title"
+        }
+      >
+        {props.translated ? "About me:" : "Sobre mí:"}
+      </h1>
+      <section className="contact_trajectory">
+        <ul className="contact_trajectoryContainer">
+          <li
+            id="0"
+            className="contact_trajectoryItem item_hovered contact_trajectoryUniversity"
+          >
+            2008
+          </li>
+          <li id="1" className="contact_trajectoryItem contact_trajectoryNH">
+            2010
+          </li>
+          <li
+            id="2"
+            className="contact_trajectoryItem contact_trajectoryEurostarsPraga"
+          >
+            2011
+          </li>
+          <li
+            id="3"
+            className="contact_trajectoryItem contact_trajectoryEurostarsMadrid"
+          >
+            2013
+          </li>
+          <li
+            id="4"
+            className="contact_trajectoryItem contact_trajectoryEurostarsMadridRevenue"
+          >
+            2015
+          </li>
+          <li
+            id="5"
+            className="contact_trajectoryItem contact_trajectoryEurostarsMadridTMS"
+          >
+            2016
+          </li>
+          <li
+            id="6"
+            className="contact_trajectoryItem contact_trajectoryGoldcarMadrid"
+          >
+            2018
+          </li>
+          <li
+            id="7"
+            className="contact_trajectoryItem contact_trajectoryAdalab"
+          >
+            2020
+          </li>
+          <li
+            id="8"
+            className="contact_trajectoryItem contact_trajectorypostAdalab"
+          >
+            2021
+          </li>
+          <li
+            id="9"
+            className="contact_trajectoryItem contact_trajectoryPerspectives"
+          >
+            ...
+          </li>
+        </ul>
+        <p className="contact_trajectoryContent bg_yellow">
+          {props.trajectory[0]}{" "}
+        </p>
+      </section>
       <section className="contact__section">
-        <h1
-          className={
-            props.accesible
-              ? "contact__title contact__titleACC"
-              : "contact__title"
-          }
-        >
-          {props.translated ? "Contact" : "Contacto"}
-        </h1>
         <h2
           className={
             props.accesible
@@ -117,12 +278,6 @@ const Contact = (props) => {
             </a>
           </li>
         </ul>
-        <img
-          className="contact__image"
-          src={Illustration}
-          title="martreyz illustration"
-          alt="Selfillustration martreyz"
-        />
       </section>
       <nav
         className={
