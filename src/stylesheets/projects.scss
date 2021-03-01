@@ -1,228 +1,259 @@
+@import "./variables.scss";
+
 .projects {
-  padding: 15px 15px 150px 15px;
+  padding: 0px 30px 40px 30px;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @media all and (min-width: 768px) {
-    padding: 0px 180px 30px 180px;
-  }
+  width: 100%;
+  display: grid;
+  grid-template-rows: 20% 60% 20%;
+  grid-template-columns: 40% 60%;
   &__container {
     display: flex;
-    height: 100%;
     flex-direction: column;
     align-items: center;
-    @media all and (min-width: 768px) {
-      display: block;
-      width: 80%;
-    }
-    @media all and (min-width: 1054px) {
-      width: 60%;
+    width: 100%;
+    height: 55vh;
+    justify-content: flex-start;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    &GITHUB {
       display: flex;
-      flex-direction: column;
+      width: 100%;
+      justify-content: space-between;
+      height: 100%;
       align-items: center;
-      justify-content: center;
+    }
+    &CODEPEN {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      height: 100%;
+      align-items: center;
+      &-one {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        background-color: $color-neutral-lowOpacity;
+        padding: 20px;
+        box-shadow: 0px 0px 50px 0px $color-tertiary-dark;
+        border-radius: 10%;
+        transform: scale(0.6);
+        transition: all ease 1s;
+        cursor: pointer;
+        &:hover {
+          transform: scale(0.7);
+        }
+      }
+      &-three {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        background-color: $color-neutral-lowOpacity;
+        padding: 20px;
+        box-shadow: 0px 0px 50px 0px $color-tertiary-dark;
+        border-radius: 10%;
+        transform: scale(0.6);
+        transition: all ease 1s;
+        cursor: pointer;
+        &:hover {
+          transform: scale(0.7);
+        }
+      }
+      &-two {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        background-color: $color-neutral-lowOpacity;
+        padding: 20px;
+        box-shadow: 0px 0px 50px 0px $color-tertiary-dark;
+        border-radius: 10%;
+      }
     }
   }
   &__title {
-    color: #bfd1c5;
-    font-weight: 900;
-    font-size: 60px;
-    align-self: flex-start;
-    text-align: center;
-    @media all and (min-width: 768px) {
-      align-self: unset;
-      font-size: 80px;
-      line-height: 1.4;
-      margin: 0px 0px 40px -50%;
-    }
+    color: $color-secondary;
+    font-size: 6em;
+    margin-left: 5%;
+    margin-top: 3%;
+    width: 100%;
+    grid-row: 1/2;
     &ACC {
       color: #37493d;
     }
   }
-  &__previewImage {
-    width: 100%;
-    height: 35%;
-    background-image: url("../images/preview.png");
-    background-size: cover;
-    border-radius: 5px;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    z-index: 10;
-    margin-bottom: 10px;
-    filter: grayscale(80%);
-    @media all and (min-width: 768px) {
-      height: 45%;
-      margin-bottom: 0px;
-      width: 96%;
-    }
-    @media all and (min-width: 934px) {
-      position: absolute;
-      top: 10px;
-      z-index: 10;
-      height: 25%;
-      transition: all ease-out 1s;
-    }
+}
+
+.projectG {
+  object-fit: cover;
+  &__containerGITHUB-one {
+    width: 45%;
+    background-color: $color-neutral-lowOpacity;
+    padding: 10px;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 50px 0px $color-tertiary-dark;
+    border-radius: 10%;
+    transform: scale(0.6);
+    cursor: pointer;
+    transition: all ease 1s;
     &:hover {
-      @media all and (min-width: 934px) {
-        filter: none;
-        height: 94%;
-        width: 96%;
+      transform: scale(0.7);
+    }
+  }
+  &__containerGITHUB-three {
+    width: 45%;
+    background-color: $color-neutral-lowOpacity;
+    padding: 10px;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 50px 0px $color-tertiary-dark;
+    border-radius: 10%;
+    transform: scale(0.6);
+    cursor: pointer;
+    transition: all ease 1s;
+    &:hover {
+      transform: scale(0.7);
+    }
+  }
+  &__containerGITHUB-two {
+    width: 75%;
+    background-color: $color-neutral-lowOpacity;
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 0px 50px 0px $color-tertiary-dark;
+    border-radius: 10%;
+    z-index: 99;
+  }
+  &_one {
+    &Title {
+      font-size: 2em;
+      color: $color-tertiary-dark;
+    }
+    &Nav {
+      display: none;
+    }
+    &Text {
+      display: none;
+    }
+  }
+  &_three {
+    &Title {
+      font-size: 2em;
+      text-align: center;
+      color: $color-tertiary-dark;
+    }
+    &Nav {
+      display: none;
+    }
+    &Text {
+      display: none;
+    }
+  }
+  &_two {
+    &Title {
+      font-size: 2em;
+      text-align: center;
+      color: $color-secondary-fullOpacity;
+    }
+    &Text {
+      color: $color-secondary-fullOpacity;
+      font-size: 1.4em;
+    }
+    &Nav {
+      width: 30%;
+      display: flex;
+      justify-content: center;
+      margin: 10px 0px;
+      &RepoIcon {
+        background-image: url("../images/code-solid.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        text-decoration: none;
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+        transition: all ease 1s;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+      &DemoIcon {
+        background-image: url("../images/laptop-solid.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        text-decoration: none;
+        width: 25px;
+        height: 25px;
+        transition: all ease 1s;
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
+    &Text {
+      width: 90%;
+    }
   }
-  &__decoration {
+  &_oneImg {
+    height: 30%;
     width: 90%;
-    height: 350px;
-    background-color: #ebcaca5b;
-    padding: 10px;
-    position: relative;
-    @media all and (min-width: 768px) {
-      width: 120%;
-      height: 70%;
-      padding: 10px;
-      border-radius: 5px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      right: -20px;
-      flex-wrap: nowrap;
-      box-sizing: border-box;
-    }
-    @media all and (min-width: 934px) {
-      padding: 25% 10px 10px 10px;
-      width: 90%;
-      right: -50px;
-      height: auto;
-    }
+    object-fit: cover;
+    object-position: top;
+    flex-grow: 1;
+    margin-bottom: 10px;
   }
-  &__previewTitle {
-    color: #87a0a0;
-    font-weight: 600;
-    @media all and (min-width: 768px) {
-      font-size: 45px;
-      line-height: 1.2;
-      text-transform: uppercase;
-      z-index: 9;
-      margin-bottom: 10px;
-    }
-    &ACC {
-      color: #364a4e;
-    }
+  &_twoImg {
+    height: 150px;
+    width: 90%;
+    object-fit: cover;
+    object-position: top;
   }
-  &__previewDescription {
-    color: #465a5a;
-    font-weight: 400;
-    @media all and (min-width: 768px) {
-      font-size: 18px;
-      width: 90%;
-      margin-bottom: 10px;
-    }
-  }
-  &__previewPrevious {
-    left: 0px;
-    top: 105%;
-    transition: all ease 1s;
-    outline: none;
-    background-image: url("../images/arrow-alt-circle-left-solid.svg");
-    background-repeat: no-repeat;
-    position: absolute;
-    background-color: transparent;
-    border: none;
-    width: 30px;
-    height: 30px;
-    @media all and (min-width: 768px) {
-      left: -45px;
-      top: 45%;
-    }
-    &:hover {
-      transform: scale(1.2);
-      filter: brightness(130%);
-    }
-    &ACC {
-      background-image: url("../images/arrow-circleLeft-ACC.svg");
-    }
-  }
-  &__previewNext {
-    transition: all ease 1s;
-    outline: none;
-    background-image: url("../images/arrow-alt-circle-right-solid.svg");
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    background-color: transparent;
-    border: none;
-    right: 0px;
-    top: 105%;
-    @media all and (min-width: 768px) {
-      right: -45px;
-      top: 45%;
-    }
-    &:hover {
-      transform: scale(1.2);
-      filter: brightness(130%);
-    }
-    &ACC {
-      background-image: url("../images/arrow-circleRight-ACC.svg");
-    }
+  &_threeImg {
+    height: 30%;
+    width: 90%;
+    object-fit: cover;
+    object-position: top;
+    flex-grow: 1;
+    margin-bottom: 10px;
   }
 }
 
 .projects__menu-home {
   list-style-type: none;
   text-transform: uppercase;
-  font-size: 18px;
+  background-image: url("../images/long-arrow-alt-left-solid.svg");
+  background-repeat: no-repeat;
+  background-size: 27px;
+  background-position-x: 6px;
+  background-position-y: 25px;
+  height: 50px;
+  padding-left: 30px;
   transition: all ease 1s;
   position: absolute;
-  bottom: 70px;
-  &::before {
-    background-image: url("../images/angle-left-solid.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: -10px;
-    left: -30px;
-    width: 40px;
-    height: 50px;
-    content: "";
-    transform: scaleX(0.8);
-  }
-  &ACC {
-    &::before {
-      background-image: url("../images/angle-left-ACC.svg");
-    }
-  }
-  @media all and (min-width: 768px) {
-    font-size: 20px;
-    left: 70px;
-    bottom: initial;
-    &:hover {
-      transform: scale(1.2);
-      color: #bfd1c5;
-    }
-    &::before {
-      top: -24px;
-      left: -40px;
-      width: 40px;
-      height: 100px;
-    }
+  left: 30px;
+  top: 45vh;
+  &:hover {
+    transform: scale(1.2);
   }
 }
 
 .projectsLink__menu-home {
-  color: white;
   text-decoration: none;
-  background-color: rgba(191, 209, 197, 0.5);
-  border-radius: 15px;
-  padding: 5px;
-  @media all and (min-width: 768px) {
-    padding: 10px;
-  }
-  &ACC {
-    background-color: rgba(51, 66, 56, 0.5);
-  }
+  color: $color-secondary;
+  font-weight: 700;
+  font-size: 25px;
 }
 
 .projects__previewMenuLink {
@@ -272,4 +303,162 @@
     display: flex;
     align-items: center;
   }
+}
+
+@keyframes hexagonRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-1028deg);
+  }
+}
+
+@keyframes hexagonMovement {
+  0% {
+    flex-grow: 1;
+  }
+  100% {
+    flex-grow: 0;
+  }
+}
+
+@keyframes hexagonRotateBack {
+  0% {
+    transform: rotate(-1028deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes hexagonMovementBack {
+  0% {
+    flex-grow: 0;
+  }
+  100% {
+    flex-grow: 1;
+  }
+}
+.projects__containerSelector {
+  width: 60%;
+  border-bottom: dashed 2px $color-tertiary-dark;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  font-size: 1.5em;
+  margin-bottom: 40px;
+  &-hexagonPlayground {
+    flex-grow: 1;
+    margin-bottom: 2px;
+    padding: 0px 60px 0px 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+  }
+  &App {
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+    transition: all ease 1s;
+    color: $color-tertiary-dark;
+    &:active {
+      color: $color-secondary;
+      transform: scale(1.1);
+    }
+    &:hover {
+      color: $color-secondary;
+      transform: scale(1.1);
+    }
+  }
+  &CSS {
+    cursor: pointer;
+    transition: all ease 1s;
+    color: $color-tertiary-dark;
+    &:active {
+      color: $color-secondary;
+      transform: scale(1.1);
+    }
+    &:hover {
+      color: $color-secondary;
+      transform: scale(1.1);
+    }
+  }
+  &-hexagon {
+    background-image: url("../images/hexagon2.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+    align-self: flex-end;
+  }
+}
+
+.selectedByHexagon {
+  color: $color-secondary;
+  transform: scale(1.1);
+}
+
+.toCSS {
+  animation: hexagonRotate 5s ease forwards;
+}
+
+.cointainerToCSS {
+  animation: hexagonMovement 5s ease forwards;
+}
+
+.toApp {
+  animation: hexagonRotateBack 5s ease forwards;
+}
+
+.cointainerToApp {
+  animation: hexagonMovementBack 5s ease forwards;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.projects__stack {
+  height: 100%;
+  width: 80%;
+  margin-left: 5vw;
+  margin-bottom: 5vh;
+  grid-row: 2/4;
+  grid-column: 1/2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  justify-self: flex-end;
+}
+
+.projects__stackTech {
+  background-image: url("../images/hexagon2.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+  color: #f2e0d5;
+  font-size: 1.3em;
+  text-align: center;
+  height: 35vh;
+  width: 55%;
+  align-self: flex-start;
+  padding: 10px;
+}
+
+.projects__stackLang {
+  background-image: url("../images/hexagon2 copy.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+  color: #f2e0d5;
+  font-size: 1.3em;
+  text-align: center;
+  height: 35vh;
+  width: 55%;
+  align-self: flex-end;
+  margin-top: -27%;
+  padding: 10px;
 }

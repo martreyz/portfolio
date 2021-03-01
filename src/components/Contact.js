@@ -120,7 +120,9 @@ const Contact = (props) => {
         {props.translated ? "About me:" : "Sobre mí:"}
       </h1>
       <section className="contact_trajectory">
+        <h2 className="contact_trajectoryTitle">Trayectoria profesional:</h2>
         <ul className="contact_trajectoryContainer">
+          {" "}
           <li
             id="0"
             className="contact_trajectoryItem item_hovered contact_trajectoryUniversity"
@@ -181,6 +183,18 @@ const Contact = (props) => {
         </ul>
         <p className="contact_trajectoryContent bg_yellow">
           {props.trajectory[0]}{" "}
+        </p>
+      </section>
+      <section className="contact__hobbies">
+        <h3 className="contact__hobbiesTitle">Un poco más sobre quién soy:</h3>
+        <p className="contact__hobbiesAbout">
+          Soy gallega pero ya llevo casi 8 años residiendo en Madrid.
+        </p>
+        <p className="contact__hobbiesText">
+          En mis ratos libres, si no estoy programando, probablemente estaré
+          dibujando o tocando el ukelele, aunque en ambos soy autodidacta y aún
+          me queda muchísimo por aprender. Me encantan los animales y convivo
+          con dos gatos, me gusta el café y adoro el invierno.
         </p>
       </section>
       <section className="contact__section">

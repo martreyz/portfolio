@@ -1,5 +1,13 @@
 [
     {
+        "id": 0,
+        "name": "Retro games",
+        "webpage": "https://martreyz.github.io/retro-games/",
+        "repository": "https://github.com/martreyz/retro-games",
+        "preview": "'../images/bodybg.png'",
+        "description": "Proyecto en construcción: Creación de una app web con juegos retro programados en JavaScript. Maquetado con CSS y HTML, interactividad realizada con JavaScript. Además, se utilizaron Git y Github para el control de versiones."
+    },
+    {
         "id": 1,
         "name": "Rick y Morty",
         "webpage": "https://martreyz.github.io/modulo-3-evaluacion-final-martreyz/#/",
@@ -9,34 +17,11 @@
     },
     {
         "id": 2,
-        "name": "<em>y</em>",
-        "webpage": "https://martreyz.github.io/Project-promo-k-module-2-team-1/",
-        "repository": "https://github.com/martreyz/Project-promo-k-module-2-team-1",
-        "preview": "../portfolio/images/emyem.png",
-        "description": "Web App de creación de tarjetas de visita, maquetación responsive, mobile first, utilizando JavaScript, HTML5, CSS3, SASS, Flexbox y CSS Grid. Además se utilizó Gulp para automatización de tareas y Git y GitHub para el control de versiones."
-    },
-    {
-        "id": 3,
         "name": "Gestiona tus series",
         "webpage": "https://martreyz.github.io/modulo-2-evaluacion-final-martreyz/",
         "repository": "https://github.com/martreyz/modulo-2-evaluacion-final-martreyz",
         "preview": "../portfolio/images/preview.png",
         "description": "Aplicación web de gestión de series, utilizando JavaScript, HTML5, CSS3 y SASS. Además se utilizó Gulp para automatización de tareas y Git y GitHub para el control de versiones"
-    },
-    {
-        "id": 4,
-        "name": "Pokedex",
-        "webpage": "https://martreyz.github.io/modulo-3-evaluacion-intermedia-martreyz/",
-        "repository": "https://github.com/martreyz/modulo-3-evaluacion-intermedia-martreyz",
-        "preview": "../portfolio/images/pokedex.png",
-        "description": "Aplicación web de visualización y guardado en favoritos de pokemons (Pokedex), utilizando React, JavaScript, HTML5, CSS3 y SASS. Además se utilizó Gulp para automatización de tareas y Git y GitHub para el control de versiones"
-    },
-    {
-        "id": 5,
-        "name": "Marea Coders",
-        "webpage": "https://martreyz.github.io/project-promo-k-module-1-team-7/",
-        "repository": "https://github.com/martreyz/project-promo-k-module-1-team-7",
-        "preview": "../portfolio/images/mareacoders.png",
-        "description": "Web de presentación y contacto del grupo, maquetación responsive, mobile first, utilizando HTML5, CSS3, SASS, Flexbox y CSS Grid. Además se utilizaron Git y GitHub para el control de versiones."
     }
+
 ]
