@@ -6,7 +6,7 @@
   width: 100%;
   display: grid;
   grid-template-rows: 20% 60% 20%;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 10% 40% 50%;
   &__container {
     display: flex;
     flex-direction: column;
@@ -15,7 +15,7 @@
     height: 55vh;
     justify-content: flex-start;
     grid-row: 2/3;
-    grid-column: 2/3;
+    grid-column: 3/4;
     &GITHUB {
       display: flex;
       width: 100%;
@@ -75,7 +75,7 @@
   }
   &__title {
     color: $color-secondary;
-    font-size: 6em;
+    font-size: 6vw;
     margin-left: 5%;
     margin-top: 3%;
     width: 100%;
@@ -104,7 +104,7 @@
     transition: all ease 1s;
     order: 1;
     & > h3 {
-      font-size: 2em;
+      font-size: 2vw;
       color: $color-tertiary-dark;
     }
     & > nav {
@@ -133,7 +133,7 @@
     transition: all ease 1s;
     order: 3;
     & > h3 {
-      font-size: 2em;
+      font-size: 2vw;
       color: $color-tertiary-dark;
     }
     & > nav {
@@ -150,7 +150,7 @@
     width: 75%;
     height: auto;
     background-color: $color-neutral-lowOpacity;
-    padding: 30px 10px;
+    padding: 3vh 1vw;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -164,23 +164,24 @@
       transform: scale(1);
     }
     & > h3 {
-      font-size: 2em;
+      font-size: 2vw;
       text-align: center;
       color: $color-secondary-fullOpacity;
     }
     & > nav {
       display: none;
       width: 30%;
+      height: 2.5vh;
       display: flex;
       justify-content: center;
-      margin: 10px 0px;
+      margin: 1vh 0px;
       & > a {
         background-image: url("../images/laptop-solid.svg");
         background-repeat: no-repeat;
         background-size: contain;
         text-decoration: none;
-        width: 25px;
-        height: 25px;
+        width: 2.5vw;
+        height: auto;
         transition: all ease 1s;
         &:hover {
           transform: scale(1.1);
@@ -190,9 +191,7 @@
           background-repeat: no-repeat;
           background-size: contain;
           text-decoration: none;
-          width: 25px;
-          height: 25px;
-          margin-right: 5px;
+          width: 2.5vw;
           transition: all ease 1s;
           &:hover {
             transform: scale(1.1);
@@ -202,12 +201,12 @@
     }
     & > p {
       color: $color-secondary-fullOpacity;
-      font-size: 1.4em;
+      font-size: 1.4vw;
       width: 90%;
       display: block;
     }
     & > img {
-      height: 150px;
+      height: 15vh;
       width: 90%;
       object-fit: cover;
       object-position: top;
@@ -263,7 +262,7 @@
     transform: scale(0.7);
   }
   & > h3 {
-    font-size: 2em;
+    font-size: 2vw;
     color: $color-tertiary-dark;
   }
   & > nav {
@@ -300,7 +299,7 @@
     transform: scale(1);
   }
   & > h3 {
-    font-size: 2em;
+    font-size: 2vw;
     text-align: center;
     color: $color-secondary-fullOpacity;
   }
@@ -338,7 +337,7 @@
   }
   & > p {
     color: $color-secondary-fullOpacity;
-    font-size: 1.4em;
+    font-size: 1.4vw;
     width: 90%;
     display: block;
   }
@@ -472,12 +471,12 @@
   display: flex;
   justify-content: flex-start;
   position: relative;
-  font-size: 1.5em;
+  font-size: 1.5vw;
   margin-bottom: 40px;
   &-hexagonPlayground {
     flex-grow: 1;
     margin-bottom: 2px;
-    padding: 0px 60px 0px 1%;
+    padding: 0px 4vw 0px 1vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -515,8 +514,8 @@
     background-image: url("../images/hexagon2.svg");
     background-repeat: no-repeat;
     background-size: contain;
-    width: 25px;
-    height: 25px;
+    width: 2vw;
+    height: 2.5vh;
     align-self: flex-end;
   }
 }
@@ -549,11 +548,11 @@
 
 .projects__stack {
   height: 90%;
-  width: 80%;
+  width: 35vw;
   margin-left: 5vw;
   margin-bottom: 5vh;
   grid-row: 2/4;
-  grid-column: 1/2;
+  grid-column: 2/3;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -566,12 +565,12 @@
   background-size: contain;
   background-position-x: center;
   color: #f2e0d5;
-  font-size: 1.3em;
+  font-size: 1.3vw;
   text-align: center;
   height: 30vh;
   width: 35vh;
   align-self: flex-start;
-  padding: 20px;
+  padding: 2vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -581,7 +580,7 @@
     color: black;
   }
   &Title {
-    font-size: 2rem;
+    font-size: 2vw;
   }
   &Text {
     display: flex;
@@ -592,53 +591,53 @@
     max-width: 80%;
     margin-top: 10px;
     &-itemA {
-      font-size: 1.5rem;
+      font-size: 1.5vw;
       color: $color-primary;
       margin-right: 10px;
       align-self: flex-start;
     }
     &-itemB {
-      font-size: 1.4rem;
+      font-size: 1.4vw;
       color: $color-tertiary-dark;
       margin-right: 10px;
     }
     &-itemC {
-      font-size: 1.4rem;
+      font-size: 1.4vw;
       color: $color-secondary-fullOpacity;
       margin-right: 10px;
       align-self: flex-start;
     }
     &-itemD {
-      font-size: 1.9rem;
+      font-size: 1.9vw;
       color: $color-tertiary-dark;
       margin-right: 10px;
       align-self: flex-end;
     }
     &-itemE {
-      font-size: 1.3rem;
+      font-size: 1.3vw;
       color: $color-secondary-fullOpacity;
       margin-right: 10px;
       align-self: flex-start;
     }
     &-itemF {
-      font-size: 1.9rem;
+      font-size: 1.9vw;
       color: $color-primary;
       margin-right: 10px;
       align-self: flex-end;
     }
     &-itemG {
-      font-size: 1.5rem;
+      font-size: 1.5vw;
       color: $color-secondary-fullOpacity;
       margin-right: 10px;
       align-self: flex-start;
     }
     &-itemH {
-      font-size: 1.9rem;
+      font-size: 1.9vw;
       color: $color-tertiary-dark;
       margin-right: 10px;
     }
     &-itemI {
-      font-size: 1.9rem;
+      font-size: 1.9vw;
       color: $color-primary;
       margin-right: 10px;
     }
@@ -651,13 +650,13 @@
   background-size: contain;
   background-position-x: center;
   color: #f2e0d5;
-  font-size: 1.3em;
+  font-size: 1.3vw;
   text-align: center;
   height: 30vh;
   width: 35vh;
   align-self: flex-end;
-  margin-top: -22%;
-  padding: 20px;
+  margin-top: -10vh;
+  padding: 2vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -667,7 +666,7 @@
     color: black;
   }
   &Title {
-    font-size: 2rem;
+    font-size: 2vw;
   }
   &Text {
     display: flex;
@@ -678,42 +677,42 @@
     max-width: 80%;
     margin-top: 10px;
     &-itemA {
-      font-size: 1.5rem;
+      font-size: 1.5vw;
       color: $color-primary;
       margin-right: 10px;
       align-self: flex-start;
     }
     &-itemB {
-      font-size: 1.4rem;
+      font-size: 1.4vw;
       color: $color-tertiary-dark;
       margin-right: 10px;
     }
     &-itemC {
-      font-size: 1.4rem;
+      font-size: 1.4vw;
       color: $color-secondary-fullOpacity;
       margin-right: 10px;
       align-self: flex-start;
     }
     &-itemD {
-      font-size: 1.9rem;
+      font-size: 1.9vw;
       color: $color-tertiary-dark;
       margin-right: 10px;
       align-self: flex-end;
     }
     &-itemE {
-      font-size: 1.3rem;
+      font-size: 1.3vw;
       color: $color-secondary-fullOpacity;
       margin-right: 10px;
       align-self: flex-start;
     }
     &-itemF {
-      font-size: 1.9rem;
+      font-size: 1.9vw;
       color: $color-primary;
       margin-right: 10px;
       align-self: flex-end;
     }
     &-itemG {
-      font-size: 1.5rem;
+      font-size: 1.5vw;
       color: $color-secondary-fullOpacity;
       margin-right: 10px;
       align-self: flex-start;
