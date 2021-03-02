@@ -13,7 +13,7 @@
     flex-direction: column;
     background-color: $color-tertiary;
     height: fit-content;
-    width: 80%;
+    width: min-content;
     padding: 15px;
     grid-column: 2/3;
     grid-row: 3/4;
@@ -23,7 +23,7 @@
   }
   &__title {
     color: $color-secondary;
-    font-size: 6em;
+    font-size: 6vw;
     margin-left: 5%;
     margin-top: 3%;
     width: 100%;
@@ -36,7 +36,7 @@
   &__subtitle {
     color: $color-secondary;
     display: block;
-    font-size: 2.5em;
+    font-size: 2.5vw;
     text-align: right;
     margin-bottom: 5px;
     &ACC {
@@ -47,8 +47,8 @@
     color: $color-secondary;
     display: block;
     line-height: 1;
-    font-size: 1.3em;
-    margin-bottom: 10px;
+    font-size: 1.5vw;
+    margin-bottom: 1vh;
     &ACC {
       color: #506464;
     }
@@ -57,13 +57,15 @@
     list-style-type: none;
     color: $color-secondary;
     display: flex;
+    font-size: 1.3vw;
     justify-content: space-around;
     width: 100%;
+    margin-right: 4vw;
     &ACC {
       color: #506464;
     }
     &Item {
-      margin-top: 5px;
+      margin-top: 0.5vh;
       @media all and (min-width: 768px) {
         display: flex;
         flex-direction: column;
@@ -91,17 +93,12 @@
     }
   }
   &__logoImg {
-    width: 30px;
-    height: 40px;
+    width: 3vw;
+    height: 4vh;
     transition: all linear 1s;
     &:hover {
       transform: scale(1.1);
     }
-  }
-  &__image {
-    width: 180px;
-    grid-column: 2/3;
-    grid-row: 1/4;
   }
 }
 
@@ -162,6 +159,7 @@
   margin-top: 10%;
   &Title {
     color: $color-secondary;
+    font-size: 2vw;
     &ACC {
       color: black;
     }
@@ -176,6 +174,7 @@
     list-style-type: none;
     color: $color-tertiary-dark;
     transition: all ease 1s;
+
     cursor: pointer;
     &:hover {
       transform: scale(1.2);
@@ -185,7 +184,7 @@
   &Content {
     width: 100%;
     border: 5px dashed #2f68687e;
-    font-size: 1.3em;
+    font-size: 1.3vw;
     background-color: #b0d9cd;
     color: #836067;
     padding: 20px;
@@ -197,8 +196,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     width: 80px;
-    height: 70px;
-    padding: 10px;
+    height: min-content;
+    padding: 1.3vw;
     display: flex;
     align-items: center;
     font-weight: bold;
@@ -211,10 +210,10 @@
     background-repeat: no-repeat;
     background-size: contain;
     width: 80px;
-    height: 70px;
+    height: min-content;
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 1.3vw;
     font-weight: bold;
     align-self: flex-end;
     justify-content: center;
@@ -226,8 +225,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     width: 80px;
-    height: 70px;
-    padding: 10px;
+    height: min-content;
+    padding: 1.3vw;
     display: flex;
     align-items: center;
     font-weight: bold;
@@ -241,8 +240,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     width: 80px;
-    height: 70px;
-    padding: 10px;
+    height: min-content;
+    padding: 1.3vw;
     display: flex;
     align-items: center;
     font-weight: bold;
@@ -257,8 +256,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     width: 80px;
-    height: 70px;
-    padding: 10px;
+    height: min-content;
+    padding: 1.3vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -272,9 +271,9 @@
     background-repeat: no-repeat;
     background-size: contain;
     width: 80px;
-    height: 70px;
+    height: min-content;
     display: flex;
-    padding: 10px;
+    padding: 1.3vw;
     align-items: center;
     font-weight: bold;
     align-self: flex-end;
@@ -288,8 +287,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     width: 80px;
-    height: 70px;
-    padding: 10px;
+    height: min-content;
+    padding: 1.3vw;
     display: flex;
     align-items: center;
     font-weight: bold;
@@ -303,10 +302,10 @@
     background-repeat: no-repeat;
     background-size: contain;
     width: 80px;
-    height: 70px;
+    height: min-content;
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 1.3vw;
     font-weight: bold;
     align-self: flex-end;
     justify-content: center;
@@ -319,10 +318,10 @@
     background-repeat: no-repeat;
     background-size: contain;
     width: 80px;
-    height: 70px;
+    height: min-content;
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 1.3vw;
     font-weight: bold;
     justify-content: center;
     text-align: center;
@@ -334,10 +333,10 @@
     background-repeat: no-repeat;
     background-size: contain;
     width: 80px;
-    height: 70px;
+    height: min-content;
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 1.3vw;
     font-weight: bold;
     align-self: flex-end;
     justify-content: center;
@@ -371,15 +370,15 @@
   background-size: contain;
   background-position-x: center;
   color: #f2e0d5;
-  font-size: 1.3em;
-  height: 90%;
+  font-size: 1.2vw;
+  height: min-content;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   position: relative;
-  padding: 20% 25%;
+  padding: 10% 10vw;
   grid-row: 2/3;
   grid-column: 2/3;
   justify-self: center;
