@@ -8,6 +8,7 @@ import { Route } from "react-router-dom";
 import ProjectsData from "../data/projects.json";
 import ProjectsDataEN from "../data/projectsEn.json";
 import Trajectory from "../data/trajectory.json";
+import TrajectoryEN from "../data/trajectoryEN.json";
 
 import { useState } from "react";
 
@@ -17,6 +18,7 @@ function App() {
   const [translated, setTranslated] = useState(false);
   const [accesible, setAccesible] = useState(false);
   const [trajectory] = useState(Trajectory);
+  const [trajectoryEN] = useState(TrajectoryEN);
 
   const handleLangClick = () => {
     setTranslated(!translated);
@@ -51,6 +53,7 @@ function App() {
           accesible={accesible}
           translated={translated}
           trajectory={trajectory}
+          trajectoryEN={trajectoryEN}
         />
       </Route>
       <Footer accesible={accesible} translated={translated} />

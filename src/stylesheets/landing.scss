@@ -66,9 +66,12 @@
     background-image: url("../images/long-arrow-alt-right-solid.svg");
     background-repeat: no-repeat;
     background-size: 27px;
-    background-position: 65px;
+    background-position: 55px;
     padding-right: 30px;
     transition: all ease 1s;
+    &ACC {
+      background-image: url("../images/long-arrow-rightACC.svg");
+    }
     &:hover {
       transform: scale(1.2);
     }
@@ -82,6 +85,9 @@
     background-position: 6px;
     padding-left: 30px;
     transition: all ease 1s;
+    &ACC {
+      background-image: url("../images/long-arrow-leftACC.svg");
+    }
     &:hover {
       transform: scale(1.2);
     }
@@ -94,6 +100,9 @@
   color: $color-secondary;
   font-weight: 700;
   font-size: 25px;
+  &ACC {
+    color: $color-tertiary-dark;
+  }
 }
 
 .landing__titleACC {

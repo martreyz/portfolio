@@ -2,7 +2,7 @@ import "../stylesheets/footer.scss";
 
 const Footer = (props) => {
   return (
-    <footer className="footer">
+    <footer className={props.accesible ? "footer footerACC" : "footer"}>
       <nav className="footer__menu">
         <ul className="footer__menuList">
           <li

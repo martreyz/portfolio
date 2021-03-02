@@ -1,6 +1,6 @@
 import "../stylesheets/contact.scss";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Github from "../images/github-alt-brands.svg";
 import Linkedin from "../images/linkedin-in-brands.svg";
 import Twitter from "../images/twitter-brands.svg";
@@ -11,7 +11,11 @@ import TwitterACC from "../images/twitter-ACC.svg";
 import MailACC from "../images/envelope-ACC.svg";
 
 const Contact = (props) => {
+  const trajectory = [...props.trajectory];
+  const trajectoryEN = [...props.trajectoryEN];
+
   useEffect(() => {
+    const isTranslated = document.querySelector(".contactLink__menu-home");
     const trajectoryArray = document.querySelectorAll(
       ".contact_trajectoryItem"
     );
@@ -24,12 +28,19 @@ const Contact = (props) => {
     let counter = 1;
 
     const showTrajectoryContentOnClick = (ev) => {
+      debugger;
       if (trajectoryArray[counter - 1]) {
         trajectoryArray[counter - 1].classList.remove("item_hovered");
       }
+      let infoToShow;
+      if (isTranslated.innerHTML === "Home") {
+        infoToShow = trajectoryEN[ev.currentTarget.id];
+        trajectoryContent.innerHTML = infoToShow;
+      } else {
+        infoToShow = trajectory[ev.currentTarget.id];
+        trajectoryContent.innerHTML = infoToShow;
+      }
 
-      const infoToShow = props.trajectory[ev.currentTarget.id];
-      trajectoryContent.innerHTML = infoToShow;
       if (
         ev.currentTarget.id === "0" ||
         parseInt(ev.currentTarget.id) % 3 === 0
@@ -49,13 +60,20 @@ const Contact = (props) => {
     };
 
     const showTrajectoryContentOnHover = (ev) => {
+      debugger;
       isHovered = true;
       if (trajectoryArray[counter - 1]) {
         trajectoryArray[counter - 1].classList.remove("item_hovered");
       }
+      let infoToShow;
+      if (isTranslated.innerHTML === "Home") {
+        infoToShow = trajectoryEN[ev.currentTarget.id];
+        trajectoryContent.innerHTML = infoToShow;
+      } else {
+        infoToShow = trajectory[ev.currentTarget.id];
+        trajectoryContent.innerHTML = infoToShow;
+      }
 
-      const infoToShow = props.trajectory[ev.currentTarget.id];
-      trajectoryContent.innerHTML = infoToShow;
       if (
         ev.currentTarget.id === "0" ||
         parseInt(ev.currentTarget.id) % 3 === 0
@@ -120,7 +138,13 @@ const Contact = (props) => {
         {props.translated ? "About me:" : "Sobre mí:"}
       </h1>
       <section className="contact_trajectory">
-        <h2 className="contact_trajectoryTitle">
+        <h2
+          className={
+            props.accesible
+              ? "contact_trajectoryTitle contact_trajectoryTitleACC"
+              : "contact_trajectoryTitle"
+          }
+        >
           {props.translated
             ? "Professional trajectory:"
             : "Trayectoria profesional :"}{" "}
@@ -129,67 +153,122 @@ const Contact = (props) => {
           {" "}
           <li
             id="0"
-            className="contact_trajectoryItem item_hovered contact_trajectoryUniversity"
+            className={
+              props.accesible
+                ? "contact_trajectoryItem contact_trajectoryUniversity contact_trajectoryItemACC"
+                : "contact_trajectoryItem item_hovered contact_trajectoryUniversity"
+            }
           >
             2008
           </li>
-          <li id="1" className="contact_trajectoryItem contact_trajectoryNH">
+          <li
+            id="1"
+            className={
+              props.accesible
+                ? "contact_trajectoryItem contact_trajectoryNH contact_trajectoryItemACC"
+                : "contact_trajectoryItem contact_trajectoryNH"
+            }
+          >
             2010
           </li>
           <li
             id="2"
-            className="contact_trajectoryItem contact_trajectoryEurostarsPraga"
+            className={
+              props.accesible
+                ? "contact_trajectoryItem contact_trajectoryEurostarsPraga contact_trajectoryItemACC"
+                : "contact_trajectoryItem contact_trajectoryEurostarsPraga"
+            }
           >
             2011
           </li>
           <li
             id="3"
-            className="contact_trajectoryItem contact_trajectoryEurostarsMadrid"
+            className={
+              props.accesible
+                ? "contact_trajectoryItem contact_trajectoryEurostarsMadrid contact_trajectoryItemACC"
+                : "contact_trajectoryItem contact_trajectoryEurostarsMadrid"
+            }
           >
             2013
           </li>
           <li
             id="4"
-            className="contact_trajectoryItem contact_trajectoryEurostarsMadridRevenue"
+            className={
+              props.accesible
+                ? "contact_trajectoryItem contact_trajectoryEurostarsMadridRevenue contact_trajectoryItemACC"
+                : "contact_trajectoryItem contact_trajectoryEurostarsMadridRevenue"
+            }
           >
             2015
           </li>
           <li
             id="5"
-            className="contact_trajectoryItem contact_trajectoryEurostarsMadridTMS"
+            className={
+              props.accesible
+                ? "contact_trajectoryItem contact_trajectoryEurostarsMadridTMS contact_trajectoryItemACC"
+                : "contact_trajectoryItem contact_trajectoryEurostarsMadridTMS"
+            }
           >
             2016
           </li>
           <li
             id="6"
-            className="contact_trajectoryItem contact_trajectoryGoldcarMadrid"
+            className={
+              props.accesible
+                ? "contact_trajectoryItem contact_trajectoryGoldcarMadrid contact_trajectoryItemACC"
+                : "contact_trajectoryItem contact_trajectoryGoldcarMadrid"
+            }
           >
             2018
           </li>
           <li
             id="7"
-            className="contact_trajectoryItem contact_trajectoryAdalab"
+            className={
+              props.accesible
+                ? "contact_trajectoryItem contact_trajectoryAdalab contact_trajectoryItemACC"
+                : "contact_trajectoryItem contact_trajectoryAdalab"
+            }
           >
             2020
           </li>
           <li
             id="8"
-            className="contact_trajectoryItem contact_trajectorypostAdalab"
+            className={
+              props.accesible
+                ? "contact_trajectoryItem contact_trajectorypostAdalab contact_trajectoryItemACC"
+                : "contact_trajectoryItem contact_trajectorypostAdalab"
+            }
           >
             2021
           </li>
           <li
             id="9"
-            className="contact_trajectoryItem contact_trajectoryPerspectives"
+            className={
+              props.accesible
+                ? "contact_trajectoryItem contact_trajectoryPerspectives contact_trajectoryItemACC"
+                : "contact_trajectoryItem contact_trajectoryPerspectives"
+            }
           >
             ...
           </li>
         </ul>
-        <p className="contact_trajectoryContent bg_yellow">
-          {props.trajectory[0]}{" "}
+        <p
+          className={
+            props.accesible
+              ? "contact_trajectoryContent bg_yellow contact_trajectoryContentACC"
+              : "contact_trajectoryContent bg_yellow"
+          }
+        >
+          {props.translated ? props.trajectoryEN[0] : props.trajectory[0]}{" "}
         </p>
       </section>
-      <section className="contact__hobbies">
+      <section
+        className={
+          props.accesible
+            ? "contact__hobbies contact__hobbiesACC"
+            : "contact__hobbies"
+        }
+      >
         <h3 className="contact__hobbiesTitle">
           {props.translated
             ? "A little more about me:"
@@ -236,7 +315,11 @@ const Contact = (props) => {
             <a
               target="_blank"
               rel="noreferrer"
-              className="contact__menuList-access"
+              className={
+                props.accesible
+                  ? "contact__menuList-access contact__menuList-accessACC"
+                  : "contact__menuList-access"
+              }
               href="https://github.com/martreyz"
               title="Access GitHub"
             >
@@ -253,7 +336,11 @@ const Contact = (props) => {
             <a
               target="_blank"
               rel="noreferrer"
-              className="contact__menuList-access"
+              className={
+                props.accesible
+                  ? "contact__menuList-access contact__menuList-accessACC"
+                  : "contact__menuList-access"
+              }
               href="https://www.linkedin.com/in/martareyrodriguez/"
               title="Access Linkedin"
             >
@@ -270,7 +357,11 @@ const Contact = (props) => {
             <a
               target="_blank"
               rel="noreferrer"
-              className="contact__menuList-access"
+              className={
+                props.accesible
+                  ? "contact__menuList-access contact__menuList-accessACC"
+                  : "contact__menuList-access"
+              }
               href="mailto: martreyz@gmail.com"
               title="Send email"
             >
@@ -287,7 +378,11 @@ const Contact = (props) => {
             <a
               target="_blank"
               rel="noreferrer"
-              className="contact__menuList-access"
+              className={
+                props.accesible
+                  ? "contact__menuList-access contact__menuList-accessACC"
+                  : "contact__menuList-access"
+              }
               href="https://twitter.com/im_martreyz"
               title="Access Twitter"
             >

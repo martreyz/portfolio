@@ -367,6 +367,9 @@
   &:hover {
     transform: scale(1.2);
   }
+  &ACC {
+    background-image: url("../images/long-arrow-leftACC.svg");
+  }
 }
 
 .projectsLink__menu-home {
@@ -374,6 +377,9 @@
   color: $color-secondary;
   font-weight: 700;
   font-size: 25px;
+  &ACC {
+    color: $color-tertiary-dark;
+  }
 }
 
 .projects__previewMenuLink {
@@ -570,6 +576,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  &ACC {
+    background-image: url("../images/hexagonACC.svg");
+    color: black;
+  }
   &Title {
     font-size: 2rem;
   }
@@ -652,6 +662,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  &ACC {
+    background-image: url("../images/hexagonACC.svg");
+    color: black;
+  }
   &Title {
     font-size: 2rem;
   }

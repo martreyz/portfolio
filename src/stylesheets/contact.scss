@@ -147,6 +147,10 @@
   padding-right: 30px;
   padding-bottom: 30px;
   background-size: 27px;
+  &ACC {
+    color: $color-tertiary-dark;
+    background-image: url("../images/long-arrow-rightACC.svg");
+  }
 }
 
 .contact_trajectory {
@@ -158,6 +162,9 @@
   margin-top: 10%;
   &Title {
     color: $color-secondary;
+    &ACC {
+      color: black;
+    }
   }
   &Container {
     margin-top: 50px;
@@ -340,6 +347,10 @@
   }
 }
 
+.contact_trajectoryItemACC {
+  background-image: url("../images/hexagonACC.svg");
+}
+
 .bg_yellow {
   background-color: #f2e0d5;
 }
@@ -375,4 +386,13 @@
   &Title {
     color: $color-tertiary-dark;
   }
+  &ACC {
+    background-image: url("../images/hexagonACC.svg");
+    color: black;
+  }
+}
+
+.contact_trajectoryContentACC {
+  background-color: #e3e4e5;
+  color: black;
 }

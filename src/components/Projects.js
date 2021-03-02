@@ -139,7 +139,7 @@ const Projects = (props) => {
             onClick={handleCSSOnClick}
             className="projects__containerSelectorCSS"
           >
-            Proyectos CSS
+            {props.translated ? "CSS Projects" : "Proyectos CSS"}
           </span>
           <div className="projects__containerSelector-hexagonPlayground">
             <div className="projects__containerSelector-hexagon"></div>
@@ -159,10 +159,14 @@ const Projects = (props) => {
             <img
               className="projectG_oneImg"
               src={previewOne}
-              title="Project preview"
+              title={props.translated ? "Project preview" : "Previsualización"}
               alt="Project preview"
             />
-            <h3 className="projectG_oneTitle">{props.projectsData[0].name}</h3>
+            <h3 className="projectG_oneTitle">
+              {props.translated
+                ? props.projectsDataEN[0].name
+                : props.projectsData[0].name}
+            </h3>
             <nav className="projectG_oneNav">
               <a
                 className="projectG_oneNavRepo"
@@ -180,7 +184,9 @@ const Projects = (props) => {
               </a>
             </nav>
             <p className="projectG_oneText">
-              {props.projectsData[0].description}
+              {props.translated
+                ? props.projectsDataEN[0].description
+                : props.projectsData[0].description}
             </p>
           </div>
           <div
@@ -191,9 +197,13 @@ const Projects = (props) => {
               className="projectG_twoImg"
               src={previewTwo}
               alt="Project preview"
-              title="Project preview"
+              title={props.translated ? "Project preview" : "Previsualización"}
             />
-            <h3 className="projectG_twoTitle">{props.projectsData[1].name}</h3>
+            <h3 className="projectG_twoTitle">
+              {props.translated
+                ? props.projectsDataEN[1].name
+                : props.projectsData[1].name}
+            </h3>
             <nav className="projectG_twoNav">
               <a
                 className="projectG_twoNavRepo"
@@ -211,7 +221,9 @@ const Projects = (props) => {
               </a>
             </nav>
             <p className="projectG_twoText">
-              {props.projectsData[1].description}
+              {props.translated
+                ? props.projectsDataEN[1].description
+                : props.projectsData[1].description}
             </p>
           </div>
           <div
@@ -222,10 +234,12 @@ const Projects = (props) => {
               className="projectG_threeImg"
               src={previewThree}
               alt="Project preview"
-              title="Project preview"
+              title={props.translated ? "Project preview" : "Previsualización"}
             />
             <h3 className="projectG_threeTitle">
-              {props.projectsData[2].name}
+              {props.translated
+                ? props.projectsDataEN[2].name
+                : props.projectsData[2].name}
             </h3>
             <nav className="projectG_threeNav">
               <a
@@ -244,7 +258,9 @@ const Projects = (props) => {
               </a>
             </nav>
             <p className="projectG_threeText">
-              {props.projectsData[2].description}
+              {props.translated
+                ? props.projectsDataEN[2].description
+                : props.projectsData[2].description}
             </p>
           </div>
         </div>
@@ -276,8 +292,16 @@ const Projects = (props) => {
         </div>
       </section>
       <section className="projects__stack">
-        <div className="projects__stackTech">
-          <h2 className="projects__stackTechTitle">Tecnologías:</h2>
+        <div
+          className={
+            props.accesible
+              ? "projects__stackTech projects__stackTechACC"
+              : "projects__stackTech"
+          }
+        >
+          <h2 className="projects__stackTechTitle">
+            {props.translated ? "Technologies:" : "Tecnologías:"}
+          </h2>
           <p className="projects__stackTechText">
             <span className="projects__stackTechText-item projects__stackTechText-itemA">
               VS Code
@@ -308,8 +332,14 @@ const Projects = (props) => {
             </span>
           </p>
         </div>
-        <div className="projects__stackLang">
-          <h2>Lenguajes:</h2>
+        <div
+          className={
+            props.accesible
+              ? "projects__stackLang projects__stackLangACC"
+              : "projects__stackLang"
+          }
+        >
+          <h2>{props.translated ? "Stack:" : "Lenguajes:"}</h2>
           <p className="projects__stackLangText">
             <span className="projects__stackLangText-item projects__stackLangText-itemA">
               HTML
