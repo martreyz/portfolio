@@ -28,7 +28,6 @@ const Contact = (props) => {
     let counter = 1;
 
     const showTrajectoryContentOnClick = (ev) => {
-      debugger;
       if (trajectoryArray[counter - 1]) {
         trajectoryArray[counter - 1].classList.remove("item_hovered");
       }
@@ -60,7 +59,6 @@ const Contact = (props) => {
     };
 
     const showTrajectoryContentOnHover = (ev) => {
-      debugger;
       isHovered = true;
       if (trajectoryArray[counter - 1]) {
         trajectoryArray[counter - 1].classList.remove("item_hovered");

@@ -8,33 +8,39 @@
 .landing {
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 70px 15px 100px 15px;
+  padding: 70px 50px 100px 50px;
   &__container {
-    height: 60vh;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap-reverse;
+    height: auto;
+    width: 60%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 60% 40%;
   }
   &__photo {
     border-radius: 30%;
-    width: 40%;
+    width: 20vw;
     opacity: 0.8;
+    grid-row: 1/3;
+    grid-column: 2/3;
   }
   &__text {
-    margin-top: -80px;
-    margin-left: 60px;
+    margin-left: 4vw;
     z-index: 99;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    align-self: start;
   }
   &__title {
     color: $color-secondary;
     line-height: 1.4;
-    font-size: 16em;
-    margin-top: -80px;
+    font-size: 18vw;
     z-index: 99;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    align-self: center;
   }
 
   &__textOne {
@@ -42,7 +48,7 @@
     font-weight: 700;
     line-height: 1.3;
     display: block;
-    font-size: 5em;
+    font-size: 5vw;
     width: 150%;
     &ACC {
       color: #537070;
@@ -53,7 +59,7 @@
     font-weight: 700;
     line-height: 0.4;
     display: block;
-    font-size: 3em;
+    font-size: 3vw;
     margin-left: 20px;
     z-index: 99;
     &ACC {
@@ -61,6 +67,7 @@
     }
   }
   &__menu-projects {
+    cursor: pointer;
     list-style-type: none;
     text-transform: uppercase;
     background-image: url("../images/long-arrow-alt-right-solid.svg");
@@ -96,6 +103,7 @@
 
 .landingLink__menu-projects,
 .landingLink__menu-contact {
+  cursor: pointer;
   text-decoration: none;
   color: $color-secondary;
   font-weight: 700;
