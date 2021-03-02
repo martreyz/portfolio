@@ -1,7 +1,7 @@
 @import "./variables.scss";
 
 .projects {
-  padding: 0px 30px 40px 30px;
+  padding: 0px 3vw 4vh 5vw;
   height: 100vh;
   width: 100%;
   display: grid;
@@ -285,7 +285,7 @@
   width: 75%;
   height: auto;
   background-color: $color-neutral-lowOpacity;
-  padding: 30px 10px;
+  padding: 3vh 1vw;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -342,7 +342,7 @@
     display: block;
   }
   & > img {
-    height: 150px;
+    height: 15vh;
     width: 90%;
     object-fit: cover;
     object-position: top;
@@ -375,7 +375,7 @@
   text-decoration: none;
   color: $color-secondary;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 1.5vw;
   &ACC {
     color: $color-tertiary-dark;
   }
