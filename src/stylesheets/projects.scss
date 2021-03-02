@@ -102,6 +102,17 @@
     transform: scale(0.6);
     cursor: pointer;
     transition: all ease 1s;
+    order: 1;
+    & > h3 {
+      font-size: 2em;
+      color: $color-tertiary-dark;
+    }
+    & > nav {
+      display: none;
+    }
+    & > p {
+      display: none;
+    }
     &:hover {
       transform: scale(0.7);
     }
@@ -113,19 +124,31 @@
     height: 65%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     box-shadow: 0px 0px 50px 0px $color-tertiary-dark;
     border-radius: 10%;
     transform: scale(0.6);
     cursor: pointer;
     transition: all ease 1s;
+    order: 3;
+    & > h3 {
+      font-size: 2em;
+      color: $color-tertiary-dark;
+    }
+    & > nav {
+      display: none;
+    }
+    & > p {
+      display: none;
+    }
     &:hover {
       transform: scale(0.7);
     }
   }
   &__containerGITHUB-two {
     width: 75%;
+    height: auto;
     background-color: $color-neutral-lowOpacity;
     padding: 30px 10px;
     display: flex;
@@ -135,61 +158,23 @@
     box-shadow: 0px 0px 50px 0px $color-tertiary-dark;
     border-radius: 10%;
     z-index: 99;
-  }
-  &_one {
-    &Title {
-      font-size: 2em;
-      color: $color-tertiary-dark;
+    transform: scale(1);
+    order: 2;
+    &:hover {
+      transform: scale(1);
     }
-    &Nav {
-      display: none;
-    }
-    &Text {
-      display: none;
-    }
-  }
-  &_three {
-    &Title {
-      font-size: 2em;
-      text-align: center;
-      color: $color-tertiary-dark;
-    }
-    &Nav {
-      display: none;
-    }
-    &Text {
-      display: none;
-    }
-  }
-  &_two {
-    &Title {
+    & > h3 {
       font-size: 2em;
       text-align: center;
       color: $color-secondary-fullOpacity;
     }
-    &Text {
-      color: $color-secondary-fullOpacity;
-      font-size: 1.4em;
-    }
-    &Nav {
+    & > nav {
+      display: none;
       width: 30%;
       display: flex;
       justify-content: center;
       margin: 10px 0px;
-      &RepoIcon {
-        background-image: url("../images/code-solid.svg");
-        background-repeat: no-repeat;
-        background-size: contain;
-        text-decoration: none;
-        width: 25px;
-        height: 25px;
-        margin-right: 5px;
-        transition: all ease 1s;
-        &:hover {
-          transform: scale(1.1);
-        }
-      }
-      &DemoIcon {
+      & > a {
         background-image: url("../images/laptop-solid.svg");
         background-repeat: no-repeat;
         background-size: contain;
@@ -200,10 +185,32 @@
         &:hover {
           transform: scale(1.1);
         }
+        &:first-child {
+          background-image: url("../images/code-solid.svg");
+          background-repeat: no-repeat;
+          background-size: contain;
+          text-decoration: none;
+          width: 25px;
+          height: 25px;
+          margin-right: 5px;
+          transition: all ease 1s;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
       }
     }
-    &Text {
+    & > p {
+      color: $color-secondary-fullOpacity;
+      font-size: 1.4em;
       width: 90%;
+      display: block;
+    }
+    & > img {
+      height: 150px;
+      width: 90%;
+      object-fit: cover;
+      object-position: top;
     }
   }
   &_oneImg {
@@ -227,6 +234,119 @@
     object-position: top;
     flex-grow: 1;
     margin-bottom: 10px;
+  }
+}
+
+.orderOne {
+  order: 1;
+}
+
+.orderThree {
+  order: 3;
+}
+
+.smallProyect {
+  width: 45%;
+  background-color: $color-neutral-lowOpacity;
+  padding: 10px;
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 50px 0px $color-tertiary-dark;
+  border-radius: 10%;
+  transform: scale(0.6);
+  cursor: pointer;
+  transition: all ease 1s;
+  &:hover {
+    transform: scale(0.7);
+  }
+  & > h3 {
+    font-size: 2em;
+    color: $color-tertiary-dark;
+  }
+  & > nav {
+    display: none;
+  }
+  & > p {
+    display: none;
+  }
+  & > img {
+    height: 30%;
+    width: 90%;
+    object-fit: cover;
+    object-position: top;
+    flex-grow: 1;
+    margin-bottom: 10px;
+  }
+}
+
+.bigProyect {
+  width: 75%;
+  height: auto;
+  background-color: $color-neutral-lowOpacity;
+  padding: 30px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0px 0px 50px 0px $color-tertiary-dark;
+  border-radius: 10%;
+  z-index: 99;
+  transform: scale(1);
+  order: 2;
+  &:hover {
+    transform: scale(1);
+  }
+  & > h3 {
+    font-size: 2em;
+    text-align: center;
+    color: $color-secondary-fullOpacity;
+  }
+  & > nav {
+    display: none;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+    & > a {
+      background-image: url("../images/laptop-solid.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      text-decoration: none;
+      width: 25px;
+      height: 25px;
+      transition: all ease 1s;
+      &:hover {
+        transform: scale(1.1);
+      }
+      &:first-child {
+        background-image: url("../images/code-solid.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        text-decoration: none;
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+        transition: all ease 1s;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  & > p {
+    color: $color-secondary-fullOpacity;
+    font-size: 1.4em;
+    width: 90%;
+    display: block;
+  }
+  & > img {
+    height: 150px;
+    width: 90%;
+    object-fit: cover;
+    object-position: top;
   }
 }
 
@@ -422,7 +542,7 @@
 }
 
 .projects__stack {
-  height: 100%;
+  height: 90%;
   width: 80%;
   margin-left: 5vw;
   margin-bottom: 5vh;
@@ -442,10 +562,77 @@
   color: #f2e0d5;
   font-size: 1.3em;
   text-align: center;
-  height: 35vh;
-  width: 55%;
+  height: 30vh;
+  width: 35vh;
   align-self: flex-start;
-  padding: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  &Title {
+    font-size: 2rem;
+  }
+  &Text {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    margin-top: 10px;
+    &-itemA {
+      font-size: 1.5rem;
+      color: $color-primary;
+      margin-right: 10px;
+      align-self: flex-start;
+    }
+    &-itemB {
+      font-size: 1.4rem;
+      color: $color-tertiary-dark;
+      margin-right: 10px;
+    }
+    &-itemC {
+      font-size: 1.4rem;
+      color: $color-secondary-fullOpacity;
+      margin-right: 10px;
+      align-self: flex-start;
+    }
+    &-itemD {
+      font-size: 1.9rem;
+      color: $color-tertiary-dark;
+      margin-right: 10px;
+      align-self: flex-end;
+    }
+    &-itemE {
+      font-size: 1.3rem;
+      color: $color-secondary-fullOpacity;
+      margin-right: 10px;
+      align-self: flex-start;
+    }
+    &-itemF {
+      font-size: 1.9rem;
+      color: $color-primary;
+      margin-right: 10px;
+      align-self: flex-end;
+    }
+    &-itemG {
+      font-size: 1.5rem;
+      color: $color-secondary-fullOpacity;
+      margin-right: 10px;
+      align-self: flex-start;
+    }
+    &-itemH {
+      font-size: 1.9rem;
+      color: $color-tertiary-dark;
+      margin-right: 10px;
+    }
+    &-itemI {
+      font-size: 1.9rem;
+      color: $color-primary;
+      margin-right: 10px;
+    }
+  }
 }
 
 .projects__stackLang {
@@ -456,9 +643,66 @@
   color: #f2e0d5;
   font-size: 1.3em;
   text-align: center;
-  height: 35vh;
-  width: 55%;
+  height: 30vh;
+  width: 35vh;
   align-self: flex-end;
-  margin-top: -27%;
-  padding: 10px;
+  margin-top: -22%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  &Title {
+    font-size: 2rem;
+  }
+  &Text {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    margin-top: 10px;
+    &-itemA {
+      font-size: 1.5rem;
+      color: $color-primary;
+      margin-right: 10px;
+      align-self: flex-start;
+    }
+    &-itemB {
+      font-size: 1.4rem;
+      color: $color-tertiary-dark;
+      margin-right: 10px;
+    }
+    &-itemC {
+      font-size: 1.4rem;
+      color: $color-secondary-fullOpacity;
+      margin-right: 10px;
+      align-self: flex-start;
+    }
+    &-itemD {
+      font-size: 1.9rem;
+      color: $color-tertiary-dark;
+      margin-right: 10px;
+      align-self: flex-end;
+    }
+    &-itemE {
+      font-size: 1.3rem;
+      color: $color-secondary-fullOpacity;
+      margin-right: 10px;
+      align-self: flex-start;
+    }
+    &-itemF {
+      font-size: 1.9rem;
+      color: $color-primary;
+      margin-right: 10px;
+      align-self: flex-end;
+    }
+    &-itemG {
+      font-size: 1.5rem;
+      color: $color-secondary-fullOpacity;
+      margin-right: 10px;
+      align-self: flex-start;
+    }
+  }
 }

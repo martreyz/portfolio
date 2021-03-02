@@ -67,6 +67,60 @@ const Projects = (props) => {
     infoToShowGITHUB.classList.remove("hidden");
   };
 
+  const handleClickonFirst = () => {
+    const projectOne = document.querySelector(".projectG__containerGITHUB-one");
+    const projectTwo = document.querySelector(".projectG__containerGITHUB-two");
+    const projectThree = document.querySelector(
+      ".projectG__containerGITHUB-three"
+    );
+    projectThree.classList.remove("bigProyect");
+    projectOne.classList.add("bigProyect");
+    projectOne.classList.remove("orderThree");
+    projectOne.classList.remove("orderOne");
+    projectTwo.classList.add("smallProyect");
+    projectThree.classList.add("smallProyect");
+
+    projectTwo.classList.add("orderThree");
+    projectTwo.classList.remove("orderOne");
+    projectThree.classList.add("orderOne");
+  };
+
+  const handleClickOnThird = () => {
+    const projectOne = document.querySelector(".projectG__containerGITHUB-one");
+    const projectTwo = document.querySelector(".projectG__containerGITHUB-two");
+    const projectThree = document.querySelector(
+      ".projectG__containerGITHUB-three"
+    );
+    projectOne.classList.remove("bigProyect");
+    projectThree.classList.add("bigProyect");
+    projectTwo.classList.add("smallProyect");
+    projectTwo.classList.add("orderOne");
+    projectOne.classList.add("orderThree");
+    projectTwo.classList.remove("orderThree");
+  };
+
+  const handleClickonSecond = () => {
+    const projectOne = document.querySelector(".projectG__containerGITHUB-one");
+    const projectTwo = document.querySelector(".projectG__containerGITHUB-two");
+    const projectThree = document.querySelector(
+      ".projectG__containerGITHUB-three"
+    );
+
+    console.log("hello");
+
+    projectOne.classList.remove("bigProyect");
+    projectThree.classList.remove("bigProyect");
+
+    projectThree.classList.remove("orderOne");
+    projectThree.classList.remove("orderTwo");
+    projectOne.classList.remove("orderThree");
+    projectOne.classList.remove("orderTwo");
+    projectTwo.classList.remove("orderThree");
+    projectTwo.classList.remove("orderOne");
+
+    projectTwo.classList.remove("smallProyect");
+  };
+
   return (
     <main className="projects">
       <h1
@@ -98,7 +152,10 @@ const Projects = (props) => {
           </span>
         </div>
         <div className="projects__containerGITHUB">
-          <div className="projectG projectG__containerGITHUB-one">
+          <div
+            onClick={handleClickonFirst}
+            className="projectG projectG__containerGITHUB-one"
+          >
             <img
               className="projectG_oneImg"
               src={previewOne}
@@ -126,7 +183,10 @@ const Projects = (props) => {
               {props.projectsData[0].description}
             </p>
           </div>
-          <div className="projectG projectG__containerGITHUB-two">
+          <div
+            onClick={handleClickonSecond}
+            className="projectG projectG__containerGITHUB-two"
+          >
             <img
               className="projectG_twoImg"
               src={previewTwo}
@@ -154,7 +214,10 @@ const Projects = (props) => {
               {props.projectsData[1].description}
             </p>
           </div>
-          <div className="projectG projectG__containerGITHUB-three">
+          <div
+            onClick={handleClickOnThird}
+            className="projectG projectG__containerGITHUB-three"
+          >
             <img
               className="projectG_threeImg"
               src={previewThree}
@@ -214,10 +277,62 @@ const Projects = (props) => {
       </section>
       <section className="projects__stack">
         <div className="projects__stackTech">
-          <h2>Tecnologías:</h2>
+          <h2 className="projects__stackTechTitle">Tecnologías:</h2>
+          <p className="projects__stackTechText">
+            <span className="projects__stackTechText-item projects__stackTechText-itemA">
+              VS Code
+            </span>
+            <span className="projects__stackTechText-item projects__stackTechText-itemB">
+              Slack
+            </span>
+            <span className="projects__stackTechText-item projects__stackTechText-itemC">
+              Trello
+            </span>
+            <span className="projects__stackTechText-item projects__stackTechText-itemD">
+              Notion
+            </span>
+            <span className="projects__stackTechText-item projects__stackTechText-itemE">
+              Figma
+            </span>
+            <span className="projects__stackTechText-item projects__stackTechText-itemF">
+              Git
+            </span>
+            <span className="projects__stackTechText-item projects__stackTechText-itemG">
+              Zeplin
+            </span>
+            <span className="projects__stackTechText-item projects__stackTechText-itemH">
+              GitHub
+            </span>
+            <span className="projects__stackTechText-item projects__stackTechText-itemI">
+              Postman
+            </span>
+          </p>
         </div>
         <div className="projects__stackLang">
           <h2>Lenguajes:</h2>
+          <p className="projects__stackLangText">
+            <span className="projects__stackLangText-item projects__stackLangText-itemA">
+              HTML
+            </span>
+            <span className="projects__stackLangText-item projects__stackLangText-itemB">
+              CSS
+            </span>
+            <span className="projects__stackLangText-item projects__stackLangText-itemC">
+              SASS
+            </span>
+            <span className="projects__stackLangText-item projects__stackLangText-itemD">
+              JavaScript
+            </span>
+            <span className="projects__stackLangText-item projects__stackLangText-itemE">
+              React JS
+            </span>
+            <span className="projects__stackLangText-item projects__stackLangText-itemF">
+              jQuery
+            </span>
+            <span className="projects__stackLangText-item projects__stackLangText-itemG">
+              Node JS
+            </span>
+          </p>
         </div>
       </section>
       <nav
