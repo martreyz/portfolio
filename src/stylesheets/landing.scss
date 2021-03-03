@@ -6,7 +6,7 @@
 }
 
 .landing {
-  height: 100vh;
+  height: 92vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -139,12 +139,10 @@
 
 @media all and (max-width: 768px) {
   .landing {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 3vh;
     padding: 70px 40px 100px 40px;
     &__container {
       height: 70%;

@@ -2,7 +2,7 @@
 
 .projects {
   padding: 0px 3vw 4vh 5vw;
-  height: 100vh;
+  height: 92vh;
   width: 100%;
   display: grid;
   grid-template-rows: 20% 60% 20%;
@@ -473,7 +473,7 @@
   justify-content: flex-start;
   position: relative;
   font-size: 1.5vw;
-  margin-bottom: 40px;
+  margin-bottom: 2vh;
   &-hexagonPlayground {
     flex-grow: 1;
     margin-bottom: 2px;
@@ -723,13 +723,12 @@
 
 @media all and (max-width: 768px) {
   .projects {
-    padding: 0px 3vw 4vh 5vw;
-    height: 100vh;
+    padding: 0px 3vw 0vh 5vw;
     width: 100%;
     display: grid;
-    grid-template-rows: 10% 50% 35%;
+    grid-template-rows: 10% 55% 35%;
     grid-template-columns: 100%;
-    grid-gap: 30px;
+    grid-gap: 5px;
     &__container {
       grid-row: 2/3;
       grid-column: 1/2;
@@ -747,7 +746,7 @@
       color: $color-secondary;
       font-size: 12vw;
       margin-left: 0vw;
-      margin-top: 2vh;
+      margin-top: 0vh;
       text-align: center;
       width: 100%;
       grid-row: 1/2;
@@ -820,10 +819,10 @@
   }
 
   .projects__stack {
-    height: 90%;
+    height: 100%;
     width: 100%;
     margin-left: 0vw;
-    margin-bottom: 5vh;
+    margin-bottom: 0vh;
     grid-row: 3/4;
     grid-column: 1/2;
     display: flex;
@@ -834,7 +833,8 @@
 
   .projects__stackTech {
     height: 60%;
-    width: 35%;
+    width: 28%;
+    padding: 5px;
     &Title {
       font-size: 4vw;
     }
@@ -871,7 +871,8 @@
 
   .projects__stackLang {
     height: 60%;
-    width: 35%;
+    width: 28%;
+    padding: 5px;
     &Title {
       font-size: 4vw;
     }

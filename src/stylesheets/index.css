@@ -11,15 +11,14 @@ body {
   width: 100%;
   overflow: hidden;
   background-color: #ffffff;
+}
+
+.root {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 html {
   overflow: hidden;
-}
-
-@media all and (max-width: 375px) {
-  body {
-    padding-bottom: 3vh;
-  }
 }
