@@ -108,7 +108,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: center;
   &:hover {
     color: $color-secondary;
   }
@@ -399,16 +399,19 @@
 
 @media all and (max-width: 1024px) {
   .contact {
-    flex-grow: 1;
+    height: 92vh;
     grid-template-columns: 100%;
-    grid-template-rows: 10% 40% 25% 25%;
-    padding: 0px 30px 40px 30px;
+    grid-template-rows: 10% 45% 22% 22%;
+    grid-gap: 2vh;
+    padding: 0px 30px 0px 30px;
     margin-left: 5%;
     &__section {
-      width: 60%;
+      width: 40vw;
       grid-column: 1/2;
-      grid-row: 4/5;
+      height: min-content;
+      grid-row: 3/5;
       justify-self: start;
+      align-self: center;
     }
     &__title {
       font-size: 12vw;
@@ -437,7 +440,7 @@
       }
     }
     &__list {
-      font-size: 1.8vw;
+      font-size: 1.5vw;
       justify-content: space-around;
       width: 100%;
       margin-right: 4vw;
@@ -537,21 +540,26 @@
   }
 
   .contact__hobbies {
-    font-size: 2vw;
+    font-size: 1.8vw;
     max-height: 100%;
-    width: 38vw;
-    padding: 3% 8vw;
-    grid-row: 3/4;
+    width: 45vw;
+    padding: 1vh 12vw;
+    grid-row: 3/5;
     justify-self: end;
+    align-self: flex-start;
     grid-column: 1/2;
+    &Title {
+      font-size: 2.5vw;
+    }
   }
 }
 
-@media all and (max-width: 375px) {
+@media all and (max-width: 420px) {
   .contact {
     grid-template-columns: 100%;
     grid-template-rows: 10% 52% 20% 18%;
-    padding: 0px 30px 40px 30px;
+    padding: 0px 30px 5vh 30px;
+    height: 92vh;
     grid-gap: 5px;
     &__section {
       width: 80%;
