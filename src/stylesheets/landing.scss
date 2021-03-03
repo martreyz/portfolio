@@ -144,6 +144,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 3vh;
     padding: 70px 40px 100px 40px;
     &__container {
       height: 70%;
@@ -197,6 +198,7 @@
       font-weight: 700;
       line-height: 0.4;
       display: block;
+      width: 110%;
       font-size: 5vw;
       margin-left: 20px;
       z-index: 99;
