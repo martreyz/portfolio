@@ -11,7 +11,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 70px 50px 100px 50px;
+  padding: 70px 40px 100px 40px;
   &__container {
     height: auto;
     width: 60%;
@@ -72,9 +72,11 @@
     text-transform: uppercase;
     background-image: url("../images/long-arrow-alt-right-solid.svg");
     background-repeat: no-repeat;
-    background-size: 27px;
-    background-position: 55px;
-    padding-right: 30px;
+    background-size: 1.5vw;
+    background-position-x: 3.7vw;
+    background-position-y: 2.7vh;
+    padding-right: 1.5vw;
+    padding-bottom: 2vh;
     transition: all ease 1s;
     &ACC {
       background-image: url("../images/long-arrow-rightACC.svg");
@@ -88,9 +90,11 @@
     text-transform: uppercase;
     background-image: url("../images/long-arrow-alt-left-solid.svg");
     background-repeat: no-repeat;
-    background-size: 27px;
-    background-position: 6px;
-    padding-left: 30px;
+    background-size: 1.5vw;
+    background-position-y: 2.7vh;
+    background-position-x: 0.3vw;
+    padding-left: 1.5vw;
+    padding-bottom: 2vh;
     transition: all ease 1s;
     &ACC {
       background-image: url("../images/long-arrow-leftACC.svg");
@@ -101,13 +105,19 @@
   }
 }
 
+// background-size: 1.5vw;
+//   background-position-x: 0.3vw;
+//   background-position-y: 2.7vh;
+//   height: 50px;
+//   padding-left: 1.5vw;
+
 .landingLink__menu-projects,
 .landingLink__menu-contact {
   cursor: pointer;
   text-decoration: none;
   color: $color-secondary;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 1.5vw;
   &ACC {
     color: $color-tertiary-dark;
   }
@@ -126,8 +136,8 @@
   justify-content: center;
 }
 .menu {
-  width: 97%;
-  height: 80px;
+  width: 100%;
+  padding: 0px 40px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;

@@ -76,10 +76,11 @@
   &__title {
     color: $color-secondary;
     font-size: 6vw;
-    margin-left: 5%;
-    margin-top: 3%;
+    margin-left: 5vw;
+    margin-top: 3vh;
     width: 100%;
     grid-row: 1/2;
+    align-self: center;
     &ACC {
       color: #37493d;
     }
@@ -354,11 +355,11 @@
   text-transform: uppercase;
   background-image: url("../images/long-arrow-alt-left-solid.svg");
   background-repeat: no-repeat;
-  background-size: 27px;
-  background-position-x: 6px;
-  background-position-y: 25px;
+  background-size: 1.5vw;
+  background-position-x: 0.3vw;
+  background-position-y: 2.7vh;
   height: 50px;
-  padding-left: 30px;
+  padding-left: 1.5vw;
   transition: all ease 1s;
   position: absolute;
   left: 30px;

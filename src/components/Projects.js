@@ -130,7 +130,7 @@ const Projects = (props) => {
             : "projects__title"
         }
       >
-        {props.translated ? "Projects" : "Proyectos"}
+        {props.translated ? "Projects:" : "Proyectos:"}
       </h1>
 
       <section className="projects__container">
