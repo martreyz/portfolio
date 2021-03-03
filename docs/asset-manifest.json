@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "./static/css/main.9f7f7ed5.chunk.css",
+    "main.js": "./static/js/main.9327fe35.chunk.js",
+    "main.js.map": "./static/js/main.9327fe35.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.9e248ef8.js",
+    "runtime-main.js.map": "./static/js/runtime-main.9e248ef8.js.map",
+    "static/js/2.a8b08597.chunk.js": "./static/js/2.a8b08597.chunk.js",
+    "static/js/2.a8b08597.chunk.js.map": "./static/js/2.a8b08597.chunk.js.map",
+    "static/js/3.696f2b84.chunk.js": "./static/js/3.696f2b84.chunk.js",
+    "static/js/3.696f2b84.chunk.js.map": "./static/js/3.696f2b84.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.9f7f7ed5.chunk.css.map": "./static/css/main.9f7f7ed5.chunk.css.map",
+    "static/js/2.a8b08597.chunk.js.LICENSE.txt": "./static/js/2.a8b08597.chunk.js.LICENSE.txt",
+    "static/media/bodybg.62f76f9b.PNG": "./static/media/bodybg.62f76f9b.PNG",
+    "static/media/footer.scss": "./static/media/twitter-brands.429045c3.svg",
+    "static/media/projects.scss": "./static/media/long-arrow-leftACC.b4ec9a56.svg",
+    "static/media/contact.scss": "./static/media/long-arrow-rightACC.a90e7c8d.svg",
+    "static/media/marta.480e0dd4.png": "./static/media/marta.480e0dd4.png",
+    "static/media/preview.e4bf530e.png": "./static/media/preview.e4bf530e.png",
+    "static/media/rickmorty.204cdad4.png": "./static/media/rickmorty.204cdad4.png",
+    "static/media/header.scss": "./static/media/toggle-on-solid.2cbf4a70.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9e248ef8.js",
+    "static/js/2.a8b08597.chunk.js",
+    "static/css/main.9f7f7ed5.chunk.css",
+    "static/js/main.9327fe35.chunk.js"
+  ]
+}
