@@ -763,6 +763,16 @@
     margin-top: 5px;
   }
 
+  .projectG__containerGITHUB-one > h3 {
+    font-size: 3vw;
+    text-align: center;
+  }
+
+  .projectG__containerGITHUB-three > h3 {
+    font-size: 3vw;
+    text-align: center;
+  }
+
   .projectG__containerGITHUB-two > p {
     font-size: 2vw;
   }
@@ -888,5 +898,90 @@
         font-size: 2.5vw;
       }
     }
+  }
+}
+
+@media all and (max-width: 375px) {
+  .projectG__containerGITHUB-two > h3 {
+    font-size: 4vw;
+    margin-top: 5px;
+  }
+
+  .projectG__containerGITHUB-one > h3 {
+    font-size: 4vw;
+    text-align: center;
+  }
+
+  .projectG__containerGITHUB-three > h3 {
+    font-size: 4vw;
+    text-align: center;
+  }
+  .projectG__containerGITHUB-two > p {
+    font-size: 3vw;
+  }
+
+  .projects__containerSelector {
+    font-size: 3vw;
+    &-hexagonPlayground {
+      padding: 0px 8vw 0vh 1vw;
+      margin-bottom: 0px;
+    }
+    &-hexagon {
+      width: 3vw;
+    }
+  }
+
+  .cp_embed_wrapper {
+    height: 200%;
+    width: 110%;
+  }
+
+  .cp_embed_wrapper > iframe {
+    height: 100%;
+
+    filter: brightness(250%);
+  }
+
+  .projects__containerCODEPEN {
+    height: min-content;
+  }
+
+  .projects__containerCODEPEN-one {
+    padding: 0px;
+    height: 70%;
+    overflow: hidden;
+  }
+  .projects__containerCODEPEN-three {
+    padding: 0px;
+    height: 70%;
+    overflow: hidden;
+  }
+
+  .projects__containerCODEPEN-two {
+    padding: 0px;
+    height: 40vh;
+    overflow: hidden;
+  }
+
+  .projects__stack {
+    height: 90%;
+    width: 100%;
+    margin-left: 0vw;
+    margin-top: -2vh;
+    grid-row: 3/4;
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-self: start;
+  }
+
+  .projects__stackTech {
+    height: 50%;
+    width: 35%;
+  }
+  .projects__stackLang {
+    height: 50%;
+    width: 35%;
   }
 }
