@@ -20,6 +20,6 @@ html {
 
 @media all and (max-width: 375px) {
   body {
-    overflow: visible;
+    height: 110vh;
   }
 }
