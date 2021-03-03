@@ -3,9 +3,9 @@
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 5px 20px;
+  padding: 0.5vh 1.5vw;
   border-top: 1.3px solid $color-secondary;
-  height: 30px;
+  height: 3vh;
   width: 100%;
   position: absolute;
   bottom: 0px;
@@ -19,9 +19,8 @@
       background-repeat: no-repeat;
       text-decoration: none;
       list-style-type: none;
-      width: 15px;
-      height: 15px;
-      margin-right: 10px;
+      width: 2.8vh;
+      height: 1.7vh;
       transition: all ease 1s;
       &:hover {
         transform: scale(1.2);
@@ -35,9 +34,8 @@
       background-repeat: no-repeat;
       text-decoration: none;
       list-style-type: none;
-      width: 15px;
-      height: 15px;
-      margin-right: 10px;
+      width: 2.8vh;
+      height: 1.7vh;
       transition: all ease 1s;
       &:hover {
         transform: scale(1.2);
@@ -51,9 +49,8 @@
       background-repeat: no-repeat;
       text-decoration: none;
       list-style-type: none;
-      width: 15px;
-      height: 15px;
-      margin-right: 10px;
+      width: 2.8vh;
+      height: 1.7vh;
       transition: all ease 1s;
       &:hover {
         transform: scale(1.2);
@@ -67,9 +64,8 @@
       background-repeat: no-repeat;
       text-decoration: none;
       list-style-type: none;
-      width: 15px;
-      height: 15px;
-      margin-right: 10px;
+      width: 2.8vh;
+      height: 1.7vh;
       transition: all ease 1s;
       &:hover {
         transform: scale(1.2);
@@ -83,9 +79,8 @@
       background-repeat: no-repeat;
       text-decoration: none;
       list-style-type: none;
-      width: 15px;
-      height: 15px;
-      margin-right: 10px;
+      width: 2.8vh;
+      height: 1.7vh;
       transition: all ease 1s;
       &:hover {
         transform: scale(1.2);
@@ -100,13 +95,13 @@
   }
   &__small {
     color: $color-secondary;
-    font-size: 15px;
+    font-size: 1.5vh;
     display: flex;
     line-height: 1.2;
     &Logo {
       background-image: url(../images/cat-solid.svg);
       background-repeat: no-repeat;
-      width: 15px;
+      width: 1.6vh;
       margin: 0px 5px;
       &ACC {
         background-image: url(../images/cat-ACC.svg);

@@ -104,7 +104,7 @@ const Footer = (props) => {
               : "footer_smallCopy"
           }
         >
-          {props.translated ? "2020 © made with" : "2020 © hecho con"}
+          {props.translated ? "2021 © made with" : "2021 © hecho con"}
         </span>
         <div
           className={
