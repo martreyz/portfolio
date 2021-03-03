@@ -594,53 +594,53 @@
     &-itemA {
       font-size: 1.5vw;
       color: $color-primary;
-      margin-right: 10px;
+      margin-right: 1vw;
       align-self: flex-start;
     }
     &-itemB {
       font-size: 1.4vw;
       color: $color-tertiary-dark;
-      margin-right: 10px;
+      margin-right: 1vw;
     }
     &-itemC {
       font-size: 1.4vw;
       color: $color-secondary-fullOpacity;
-      margin-right: 10px;
+      margin-right: 1vw;
       align-self: flex-start;
     }
     &-itemD {
       font-size: 1.9vw;
       color: $color-tertiary-dark;
-      margin-right: 10px;
+      margin-right: 1vw;
       align-self: flex-end;
     }
     &-itemE {
       font-size: 1.3vw;
       color: $color-secondary-fullOpacity;
-      margin-right: 10px;
+      margin-right: 1vw;
       align-self: flex-start;
     }
     &-itemF {
       font-size: 1.9vw;
       color: $color-primary;
-      margin-right: 10px;
+      margin-right: 1vw;
       align-self: flex-end;
     }
     &-itemG {
       font-size: 1.5vw;
       color: $color-secondary-fullOpacity;
-      margin-right: 10px;
+      margin-right: 1vw;
       align-self: flex-start;
     }
     &-itemH {
       font-size: 1.9vw;
       color: $color-tertiary-dark;
-      margin-right: 10px;
+      margin-right: 1vw;
     }
     &-itemI {
       font-size: 1.9vw;
       color: $color-primary;
-      margin-right: 10px;
+      margin-right: 1vw;
     }
   }
 }
@@ -680,53 +680,53 @@
     &-itemA {
       font-size: 1.5vw;
       color: $color-primary;
-      margin-right: 10px;
+      margin-right: 1vw;
       align-self: flex-start;
     }
     &-itemB {
       font-size: 1.4vw;
       color: $color-tertiary-dark;
-      margin-right: 10px;
+      margin-right: 1vw;
     }
     &-itemC {
       font-size: 1.4vw;
       color: $color-secondary-fullOpacity;
-      margin-right: 10px;
+      margin-right: 1vw;
       align-self: flex-start;
     }
     &-itemD {
       font-size: 1.9vw;
       color: $color-tertiary-dark;
-      margin-right: 10px;
+      margin-right: 1vw;
       align-self: flex-end;
     }
     &-itemE {
       font-size: 1.3vw;
       color: $color-secondary-fullOpacity;
-      margin-right: 10px;
+      margin-right: 1vw;
       align-self: flex-start;
     }
     &-itemF {
       font-size: 1.9vw;
       color: $color-primary;
-      margin-right: 10px;
+      margin-right: 1vw;
       align-self: flex-end;
     }
     &-itemG {
       font-size: 1.5vw;
       color: $color-secondary-fullOpacity;
-      margin-right: 10px;
+      margin-right: 1vw;
       align-self: flex-start;
     }
   }
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 1024px) {
   .projects {
     padding: 0px 3vw 0vh 5vw;
     width: 100%;
     display: grid;
-    grid-template-rows: 10% 55% 35%;
+    grid-template-rows: 10% 50% 40%;
     grid-template-columns: 100%;
     grid-gap: 5px;
     &__container {
@@ -819,7 +819,7 @@
   }
 
   .projects__stack {
-    height: 100%;
+    height: 30vh;
     width: 100%;
     margin-left: 0vw;
     margin-bottom: 0vh;
@@ -832,9 +832,9 @@
   }
 
   .projects__stackTech {
-    height: 60%;
-    width: 28%;
-    padding: 5px;
+    max-height: 55%;
+    width: 35vw;
+    padding: 0.5vh 7vw;
     &Title {
       font-size: 4vw;
     }
@@ -870,9 +870,9 @@
   }
 
   .projects__stackLang {
-    height: 60%;
-    width: 28%;
-    padding: 5px;
+    max-height: 55%;
+    width: 35vw;
+    padding: 0.5vh 7vw;
     &Title {
       font-size: 4vw;
     }
@@ -902,7 +902,10 @@
   }
 }
 
-@media all and (max-width: 375px) {
+@media all and (max-width: 420px) {
+  .projects {
+    grid-template-rows: 10% 55% 35%;
+  }
   .projectG__containerGITHUB-two > h3 {
     font-size: 4vw;
     margin-top: 5px;
@@ -978,11 +981,13 @@
   }
 
   .projects__stackTech {
-    height: 50%;
-    width: 35%;
+    max-height: 55%;
+    width: 40vw;
+    padding: 2vh 5vw;
   }
   .projects__stackLang {
-    height: 50%;
-    width: 35%;
+    max-height: 55%;
+    width: 40vw;
+    padding: 2vh 5vw;
   }
 }
