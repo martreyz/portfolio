@@ -20,6 +20,6 @@ html {
 
 @media all and (max-width: 375px) {
   body {
-    height: 110vh;
+    padding-bottom: 3vh;
   }
 }
