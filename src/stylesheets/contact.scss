@@ -403,32 +403,20 @@
 @media all and (max-width: 768px) {
   .contact {
     height: 95vh;
-    width: 90%;
-    display: grid;
     grid-template-columns: 100%;
     grid-template-rows: 10% 40% 30% 20%;
-    grid-gap: 20px;
     padding: 0px 30px 40px 30px;
     margin-left: 5%;
     &__section {
-      display: flex;
-      flex-direction: column;
-      background-color: $color-tertiary;
-      height: fit-content;
       width: 60%;
-      padding: 15px;
       grid-column: 1/2;
       grid-row: 4/5;
-      z-index: 99;
-      border-radius: 10px;
       justify-self: start;
     }
     &__title {
-      color: $color-secondary;
       font-size: 12vw;
       margin-left: 0vw;
       margin-top: 2vh;
-      width: 100%;
       text-align: center;
       grid-row: 1/2;
       grid-column: 1/2;
@@ -437,18 +425,13 @@
       }
     }
     &__subtitle {
-      color: $color-secondary;
-      display: block;
       font-size: 4vw;
-      text-align: right;
       margin-bottom: 5px;
       &ACC {
         color: #537070;
       }
     }
     &__text {
-      color: $color-secondary;
-      display: block;
       line-height: 1;
       font-size: 2vw;
       margin-bottom: 1vh;
@@ -457,82 +440,21 @@
       }
     }
     &__list {
-      list-style-type: none;
-      color: $color-secondary;
-      display: flex;
-      font-size: 1.3vw;
+      font-size: 1.8vw;
       justify-content: space-around;
       width: 100%;
       margin-right: 4vw;
       &ACC {
         color: #506464;
       }
-      &Item {
-        margin-top: 0.5vh;
-        @media all and (min-width: 768px) {
-          display: flex;
-          flex-direction: column;
-        }
-      }
-      &Github {
-        @media all and (min-width: 768px) {
-          grid-column: 1/2;
-        }
-      }
-      &Linkedin {
-        @media all and (min-width: 768px) {
-          grid-column: 2/3;
-        }
-      }
-      &Mail {
-        @media all and (min-width: 768px) {
-          grid-column: 3/4;
-        }
-      }
-      &Twitter {
-        @media all and (min-width: 768px) {
-          grid-column: 4/5;
-        }
-      }
-    }
-    &__logoImg {
-      width: 3vw;
-      height: 4vh;
-      transition: all linear 1s;
-      &:hover {
-        transform: scale(1.1);
-      }
-    }
-  }
-
-  .contact__menuList-access {
-    text-decoration: none;
-    color: $color-secondary;
-    display: block;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    &:hover {
-      color: $color-secondary;
-    }
-    @media all and (min-width: 768px) {
-      align-items: center;
-    }
-    &ACC {
-      color: #506464;
     }
   }
 
   .contact__menu-home {
-    list-style-type: none;
-    text-transform: uppercase;
-    position: absolute;
     top: 0px;
     right: 7vw;
     width: 15vw;
     height: 93%;
-    transition: all ease 1s;
     background-image: url("../images/long-arrow-alt-right-solid.svg");
     background-repeat: no-repeat;
     background-position-x: 10vw;
@@ -552,8 +474,6 @@
   }
 
   .contactLink__menu-home {
-    text-decoration: none;
-    color: $color-secondary;
     font-size: 6vw;
     &ACC {
       color: $color-tertiary-dark;
@@ -562,250 +482,69 @@
 
   .contact_trajectory {
     padding: 0px;
-    display: flex;
-    flex-direction: column;
     margin-top: 3%;
     grid-row: 2/3;
     grid-column: 1/2;
     justify-self: center;
     width: 100%;
     &Title {
-      color: $color-secondary;
       font-size: 3vw;
       &ACC {
         color: black;
       }
     }
-    &Container {
-      margin-top: 50px;
-      display: flex;
-      width: 100%;
-      justify-content: space-between;
-    }
-    &Item {
-      list-style-type: none;
-      color: $color-tertiary-dark;
-      transition: all ease 1s;
-
-      cursor: pointer;
-      &:hover {
-        transform: scale(1.2);
-        filter: brightness(120%);
-      }
-    }
     &Content {
-      width: 100%;
-      border: 5px dashed #2f68687e;
       font-size: 2vw;
-      background-color: #b0d9cd;
-      color: #836067;
-      padding: 20px;
-      border-radius: 15px;
-      margin-top: 20px;
     }
     &University {
-      background-image: url("../images/hexagon.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
       width: 8vw;
       height: 5vh;
-      padding: 1.3vw;
-      display: flex;
-      align-items: center;
-      font-weight: bold;
-      text-align: center;
-      justify-content: center;
-      margin-top: -35px;
     }
     &NH {
-      background-image: url("../images/hexagon2.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
       width: 8vw;
       height: 5vh;
-      display: flex;
-      align-items: center;
-      padding: 1.3vw;
-      font-weight: bold;
-      align-self: flex-end;
-      justify-content: center;
-      text-align: center;
-      margin-left: -10px;
     }
     &EurostarsPraga {
-      background-image: url("../images/hexagon2 copy.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
       width: 8vw;
       height: 5vh;
-      padding: 1.3vw;
-      display: flex;
-      align-items: center;
-      font-weight: bold;
-      text-align: center;
-      justify-content: center;
-      margin-top: -35px;
-      margin-left: -10px;
     }
     &EurostarsMadrid {
-      background-image: url("../images/hexagon.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
       width: 8vw;
       height: 5vh;
-      padding: 1.3vw;
-      display: flex;
-      align-items: center;
-      font-weight: bold;
-      align-self: flex-end;
-      justify-content: center;
-      text-align: center;
-      margin-top: -35px;
-      margin-left: -10px;
     }
     &EurostarsMadridRevenue {
-      background-image: url("../images/hexagon2.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
       width: 8vw;
       height: 5vh;
-      padding: 1.3vw;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      text-align: center;
-      margin-top: -35px;
-      margin-left: -10px;
     }
     &EurostarsMadridTMS {
-      background-image: url("../images/hexagon2 copy.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
       width: 8vw;
       height: 5vh;
-      display: flex;
-      padding: 1.3vw;
-      align-items: center;
-      font-weight: bold;
-      align-self: flex-end;
-      justify-content: center;
-      text-align: center;
-      margin-top: -35px;
-      margin-left: -10px;
     }
     &GoldcarMadrid {
-      background-image: url("../images/hexagon.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
       width: 8vw;
       height: 5vh;
-      padding: 1.3vw;
-      display: flex;
-      align-items: center;
-      font-weight: bold;
-      justify-content: center;
-      text-align: center;
-      margin-top: -35px;
-      margin-left: -10px;
     }
     &Adalab {
-      background-image: url("../images/hexagon2.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
       width: 8vw;
       height: 5vh;
-      display: flex;
-      align-items: center;
-      padding: 1.3vw;
-      font-weight: bold;
-      align-self: flex-end;
-      justify-content: center;
-      text-align: center;
-      margin-top: -35px;
-      margin-left: -10px;
     }
     &postAdalab {
-      background-image: url("../images/hexagon2 copy.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
       width: 8vw;
       height: 5vh;
-      display: flex;
-      align-items: center;
-      padding: 1.3vw;
-      font-weight: bold;
-      justify-content: center;
-      text-align: center;
-      margin-top: -35px;
-      margin-left: -10px;
     }
     &Perspectives {
-      background-image: url("../images/hexagon.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
       width: 8vw;
       height: 5vh;
-      display: flex;
-      align-items: center;
-      padding: 1.3vw;
-      font-weight: bold;
-      align-self: flex-end;
-      justify-content: center;
-      text-align: center;
-      margin-top: -35px;
-      margin-left: -10px;
     }
-  }
-
-  .contact_trajectoryItemACC {
-    background-image: url("../images/hexagonACC.svg");
-  }
-
-  .bg_yellow {
-    background-color: #f2e0d5;
-  }
-
-  .bg_red {
-    background-color: #a65b698e;
-    color: #f2e0d5;
-  }
-
-  .item_hovered {
-    transform: scale(1.2);
-    filter: brightness(120%);
   }
 
   .contact__hobbies {
-    background-image: url("../images/hexagon2.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position-x: center;
-    color: #f2e0d5;
     font-size: 2vw;
     height: 100%;
     width: 60%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    position: relative;
     padding: 3% 8vw;
     grid-row: 3/4;
     justify-self: end;
     grid-column: 1/2;
-    &Title {
-      color: $color-tertiary-dark;
-    }
-    &ACC {
-      background-image: url("../images/hexagonACC.svg");
-      color: black;
-    }
-  }
-
-  .contact_trajectoryContentACC {
-    background-color: #e3e4e5;
-    color: black;
   }
 }

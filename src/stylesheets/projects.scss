@@ -720,3 +720,173 @@
     }
   }
 }
+
+@media all and (max-width: 768px) {
+  .projects {
+    padding: 0px 3vw 4vh 5vw;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 10% 50% 35%;
+    grid-template-columns: 100%;
+    grid-gap: 30px;
+    &__container {
+      grid-row: 2/3;
+      grid-column: 1/2;
+      align-self: start;
+      height: 100%;
+      justify-content: center;
+      &GITHUB {
+        height: min-content;
+      }
+      &CODEPEN {
+        height: min-content;
+      }
+    }
+    &__title {
+      color: $color-secondary;
+      font-size: 12vw;
+      margin-left: 0vw;
+      margin-top: 2vh;
+      text-align: center;
+      width: 100%;
+      grid-row: 1/2;
+      align-self: center;
+      &ACC {
+        color: #37493d;
+      }
+    }
+  }
+
+  .projectG__containerGITHUB-two > h3 {
+    font-size: 3vw;
+    margin-top: 5px;
+  }
+
+  .projectG__containerGITHUB-two > p {
+    font-size: 2vw;
+  }
+
+  .projects__menu-home {
+    top: 0px;
+    left: 7vw;
+    width: 15vw;
+    height: 93%;
+    background-image: url("../images/long-arrow-alt-left-solid.svg");
+    background-repeat: no-repeat;
+    background-position-x: 1vw;
+    background-position-y: 100%;
+    padding-left: 5vw;
+    padding-bottom: 2vh;
+    background-size: 5vw;
+    display: flex;
+    align-items: flex-end;
+    &:hover {
+      transform: scale(1.2);
+    }
+    &ACC {
+      background-image: url("../images/long-arrow-leftACC.svg");
+    }
+  }
+
+  .projectsLink__menu-home {
+    text-decoration: none;
+    color: $color-secondary;
+    font-weight: 700;
+    font-size: 6vw;
+    &ACC {
+      color: $color-tertiary-dark;
+    }
+  }
+
+  .projects__containerSelector {
+    font-size: 3vw;
+    &-hexagonPlayground {
+      padding: 0px 8vw 0.3vh 1vw;
+    }
+    &-hexagon {
+      width: 3vw;
+    }
+  }
+
+  .projects__stack {
+    height: 90%;
+    width: 100%;
+    margin-left: 0vw;
+    margin-bottom: 5vh;
+    grid-row: 3/4;
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-self: start;
+  }
+
+  .projects__stackTech {
+    height: 60%;
+    width: 35%;
+    &Title {
+      font-size: 4vw;
+    }
+    &Text {
+      &-itemA {
+        font-size: 2.5vw;
+      }
+      &-itemB {
+        font-size: 2.4vw;
+      }
+      &-itemC {
+        font-size: 2.4vw;
+      }
+      &-itemD {
+        font-size: 2.9vw;
+      }
+      &-itemE {
+        font-size: 2.3vw;
+      }
+      &-itemF {
+        font-size: 2.9vw;
+      }
+      &-itemG {
+        font-size: 2.5vw;
+      }
+      &-itemH {
+        font-size: 2.9vw;
+      }
+      &-itemI {
+        font-size: 2.9vw;
+      }
+    }
+  }
+
+  .projects__stackLang {
+    height: 60%;
+    width: 35%;
+    &Title {
+      font-size: 4vw;
+    }
+    &Text {
+      &-itemA {
+        font-size: 2.5vw;
+      }
+      &-itemB {
+        font-size: 2.4vw;
+      }
+      &-itemC {
+        font-size: 2.4vw;
+      }
+      &-itemD {
+        font-size: 2.9vw;
+      }
+      &-itemE {
+        font-size: 2.3vw;
+      }
+      &-itemF {
+        font-size: 2.9vw;
+      }
+      &-itemG {
+        font-size: 2.5vw;
+      }
+    }
+  }
+}

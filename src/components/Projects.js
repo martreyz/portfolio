@@ -339,7 +339,9 @@ const Projects = (props) => {
               : "projects__stackLang"
           }
         >
-          <h2>{props.translated ? "Stack:" : "Lenguajes:"}</h2>
+          <h2 className="projects__stackLangTitle">
+            {props.translated ? "Stack:" : "Lenguajes:"}
+          </h2>
           <p className="projects__stackLangText">
             <span className="projects__stackLangText-item projects__stackLangText-itemA">
               HTML
