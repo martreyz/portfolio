@@ -6,9 +6,8 @@
   box-sizing: border-box;
 }
 
-/* He puesto height 100% en vez de 100vh en body */
 body {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   overflow: hidden;
   background-color: #ffffff;
