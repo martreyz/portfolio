@@ -17,3 +17,9 @@ body {
 html {
   overflow: hidden;
 }
+
+@media all and (max-width: 375px) {
+  body {
+    height: 110vh;
+  }
+}
