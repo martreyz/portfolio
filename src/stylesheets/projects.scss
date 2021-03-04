@@ -177,7 +177,7 @@
       justify-content: center;
       margin: 1vh 0px;
       & > a {
-        background-image: url("../images/laptop-solid.svg");
+        background-image: url("../images/Projects/demo.svg");
         background-repeat: no-repeat;
         background-size: contain;
         text-decoration: none;
@@ -188,7 +188,7 @@
           transform: scale(1.1);
         }
         &:first-child {
-          background-image: url("../images/code-solid.svg");
+          background-image: url("../images/Projects/repository.svg");
           background-repeat: no-repeat;
           background-size: contain;
           text-decoration: none;
@@ -311,7 +311,7 @@
     justify-content: center;
     margin: 10px 0px;
     & > a {
-      background-image: url("../images/laptop-solid.svg");
+      background-image: url("../images/Projects/demo.svg");
       background-repeat: no-repeat;
       background-size: contain;
       text-decoration: none;
@@ -322,7 +322,7 @@
         transform: scale(1.1);
       }
       &:first-child {
-        background-image: url("../images/code-solid.svg");
+        background-image: url("../images/Projects/repository.svg");
         background-repeat: no-repeat;
         background-size: contain;
         text-decoration: none;
@@ -353,7 +353,7 @@
 .projects__menu-home {
   list-style-type: none;
   text-transform: uppercase;
-  background-image: url("../images/long-arrow-alt-left-solid.svg");
+  background-image: url("../images/Menus/longArrowLeft.svg");
   background-repeat: no-repeat;
   background-size: 1.5vw;
   background-position-x: 0.3vw;
@@ -368,7 +368,7 @@
     transform: scale(1.2);
   }
   &ACC {
-    background-image: url("../images/long-arrow-leftACC.svg");
+    background-image: url("../images/Menus/longArrowLeftACC.svg");
   }
 }
 
@@ -402,14 +402,14 @@
     background-color: #364a4e;
   }
   &Page {
-    background-image: url("../images/laptop-solid.svg");
+    background-image: url("../images/Projects/demo.svg");
     margin-right: 5px;
     @media all and (min-width: 768px) {
       margin-right: 10px;
     }
   }
   &Repo {
-    background-image: url("../images/code-solid.svg");
+    background-image: url("../images/Projects/repository.svg");
   }
   &:hover {
     transform: scale(1.2);
@@ -512,7 +512,7 @@
     }
   }
   &-hexagon {
-    background-image: url("../images/hexagon2.svg");
+    background-image: url("../images/Hexagons/hexagonSecColor.svg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 2vw;
@@ -561,7 +561,7 @@
 }
 
 .projects__stackTech {
-  background-image: url("../images/hexagon2.svg");
+  background-image: url("../images/Hexagons/hexagonSecColor.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position-x: center;
@@ -577,7 +577,7 @@
   align-items: center;
   justify-content: flex-start;
   &ACC {
-    background-image: url("../images/hexagonACC.svg");
+    background-image: url("../images/Hexagons/hexagonACC.svg");
     color: black;
   }
   &Title {
@@ -646,7 +646,7 @@
 }
 
 .projects__stackLang {
-  background-image: url("../images/hexagon2 copy.svg");
+  background-image: url("../images/Hexagons/hexagonMainColor.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position-x: center;
@@ -663,7 +663,7 @@
   align-items: center;
   justify-content: flex-start;
   &ACC {
-    background-image: url("../images/hexagonACC.svg");
+    background-image: url("../images/Hexagons/hexagonACC.svg");
     color: black;
   }
   &Title {
@@ -781,7 +781,7 @@
     left: 7vw;
     width: 15vw;
     height: 93%;
-    background-image: url("../images/long-arrow-alt-left-solid.svg");
+    background-image: url("../images/Menus/longArrowLeft.svg");
     background-repeat: no-repeat;
     background-position-x: 1vw;
     background-position-y: 100%;
@@ -794,7 +794,7 @@
       transform: scale(1.2);
     }
     &ACC {
-      background-image: url("../images/long-arrow-leftACC.svg");
+      background-image: url("../images/Menus/longArrowLeftACC.svg");
     }
   }
 

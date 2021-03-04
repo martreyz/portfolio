@@ -11,7 +11,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 70px 40px 100px 40px;
+  padding: 7vh 3vw 10vh 3vw;
   &__container {
     height: auto;
     width: 60%;
@@ -28,7 +28,6 @@
   }
   &__text {
     margin-left: 4vw;
-    z-index: 99;
     grid-row: 2/3;
     grid-column: 1/2;
     align-self: start;
@@ -37,10 +36,12 @@
     color: $color-secondary;
     line-height: 1.4;
     font-size: 18vw;
-    z-index: 99;
     grid-row: 1/2;
     grid-column: 1/2;
     align-self: center;
+    &ACC {
+      color: #37493d;
+    }
   }
 
   &__textOne {
@@ -60,17 +61,15 @@
     line-height: 0.4;
     display: block;
     font-size: 3vw;
-    margin-left: 20px;
-    z-index: 99;
+    margin-left: 2vw;
     &ACC {
       color: #384d4d;
     }
   }
   &__menu-projects {
-    cursor: pointer;
     list-style-type: none;
     text-transform: uppercase;
-    background-image: url("../images/long-arrow-alt-right-solid.svg");
+    background-image: url("../images/Menus/longArrowRight.svg");
     background-repeat: no-repeat;
     background-size: 1.5vw;
     background-position-x: 3.7vw;
@@ -79,7 +78,7 @@
     padding-bottom: 2vh;
     transition: all ease 1s;
     &ACC {
-      background-image: url("../images/long-arrow-rightACC.svg");
+      background-image: url("../images/Menus/longArrowRightACC.svg");
     }
     &:hover {
       transform: scale(1.2);
@@ -88,7 +87,7 @@
   &__menu-contact {
     list-style-type: none;
     text-transform: uppercase;
-    background-image: url("../images/long-arrow-alt-left-solid.svg");
+    background-image: url("../images/Menus/longArrowLeft.svg");
     background-repeat: no-repeat;
     background-size: 1.5vw;
     background-position-y: 2.7vh;
@@ -97,7 +96,7 @@
     padding-bottom: 2vh;
     transition: all ease 1s;
     &ACC {
-      background-image: url("../images/long-arrow-leftACC.svg");
+      background-image: url("../images/Menus/longArrowLeftACC.svg");
     }
     &:hover {
       transform: scale(1.2);
@@ -117,21 +116,16 @@
   }
 }
 
-.landing__titleACC {
-  color: #37493d;
-}
-
 .nav__menu {
   width: 100%;
-  height: 100vh;
-  position: absolute;
   display: flex;
+  position: absolute;
   align-items: center;
   justify-content: center;
 }
 .menu {
   width: 100%;
-  padding: 0px 40px;
+  padding: 0px 1.5vw;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -139,141 +133,73 @@
 
 @media all and (max-width: 1024px) {
   .landing {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 70px 40px 100px 40px;
     &__container {
       height: 70%;
-      width: 60%;
-      display: grid;
       grid-template-columns: 100%;
       grid-template-rows: 55% 35% 10%;
     }
     &__photo {
-      border-radius: 30%;
       width: 70%;
-      opacity: 0.8;
       grid-row: 1/2;
       grid-column: 1/2;
       align-self: end;
       justify-self: end;
     }
     &__text {
-      margin-left: 4vw;
-      z-index: 99;
       grid-row: 3/4;
-      align-self: start;
       justify-self: end;
       grid-column: 1/2;
-      margin-top: -10%;
+      margin-top: -2vh;
     }
     &__title {
-      color: $color-secondary;
-      line-height: 1.4;
       font-size: 25vw;
-      z-index: 99;
       grid-row: 2/3;
       align-self: start;
       grid-column: 1/2;
-      margin-top: -10%;
+      margin-top: -3vh;
     }
 
     &__textOne {
-      color: $color-secondary;
-      font-weight: 700;
-      line-height: 1.3;
-      display: block;
       font-size: 8vw;
-      width: 150%;
-      &ACC {
-        color: #537070;
-      }
     }
     &__textTwo {
-      color: $color-secondary;
-      font-weight: 700;
-      line-height: 0.4;
-      display: block;
       width: 110%;
       font-size: 5vw;
-      margin-left: 20px;
-      z-index: 99;
-      &ACC {
-        color: #384d4d;
-      }
+      margin-left: 2vw;
     }
     &__menu-projects {
-      cursor: pointer;
-      list-style-type: none;
-      text-transform: uppercase;
-      background-image: url("../images/long-arrow-alt-right-solid.svg");
-      background-repeat: no-repeat;
       background-size: 5vw;
       background-position-x: 15vw;
       background-position-y: 3.5vh;
       padding-right: 5vw;
-      padding-bottom: 2vh;
-      transition: all ease 1s;
       align-self: flex-end;
-      &ACC {
-        background-image: url("../images/long-arrow-rightACC.svg");
-      }
-      &:hover {
-        transform: scale(1.2);
-      }
     }
     &__menu-contact {
-      list-style-type: none;
-      text-transform: uppercase;
-      background-image: url("../images/long-arrow-alt-left-solid.svg");
-      background-repeat: no-repeat;
       background-size: 5vw;
       background-position-y: 3.5vh;
       background-position-x: 1vw;
       padding-left: 5vw;
-      padding-bottom: 2vh;
-      transition: all ease 1s;
-      &ACC {
-        background-image: url("../images/long-arrow-leftACC.svg");
-      }
-      &:hover {
-        transform: scale(1.2);
-      }
     }
   }
 
   .landingLink__menu-projects,
   .landingLink__menu-contact {
-    cursor: pointer;
-    text-decoration: none;
-    color: $color-secondary;
-    font-weight: 700;
     font-size: 6vw;
-    &ACC {
-      color: $color-tertiary-dark;
-    }
-  }
-
-  .landing__titleACC {
-    color: #37493d;
   }
 
   .nav__menu {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 92vh;
   }
   .menu {
-    width: 100%;
     height: 90%;
-    padding: 0px 40px;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    padding: 0px 5vw;
+  }
+}
+
+@media all and (max-width: 420px) {
+  .landing {
+    &__text {
+      margin-top: -5vh;
+    }
   }
 }

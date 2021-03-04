@@ -127,7 +127,7 @@
   right: 30px;
   top: 45vh;
   transition: all ease 1s;
-  background-image: url("../images/long-arrow-alt-right-solid.svg");
+  background-image: url("../images/Menus/longArrowRight.svg");
   background-repeat: no-repeat;
   background-position-x: 2.6vw;
   background-position-y: 2.7vh;
@@ -140,7 +140,7 @@
 
   &ACC {
     color: $color-tertiary-dark;
-    background-image: url("../images/long-arrow-rightACC.svg");
+    background-image: url("../images/Menus/longArrowRightACC.svg");
   }
 }
 
@@ -198,7 +198,7 @@
     margin-top: 3vh;
   }
   &University {
-    background-image: url("../images/hexagon.svg");
+    background-image: url("../images/Hexagons/hexagonLight.svg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 4vw;
@@ -212,7 +212,7 @@
     justify-content: center;
   }
   &NH {
-    background-image: url("../images/hexagon2.svg");
+    background-image: url("../images/Hexagons/hexagonMainColor.svg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 4vw;
@@ -227,7 +227,7 @@
     margin-left: -10px;
   }
   &EurostarsPraga {
-    background-image: url("../images/hexagon2 copy.svg");
+    background-image: url("../images/Hexagons/hexagonSecColor.svg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 4vw;
@@ -241,7 +241,7 @@
     margin-left: -10px;
   }
   &EurostarsMadrid {
-    background-image: url("../images/hexagon.svg");
+    background-image: url("../images/Hexagons/hexagonLight.svg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 4vw;
@@ -256,7 +256,7 @@
     margin-left: -10px;
   }
   &EurostarsMadridRevenue {
-    background-image: url("../images/hexagon2.svg");
+    background-image: url("../images/Hexagons/hexagonMainColor.svg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 4vw;
@@ -270,7 +270,7 @@
     margin-left: -10px;
   }
   &EurostarsMadridTMS {
-    background-image: url("../images/hexagon2 copy.svg");
+    background-image: url("../images/Hexagons/hexagonSecColor.svg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 4vw;
@@ -285,7 +285,7 @@
     margin-left: -10px;
   }
   &GoldcarMadrid {
-    background-image: url("../images/hexagon.svg");
+    background-image: url("../images/Hexagons/hexagonLight.svg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 4vw;
@@ -299,7 +299,7 @@
     margin-left: -10px;
   }
   &Adalab {
-    background-image: url("../images/hexagon2.svg");
+    background-image: url("../images/Hexagons/hexagonMainColor.svg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 4vw;
@@ -314,7 +314,7 @@
     margin-left: -10px;
   }
   &postAdalab {
-    background-image: url("../images/hexagon2 copy.svg");
+    background-image: url("../images/Hexagons/hexagonSecColor.svg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 4vw;
@@ -328,7 +328,7 @@
     margin-left: -10px;
   }
   &Perspectives {
-    background-image: url("../images/hexagon.svg");
+    background-image: url("../images/Hexagons/hexagonLight.svg");
     background-repeat: no-repeat;
     background-size: contain;
     width: 4vw;
@@ -345,7 +345,7 @@
 }
 
 .contact_trajectoryItemACC {
-  background-image: url("../images/hexagonACC.svg");
+  background-image: url("../images/Hexagons/hexagonACC.svg");
 }
 
 .bg_yellow {
@@ -363,11 +363,11 @@
 }
 
 .contact__hobbies {
-  background-image: url("../images/hexagon2.svg");
+  background-image: url("../images/Hexagons/hexagonMainColor.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position-x: center;
-  color: #f2e0d5;
+  color: $color-secondary;
   font-size: 1.2vw;
   max-height: 100%;
   text-align: center;
@@ -387,7 +387,7 @@
     width: 60%;
   }
   &ACC {
-    background-image: url("../images/hexagonACC.svg");
+    background-image: url("../images/Hexagons/hexagonACC.svg");
     color: black;
   }
 }
@@ -455,7 +455,7 @@
     right: 7vw;
     width: 15vw;
     height: 93%;
-    background-image: url("../images/long-arrow-alt-right-solid.svg");
+    background-image: url("../images/Menus/longArrowRight.svg");
     background-repeat: no-repeat;
     background-position-x: 10vw;
     background-position-y: 100%;
@@ -469,7 +469,7 @@
     }
     &ACC {
       color: $color-tertiary-dark;
-      background-image: url("../images/long-arrow-rightACC.svg");
+      background-image: url("../images/Menus/longArrowRightACC.svg");
     }
   }
 

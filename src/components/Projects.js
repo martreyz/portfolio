@@ -1,9 +1,9 @@
 import "../stylesheets/projects.scss";
 import { Link } from "react-router-dom";
 import Codepen from "react-codepen-embed";
-import previewOne from "../images/bodybg.PNG";
-import previewTwo from "../images/rickmorty.png";
-import previewThree from "../images/preview.png";
+import previewOne from "../images/Projects/pacmanSH.png";
+import previewTwo from "../images/Projects/rickMortySH.png";
+import previewThree from "../images/Projects/seriesSH.png";
 
 const Projects = (props) => {
   const handleCSSOnClick = () => {

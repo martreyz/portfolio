@@ -1,14 +1,14 @@
 import "../stylesheets/contact.scss";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Github from "../images/github-alt-brands.svg";
-import Linkedin from "../images/linkedin-in-brands.svg";
-import Twitter from "../images/twitter-brands.svg";
-import Mail from "../images/envelope-solid.svg";
-import GithubACC from "../images/github-ACC.svg";
-import LinkedinACC from "../images/linkedin-ACC.svg";
-import TwitterACC from "../images/twitter-ACC.svg";
-import MailACC from "../images/envelope-ACC.svg";
+import Github from "../images/Social-Footer/github.svg";
+import Linkedin from "../images/Social-Footer/linkedin.svg";
+import Twitter from "../images/Social-Footer/twitter.svg";
+import Mail from "../images/Social-Footer/envelope.svg";
+import GithubACC from "../images/Social-Footer/githubACC.svg";
+import LinkedinACC from "../images/Social-Footer/linkedinACC.svg";
+import TwitterACC from "../images/Social-Footer/twitterACC.svg";
+import MailACC from "../images/Social-Footer/envelopeACC.svg";
 
 const Contact = (props) => {
   const trajectory = [...props.trajectory];

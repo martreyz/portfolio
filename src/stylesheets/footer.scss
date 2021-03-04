@@ -13,7 +13,7 @@
   &__menuList {
     display: flex;
     &-github {
-      background-image: url("../images/github-alt-brands.svg");
+      background-image: url("../images/Social-Footer/github.svg");
       background-repeat: no-repeat;
       text-decoration: none;
       list-style-type: none;
@@ -24,11 +24,11 @@
         transform: scale(1.2);
       }
       &ACC {
-        background-image: url("../images/github-ACC.svg");
+        background-image: url("../images/Social-Footer/githubACC.svg");
       }
     }
     &-linkedin {
-      background-image: url("../images/linkedin-in-brands.svg");
+      background-image: url("../images/Social-Footer/linkedin.svg");
       background-repeat: no-repeat;
       text-decoration: none;
       list-style-type: none;
@@ -39,11 +39,11 @@
         transform: scale(1.2);
       }
       &ACC {
-        background-image: url("../images/linkedin-ACC.svg");
+        background-image: url("../images/Social-Footer/linkedinACC.svg");
       }
     }
     &-mail {
-      background-image: url("../images/envelope-solid.svg");
+      background-image: url("../images/Social-Footer/envelope.svg");
       background-repeat: no-repeat;
       text-decoration: none;
       list-style-type: none;
@@ -54,11 +54,11 @@
         transform: scale(1.2);
       }
       &ACC {
-        background-image: url("../images/envelope-ACC.svg");
+        background-image: url("../images/Social-Footer/envelopeACC.svg");
       }
     }
     &-twitter {
-      background-image: url("../images/twitter-brands.svg");
+      background-image: url("../images/Social-Footer/twitter.svg");
       background-repeat: no-repeat;
       text-decoration: none;
       list-style-type: none;
@@ -69,11 +69,11 @@
         transform: scale(1.2);
       }
       &ACC {
-        background-image: url("../images/twitter-ACC.svg");
+        background-image: url("../images/Social-Footer/twitterACC.svg");
       }
     }
     &-codepen {
-      background-image: url("../images/codepen-brands.svg");
+      background-image: url("../images/Social-Footer/codepen.svg");
       background-repeat: no-repeat;
       text-decoration: none;
       list-style-type: none;
@@ -84,7 +84,7 @@
         transform: scale(1.2);
       }
       &ACC {
-        background-image: url("../images/codepen-ACC.svg");
+        background-image: url("../images/Social-Footer/codepenACC.svg");
       }
     }
     &-access {
@@ -97,12 +97,12 @@
     display: flex;
     line-height: 1.2;
     &Logo {
-      background-image: url(../images/cat-solid.svg);
+      background-image: url("../images/Social-Footer/cat.svg");
       background-repeat: no-repeat;
       width: 1.6vh;
       margin: 0px 5px;
       &ACC {
-        background-image: url(../images/cat-ACC.svg);
+        background-image: url("../images/Social-Footer/catACC.svg");
       }
     }
     &ACC {

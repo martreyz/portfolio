@@ -3,7 +3,7 @@
 .header {
   height: 5vh;
   width: 100%;
-  z-index: 99;
+  z-index: 999;
 }
 
 .header__menu {
@@ -37,7 +37,7 @@
     }
   }
   &-acc {
-    background-image: url("../images/toggle-off-solid.svg");
+    background-image: url("../images/Menus/toggleOff.svg");
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: contain;
@@ -48,7 +48,7 @@
     cursor: hand;
     cursor: pointer;
     &Active {
-      background-image: url("../images/toggle-on-solid.svg");
+      background-image: url("../images/Menus/toggleOn.svg");
       background-color: transparent;
       background-repeat: no-repeat;
       background-size: contain;
