@@ -88,11 +88,10 @@
 }
 
 .projectG {
-  object-fit: cover;
   &__containerGITHUB-one {
     width: 45%;
     background-color: $color-neutral-lowOpacity;
-    padding: 10px;
+    padding: 0.8vw;
     height: 65%;
     display: flex;
     flex-direction: column;
@@ -121,7 +120,7 @@
   &__containerGITHUB-three {
     width: 45%;
     background-color: $color-neutral-lowOpacity;
-    padding: 10px;
+    padding: 0.8vw;
     height: 65%;
     display: flex;
     flex-direction: column;
@@ -151,7 +150,7 @@
     width: 75%;
     height: auto;
     background-color: $color-neutral-lowOpacity;
-    padding: 3vh 1vw;
+    padding: 3vh 0.8vw;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -382,55 +381,6 @@
   }
 }
 
-.projects__previewMenuLink {
-  text-decoration: none;
-  color: transparent;
-  background-repeat: no-repeat;
-  background-size: 70%;
-  background-position: center;
-  width: 30px;
-  height: 30px;
-  background-color: #87a0a0;
-  border-radius: 20px;
-  display: inline-block;
-  transition: 1s ease all;
-  @media all and (min-width: 768px) {
-    width: 40px;
-    height: 40px;
-  }
-  &ACC {
-    background-color: #364a4e;
-  }
-  &Page {
-    background-image: url("../images/Projects/demo.svg");
-    margin-right: 5px;
-    @media all and (min-width: 768px) {
-      margin-right: 10px;
-    }
-  }
-  &Repo {
-    background-image: url("../images/Projects/repository.svg");
-  }
-  &:hover {
-    transform: scale(1.2);
-  }
-}
-
-.projects__previewMenuItem {
-  list-style-type: none;
-}
-.projects__previewMenuList {
-  display: flex;
-}
-
-.projects__previewMenu {
-  @media all and (min-width: 768px) {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-  }
-}
-
 @keyframes hexagonRotate {
   0% {
     transform: rotate(0deg);
@@ -476,7 +426,7 @@
   margin-bottom: 2vh;
   &-hexagonPlayground {
     flex-grow: 1;
-    margin-bottom: 2px;
+    margin-bottom: 1vh;
     padding: 0px 4vw 0.3vh 1vw;
     display: flex;
     flex-direction: column;
@@ -724,11 +674,9 @@
 @media all and (max-width: 1024px) {
   .projects {
     padding: 0px 3vw 0vh 5vw;
-    width: 100%;
-    display: grid;
     grid-template-rows: 10% 50% 40%;
     grid-template-columns: 100%;
-    grid-gap: 5px;
+    grid-gap: 1vw;
     &__container {
       grid-row: 2/3;
       grid-column: 1/2;
@@ -743,17 +691,10 @@
       }
     }
     &__title {
-      color: $color-secondary;
       font-size: 12vw;
       margin-left: 0vw;
       margin-top: 0vh;
       text-align: center;
-      width: 100%;
-      grid-row: 1/2;
-      align-self: center;
-      &ACC {
-        color: #37493d;
-      }
     }
   }
 
@@ -781,8 +722,6 @@
     left: 7vw;
     width: 15vw;
     height: 93%;
-    background-image: url("../images/Menus/longArrowLeft.svg");
-    background-repeat: no-repeat;
     background-position-x: 1vw;
     background-position-y: 100%;
     padding-left: 5vw;
@@ -790,22 +729,10 @@
     background-size: 5vw;
     display: flex;
     align-items: flex-end;
-    &:hover {
-      transform: scale(1.2);
-    }
-    &ACC {
-      background-image: url("../images/Menus/longArrowLeftACC.svg");
-    }
   }
 
   .projectsLink__menu-home {
-    text-decoration: none;
-    color: $color-secondary;
-    font-weight: 700;
     font-size: 6vw;
-    &ACC {
-      color: $color-tertiary-dark;
-    }
   }
 
   .projects__containerSelector {
@@ -825,7 +752,6 @@
     margin-bottom: 0vh;
     grid-row: 3/4;
     grid-column: 1/2;
-    display: flex;
     flex-direction: row;
     justify-content: center;
     justify-self: start;
@@ -900,6 +826,15 @@
       }
     }
   }
+  .bigProyect {
+    & > h3 {
+      font-size: 3vw;
+      margin-top: 5px;
+    }
+    & > p {
+      font-size: 2vw;
+    }
+  }
 }
 
 @media all and (max-width: 420px) {
@@ -922,6 +857,20 @@
   }
   .projectG__containerGITHUB-two > p {
     font-size: 3vw;
+  }
+
+  .bigProyect {
+    padding: 1vw;
+    & > h3 {
+      font-size: 4vw;
+      margin-top: 0px;
+    }
+    & > p {
+      font-size: 3vw;
+    }
+    & > nav {
+      margin: 0px;
+    }
   }
 
   .projects__containerSelector {
@@ -968,26 +917,28 @@
   }
 
   .projects__stack {
-    height: 90%;
-    width: 100%;
+    height: 100%;
+    width: 70%;
     margin-left: 0vw;
     margin-top: -2vh;
     grid-row: 3/4;
     grid-column: 1/2;
+    padding: 3vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    justify-self: start;
+    justify-self: end;
   }
 
   .projects__stackTech {
-    max-height: 55%;
+    height: min-content;
     width: 40vw;
     padding: 2vh 5vw;
   }
   .projects__stackLang {
-    max-height: 55%;
+    height: min-content;
     width: 40vw;
     padding: 2vh 5vw;
+    align-self: flex-end;
   }
 }

@@ -106,8 +106,6 @@ const Projects = (props) => {
       ".projectG__containerGITHUB-three"
     );
 
-    console.log("hello");
-
     projectOne.classList.remove("bigProyect");
     projectThree.classList.remove("bigProyect");
 

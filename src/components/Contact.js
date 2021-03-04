@@ -1,6 +1,6 @@
 import "../stylesheets/contact.scss";
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Github from "../images/Social-Footer/github.svg";
 import Linkedin from "../images/Social-Footer/linkedin.svg";
 import Twitter from "../images/Social-Footer/twitter.svg";
@@ -122,7 +122,7 @@ const Contact = (props) => {
     };
 
     setInterval(changeHover, 8000);
-  }, []);
+  });
 
   return (
     <main className="contact">
