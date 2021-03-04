@@ -924,21 +924,26 @@
     grid-row: 3/4;
     grid-column: 1/2;
     padding: 3vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    justify-self: end;
+    position: relative;
+    justify-self: flex-end;
   }
 
   .projects__stackTech {
-    height: min-content;
-    width: 40vw;
-    padding: 2vh 5vw;
-  }
-  .projects__stackLang {
-    height: min-content;
-    width: 40vw;
+    height: 15vh;
+    width: 20vh;
     padding: 2vh 5vw;
     align-self: flex-end;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  .projects__stackLang {
+    height: 15vh;
+    width: 20vh;
+    padding: 2vh 5vw;
+    align-self: flex-end;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
   }
 }
