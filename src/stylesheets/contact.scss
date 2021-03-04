@@ -1,40 +1,37 @@
 @import "./variables.scss";
 
 .contact {
-  flex-grow: 1;
   height: 92vh;
   width: 90%;
   display: grid;
   grid-template-columns: 60% 40%;
   grid-template-rows: 10% 45% 45%;
-  grid-gap: 20px;
-  padding: 0px 0px 0px 30px;
-  &__section {
-    display: flex;
-    flex-direction: column;
-    background-color: $color-tertiary;
-    height: fit-content;
-    width: 80%;
-    padding: 15px;
-    grid-column: 2/3;
-    grid-row: 3/4;
-    border-radius: 10px;
-    justify-self: center;
-    align-self: flex-start;
-  }
+  grid-gap: 1.8vw;
+  padding: 0px 0px 0px 3vw;
   &__title {
     color: $color-secondary;
     font-size: 6vw;
-    width: 100%;
     grid-row: 1/2;
     grid-column: 1/3;
     &ACC {
       color: #37493d;
     }
   }
+  &__section {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-tertiary;
+    height: fit-content;
+    width: 80%;
+    padding: 1vw;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    border-radius: 5%;
+    justify-self: center;
+    align-self: flex-start;
+  }
   &__subtitle {
     color: $color-secondary;
-    display: block;
     font-size: 2vw;
     text-align: right;
     margin-bottom: 1vh;
@@ -44,7 +41,6 @@
   }
   &__text {
     color: $color-secondary;
-    display: block;
     line-height: 1;
     font-size: 1.5vw;
     margin-bottom: 1vh;
@@ -54,41 +50,19 @@
   }
   &__list {
     list-style-type: none;
-    color: $color-secondary;
     display: flex;
     font-size: 1.3vw;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
-    margin-right: 4vw;
     &ACC {
       color: #506464;
     }
     &Item {
       margin-top: 0.5vh;
-      @media all and (min-width: 768px) {
-        display: flex;
-        flex-direction: column;
-      }
-    }
-    &Github {
-      @media all and (min-width: 768px) {
-        grid-column: 1/2;
-      }
-    }
-    &Linkedin {
-      @media all and (min-width: 768px) {
-        grid-column: 2/3;
-      }
-    }
-    &Mail {
-      @media all and (min-width: 768px) {
-        grid-column: 3/4;
-      }
-    }
-    &Twitter {
-      @media all and (min-width: 768px) {
-        grid-column: 4/5;
-      }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 1vw;
     }
   }
   &__logoImg {
@@ -104,17 +78,9 @@
 .contact__menuList-access {
   text-decoration: none;
   color: $color-secondary;
-  display: block;
   text-align: center;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  &:hover {
-    color: $color-secondary;
-  }
-  @media all and (min-width: 768px) {
-    align-items: center;
-  }
+  width: min-content;
   &ACC {
     color: #506464;
   }
@@ -139,7 +105,6 @@
   }
 
   &ACC {
-    color: $color-tertiary-dark;
     background-image: url("../images/Menus/longArrowRightACC.svg");
   }
 }
@@ -165,7 +130,7 @@
     color: $color-secondary;
     font-size: 2vw;
     &ACC {
-      color: black;
+      color: $color-tertiary-dark;
     }
   }
   &Container {
@@ -182,6 +147,17 @@
     transition: all ease 1s;
     font-size: 1.5vw;
     cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 4vw;
+    height: 7vh;
+    padding: 1.3vw;
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
     &:hover {
       transform: scale(1.2);
       filter: brightness(120%);
@@ -196,157 +172,52 @@
     padding: 20px;
     border-radius: 15px;
     margin-top: 3vh;
+    &ACC {
+      background-color: #e3e4e5;
+      color: black;
+    }
   }
   &University {
     background-image: url("../images/Hexagons/hexagonLight.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 4vw;
-    height: 7vh;
-    padding: 1.3vw;
-    display: flex;
-    align-items: center;
-    align-self: flex-start;
-    font-weight: bold;
-    text-align: center;
-    justify-content: center;
   }
   &NH {
-    background-image: url("../images/Hexagons/hexagonMainColor.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 4vw;
-    height: 7vh;
-    display: flex;
-    align-items: center;
-    padding: 1.3vw;
-    font-weight: bold;
+    background-image: url("../images/Hexagons/hexagonSecColor.svg");
     align-self: flex-end;
-    justify-content: center;
-    text-align: center;
-    margin-left: -10px;
   }
   &EurostarsPraga {
-    background-image: url("../images/Hexagons/hexagonSecColor.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 4vw;
-    height: 7vh;
-    padding: 1.3vw;
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    text-align: center;
-    justify-content: center;
-    margin-left: -10px;
+    background-image: url("../images/Hexagons/hexagonMainColor.svg");
   }
   &EurostarsMadrid {
     background-image: url("../images/Hexagons/hexagonLight.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 4vw;
-    height: 7vh;
-    padding: 1.3vw;
-    display: flex;
-    align-items: center;
-    font-weight: bold;
     align-self: flex-end;
-    justify-content: center;
-    text-align: center;
-    margin-left: -10px;
   }
   &EurostarsMadridRevenue {
-    background-image: url("../images/Hexagons/hexagonMainColor.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 4vw;
-    height: 7vh;
-    padding: 1.3vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    text-align: center;
-    margin-left: -10px;
+    background-image: url("../images/Hexagons/hexagonSecColor.svg");
   }
   &EurostarsMadridTMS {
-    background-image: url("../images/Hexagons/hexagonSecColor.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 4vw;
-    height: 7vh;
-    display: flex;
-    padding: 1.3vw;
-    align-items: center;
-    font-weight: bold;
+    background-image: url("../images/Hexagons/hexagonMainColor.svg");
     align-self: flex-end;
-    justify-content: center;
-    text-align: center;
-    margin-left: -10px;
   }
   &GoldcarMadrid {
     background-image: url("../images/Hexagons/hexagonLight.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 4vw;
-    height: 7vh;
-    padding: 1.3vw;
-    display: flex;
-    align-items: center;
-    font-weight: bold;
-    justify-content: center;
-    text-align: center;
-    margin-left: -10px;
   }
   &Adalab {
-    background-image: url("../images/Hexagons/hexagonMainColor.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 4vw;
-    height: 7vh;
-    display: flex;
-    align-items: center;
-    padding: 1.3vw;
-    font-weight: bold;
+    background-image: url("../images/Hexagons/hexagonSecColor.svg");
     align-self: flex-end;
-    justify-content: center;
-    text-align: center;
-    margin-left: -10px;
   }
   &postAdalab {
-    background-image: url("../images/Hexagons/hexagonSecColor.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 4vw;
-    height: 7vh;
-    display: flex;
-    align-items: center;
-    padding: 1.3vw;
-    font-weight: bold;
-    justify-content: center;
-    text-align: center;
-    margin-left: -10px;
+    background-image: url("../images/Hexagons/hexagonMainColor.svg");
   }
   &Perspectives {
     background-image: url("../images/Hexagons/hexagonLight.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 4vw;
-    height: 7vh;
-    display: flex;
-    align-items: center;
-    padding: 1.3vw;
-    font-weight: bold;
     align-self: flex-end;
-    justify-content: center;
-    text-align: center;
-    margin-left: -10px;
+  }
+  &ItemACC {
+    background-image: url("../images/Hexagons/hexagonACC.svg");
   }
 }
 
-.contact_trajectoryItemACC {
-  background-image: url("../images/Hexagons/hexagonACC.svg");
-}
+//Styles for text container changing styles:
 
 .bg_yellow {
   background-color: #f2e0d5;
@@ -367,14 +238,14 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position-x: center;
-  color: $color-secondary;
+  color: $color-secondary-fullOpacity;
   font-size: 1.2vw;
   max-height: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   position: relative;
   padding: 10% 10vw;
   grid-row: 2/3;
@@ -392,19 +263,19 @@
   }
 }
 
-.contact_trajectoryContentACC {
-  background-color: #e3e4e5;
-  color: black;
-}
-
 @media all and (max-width: 1024px) {
   .contact {
-    height: 92vh;
     grid-template-columns: 100%;
     grid-template-rows: 10% 45% 22% 22%;
     grid-gap: 2vh;
-    padding: 0px 30px 0px 30px;
-    margin-left: 5%;
+    padding: 0px 3vw;
+    margin-left: 5vw;
+    &__title {
+      font-size: 12vw;
+      text-align: center;
+      grid-row: 1/2;
+      grid-column: 1/2;
+    }
     &__section {
       width: 40vw;
       grid-column: 1/2;
@@ -413,39 +284,15 @@
       justify-self: start;
       align-self: center;
     }
-    &__title {
-      font-size: 12vw;
-      margin-left: 0vw;
-      margin-top: 0vh;
-      text-align: center;
-      grid-row: 1/2;
-      grid-column: 1/2;
-      &ACC {
-        color: #37493d;
-      }
-    }
     &__subtitle {
       font-size: 4vw;
-      margin-bottom: 5px;
-      &ACC {
-        color: #537070;
-      }
     }
     &__text {
-      line-height: 1;
       font-size: 2vw;
-      margin-bottom: 1vh;
-      &ACC {
-        color: #506464;
-      }
     }
     &__list {
-      font-size: 1.5vw;
-      justify-content: space-around;
-      width: 100%;
-      margin-right: 4vw;
-      &ACC {
-        color: #506464;
+      &Item {
+        font-size: 1.5vw;
       }
     }
   }
@@ -454,34 +301,19 @@
     top: 0px;
     right: 7vw;
     width: 15vw;
-    height: 93%;
-    background-image: url("../images/Menus/longArrowRight.svg");
-    background-repeat: no-repeat;
+    height: 91%;
     background-position-x: 10vw;
     background-position-y: 100%;
-    padding-right: 1.5vw;
-    padding-bottom: 2vh;
     background-size: 5vw;
     display: flex;
     align-items: flex-end;
-    &:hover {
-      transform: scale(1.2);
-    }
-    &ACC {
-      color: $color-tertiary-dark;
-      background-image: url("../images/Menus/longArrowRightACC.svg");
-    }
   }
 
   .contactLink__menu-home {
     font-size: 6vw;
-    &ACC {
-      color: $color-tertiary-dark;
-    }
   }
 
   .contact_trajectory {
-    padding: 0px;
     grid-row: 2/3;
     grid-column: 1/2;
     justify-self: center;
@@ -490,50 +322,11 @@
     margin: 2vh 0px 0px 0px;
     &Title {
       font-size: 3vw;
-      &ACC {
-        color: black;
-      }
     }
     &Content {
       font-size: 2vw;
     }
-    &University {
-      width: 8vw;
-      height: 5vh;
-    }
-    &NH {
-      width: 8vw;
-      height: 5vh;
-    }
-    &EurostarsPraga {
-      width: 8vw;
-      height: 5vh;
-    }
-    &EurostarsMadrid {
-      width: 8vw;
-      height: 5vh;
-    }
-    &EurostarsMadridRevenue {
-      width: 8vw;
-      height: 5vh;
-    }
-    &EurostarsMadridTMS {
-      width: 8vw;
-      height: 5vh;
-    }
-    &GoldcarMadrid {
-      width: 8vw;
-      height: 5vh;
-    }
-    &Adalab {
-      width: 8vw;
-      height: 5vh;
-    }
-    &postAdalab {
-      width: 8vw;
-      height: 5vh;
-    }
-    &Perspectives {
+    &Item {
       width: 8vw;
       height: 5vh;
     }
@@ -541,12 +334,10 @@
 
   .contact__hobbies {
     font-size: 1.8vw;
-    max-height: 100%;
     width: 45vw;
     padding: 1vh 12vw;
     grid-row: 3/5;
     justify-self: end;
-    align-self: flex-start;
     grid-column: 1/2;
     &Title {
       font-size: 2.5vw;
@@ -556,113 +347,30 @@
 
 @media all and (max-width: 420px) {
   .contact {
-    grid-template-columns: 100%;
     grid-template-rows: 10% 52% 20% 18%;
-    padding: 0px 30px 5vh 30px;
-    height: 92vh;
-    grid-gap: 5px;
+    padding: 0px 3vw 5vh 3vw;
+    grid-gap: 2vw;
     &__section {
-      width: 80%;
-      grid-column: 1/2;
+      width: 60%;
       grid-row: 4/5;
-      justify-self: start;
-    }
-
-    &__subtitle {
-      font-size: 4vw;
-      margin-bottom: 0px;
-      &ACC {
-        color: #537070;
-      }
-    }
-    &__text {
-      line-height: 1;
-      font-size: 2vw;
-      margin-bottom: 0vh;
-      &ACC {
-        color: #506464;
-      }
     }
     &__list {
-      font-size: 1.8vw;
-      justify-content: space-around;
-      width: 100%;
-      margin-right: 4vw;
-      &ACC {
-        color: #506464;
+      &Item {
+        font-size: 2vw;
       }
     }
   }
-
-  .contact__menuList-access {
-    align-items: center;
-  }
-
   .contact_trajectory {
-    padding: 0px;
-    grid-row: 2/3;
-    grid-column: 1/2;
-    justify-self: center;
-    width: 100%;
-
     &Title {
-      font-size: 3vw;
-      &ACC {
-        color: black;
-      }
+      font-size: 5vw;
     }
     &Content {
       font-size: 2.3vw;
     }
-    &University {
+    &Item {
       width: 8vw;
       height: 4vh;
-      font-size: 3.5vw;
-    }
-    &NH {
-      width: 8vw;
-      height: 4vh;
-      font-size: 3.5vw;
-    }
-    &EurostarsPraga {
-      width: 8vw;
-      height: 4vh;
-      font-size: 3.5vw;
-    }
-    &EurostarsMadrid {
-      width: 8vw;
-      height: 4vh;
-      font-size: 3.5vw;
-    }
-    &EurostarsMadridRevenue {
-      width: 8vw;
-      height: 4vh;
-      font-size: 3.5vw;
-    }
-    &EurostarsMadridTMS {
-      width: 8vw;
-      height: 4vh;
-      font-size: 3.5vw;
-    }
-    &GoldcarMadrid {
-      width: 8vw;
-      height: 4vh;
-      font-size: 3.5vw;
-    }
-    &Adalab {
-      width: 8vw;
-      height: 4vh;
-      font-size: 3.5vw;
-    }
-    &postAdalab {
-      width: 8vw;
-      height: 4vh;
-      font-size: 3.5vw;
-    }
-    &Perspectives {
-      width: 8vw;
-      height: 4vh;
-      font-size: 3.5vw;
+      font-size: 3vw;
     }
   }
 
@@ -672,7 +380,5 @@
     width: 38vw;
     padding: 3% 8vw;
     grid-row: 3/4;
-    justify-self: end;
-    grid-column: 1/2;
   }
 }
