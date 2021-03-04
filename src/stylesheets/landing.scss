@@ -134,12 +134,13 @@
 @media all and (max-width: 1024px) {
   .landing {
     &__container {
-      height: 70%;
+      height: 65vw;
+      margin: 17.5vh 0px;
       grid-template-columns: 100%;
-      grid-template-rows: 55% 35% 10%;
+      grid-template-rows: auto;
     }
     &__photo {
-      width: 70%;
+      width: 50%;
       grid-row: 1/2;
       grid-column: 1/2;
       align-self: end;
@@ -149,14 +150,13 @@
       grid-row: 3/4;
       justify-self: end;
       grid-column: 1/2;
-      margin-top: -2vh;
     }
     &__title {
-      font-size: 25vw;
+      font-size: 20vw;
       grid-row: 2/3;
       align-self: start;
       grid-column: 1/2;
-      margin-top: -3vh;
+      line-height: 0.7;
     }
 
     &__textOne {
@@ -198,8 +198,8 @@
 
 @media all and (max-width: 420px) {
   .landing {
-    &__text {
-      margin-top: -5vh;
+    &__container {
+      height: 25vh;
     }
   }
 }
