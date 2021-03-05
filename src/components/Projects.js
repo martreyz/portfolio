@@ -270,6 +270,13 @@ const Projects = (props) => {
               defaultTab="result"
               title="Hawaii"
             />
+            <a
+              href="https://codepen.io/martreyz/pen/bGBqBJq"
+              target="_blank"
+              rel="noreferrer"
+              title="View project"
+              className="projects__containerCODEPEN-oneLink"
+            ></a>
           </div>
           <div className="projects__containerCODEPEN-two">
             <Codepen
@@ -278,6 +285,13 @@ const Projects = (props) => {
               defaultTab="result"
               title="Watch"
             />
+            <a
+              href="https://codepen.io/martreyz/pen/KKgNZoY"
+              target="_blank"
+              rel="noreferrer"
+              title="View project"
+              className="projects__containerCODEPEN-twoLink"
+            ></a>
           </div>
           <div className="projects__containerCODEPEN-three">
             <Codepen
@@ -286,6 +300,13 @@ const Projects = (props) => {
               defaultTab="result"
               title="Castle"
             />
+            <a
+              href="https://codepen.io/martreyz/pen/zYKZxBb"
+              target="_blank"
+              rel="noreferrer"
+              title="View project"
+              className="projects__containerCODEPEN-threeLink"
+            ></a>
           </div>
         </div>
       </section>
