@@ -404,6 +404,7 @@ const Contact = (props) => {
       >
         <Link
           to="/"
+          title={props.translated ? "Home" : "Inicio"}
           className={
             props.accesible
               ? "contactLink__menu-home contactLink__menu-homeACC"

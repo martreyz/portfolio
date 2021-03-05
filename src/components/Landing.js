@@ -57,6 +57,7 @@ const Landing = (props) => {
           >
             <Link
               to="/projects"
+              title={props.translated ? "Projects" : "Proyectos"}
               className={
                 props.accesible
                   ? "landingLink__menu-projects landingLink__menu-projectsACC"
@@ -74,6 +75,7 @@ const Landing = (props) => {
             }
           >
             <Link
+              title={props.translated ? "About me" : "Sobre mí"}
               to="/contact"
               className={
                 props.accesible

@@ -18,6 +18,7 @@ const Header = (props) => {
     <header className="header">
       <nav className="header__menu">
         <button
+          title={translate ? "Cambiar a inglés" : "Back to spanish"}
           onClick={handleLangClick}
           className={
             accesible
@@ -25,13 +26,23 @@ const Header = (props) => {
               : "header__menu-lang"
           }
         >
-          {translate ? "Es" : "En"}
+          {accesible
+            ? translate
+              ? "Back to Spanish"
+              : "Traducir a inglés"
+            : translate
+            ? "Es"
+            : "En"}
         </button>
         <button
-          title={translate ? "Accessible mode" : "Modo accesible"}
+          title={
+            translate ? "Modo de alto contraste" : "Modo de bajo contraste"
+          }
           onClick={handleAccClick}
           className={accesible ? "header__menu-accActive" : "header__menu-acc"}
-        ></button>
+        >
+          {accesible ? "Modo de bajo contraste" : ""}
+        </button>
       </nav>
     </header>
   );

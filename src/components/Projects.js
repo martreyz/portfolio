@@ -373,6 +373,7 @@ const Projects = (props) => {
         }
       >
         <Link
+          title={props.translated ? "Home" : "Inicio"}
           to="/"
           className={
             props.accesible

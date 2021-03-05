@@ -172,10 +172,6 @@
     padding: 20px;
     border-radius: 15px;
     margin-top: 3vh;
-    &ACC {
-      background-color: #e3e4e5;
-      color: black;
-    }
   }
   &University {
     background-image: url("../images/Hexagons/hexagonLight.svg");
@@ -228,6 +224,11 @@
   color: #f2e0d5;
 }
 
+.contact_trajectoryContentACC {
+  background-color: #e3e4e5;
+  color: black;
+}
+
 .item_hovered {
   transform: scale(1.2);
   filter: brightness(120%);
@@ -260,6 +261,9 @@
   &ACC {
     background-image: url("../images/Hexagons/hexagonACC.svg");
     color: black;
+    text-align: left;
+    padding: 10% 10vw 10% 11vw;
+    font-size: 1vw;
   }
 }
 

@@ -48,16 +48,20 @@
     cursor: hand;
     cursor: pointer;
     &Active {
-      background-image: url("../images/Menus/toggleOn.svg");
-      background-color: transparent;
-      background-repeat: no-repeat;
-      background-size: contain;
+      background-color: #e3e4e5;
+      border-radius: 20%;
       height: 3vh;
-      width: 4vh;
+      padding: 0px 1vw;
+      font-size: 1vw;
+      box-shadow: 1px 1px 1px black;
       outline: none;
       border: none;
       cursor: hand;
       cursor: pointer;
+      transition: all ease 1s;
+      &:hover {
+        transform: scale(1.2);
+      }
     }
   }
 }
