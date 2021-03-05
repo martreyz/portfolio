@@ -18,7 +18,7 @@ const Header = (props) => {
     <header className="header">
       <nav className="header__menu">
         <button
-          title={translate ? "Cambiar a inglés" : "Back to spanish"}
+          title={translate ? "Back to spanish" : "Cambiar a inglés"}
           onClick={handleLangClick}
           className={
             accesible
@@ -36,7 +36,13 @@ const Header = (props) => {
         </button>
         <button
           title={
-            translate ? "Modo de alto contraste" : "Modo de bajo contraste"
+            accesible
+              ? translate
+                ? "Low contrast"
+                : "Bajo contraste"
+              : translate
+              ? "High contrast"
+              : "Alto contraste"
           }
           onClick={handleAccClick}
           className={accesible ? "header__menu-accActive" : "header__menu-acc"}
