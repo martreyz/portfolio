@@ -500,14 +500,11 @@
 .projects__stack {
   height: 90%;
   width: 35vw;
-  margin-left: 5vw;
-  margin-bottom: 5vh;
   grid-row: 2/4;
   grid-column: 2/3;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  position: relative;
   justify-self: flex-end;
+  align-self: flex-end;
 }
 
 .projects__stackTech {
@@ -518,10 +515,10 @@
   color: #f2e0d5;
   font-size: 1.3vw;
   text-align: center;
-  height: 30vh;
-  width: 35vh;
-  align-self: flex-start;
+  height: auto;
+  width: 60%;
   padding: 2vw;
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -603,10 +600,11 @@
   color: #f2e0d5;
   font-size: 1.3vw;
   text-align: center;
-  height: 30vh;
-  width: 35vh;
-  align-self: flex-end;
-  margin-top: -10vh;
+  height: auto;
+  width: 60%;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
   padding: 2vw;
   display: flex;
   flex-direction: column;
@@ -747,20 +745,21 @@
 
   .projects__stack {
     height: 30vh;
-    width: 100%;
+    width: 70%;
     margin-left: 0vw;
     margin-bottom: 0vh;
     grid-row: 3/4;
     grid-column: 1/2;
     flex-direction: row;
     justify-content: center;
-    justify-self: start;
+    justify-self: end;
+    align-self: flex-start;
   }
 
   .projects__stackTech {
-    max-height: 55%;
-    width: 35vw;
-    padding: 0.5vh 7vw;
+    height: auto;
+    width: 60%;
+    padding: 2vh 7vw;
     &Title {
       font-size: 4vw;
     }
@@ -796,9 +795,9 @@
   }
 
   .projects__stackLang {
-    max-height: 55%;
-    width: 35vw;
-    padding: 0.5vh 7vw;
+    height: auto;
+    width: 60%;
+    padding: 2vh 7vw;
     &Title {
       font-size: 4vw;
     }
