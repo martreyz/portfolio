@@ -220,9 +220,11 @@
     }
     & > p {
       color: $color-secondary-fullOpacity;
-      font-size: 1.4vw;
       width: 90%;
       display: block;
+      font-family: "Architects Daughter", cursive;
+      font-weight: 300;
+      font-size: 0.9vw;
     }
     & > img {
       height: 15vh;

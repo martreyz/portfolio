@@ -170,6 +170,8 @@ const Projects = (props) => {
                 className="projectG_oneNavRepo"
                 href={props.projectsData[0].repository}
                 title="Access repository"
+                target="_blank"
+                rel="noreferrer"
               >
                 .
               </a>
@@ -177,6 +179,8 @@ const Projects = (props) => {
                 className="projectG_oneNavDemo"
                 href={props.projectsData[0].webpage}
                 title="Access demo"
+                target="_blank"
+                rel="noreferrer"
               >
                 .
               </a>
@@ -207,6 +211,8 @@ const Projects = (props) => {
                 className="projectG_twoNavRepo"
                 href={props.projectsData[1].repository}
                 title="Access repository"
+                target="_blank"
+                rel="noreferrer"
               >
                 <div className="projectG_twoNavRepoIcon"></div>
               </a>
@@ -214,6 +220,8 @@ const Projects = (props) => {
                 className="projectG_twoNavDemo"
                 href={props.projectsData[1].webpage}
                 title="Access demo"
+                target="_blank"
+                rel="noreferrer"
               >
                 <div className="projectG_twoNavDemoIcon"></div>
               </a>
@@ -244,6 +252,8 @@ const Projects = (props) => {
                 className="projectG_threeNavRepo"
                 href={props.projectsData[2].repository}
                 title="Access repository"
+                target="_blank"
+                rel="noreferrer"
               >
                 .
               </a>
@@ -251,6 +261,8 @@ const Projects = (props) => {
                 className="projectG_threeNavDemo"
                 href={props.projectsData[2].webpage}
                 title="Access demo"
+                target="_blank"
+                rel="noreferrer"
               >
                 .
               </a>
