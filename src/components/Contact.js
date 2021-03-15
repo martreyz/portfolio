@@ -1,6 +1,6 @@
 import "../stylesheets/contact.scss";
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Github from "../images/Social-Footer/github.svg";
 import Linkedin from "../images/Social-Footer/linkedin.svg";
 import Twitter from "../images/Social-Footer/twitter.svg";
@@ -11,85 +11,26 @@ import TwitterACC from "../images/Social-Footer/twitterACC.svg";
 import MailACC from "../images/Social-Footer/envelopeACC.svg";
 
 const Contact = (props) => {
-  const trajectory = [...props.trajectory];
-  const trajectoryEN = [...props.trajectoryEN];
-
+  //Declare state to stop autohover when user's interaction:
+  const [isHovered, setIsHovered] = useState(false);
   useEffect(() => {
-    const isTranslated = document.querySelector(".contactLink__menu-home");
     const trajectoryArray = document.querySelectorAll(
       ".contact_trajectoryItem"
     );
 
-    const trajectoryContent = document.querySelector(
-      ".contact_trajectoryContent"
-    );
-
-    let isHovered = false;
-    let counter = 1;
-
-    const showTrajectoryContentOnClick = (ev) => {
-      if (trajectoryArray[counter - 1]) {
-        trajectoryArray[counter - 1].classList.remove("item_hovered");
-      }
-      let infoToShow;
-      if (isTranslated.innerHTML === "Home") {
-        infoToShow = trajectoryEN[ev.currentTarget.id];
-        trajectoryContent.innerHTML = infoToShow;
-      } else {
-        infoToShow = trajectory[ev.currentTarget.id];
-        trajectoryContent.innerHTML = infoToShow;
-      }
-
-      if (
-        ev.currentTarget.id === "0" ||
-        parseInt(ev.currentTarget.id) % 3 === 0
-      ) {
-        trajectoryContent.classList.add("bg_yellow");
-        trajectoryContent.classList.remove("bg_red");
-      } else if (
-        ev.currentTarget.id === "1" ||
-        (parseInt(ev.currentTarget.id) - 1) % 3 === 0
-      ) {
-        trajectoryContent.classList.add("bg_red");
-        trajectoryContent.classList.remove("bg_yellow");
-      } else {
-        trajectoryContent.classList.remove("bg_red");
-        trajectoryContent.classList.remove("bg_yellow");
-      }
-    };
-
+    //user's hover handler:
     const showTrajectoryContentOnHover = (ev) => {
-      isHovered = true;
-      if (trajectoryArray[counter - 1]) {
-        trajectoryArray[counter - 1].classList.remove("item_hovered");
-      }
-      let infoToShow;
-      if (isTranslated.innerHTML === "Home") {
-        infoToShow = trajectoryEN[ev.currentTarget.id];
-        trajectoryContent.innerHTML = infoToShow;
-      } else {
-        infoToShow = trajectory[ev.currentTarget.id];
-        trajectoryContent.innerHTML = infoToShow;
-      }
-
-      if (
-        ev.currentTarget.id === "0" ||
-        parseInt(ev.currentTarget.id) % 3 === 0
-      ) {
-        trajectoryContent.classList.add("bg_yellow");
-        trajectoryContent.classList.remove("bg_red");
-      } else if (
-        ev.currentTarget.id === "1" ||
-        (parseInt(ev.currentTarget.id) - 1) % 3 === 0
-      ) {
-        trajectoryContent.classList.add("bg_red");
-        trajectoryContent.classList.remove("bg_yellow");
-      } else {
-        trajectoryContent.classList.remove("bg_red");
-        trajectoryContent.classList.remove("bg_yellow");
-      }
+      setIsHovered(true);
+      props.handleTrajectoryClick(parseInt(ev.currentTarget.id));
+      trajectoryArray[props.counterTrajectory].classList.remove("item_hovered");
     };
 
+    //autohover handler:
+    const showTrajectoryContentOnClick = (ev) => {
+      props.handleTrajectoryClick(parseInt(ev.currentTarget.id));
+    };
+
+    //Listener loop in order to listen all array elements:
     for (let i = 0; i < trajectoryArray.length; i++) {
       trajectoryArray[i].addEventListener(
         "mouseover",
@@ -101,27 +42,26 @@ const Contact = (props) => {
       );
     }
 
-    const changeHover = () => {
+    //timeout autohover function:
+    const autoHover = () => {
       if (!isHovered) {
-        if (counter !== 9) {
-          trajectoryArray[counter].classList.add("item_hovered");
-          if (counter !== 0) {
-            trajectoryArray[counter - 1].classList.remove("item_hovered");
-          } else {
-            trajectoryArray[9].classList.remove("item_hovered");
-          }
-          trajectoryArray[counter].click();
-          counter++;
+        if (props.counterTrajectory === 9) {
+          trajectoryArray[0].click();
+          trajectoryArray[9].classList.remove("item_hovered");
+          trajectoryArray[0].classList.add("item_hovered");
         } else {
-          trajectoryArray[counter].classList.add("item_hovered");
-          trajectoryArray[counter - 1].classList.remove("item_hovered");
-          trajectoryArray[counter].click();
-          counter = 0;
+          trajectoryArray[props.counterTrajectory + 1].click();
+          trajectoryArray[props.counterTrajectory + 1].classList.add(
+            "item_hovered"
+          );
+          trajectoryArray[props.counterTrajectory].classList.remove(
+            "item_hovered"
+          );
         }
       }
     };
 
-    setInterval(changeHover, 8000);
+    setTimeout(autoHover, 8000);
   });
 
   return (
@@ -252,12 +192,22 @@ const Contact = (props) => {
         </ul>
         <p
           className={
-            props.accesible
-              ? "contact_trajectoryContent bg_yellow contact_trajectoryContentACC"
-              : "contact_trajectoryContent bg_yellow"
+            props.counterTrajectory % 3 === 0
+              ? props.accesible
+                ? "contact_trajectoryContent bg_yellow contact_trajectoryContentACC"
+                : "contact_trajectoryContent bg_yellow"
+              : props.counterTrajectory === 2 ||
+                props.counterTrajectory === 5 ||
+                props.counterTrajectory === 8
+              ? props.accesible
+                ? "contact_trajectoryContent contact_trajectoryContentACC"
+                : "contact_trajectoryContent"
+              : props.accesible
+              ? "contact_trajectoryContent bg_red contact_trajectoryContentACC"
+              : "contact_trajectoryContent bg_red"
           }
         >
-          {props.translated ? props.trajectoryEN[0] : props.trajectory[0]}{" "}
+          {props.infoToShow}
         </p>
       </section>
       <section

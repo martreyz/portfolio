@@ -72,11 +72,12 @@
     background-image: url("../images/Menus/longArrowRight.svg");
     background-repeat: no-repeat;
     background-size: 1.5vw;
-    background-position-x: 3.7vw;
-    background-position-y: 2.7vh;
+    background-position-x: 90%;
+    background-position-y: 100%;
     padding-right: 1.5vw;
     padding-bottom: 2vh;
     transition: all ease 1s;
+    height: min-content;
     &ACC {
       background-image: url("../images/Menus/longArrowRightACC.svg");
     }
@@ -90,11 +91,12 @@
     background-image: url("../images/Menus/longArrowLeft.svg");
     background-repeat: no-repeat;
     background-size: 1.5vw;
-    background-position-y: 2.7vh;
-    background-position-x: 0.3vw;
+    background-position-y: 100%;
+    background-position-x: 10%;
     padding-left: 1.5vw;
     padding-bottom: 2vh;
     transition: all ease 1s;
+    height: min-content;
     &ACC {
       background-image: url("../images/Menus/longArrowLeftACC.svg");
     }
@@ -169,15 +171,11 @@
     }
     &__menu-projects {
       background-size: 5vw;
-      background-position-x: 15vw;
-      background-position-y: 3.5vh;
       padding-right: 5vw;
       align-self: flex-end;
     }
     &__menu-contact {
       background-size: 5vw;
-      background-position-y: 3.5vh;
-      background-position-x: 1vw;
       padding-left: 5vw;
     }
   }

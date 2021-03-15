@@ -20,6 +20,7 @@
   &__section {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     background-color: $color-tertiary;
     height: fit-content;
     width: 80%;
@@ -34,8 +35,6 @@
     color: #a65b69d5;
     font-size: 2vw;
     text-align: right;
-    margin-bottom: 1vh;
-
     &ACC {
       color: #537070;
     }
@@ -44,7 +43,6 @@
     color: #a65b69d5;
     line-height: 1;
     font-size: 1.5vw;
-    margin-bottom: 1vh;
     font-family: "Architects Daughter", cursive;
     font-weight: 300;
     font-size: 0.9vw;
@@ -99,8 +97,8 @@
   transition: all ease 1s;
   background-image: url("../images/Menus/longArrowRight.svg");
   background-repeat: no-repeat;
-  background-position-x: 2.6vw;
-  background-position-y: 2.7vh;
+  background-position-x: 90%;
+  background-position-y: 100%;
   padding-right: 1.5vw;
   padding-bottom: 2vh;
   background-size: 1.5vw;
@@ -131,11 +129,8 @@
   height: 60vh;
   margin-left: 7vw;
   &Title {
-    color: $color-secondary;
+    color: $color-tertiary-dark;
     font-size: 2vw;
-    &ACC {
-      color: $color-tertiary-dark;
-    }
   }
   &Container {
     display: flex;
@@ -298,19 +293,24 @@
       grid-column: 1/2;
     }
     &__section {
-      width: 60vw;
+      width: 50vw;
       grid-column: 1/2;
       grid-row: 4/5;
       justify-self: start;
       align-self: start;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     &__subtitle {
       font-size: 4vw;
     }
     &__text {
-      font-size: 2vw;
+      font-size: 1.8vw;
     }
     &__list {
+      width: 90%;
+      align-self: center;
       &Item {
         font-size: 1.5vw;
       }
@@ -322,8 +322,6 @@
     right: 7vw;
     width: 15vw;
     height: 91%;
-    background-position-x: 10vw;
-    background-position-y: 100%;
     background-size: 5vw;
     display: flex;
     align-items: flex-end;
@@ -340,6 +338,7 @@
     width: 100%;
     height: min-content;
     margin: 2vh 0px 0px 0px;
+    align-self: flex-start;
     &Title {
       font-size: 3vw;
     }
@@ -349,6 +348,7 @@
     &Item {
       width: 8vw;
       height: 5vh;
+      font-size: 2.5vw;
     }
   }
 
@@ -363,13 +363,14 @@
     grid-column: 1/2;
     margin-top: 0px;
     &Title {
-      font-size: 2.5vw;
+      font-size: 3vw;
+      margin-bottom: 10px;
     }
     &About {
-      font-size: 1.2vh;
+      font-size: 1.4vh;
     }
     &Text {
-      font-size: 1.2vh;
+      font-size: 1.4vh;
     }
   }
 }
@@ -395,6 +396,8 @@
     }
     &Content {
       font-size: 2.3vw;
+      border: 2px dashed #2f68687e;
+      padding: 5px;
     }
     &Item {
       width: 8vw;

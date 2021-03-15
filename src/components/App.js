@@ -19,6 +19,7 @@ function App() {
   const [accesible, setAccesible] = useState(false);
   const [trajectory] = useState(Trajectory);
   const [trajectoryEN] = useState(TrajectoryEN);
+  const [counterTrajectory, setCounterTrajectory] = useState(0);
 
   const handleLangClick = () => {
     setTranslated(!translated);
@@ -26,6 +27,9 @@ function App() {
 
   const handleAccClick = () => {
     setAccesible(!accesible);
+  };
+  const handleTrajectoryClick = (id) => {
+    setCounterTrajectory(id);
   };
 
   return (
@@ -52,8 +56,14 @@ function App() {
         <Contact
           accesible={accesible}
           translated={translated}
-          trajectory={trajectory}
-          trajectoryEN={trajectoryEN}
+          trajectory={translated ? trajectoryEN : trajectory}
+          handleTrajectoryClick={handleTrajectoryClick}
+          counterTrajectory={counterTrajectory}
+          infoToShow={
+            translated
+              ? trajectoryEN[counterTrajectory]
+              : trajectory[counterTrajectory]
+          }
         />
       </Route>
       <Footer accesible={accesible} translated={translated} />
