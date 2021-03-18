@@ -15,6 +15,7 @@ import { useState } from "react";
 function App() {
   const [projectsData] = useState(ProjectsData);
   const [projectsDataEN] = useState(ProjectsDataEN);
+  const [projectOnScreen, setProjectOnScreen] = useState(0);
   const [translated, setTranslated] = useState(false);
   const [accesible, setAccesible] = useState(false);
   const [trajectory] = useState(Trajectory);
@@ -32,6 +33,21 @@ function App() {
     setCounterTrajectory(id);
   };
 
+  //Manages selected project data:
+  const handleProjectClick = (target) => {
+    setProjectOnScreen(target);
+
+    //Resets all projects to non selected:
+    for (let i = 0; i < projectsData.length; i++) {
+      projectsDataEN[i].selected = false;
+      projectsData[i].selected = false;
+    }
+
+    //Sets targeted project info to change styles:
+    projectsDataEN[target].selected = true;
+    projectsData[target].selected = true;
+  };
+
   return (
     <>
       <Background accesible={accesible} />
@@ -47,9 +63,14 @@ function App() {
       <Route exact path="/projects">
         <Projects
           accesible={accesible}
-          projectsDataEN={projectsDataEN}
           translated={translated}
-          projectsData={projectsData}
+          projectsData={translated ? projectsDataEN : projectsData}
+          handleProjectClick={handleProjectClick}
+          projectInfo={
+            translated
+              ? projectsDataEN[projectOnScreen]
+              : projectsData[projectOnScreen]
+          }
         />
       </Route>
       <Route exact path="/contact">

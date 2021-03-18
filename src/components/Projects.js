@@ -1,22 +1,15 @@
 import "../stylesheets/projects.scss";
 import { Link } from "react-router-dom";
 import Codepen from "react-codepen-embed";
-import projects from "../data/projects.json";
-import projectsEN from "../data/projectsEn.json";
+import Project from "./Project";
 
 const Projects = (props) => {
-  const baseUrl = "/images/";
-  let image;
   //Get all HTML elements needed:
-  const selectorApp = document.querySelector(".projects__containerSelectorApp");
-  const selectorCSS = document.querySelector(".projects__containerSelectorCSS");
-  const selectorContainer = document.querySelector(
-    ".projects__containerSelector-hexagonPlayground"
-  );
-  const selectorHexagon = document.querySelector(
-    ".projects__containerSelector-hexagon"
-  );
 
+  const buttonCODEPEN = document.querySelector(
+    ".projects__containerSelectorCSS"
+  );
+  const buttonAPP = document.querySelector(".projects__containerSelectorApp");
   const infoToShowCODEPEN = document.querySelector(
     ".projects__containerCODEPEN"
   );
@@ -25,69 +18,58 @@ const Projects = (props) => {
   //FUNCTIONS REFERRED TO PROJECTS' SELECTOR:
 
   //1-Function to select CSS proyects with hexagon and animation:
-  const handleCSSOnClick = () => {
-    selectorCSS.classList.add("selectedByHexagon");
-    selectorApp.classList.remove("selectedByHexagon");
-    selectorContainer.classList.add("cointainerToCSS");
-    selectorHexagon.classList.add("toCSS");
-    selectorContainer.classList.remove("cointainerToApp");
-    selectorHexagon.classList.remove("toApp");
+  const handleCSSOnClick = (ev) => {
     infoToShowCODEPEN.classList.remove("hidden");
     infoToShowGITHUB.classList.add("hidden");
+    buttonCODEPEN.classList.add("projects__containerSelectorSelected");
+    buttonAPP.classList.remove("projects__containerSelectorSelected");
   };
 
   //2-Function to select WEBAPPs proyects with hexagon and animation:
-  const handleAppOnClick = () => {
-    selectorCSS.classList.remove("selectedByHexagon");
-    selectorApp.classList.add("selectedByHexagon");
-    selectorContainer.classList.remove("cointainerToCSS");
-    selectorHexagon.classList.remove("toCSS");
-    selectorContainer.classList.add("cointainerToApp");
-    selectorHexagon.classList.add("toApp");
+  const handleAppOnClick = (ev) => {
     infoToShowCODEPEN.classList.add("hidden");
     infoToShowGITHUB.classList.remove("hidden");
+    buttonAPP.classList.add("projects__containerSelectorSelected");
+    buttonCODEPEN.classList.remove("projects__containerSelectorSelected");
   };
-  let target;
-  //Handles projects' click to show correct information:
-  const handleProjectClick = (ev) => {
-    target = ev.currentTarget.id;
-    const descriptionContainer = document.querySelector(
-      ".projects__containerGITHUB-description"
-    );
-    const descriptionImg = document.querySelector(
-      ".projects__containerGITHUB-img"
-    );
-    descriptionContainer.innerHTML = props.translated
-      ? projectsEN[target].description
-      : projects[target].description;
 
-    descriptionImg.src = projects[target].preview;
+  //Handles projects' click and calls handler APP function:
+  const handleProjectClick = (ev) => {
+    let target = ev.currentTarget.id;
+    props.handleProjectClick(parseInt(target));
+
+    //Triggers function to play animation each time that info to show changes:
+    showProjectInfoContainer();
+  };
+
+  //Animates info container while showing up:
+
+  const showProjectInfoContainer = () => {
+    const projectInfo = document.querySelector(
+      ".projects__containerGITHUB-info"
+    );
+    projectInfo.classList.remove("projects__containerGITHUB-infoShow");
+    void projectInfo.offsetWidth;
+    projectInfo.classList.add("projects__containerGITHUB-infoShow");
   };
 
   //RENDERS ALL PROJECTS IN ARRAY:
-  const renderProjectsArray = props.translated
-    ? projectsEN.map((item) => {
-        return (
-          <li
-            id={item.id}
-            onClick={handleProjectClick}
-            className="projects__containerGITHUB-title"
-          >
-            {item.name}
-          </li>
-        );
-      })
-    : projects.map((item) => {
-        return (
-          <li
-            id={item.id}
-            onClick={handleProjectClick}
-            className="projects__containerGITHUB-title"
-          >
-            {item.name}
-          </li>
-        );
-      });
+  let renderProjectsArray = props.projectsData.map((item) => {
+    return (
+      <li
+        id={item.id}
+        key={item.id}
+        onClick={handleProjectClick}
+        className={
+          item.selected
+            ? "projects__containerGITHUB-title projects__containerGITHUB-titleMain"
+            : "projects__containerGITHUB-title"
+        }
+      >
+        {item.name}
+      </li>
+    );
+  });
 
   return (
     <main className="projects">
@@ -104,27 +86,34 @@ const Projects = (props) => {
       <section className="projects__container">
         <div className="projects__containerSelector">
           <span
+            onClick={handleAppOnClick}
+            className="projects__containerSelectorApp projects__containerSelectorSelected"
+          >
+            WebApps
+          </span>
+          <span
             onClick={handleCSSOnClick}
             className="projects__containerSelectorCSS"
           >
             {props.translated ? "CSS Projects" : "Proyectos CSS"}
           </span>
-          <div className="projects__containerSelector-hexagonPlayground">
-            <div className="projects__containerSelector-hexagon"></div>
-          </div>
-          <span
-            onClick={handleAppOnClick}
-            className="projects__containerSelectorApp selectedByHexagon"
-          >
-            WebApps
-          </span>
         </div>
         <div className="projects__containerGITHUB">
-          <img className="projects__containerGITHUB-img" src={image + target} />
+          <div className="projects__containerGITHUB-info">
+            {props.projectInfo ? (
+              <Project
+                webpage={props.projectInfo.webpage}
+                repository={props.projectInfo.repository}
+                preview={props.projectInfo.preview}
+                technologies={props.projectInfo.technologies}
+                description={props.projectInfo.description}
+                id={props.projectInfo.id}
+              />
+            ) : null}
+          </div>
           <ul className="projects__containerGITHUB-list">
             {renderProjectsArray}
           </ul>{" "}
-          <p className="projects__containerGITHUB-description"></p>
         </div>
         <div className="projects__containerCODEPEN hidden">
           <div className="projects__containerCODEPEN-one">
