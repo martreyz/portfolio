@@ -236,20 +236,14 @@
 }
 
 .contact__hobbies {
-  background-image: url("../images/Hexagons/hexagonMainColor.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position-x: center;
   color: $color-secondary-fullOpacity;
   font-size: 1.2vw;
-  max-height: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 10% 10vw;
   grid-row: 2/3;
   grid-column: 2/3;
   justify-self: flex-start;
@@ -258,17 +252,27 @@
   &Title {
     color: $color-tertiary-dark;
     font-size: 1.7vw;
-    width: 60%;
+    width: 50%;
+    background-image: url("../images/Hexagons/hexagonMainColor.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    padding: 1vh 3vw;
+    overflow-wrap: break-word;
+    margin-bottom: 2vh;
   }
   &About {
     font-family: "Architects Daughter", cursive;
     font-weight: 300;
     font-size: 1.8vh;
+    width: 50%;
   }
   &Text {
     font-family: "Architects Daughter", cursive;
     font-weight: 300;
     font-size: 1.8vh;
+    width: 60%;
+    margin-bottom: 1vh;
   }
   &ACC {
     background-image: url("../images/Hexagons/hexagonACC.svg");
@@ -364,22 +368,26 @@
     margin-top: 0px;
     &Title {
       font-size: 3vw;
-      margin-bottom: 10px;
+      margin-bottom: 0vh;
+      background-image: none;
     }
     &About {
       font-size: 1.4vh;
+      width: 100%;
     }
     &Text {
       font-size: 1.4vh;
+      width: 100%;
+      margin-bottom: 0.5vh;
     }
   }
 }
 
 @media all and (max-width: 420px) {
   .contact {
-    grid-template-rows: 10% 52% 20% 18%;
+    grid-auto-rows: max-content;
     padding: 0px 3vw 5vh 3vw;
-    grid-gap: 2vw;
+    grid-gap: 10vw;
     &__section {
       width: 60%;
       grid-row: 4/5;
@@ -391,6 +399,7 @@
     }
   }
   .contact_trajectory {
+    align-self: flex-start;
     &Title {
       font-size: 5vw;
     }
@@ -409,7 +418,6 @@
   .contact__hobbies {
     font-size: 1.9vw;
     max-height: 100%;
-    padding: 0% 10vw;
     grid-row: 3/4;
   }
 }

@@ -16,7 +16,7 @@
   width: 100%;
   display: grid;
   grid-template-rows: 20% 60% 20%;
-  grid-template-columns: 10% 40% 50%;
+  grid-template-columns: 10% 20% 70%;
   &__container {
     display: flex;
     flex-direction: column;
@@ -24,8 +24,9 @@
     width: 100%;
     height: 55vh;
     justify-content: space-between;
-    grid-row: 2/3;
+    grid-row: 2/4;
     grid-column: 3/4;
+    align-self: center;
     &GITHUB {
       height: 80%;
       max-height: 100%;
@@ -94,8 +95,8 @@
           grid-column: 1/3;
           grid-row: 1/2;
           overflow: hidden;
-          width: 60%;
-          height: 80%;
+          width: 80%;
+          height: 95%;
           transition: all ease 3s;
           justify-self: center;
           align-self: center;
@@ -127,6 +128,12 @@
         justify-content: center;
         align-items: center;
         font-family: "Architects Daughter", cursive;
+        & > li {
+          transition: all ease 1s;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
       }
       &-linkOne {
         text-decoration: none;
@@ -146,6 +153,113 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
+      }
+    }
+    &CODEPEN {
+      height: 80%;
+      max-height: 100%;
+      width: 80%;
+      position: relative;
+      display: grid;
+      grid-template-columns: 80% 20%;
+      grid-template-rows: 100%;
+      border-radius: 15px;
+      overflow: hidden;
+      &-info {
+        grid-column: 1/2;
+        display: grid;
+        height: 100%;
+        width: 90%;
+        grid-template-rows: 60% 10% 30%;
+        grid-template-columns: 100%;
+        justify-self: center;
+        &Show {
+          animation: showProjectInfo ease 1s;
+        }
+        &Banner {
+          grid-column: 1/2;
+          grid-row: 2/3;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: $color-tertiary;
+          padding: 0px 5%;
+        }
+      }
+      &-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        grid-column: 2/3;
+        justify-self: center;
+        height: 100%;
+        width: 100%;
+        border-left: $color-secondary 0.1vh dotted;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+      }
+      &-title {
+        width: 100%;
+        position: relative;
+        font-size: 3vh;
+        text-decoration: none;
+        list-style-type: none;
+        color: $color-secondary;
+        border-left: solid transparent 5px;
+        padding: 1vh;
+        cursor: pointer;
+        &Main {
+          color: $color-secondary-fullOpacity;
+          border-left: solid $color-secondary 5px;
+        }
+      }
+      &-img {
+        opacity: 0.8;
+        display: block;
+        width: 100%;
+        &Container {
+          grid-column: 1/3;
+          grid-row: 1/2;
+          overflow: hidden;
+          width: 80%;
+          height: 95%;
+          transition: all ease 3s;
+          justify-self: center;
+          align-self: center;
+        }
+      }
+      &-description {
+        font-size: 1.4vh;
+        color: $color-dark;
+        grid-column: 1/3;
+        grid-row: 3/4;
+        transition: all ease 3s;
+        width: 90%;
+        justify-self: center;
+        align-self: center;
+        font-family: "Architects Daughter", cursive;
+      }
+      &-technologies {
+        font-size: 1.4vh;
+        color: $color-secondary-fullOpacity;
+        transition: all ease 3s;
+        text-align: right;
+        font-family: "Architects Daughter", cursive;
+      }
+
+      &-linkOne {
+        text-decoration: none;
+        color: transparent;
+        background-image: url("../images/Projects/demo.svg");
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: ease 1s all;
+        &:hover {
+          transform: scale(1.2);
+        }
       }
     }
   }
@@ -209,17 +323,17 @@
     color: $color-secondary;
     width: fit-content;
     height: 0px;
-    border-right: 40px solid transparent;
-    border-left: 40px solid transparent;
-    border-bottom: 40px solid $color-tertiary;
+    border-right: 4vh solid transparent;
+    border-left: 4vh solid transparent;
+    border-bottom: 4vh solid $color-tertiary;
     text-align: center;
     &:active {
       color: $color-neutral-auxiliar;
-      border-bottom: 40px solid #b38c91;
+      border-bottom: 4vh solid #b38c91;
     }
     &:hover {
       color: $color-neutral-auxiliar;
-      border-bottom: 40px solid #b38c91;
+      border-bottom: 4vh solid #b38c91;
     }
   }
   &CSS {
@@ -228,23 +342,23 @@
     color: $color-secondary;
     width: fit-content;
     height: 0px;
-    border-right: 40px solid transparent;
-    border-left: 40px solid transparent;
-    border-bottom: 40px solid $color-tertiary;
+    border-right: 4vh solid transparent;
+    border-left: 4vh solid transparent;
+    border-bottom: 4vh solid $color-tertiary;
     text-align: center;
-    margin-left: -10%;
+    margin-left: -5%;
     &:active {
       color: $color-neutral-auxiliar;
-      border-bottom: 40px solid #b38c91;
+      border-bottom: 4vh solid #b38c91;
     }
     &:hover {
       color: $color-neutral-auxiliar;
-      border-bottom: 40px solid #b38c91;
+      border-bottom: 4vh solid #b38c91;
     }
   }
   &Selected {
     color: $color-neutral-auxiliar;
-    border-bottom: 40px solid #b38c91;
+    border-bottom: 4vh solid #b38c91;
     z-index: 99;
   }
 }
@@ -256,36 +370,38 @@
 
 .projects__stack {
   height: 90%;
-  width: 35vw;
+  width: 100%;
   grid-row: 2/4;
   grid-column: 2/3;
   position: relative;
   justify-self: flex-end;
-  align-self: flex-end;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .projects__stackTech {
-  background-image: url("../images/Hexagons/hexagonSecColor.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position-x: center;
   color: #f2e0d5;
-  font-size: 1.3vw;
+  font-size: 1vw;
   text-align: center;
   height: auto;
-  width: 60%;
   padding: 2vw;
-  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  &ACC {
-    background-image: url("../images/Hexagons/hexagonACC.svg");
-    color: black;
-  }
   &Title {
     font-size: 2vw;
+    background-image: url("../images/Hexagons/hexagonSecColor.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    width: 100%;
+    height: max-content;
+    &ACC {
+      background-image: url("../images/Hexagons/hexagonACC.svg");
+      color: black;
+    }
   }
   &Text {
     display: flex;
@@ -350,29 +466,27 @@
 }
 
 .projects__stackLang {
-  background-image: url("../images/Hexagons/hexagonMainColor.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position-x: center;
   color: #f2e0d5;
-  font-size: 1.3vw;
+  font-size: 1vw;
   text-align: center;
   height: auto;
-  width: 60%;
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
   padding: 2vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  &ACC {
-    background-image: url("../images/Hexagons/hexagonACC.svg");
-    color: black;
-  }
   &Title {
     font-size: 2vw;
+    background-image: url("../images/Hexagons/hexagonMainColor.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    width: 100%;
+    height: max-content;
+    &ACC {
+      background-image: url("../images/Hexagons/hexagonACC.svg");
+      color: black;
+    }
   }
   &Text {
     display: flex;

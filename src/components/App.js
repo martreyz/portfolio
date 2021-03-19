@@ -7,6 +7,8 @@ import Contact from "./Contact";
 import { Route } from "react-router-dom";
 import ProjectsData from "../data/projects.json";
 import ProjectsDataEN from "../data/projectsEn.json";
+import CodepenProjectsData from "../data/codepenProjects.json";
+import CodepenProjectsDataEN from "../data/codepenProjectsEN.json";
 import Trajectory from "../data/trajectory.json";
 import TrajectoryEN from "../data/trajectoryEN.json";
 
@@ -21,6 +23,9 @@ function App() {
   const [trajectory] = useState(Trajectory);
   const [trajectoryEN] = useState(TrajectoryEN);
   const [counterTrajectory, setCounterTrajectory] = useState(0);
+  const [codepenProjectsData] = useState(CodepenProjectsData);
+  const [codepenProjectsDataEN] = useState(CodepenProjectsDataEN);
+  const [codepenProjectOnScreen, setCodepenProjectOnScreen] = useState(0);
 
   const handleLangClick = () => {
     setTranslated(!translated);
@@ -48,6 +53,21 @@ function App() {
     projectsData[target].selected = true;
   };
 
+  //Manages selected CSS project data:
+  const handleCSSProjectClick = (target) => {
+    setCodepenProjectOnScreen(target);
+
+    //Resets all projects to non selected:
+    for (let i = 0; i < codepenProjectsData.length; i++) {
+      codepenProjectsData[i].selected = false;
+      codepenProjectsDataEN[i].selected = false;
+    }
+
+    //Sets targeted project info to change styles:
+    codepenProjectsData[target].selected = true;
+    codepenProjectsDataEN[target].selected = true;
+  };
+
   return (
     <>
       <Background accesible={accesible} />
@@ -65,11 +85,20 @@ function App() {
           accesible={accesible}
           translated={translated}
           projectsData={translated ? projectsDataEN : projectsData}
+          codepenProjectsData={
+            translated ? codepenProjectsDataEN : codepenProjectsData
+          }
           handleProjectClick={handleProjectClick}
+          handleCSSProjectClick={handleCSSProjectClick}
           projectInfo={
             translated
               ? projectsDataEN[projectOnScreen]
               : projectsData[projectOnScreen]
+          }
+          codepenProjectInfo={
+            translated
+              ? codepenProjectsDataEN[codepenProjectOnScreen]
+              : codepenProjectsData[codepenProjectOnScreen]
           }
         />
       </Route>
