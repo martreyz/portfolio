@@ -3,7 +3,7 @@ const Project = (props) => {
     <>
       <div className="projects__containerGITHUB-infoBanner">
         <ul className="projects__containerGITHUB-links">
-          <li>
+          <li className="projects__containerGITHUB-linkOneLogo">
             <a
               className="projects__containerGITHUB-linkOne"
               href={props.webpage}
@@ -18,7 +18,7 @@ const Project = (props) => {
               Demo
             </a>
           </li>
-          <li>
+          <li className="projects__containerGITHUB-linkTwoLogo">
             <a
               className="projects__containerGITHUB-linkTwo"
               href={props.repository}

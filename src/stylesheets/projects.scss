@@ -11,26 +11,26 @@
 }
 
 .projects {
-  padding: 0px 3vw 4vh 5vw;
+  padding: 0px 3vw 4vh 9vw;
   height: 92vh;
   width: 100%;
   display: grid;
   grid-template-rows: 20% 60% 20%;
-  grid-template-columns: 10% 20% 70%;
+  grid-template-columns: 40% 60%;
   &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 55vh;
-    justify-content: space-between;
+    height: 100%;
+    justify-content: flex-start;
     grid-row: 2/4;
-    grid-column: 3/4;
-    align-self: center;
+    grid-column: 2/3;
+    align-self: flex-start;
     &GITHUB {
       height: 80%;
       max-height: 100%;
-      width: 80%;
+      width: 100%;
       position: relative;
       display: grid;
       grid-template-columns: 80% 20%;
@@ -41,10 +41,143 @@
         grid-column: 1/2;
         display: grid;
         height: 100%;
-        width: 90%;
+        width: 95%;
         grid-template-rows: 60% 10% 30%;
         grid-template-columns: 100%;
+        justify-self: flex-start;
+        &Show {
+          animation: showProjectInfo ease 1s;
+        }
+        &Banner {
+          grid-column: 1/2;
+          grid-row: 2/3;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: $color-neutral-lowOpacity;
+          padding: 0px 5%;
+        }
+      }
+      &-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        grid-column: 2/3;
         justify-self: center;
+        height: 100%;
+        width: 100%;
+        border-left: $color-secondary 0.1vh dotted;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+      }
+      &-title {
+        width: 100%;
+        position: relative;
+        font-size: 2vw;
+        text-decoration: none;
+        list-style-type: none;
+        color: $color-secondary;
+        border-left: solid transparent 5px;
+        padding: 1vh;
+        cursor: pointer;
+        &Main {
+          color: $color-secondary-fullOpacity;
+          border-left: solid $color-secondary 5px;
+        }
+      }
+      &-img {
+        opacity: 0.8;
+        display: block;
+        width: 100%;
+        &Container {
+          grid-column: 1/3;
+          grid-row: 1/2;
+          overflow: hidden;
+          width: 80%;
+          height: 95%;
+          transition: all ease 3s;
+          justify-self: center;
+          align-self: center;
+        }
+      }
+      &-description {
+        font-size: 2.3vh;
+        font-weight: 600;
+        color: $color-tertiary-dark;
+        grid-column: 1/3;
+        grid-row: 3/4;
+        transition: all ease 3s;
+        width: 90%;
+        justify-self: center;
+        align-self: center;
+        font-family: "Architects Daughter", cursive;
+      }
+      &-technologies {
+        font-size: 1.9vh;
+        color: $color-secondary-fullOpacity;
+        transition: all ease 3s;
+        text-align: right;
+        font-family: "Architects Daughter", cursive;
+      }
+      &-links {
+        color: transparent;
+        transition: all ease 3s;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Architects Daughter", cursive;
+        & > li {
+          transition: all ease 1s;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+      &-linkOne {
+        text-decoration: none;
+        color: transparent;
+        &:hover {
+          transform: scale(1.2);
+        }
+        &Logo {
+          background-image: url("../images/Projects/demo.svg");
+          background-size: 80%;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+      &-linkTwo {
+        text-decoration: none;
+        color: transparent;
+        &Logo {
+          background-image: url("../images/Projects/repository.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+    }
+    &CODEPEN {
+      height: 80%;
+      max-height: 100%;
+      width: 100%;
+      position: relative;
+      display: grid;
+      grid-template-columns: 80% 20%;
+      grid-template-rows: 100%;
+      border-radius: 15px;
+      overflow: hidden;
+      &-info {
+        grid-column: 1/2;
+        display: grid;
+        height: 100%;
+        width: 95%;
+        grid-template-rows: 60% 10% 30%;
+        grid-template-columns: 100%;
+        justify-self: flex-start;
         &Show {
           animation: showProjectInfo ease 1s;
         }
@@ -75,7 +208,7 @@
       &-title {
         width: 100%;
         position: relative;
-        font-size: 3vh;
+        font-size: 2vw;
         text-decoration: none;
         list-style-type: none;
         color: $color-secondary;
@@ -103,8 +236,9 @@
         }
       }
       &-description {
-        font-size: 1.4vh;
-        color: $color-dark;
+        font-size: 2.3vh;
+        font-weight: 600;
+        color: $color-tertiary-dark;
         grid-column: 1/3;
         grid-row: 3/4;
         transition: all ease 3s;
@@ -114,7 +248,7 @@
         font-family: "Architects Daughter", cursive;
       }
       &-technologies {
-        font-size: 1.4vh;
+        font-size: 1.9vh;
         color: $color-secondary-fullOpacity;
         transition: all ease 3s;
         text-align: right;
@@ -155,118 +289,11 @@
         background-position: center;
       }
     }
-    &CODEPEN {
-      height: 80%;
-      max-height: 100%;
-      width: 80%;
-      position: relative;
-      display: grid;
-      grid-template-columns: 80% 20%;
-      grid-template-rows: 100%;
-      border-radius: 15px;
-      overflow: hidden;
-      &-info {
-        grid-column: 1/2;
-        display: grid;
-        height: 100%;
-        width: 90%;
-        grid-template-rows: 60% 10% 30%;
-        grid-template-columns: 100%;
-        justify-self: center;
-        &Show {
-          animation: showProjectInfo ease 1s;
-        }
-        &Banner {
-          grid-column: 1/2;
-          grid-row: 2/3;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          background-color: $color-tertiary;
-          padding: 0px 5%;
-        }
-      }
-      &-list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        text-align: center;
-        grid-column: 2/3;
-        justify-self: center;
-        height: 100%;
-        width: 100%;
-        border-left: $color-secondary 0.1vh dotted;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
-      }
-      &-title {
-        width: 100%;
-        position: relative;
-        font-size: 3vh;
-        text-decoration: none;
-        list-style-type: none;
-        color: $color-secondary;
-        border-left: solid transparent 5px;
-        padding: 1vh;
-        cursor: pointer;
-        &Main {
-          color: $color-secondary-fullOpacity;
-          border-left: solid $color-secondary 5px;
-        }
-      }
-      &-img {
-        opacity: 0.8;
-        display: block;
-        width: 100%;
-        &Container {
-          grid-column: 1/3;
-          grid-row: 1/2;
-          overflow: hidden;
-          width: 80%;
-          height: 95%;
-          transition: all ease 3s;
-          justify-self: center;
-          align-self: center;
-        }
-      }
-      &-description {
-        font-size: 1.4vh;
-        color: $color-dark;
-        grid-column: 1/3;
-        grid-row: 3/4;
-        transition: all ease 3s;
-        width: 90%;
-        justify-self: center;
-        align-self: center;
-        font-family: "Architects Daughter", cursive;
-      }
-      &-technologies {
-        font-size: 1.4vh;
-        color: $color-secondary-fullOpacity;
-        transition: all ease 3s;
-        text-align: right;
-        font-family: "Architects Daughter", cursive;
-      }
-
-      &-linkOne {
-        text-decoration: none;
-        color: transparent;
-        background-image: url("../images/Projects/demo.svg");
-        background-size: 80%;
-        background-repeat: no-repeat;
-        background-position: center;
-        transition: ease 1s all;
-        &:hover {
-          transform: scale(1.2);
-        }
-      }
-    }
   }
   &__title {
     color: $color-secondary;
-    font-size: 6vw;
-    margin-left: 5vw;
+    font-size: 8vw;
+    margin-left: -6vw;
     margin-top: 3vh;
     width: 100%;
     grid-row: 1/2;
@@ -280,42 +307,44 @@
 .projects__menu-home {
   list-style-type: none;
   text-transform: uppercase;
-  background-image: url("../images/Menus/longArrowLeft.svg");
-  background-repeat: no-repeat;
-  background-size: 1.5vw;
-  background-position-x: 0.3vw;
-  background-position-y: 2.7vh;
-  height: 50px;
-  padding-left: 1.5vw;
-  transition: all ease 1s;
   position: absolute;
   left: 30px;
   top: 45vh;
+  transition: all ease 1s;
+  background-image: url("../images/Menus/longArrowLeft.svg");
+  background-repeat: no-repeat;
+  background-position-x: 10%;
+  background-position-y: 100%;
+  padding-left: 1.5vw;
+  padding-bottom: 2vh;
+  background-size: 1.5vw;
   &:hover {
     transform: scale(1.2);
   }
+
   &ACC {
     background-image: url("../images/Menus/longArrowLeftACC.svg");
   }
 }
 
 .projectsLink__menu-home {
+  cursor: pointer;
   text-decoration: none;
   color: $color-secondary;
   font-weight: 700;
-  font-size: 1.5vw;
+  font-size: 2vw;
   &ACC {
     color: $color-tertiary-dark;
   }
 }
 
 .projects__containerSelector {
-  width: 75%;
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   position: relative;
-  font-size: 1.5vw;
-  margin-bottom: 2vh;
+  font-size: 2vw;
+  margin-bottom: 1vh;
 
   &App {
     cursor: pointer;
@@ -323,17 +352,17 @@
     color: $color-secondary;
     width: fit-content;
     height: 0px;
-    border-right: 4vh solid transparent;
-    border-left: 4vh solid transparent;
-    border-bottom: 4vh solid $color-tertiary;
+    border-right: 2vh solid transparent;
+    border-left: 2vh solid transparent;
+    border-bottom: 5.5vh solid $color-neutral-lowOpacity;
     text-align: center;
     &:active {
       color: $color-neutral-auxiliar;
-      border-bottom: 4vh solid #b38c91;
+      border-bottom: 5.5vh solid #b38c91;
     }
     &:hover {
       color: $color-neutral-auxiliar;
-      border-bottom: 4vh solid #b38c91;
+      border-bottom: 5.5vh solid #b38c91;
     }
   }
   &CSS {
@@ -342,23 +371,23 @@
     color: $color-secondary;
     width: fit-content;
     height: 0px;
-    border-right: 4vh solid transparent;
-    border-left: 4vh solid transparent;
-    border-bottom: 4vh solid $color-tertiary;
+    border-right: 2vh solid transparent;
+    border-left: 2vh solid transparent;
+    border-bottom: 5.5vh solid $color-neutral-lowOpacity;
     text-align: center;
-    margin-left: -5%;
+    margin-left: -3vh;
     &:active {
       color: $color-neutral-auxiliar;
-      border-bottom: 4vh solid #b38c91;
+      border-bottom: 5.5vh solid #b38c91;
     }
     &:hover {
       color: $color-neutral-auxiliar;
-      border-bottom: 4vh solid #b38c91;
+      border-bottom: 5.5vh solid #b38c91;
     }
   }
   &Selected {
     color: $color-neutral-auxiliar;
-    border-bottom: 4vh solid #b38c91;
+    border-bottom: 5.5vh solid #b38c91;
     z-index: 99;
   }
 }
@@ -372,12 +401,13 @@
   height: 90%;
   width: 100%;
   grid-row: 2/4;
-  grid-column: 2/3;
+  grid-column: 1/2;
   position: relative;
   justify-self: flex-end;
   align-self: center;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
 }
 
 .projects__stackTech {
@@ -385,11 +415,98 @@
   font-size: 1vw;
   text-align: center;
   height: auto;
-  padding: 2vw;
+  width: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  align-self: flex-end;
+  &Title {
+    font-size: 2vw;
+    background-image: url("../images/Hexagons/hexagonSecColor.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    width: 100%;
+    height: max-content;
+    &ACC {
+      background-image: url("../images/Hexagons/hexagonACC.svg");
+      color: black;
+    }
+  }
+  &Text {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    margin-top: 10px;
+    &-itemA {
+      font-size: 1.6vw;
+      color: $color-primary;
+      margin-right: 1vw;
+      align-self: flex-start;
+    }
+    &-itemB {
+      font-size: 1.9vw;
+      color: $color-tertiary-dark;
+      margin-right: 1vw;
+    }
+    &-itemC {
+      font-size: 1.5vw;
+      color: $color-secondary-fullOpacity;
+      margin-right: 1vw;
+      align-self: flex-start;
+    }
+    &-itemD {
+      font-size: 1.8vw;
+      color: $color-tertiary-dark;
+      margin-right: 1vw;
+      align-self: flex-end;
+    }
+    &-itemE {
+      font-size: 1.7vw;
+      color: $color-secondary-fullOpacity;
+      margin-right: 1vw;
+      align-self: flex-start;
+    }
+    &-itemF {
+      font-size: 1.9vw;
+      color: $color-primary;
+      margin-right: 1vw;
+      align-self: flex-end;
+    }
+    &-itemG {
+      font-size: 1.5vw;
+      color: $color-secondary-fullOpacity;
+      margin-right: 1vw;
+      align-self: flex-start;
+    }
+    &-itemH {
+      font-size: 1.9vw;
+      color: $color-tertiary-dark;
+      margin-right: 1vw;
+    }
+    &-itemI {
+      font-size: 1.7vw;
+      color: $color-primary;
+      margin-right: 1vw;
+    }
+  }
+}
+
+.projects__stackLang {
+  color: #f2e0d5;
+  font-size: 1vw;
+  text-align: center;
+  height: auto;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  align-self: flex-start;
   &Title {
     font-size: 2vw;
     background-image: url("../images/Hexagons/hexagonSecColor.svg");
@@ -418,24 +535,24 @@
       align-self: flex-start;
     }
     &-itemB {
-      font-size: 1.4vw;
+      font-size: 1.9vw;
       color: $color-tertiary-dark;
       margin-right: 1vw;
     }
     &-itemC {
-      font-size: 1.4vw;
+      font-size: 1.6vw;
       color: $color-secondary-fullOpacity;
       margin-right: 1vw;
       align-self: flex-start;
     }
     &-itemD {
-      font-size: 1.9vw;
+      font-size: 1.8vw;
       color: $color-tertiary-dark;
       margin-right: 1vw;
       align-self: flex-end;
     }
     &-itemE {
-      font-size: 1.3vw;
+      font-size: 1.5vw;
       color: $color-secondary-fullOpacity;
       margin-right: 1vw;
       align-self: flex-start;
@@ -447,92 +564,7 @@
       align-self: flex-end;
     }
     &-itemG {
-      font-size: 1.5vw;
-      color: $color-secondary-fullOpacity;
-      margin-right: 1vw;
-      align-self: flex-start;
-    }
-    &-itemH {
-      font-size: 1.9vw;
-      color: $color-tertiary-dark;
-      margin-right: 1vw;
-    }
-    &-itemI {
-      font-size: 1.9vw;
-      color: $color-primary;
-      margin-right: 1vw;
-    }
-  }
-}
-
-.projects__stackLang {
-  color: #f2e0d5;
-  font-size: 1vw;
-  text-align: center;
-  height: auto;
-  padding: 2vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  &Title {
-    font-size: 2vw;
-    background-image: url("../images/Hexagons/hexagonMainColor.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center;
-    width: 100%;
-    height: max-content;
-    &ACC {
-      background-image: url("../images/Hexagons/hexagonACC.svg");
-      color: black;
-    }
-  }
-  &Text {
-    display: flex;
-    flex-wrap: wrap;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    max-width: 80%;
-    margin-top: 10px;
-    &-itemA {
-      font-size: 1.5vw;
-      color: $color-primary;
-      margin-right: 1vw;
-      align-self: flex-start;
-    }
-    &-itemB {
-      font-size: 1.4vw;
-      color: $color-tertiary-dark;
-      margin-right: 1vw;
-    }
-    &-itemC {
-      font-size: 1.4vw;
-      color: $color-secondary-fullOpacity;
-      margin-right: 1vw;
-      align-self: flex-start;
-    }
-    &-itemD {
-      font-size: 1.9vw;
-      color: $color-tertiary-dark;
-      margin-right: 1vw;
-      align-self: flex-end;
-    }
-    &-itemE {
-      font-size: 1.3vw;
-      color: $color-secondary-fullOpacity;
-      margin-right: 1vw;
-      align-self: flex-start;
-    }
-    &-itemF {
-      font-size: 1.9vw;
-      color: $color-primary;
-      margin-right: 1vw;
-      align-self: flex-end;
-    }
-    &-itemG {
-      font-size: 1.5vw;
+      font-size: 1.8vw;
       color: $color-secondary-fullOpacity;
       margin-right: 1vw;
       align-self: flex-start;
@@ -543,24 +575,41 @@
 @media all and (max-width: 1024px) {
   .projects {
     padding: 0px 3vw 0vh 5vw;
-    grid-template-rows: 10% 50% 40%;
+    grid-template-rows: 25% 50% 25%;
     grid-template-columns: 100%;
-    grid-gap: 1vw;
     &__container {
       grid-row: 2/3;
       grid-column: 1/2;
       align-self: start;
       height: 100%;
-      justify-content: center;
+      justify-content: flex-start;
       &GITHUB {
-        height: 70%;
+        flex-grow: 1;
+        &-technologies {
+          font-size: 1.4vh;
+        }
+        &-description {
+          font-size: 1.7vh;
+        }
+        &-list {
+          border-left: 0.2vw dotted $color-secondary-fullOpacity;
+        }
+        &-title {
+          font-size: 3vh;
+        }
       }
       &CODEPEN {
-        height: min-content;
+        flex-grow: 1;
+        &-technologies {
+          font-size: 1.4vh;
+        }
+        &-description {
+          font-size: 1.7vh;
+        }
       }
     }
     &__title {
-      font-size: 12vw;
+      font-size: 11vh;
       margin-left: 0vw;
       margin-top: 0vh;
       text-align: center;
@@ -571,14 +620,11 @@
     top: 0px;
     left: 7vw;
     width: 15vw;
-    height: 93%;
-    background-position-x: 1vw;
-    background-position-y: 100%;
-    padding-left: 5vw;
-    padding-bottom: 2vh;
+    height: 10%;
     background-size: 5vw;
     display: flex;
     align-items: flex-end;
+    justify-content: flex-end;
   }
 
   .projectsLink__menu-home {
@@ -586,94 +632,115 @@
   }
 
   .projects__containerSelector {
-    font-size: 3vw;
-    &-hexagonPlayground {
-      padding: 0px 8vw 0.3vh 1vw;
+    font-size: 3vh;
+    &App {
+      border-right: 2vh solid transparent;
+      border-left: 2vh solid transparent;
+      border-bottom: 4vh solid $color-neutral-lowOpacity;
+      &:active {
+        border-bottom: 4vh solid #b38c91;
+      }
+      &:hover {
+        border-bottom: 4vh solid #b38c91;
+      }
     }
-    &-hexagon {
-      width: 3vw;
+    &CSS {
+      border-right: 2vh solid transparent;
+      border-left: 2vh solid transparent;
+      border-bottom: 4vh solid $color-neutral-lowOpacity;
+      &:active {
+        border-bottom: 4vh solid #b38c91;
+      }
+      &:hover {
+        border-bottom: 4vh solid #b38c91;
+      }
+    }
+    &Selected {
+      color: $color-neutral-auxiliar;
+      border-bottom: 4vh solid #b38c91;
+      z-index: 99;
     }
   }
 
   .projects__stack {
-    height: 30vh;
-    width: 70%;
+    height: 100%;
+    width: 100%;
     margin-left: 0vw;
     margin-bottom: 0vh;
+    padding: 2vh 0px;
     grid-row: 3/4;
     grid-column: 1/2;
     flex-direction: row;
     justify-content: center;
-    justify-self: end;
-    align-self: flex-start;
+    align-items: center;
+    justify-self: center;
+    align-self: center;
   }
 
   .projects__stackTech {
-    height: auto;
-    width: 60%;
-    padding: 2vh 7vw;
+    padding: 0px;
+    align-self: center;
     &Title {
-      font-size: 4vw;
+      font-size: 3vh;
     }
     &Text {
       &-itemA {
-        font-size: 2.5vw;
+        font-size: 2.5vh;
       }
       &-itemB {
-        font-size: 2.4vw;
+        font-size: 2.4vh;
       }
       &-itemC {
-        font-size: 2.4vw;
+        font-size: 2.4vh;
       }
       &-itemD {
-        font-size: 2.9vw;
+        font-size: 2.9vh;
       }
       &-itemE {
-        font-size: 2.3vw;
+        font-size: 2.3vh;
       }
       &-itemF {
-        font-size: 2.9vw;
+        font-size: 2.9vh;
       }
       &-itemG {
-        font-size: 2.5vw;
+        font-size: 2.5vh;
       }
       &-itemH {
-        font-size: 2.9vw;
+        font-size: 2.9vh;
       }
       &-itemI {
-        font-size: 2.9vw;
+        font-size: 2.9vh;
       }
     }
   }
 
   .projects__stackLang {
-    height: auto;
-    width: 60%;
-    padding: 2vh 7vw;
+    padding: 0px;
+    align-self: center;
     &Title {
-      font-size: 4vw;
+      font-size: 3vh;
     }
     &Text {
       &-itemA {
-        font-size: 2.5vw;
+        font-size: 2.5vh;
       }
       &-itemB {
-        font-size: 2.4vw;
+        font-size: 2.4vh;
       }
       &-itemC {
-        font-size: 2.4vw;
+        font-size: 2.4vh;
       }
       &-itemD {
-        font-size: 2.9vw;
+        font-size: 2.9vh;
       }
       &-itemE {
-        font-size: 2.3vw;
+        font-size: 2.3vh;
       }
       &-itemF {
-        font-size: 2.9vw;
+        font-size: 2.9vh;
       }
       &-itemG {
-        font-size: 2.5vw;
+        font-size: 2.5vh;
       }
     }
   }
@@ -681,48 +748,86 @@
 
 @media all and (max-width: 420px) {
   .projects {
-    grid-template-rows: 10% 55% 35%;
+    &__container {
+      grid-row: 2/3;
+      grid-column: 1/2;
+      align-self: start;
+      height: 100%;
+      justify-content: flex-start;
+      &Selector {
+        width: 90%;
+        &App {
+          font-size: 3vh;
+        }
+        &CSS {
+          font-size: 3vh;
+        }
+        &Selected {
+          color: $color-neutral-auxiliar;
+          border-bottom: 4vh solid #b38c91;
+          z-index: 99;
+        }
+      }
+      &GITHUB {
+        height: 70%;
+        width: 90%;
+        &-technologies {
+          font-size: 1vh;
+        }
+        &-description {
+          font-size: 1.3vh;
+        }
+        &-info {
+          width: 95%;
+          justify-self: flex-start;
+          grid-template-rows: 57% 13% 30%;
+          &Banner {
+            flex-direction: column;
+            justify-content: center;
+          }
+        }
+        &-imgContainer {
+          align-self: center;
+          display: flex;
+          align-items: center;
+        }
+        &-title {
+          font-size: 2.3vh;
+        }
+        &-links {
+          color: transparent;
+          transition: all ease 3s;
+          height: min-content;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          font-family: "Architects Daughter", cursive;
+        }
+        &-linkOneLogo {
+          background-size: 2vh;
+          width: 3vh;
+        }
+        &-linkTwoLogo {
+          background-size: 2vh;
+          width: 3vh;
+        }
+      }
+      &CODEPEN {
+        width: 90%;
+        height: min-content;
+        &-description {
+          font-size: 1.4vh;
+        }
+        &-imgContainer {
+          align-self: center;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
   }
 
   .projects__containerSelector {
     font-size: 3vw;
-    &-hexagonPlayground {
-      padding: 0px 8vw 0vh 1vw;
-      margin-bottom: 0px;
-    }
-    &-hexagon {
-      width: 3vw;
-    }
-  }
-
-  .projects__stack {
-    height: 100%;
-    width: 70%;
-    margin-left: 0vw;
-    margin-top: -2vh;
-    grid-row: 3/4;
-    grid-column: 1/2;
-    padding: 3vh;
-    position: relative;
-    justify-self: flex-end;
-  }
-
-  .projects__stackTech {
-    height: 15vh;
-    width: 20vh;
-    padding: 2vh 5vw;
-    align-self: flex-end;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-  }
-  .projects__stackLang {
-    height: 15vh;
-    width: 20vh;
-    padding: 2vh 5vw;
-    align-self: flex-end;
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
   }
 }

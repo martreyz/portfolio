@@ -69,39 +69,45 @@
   &__menu-projects {
     list-style-type: none;
     text-transform: uppercase;
+    position: absolute;
+    right: 30px;
+    top: 45vh;
+    transition: all ease 1s;
     background-image: url("../images/Menus/longArrowRight.svg");
     background-repeat: no-repeat;
-    background-size: 1.5vw;
     background-position-x: 90%;
     background-position-y: 100%;
     padding-right: 1.5vw;
     padding-bottom: 2vh;
-    transition: all ease 1s;
-    height: min-content;
-    &ACC {
-      background-image: url("../images/Menus/longArrowRightACC.svg");
-    }
+    background-size: 1.5vw;
     &:hover {
       transform: scale(1.2);
+    }
+
+    &ACC {
+      background-image: url("../images/Menus/longArrowRightACC.svg");
     }
   }
   &__menu-contact {
     list-style-type: none;
     text-transform: uppercase;
+    position: absolute;
+    left: 30px;
+    top: 45vh;
+    transition: all ease 1s;
     background-image: url("../images/Menus/longArrowLeft.svg");
     background-repeat: no-repeat;
-    background-size: 1.5vw;
-    background-position-y: 100%;
     background-position-x: 10%;
+    background-position-y: 100%;
     padding-left: 1.5vw;
     padding-bottom: 2vh;
-    transition: all ease 1s;
-    height: min-content;
-    &ACC {
-      background-image: url("../images/Menus/longArrowLeftACC.svg");
-    }
+    background-size: 1.5vw;
     &:hover {
       transform: scale(1.2);
+    }
+
+    &ACC {
+      background-image: url("../images/Menus/longArrowLeftACC.svg");
     }
   }
 }
@@ -112,7 +118,7 @@
   text-decoration: none;
   color: $color-secondary;
   font-weight: 700;
-  font-size: 1.5vw;
+  font-size: 2vw;
   &ACC {
     color: $color-tertiary-dark;
   }
@@ -170,13 +176,23 @@
       margin-left: 2vw;
     }
     &__menu-projects {
+      top: 0px;
+      right: 7vw;
+      width: 21vw;
+      height: 91%;
       background-size: 5vw;
-      padding-right: 5vw;
-      align-self: flex-end;
+      display: flex;
+      align-items: flex-end;
     }
     &__menu-contact {
+      top: 0px;
+      left: 7vw;
+      width: 19vw;
+      height: 10%;
       background-size: 5vw;
-      padding-left: 5vw;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
     }
   }
 

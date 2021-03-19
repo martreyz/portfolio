@@ -5,20 +5,22 @@
   justify-content: space-between;
   padding: 0.5vh 1.5vw;
   border-top: 1.3px solid $color-secondary;
-  height: 3vh;
+  height: 4vh;
   width: 100%;
   &ACC {
     border-top: 1.3px solid $color-tertiary-dark;
   }
   &__menuList {
     display: flex;
+    justify-content: space-between;
+    height: 100%;
     &-github {
       background-image: url("../images/Social-Footer/github.svg");
       background-repeat: no-repeat;
       text-decoration: none;
       list-style-type: none;
-      width: 2.8vh;
-      height: 1.7vh;
+      width: 1.2vw;
+      margin-right: 0.6vw;
       transition: all ease 1s;
       &:hover {
         transform: scale(1.2);
@@ -26,20 +28,28 @@
       &ACC {
         background-image: url("../images/Social-Footer/githubACC.svg");
       }
+      @media all and(max-width: 1024px) {
+        width: 2.5vh;
+        margin-right: 2vw;
+      }
     }
     &-linkedin {
       background-image: url("../images/Social-Footer/linkedin.svg");
       background-repeat: no-repeat;
       text-decoration: none;
       list-style-type: none;
-      width: 2.8vh;
-      height: 1.7vh;
+      width: 1.2vw;
       transition: all ease 1s;
+      margin-right: 0.6vw;
       &:hover {
         transform: scale(1.2);
       }
       &ACC {
         background-image: url("../images/Social-Footer/linkedinACC.svg");
+      }
+      @media all and(max-width: 1024px) {
+        width: 2.5vh;
+        margin-right: 2vw;
       }
     }
     &-mail {
@@ -47,14 +57,18 @@
       background-repeat: no-repeat;
       text-decoration: none;
       list-style-type: none;
-      width: 2.8vh;
-      height: 1.7vh;
+      width: 1.2vw;
       transition: all ease 1s;
+      margin-right: 0.6vw;
       &:hover {
         transform: scale(1.2);
       }
       &ACC {
         background-image: url("../images/Social-Footer/envelopeACC.svg");
+      }
+      @media all and(max-width: 1024px) {
+        width: 2.5vh;
+        margin-right: 2vw;
       }
     }
     &-twitter {
@@ -62,8 +76,8 @@
       background-repeat: no-repeat;
       text-decoration: none;
       list-style-type: none;
-      width: 2.8vh;
-      height: 1.7vh;
+      margin-right: 0.6vw;
+      width: 1.2vw;
       transition: all ease 1s;
       &:hover {
         transform: scale(1.2);
@@ -71,20 +85,28 @@
       &ACC {
         background-image: url("../images/Social-Footer/twitterACC.svg");
       }
+      @media all and(max-width: 1024px) {
+        width: 2.5vh;
+        margin-right: 2vw;
+      }
     }
     &-codepen {
       background-image: url("../images/Social-Footer/codepen.svg");
       background-repeat: no-repeat;
       text-decoration: none;
       list-style-type: none;
-      width: 2.8vh;
-      height: 1.7vh;
+      width: 1.2vw;
+      margin-right: 0.6vw;
       transition: all ease 1s;
       &:hover {
         transform: scale(1.2);
       }
       &ACC {
         background-image: url("../images/Social-Footer/codepenACC.svg");
+      }
+      @media all and(max-width: 1024px) {
+        width: 2.5vh;
+        margin-right: 2vw;
       }
     }
     &-access {
@@ -93,16 +115,22 @@
   }
   &__small {
     color: $color-secondary;
-    font-size: 1.5vh;
+    font-size: 1.2vw;
     display: flex;
     line-height: 1.2;
+    @media all and(max-width: 1024px) {
+      font-size: 2.5vh;
+    }
     &Logo {
       background-image: url("../images/Social-Footer/cat.svg");
       background-repeat: no-repeat;
-      width: 1.6vh;
+      width: 1.2vw;
       margin: 0px 5px;
       &ACC {
         background-image: url("../images/Social-Footer/catACC.svg");
+      }
+      @media all and(max-width: 1024px) {
+        width: 2.5vh;
       }
     }
     &ACC {
