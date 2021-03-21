@@ -11,11 +11,11 @@
 }
 
 .projects {
-  padding: 0px 3vw 4vh 9vw;
+  padding: 4vh;
   height: 92vh;
   width: 100%;
   display: grid;
-  grid-template-columns: 10% 35% 55%;
+  grid-template-columns: 10% 25% 65%;
   grid-template-rows: 20% 5% 40% 35%;
   &__container {
     display: flex;
@@ -23,28 +23,33 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    justify-content: flex-start;
+    justify-content: space-between;
+    border: 3px solid $color-tertiary;
+    border-radius: 15px;
+    padding: 2vh;
     grid-row: 3/5;
     grid-column: 3/4;
     align-self: flex-start;
     &GITHUB {
-      height: 80%;
-      max-height: 100%;
+      height: 85%;
       width: 100%;
+      padding: 1vh;
       position: relative;
       display: grid;
-      grid-template-columns: 80% 20%;
+      grid-template-columns: 20% 80%;
       grid-template-rows: 100%;
+      background-color: $color-tertiary;
       border-radius: 15px;
       overflow: hidden;
       &-info {
-        grid-column: 1/2;
+        grid-column: 2/3;
         display: grid;
         height: 100%;
         width: 95%;
         grid-template-rows: 60% 10% 30%;
         grid-template-columns: 100%;
-        justify-self: flex-start;
+        justify-self: flex-end;
+
         &Show {
           animation: showProjectInfo ease 1s;
         }
@@ -54,8 +59,7 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
-          background-color: $color-neutral-lowOpacity;
-          padding: 0px 5%;
+          width: 100%;
         }
       }
       &-list {
@@ -64,27 +68,34 @@
         align-items: center;
         justify-content: space-around;
         text-align: center;
-        grid-column: 2/3;
+        grid-column: 1/2;
+        grid-row: 1/2;
         justify-self: center;
+        align-self: center;
         height: 100%;
         width: 100%;
-        border-left: $color-secondary 0.1vh dotted;
-        border-top-right-radius: 15px;
-        border-bottom-right-radius: 15px;
+        box-sizing: content-box;
+        padding: 1vh;
+        background-color: $color-neutral-lowOpacity;
+        border-right: dotted $color-secondary-fullOpacity 0.3vh;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
       }
       &-title {
         width: 100%;
         position: relative;
         font-size: 2vw;
+        box-sizing: content-box;
         text-decoration: none;
         list-style-type: none;
         color: $color-secondary;
-        border-left: solid transparent 5px;
+        border-right: solid transparent 8px;
         padding: 1vh;
         cursor: pointer;
         &Main {
-          color: $color-secondary-fullOpacity;
-          border-left: solid $color-secondary 5px;
+          background-color: $color-secondary;
+          color: $color-neutral-auxiliar;
+          border-right: solid $color-secondary-fullOpacity 8px;
         }
       }
       &-img {
@@ -95,28 +106,44 @@
           grid-column: 1/3;
           grid-row: 1/2;
           overflow: hidden;
-          width: 80%;
+          width: 100%;
+          border-radius: 15px;
+          border: 3px solid $color-tertiary;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
           height: 95%;
+          overflow: scroll;
           transition: all ease 3s;
-          justify-self: center;
-          align-self: center;
+          justify-self: flex-end;
+          align-self: flex-start;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+          &::-webkit-scrollbar {
+            display: none;
+          }
         }
       }
       &-description {
-        font-size: 2.3vh;
+        font-size: 2vh;
         font-weight: 300;
-        color: $color-tertiary-dark;
+        color: $color-secondary-fullOpacity;
         grid-column: 1/3;
         grid-row: 3/4;
         transition: all ease 3s;
-        width: 90%;
+        border: 3px solid $color-secondary;
+        padding: 1vh;
+        border-radius: 15px;
+        width: 100%;
         justify-self: center;
         align-self: center;
         font-family: "Architects Daughter", cursive;
       }
       &-technologies {
-        font-size: 1.9vh;
-        color: $color-secondary-fullOpacity;
+        font-size: 2vh;
+        color: $color-tertiary-dark;
+        border-radius: 15px;
+        padding: 1vh;
         transition: all ease 3s;
         text-align: right;
         font-family: "Architects Daughter", cursive;
@@ -126,7 +153,7 @@
         transition: all ease 3s;
         height: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         font-family: "Architects Daughter", cursive;
         & > li {
@@ -139,34 +166,68 @@
       &-linkOne {
         text-decoration: none;
         color: transparent;
+
+        background-image: url("../images/Projects/demo.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
         &:hover {
-          transform: scale(1.2);
+          background-image: url("../images/Projects/demoHover.svg");
         }
+
         &Logo {
-          background-image: url("../images/Projects/demo.svg");
-          background-size: 80%;
-          background-repeat: no-repeat;
-          background-position: center;
+          width: 7vh;
+          height: 70%;
+          padding: 1vh;
+          margin-right: 2vh;
+          background-color: $color-neutral-auxiliar;
+          border-radius: 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+          &:hover {
+            transform: scale(1.2);
+            background-color: $color-secondary;
+          }
         }
       }
       &-linkTwo {
         text-decoration: none;
         color: transparent;
+        background-image: url("../images/Projects/repository.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        &:hover {
+          background-image: url("../images/Projects/repositoryHover.svg");
+        }
         &Logo {
-          background-image: url("../images/Projects/repository.svg");
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: center;
+          width: 7vh;
+          height: 70%;
+          margin-right: 2vh;
+          background-color: $color-neutral-auxiliar;
+          padding: 1vh;
+          border-radius: 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+          &:hover {
+            transform: scale(1.2);
+            background-color: $color-secondary;
+          }
         }
       }
     }
     &CODEPEN {
-      height: 80%;
-      max-height: 100%;
+      height: 85%;
       width: 100%;
       position: relative;
       display: grid;
       grid-template-columns: 80% 20%;
+      background-color: $color-tertiary;
+      padding: 1vh;
       grid-template-rows: 100%;
       border-radius: 15px;
       overflow: hidden;
@@ -187,8 +248,7 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
-          background-color: $color-tertiary;
-          padding: 0px 5%;
+          width: 100%;
         }
       }
       &-list {
@@ -199,9 +259,13 @@
         text-align: center;
         grid-column: 2/3;
         justify-self: center;
+        align-self: center;
         height: 100%;
         width: 100%;
-        border-left: $color-secondary 0.1vh dotted;
+        box-sizing: content-box;
+        padding: 1vh;
+        background-color: $color-neutral-lowOpacity;
+        border-left: dotted $color-secondary-fullOpacity 0.3vh;
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
       }
@@ -209,15 +273,17 @@
         width: 100%;
         position: relative;
         font-size: 2vw;
+        box-sizing: content-box;
         text-decoration: none;
         list-style-type: none;
         color: $color-secondary;
-        border-left: solid transparent 5px;
+        border-left: solid transparent 8px;
         padding: 1vh;
         cursor: pointer;
         &Main {
-          color: $color-secondary-fullOpacity;
-          border-left: solid $color-secondary 5px;
+          background-color: $color-secondary;
+          color: $color-neutral-auxiliar;
+          border-left: solid $color-secondary-fullOpacity 8px;
         }
       }
       &-img {
@@ -228,28 +294,45 @@
           grid-column: 1/3;
           grid-row: 1/2;
           overflow: hidden;
-          width: 80%;
+          width: 100%;
+          border: 3px solid $color-secondary;
+          border-radius: 15px;
+          display: flex;
+          padding: 1vh;
+          justify-content: center;
+          align-items: flex-start;
           height: 95%;
+          overflow: scroll;
           transition: all ease 3s;
-          justify-self: center;
-          align-self: center;
+          justify-self: flex-end;
+          align-self: flex-start;
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+          &::-webkit-scrollbar {
+            display: none;
+          }
         }
       }
       &-description {
         font-size: 2.3vh;
         font-weight: 300;
-        color: $color-tertiary-dark;
+        color: $color-secondary-fullOpacity;
         grid-column: 1/3;
         grid-row: 3/4;
         transition: all ease 3s;
-        width: 90%;
+        border: 3px solid $color-secondary;
+        padding: 1vh;
+        border-radius: 15px;
+        width: 100%;
         justify-self: center;
         align-self: center;
         font-family: "Architects Daughter", cursive;
       }
       &-technologies {
-        font-size: 1.9vh;
-        color: $color-secondary-fullOpacity;
+        font-size: 2vh;
+        color: $color-tertiary-dark;
+        border-radius: 15px;
+        padding: 1vh;
         transition: all ease 3s;
         text-align: right;
         font-family: "Architects Daughter", cursive;
@@ -276,6 +359,7 @@
         background-size: 80%;
         background-repeat: no-repeat;
         background-position: center;
+        border: 3px solid $color-neutral-lowOpacity;
         &:hover {
           transform: scale(1.2);
         }
@@ -287,17 +371,21 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
+        border: 3px solid $color-neutral-lowOpacity;
       }
     }
   }
   &__title {
     color: $color-secondary;
-    font-size: 8vw;
-    margin-left: -6vw;
-    margin-top: 3vh;
+    border: 3px solid $color-tertiary;
+    font-size: 15vh;
+    text-align: center;
+    line-height: 1;
     width: 100%;
     grid-row: 1/2;
+    grid-column: 1/6;
     align-self: center;
+    border-radius: 15px;
     &ACC {
       color: #37493d;
     }
@@ -307,11 +395,12 @@
 .projects__menu-home {
   list-style-type: none;
   text-transform: uppercase;
-  position: absolute;
-  left: 30px;
-  top: 45vh;
+  grid-column: 1/2;
+  grid-row: 4/5;
   transition: all ease 1s;
   background-image: url("../images/Menus/longArrowLeft.svg");
+  background-color: $color-neutral-lowOpacity;
+  border-radius: 15px;
   background-repeat: no-repeat;
   background-position-x: 10%;
   background-position-y: 100%;
@@ -341,28 +430,27 @@
 .projects__containerSelector {
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
+  justify-self: flex-start;
   position: relative;
-  font-size: 2vw;
+  font-size: 4vh;
   margin-bottom: 1vh;
-
   &App {
     cursor: pointer;
     transition: all ease 1s;
     color: $color-secondary;
     width: fit-content;
-    height: 0px;
-    border-right: 2vh solid transparent;
-    border-left: 2vh solid transparent;
-    border-bottom: 5.5vh solid $color-neutral-lowOpacity;
+    background-color: $color-neutral-lowOpacity;
+    padding: 1vh;
+    border-radius: 15px;
     text-align: center;
     &:active {
       color: $color-neutral-auxiliar;
-      border-bottom: 5.5vh solid #b38c91;
+      background-color: $color-secondary;
     }
     &:hover {
       color: $color-neutral-auxiliar;
-      border-bottom: 5.5vh solid #b38c91;
+      background-color: $color-secondary;
     }
   }
   &CSS {
@@ -370,24 +458,22 @@
     transition: all ease 1s;
     color: $color-secondary;
     width: fit-content;
-    height: 0px;
-    border-right: 2vh solid transparent;
-    border-left: 2vh solid transparent;
-    border-bottom: 5.5vh solid $color-neutral-lowOpacity;
+    background-color: $color-neutral-lowOpacity;
+    padding: 1vh;
+    border-radius: 15px;
     text-align: center;
-    margin-left: -3vh;
     &:active {
       color: $color-neutral-auxiliar;
-      border-bottom: 5.5vh solid #b38c91;
+      background-color: $color-secondary;
     }
     &:hover {
       color: $color-neutral-auxiliar;
-      border-bottom: 5.5vh solid #b38c91;
+      background-color: $color-secondary;
     }
   }
   &Selected {
     color: $color-neutral-auxiliar;
-    border-bottom: 5.5vh solid #b38c91;
+    background-color: $color-secondary;
     z-index: 99;
   }
 }
@@ -399,49 +485,45 @@
 
 .projects__stack {
   height: 90%;
-  width: 100%;
-  grid-row: 3/5;
-  grid-column: 2/3;
+  width: 95%;
+  grid-row: 3/4;
+  grid-column: 1/3;
   position: relative;
-  justify-self: flex-end;
-  align-self: center;
+  justify-self: flex-start;
+  align-self: flex-start;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .projects__stackTech {
   color: #f2e0d5;
   font-size: 1vw;
+  align-self: flex-start;
   text-align: center;
-  height: auto;
-  width: 70%;
+  width: 50%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  align-self: flex-end;
+  padding: 2vh;
+  justify-content: space-between;
+  border: 3px solid $color-tertiary;
+  border-radius: 15px;
   &Title {
-    font-size: 2vw;
-    background-image: url("../images/Hexagons/hexagonSecColor.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center;
+    font-size: 4vh;
     width: 100%;
-    height: max-content;
+    height: min-content;
+    color: $color-tertiary-dark;
     &ACC {
-      background-image: url("../images/Hexagons/hexagonACC.svg");
       color: black;
     }
   }
   &Text {
     display: flex;
     flex-wrap: wrap;
-    height: 100%;
     justify-content: center;
     align-items: center;
-    max-width: 80%;
-    margin-top: 10px;
+    max-width: 100%;
     &-itemA {
       font-size: 1.6vw;
       color: $color-primary;
@@ -500,34 +582,32 @@
   color: #f2e0d5;
   font-size: 1vw;
   text-align: center;
-  height: auto;
-  width: 70%;
+  width: 45%;
+  height: 100%;
+  align-self: flex-start;
   display: flex;
   flex-direction: column;
+  padding: 2vh;
   align-items: center;
-  justify-content: flex-start;
-  align-self: flex-start;
+  justify-content: space-between;
+  background-color: $color-tertiary;
+  border-radius: 15px;
   &Title {
-    font-size: 2vw;
-    background-image: url("../images/Hexagons/hexagonSecColor.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-x: center;
+    font-size: 4vh;
     width: 100%;
-    height: max-content;
+    height: min-content;
+    color: $color-tertiary-dark;
     &ACC {
-      background-image: url("../images/Hexagons/hexagonACC.svg");
       color: black;
     }
   }
   &Text {
     display: flex;
+    height: min-content;
     flex-wrap: wrap;
-    height: 100%;
     justify-content: center;
     align-items: center;
-    max-width: 80%;
-    margin-top: 10px;
+    max-width: 100%;
     &-itemA {
       font-size: 1.5vw;
       color: $color-primary;

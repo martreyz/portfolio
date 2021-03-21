@@ -113,8 +113,8 @@ const Projects = (props) => {
         onClick={handleCodepenProjectClick}
         className={
           item.selected
-            ? "projects__containerGITHUB-title projects__containerGITHUB-titleMain"
-            : "projects__containerGITHUB-title"
+            ? "projects__containerCODEPEN-title projects__containerCODEPEN-titleMain"
+            : "projects__containerCODEPEN-title"
         }
       >
         {item.name}
