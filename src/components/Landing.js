@@ -46,47 +46,43 @@ const Landing = (props) => {
           </span>
         </p>
       </section>
-      <nav className="nav__menu">
-        <ul className="menu">
-          <li
-            className={
-              props.accesible
-                ? "landing__menu-projects landing__menu-projectsACC"
-                : "landing__menu-projects"
-            }
-          >
-            <Link
-              to="/projects"
-              title={props.translated ? "Projects" : "Proyectos"}
-              className={
-                props.accesible
-                  ? "landingLink__menu-projects landingLink__menu-projectsACC"
-                  : "landingLink__menu-projects"
-              }
-            >
-              {props.translated ? "Projects" : "Proyectos"}
-            </Link>
-          </li>
-          <li
-            className={
-              props.accesible
-                ? "landing__menu-contact landing__menu-contactACC"
-                : "landing__menu-contact"
-            }
-          >
-            <Link
-              title={props.translated ? "About me" : "Sobre mí"}
-              to="/contact"
-              className={
-                props.accesible
-                  ? "landingLink__menu-contact landingLink__menu-contactACC"
-                  : "landingLink__menu-contact"
-              }
-            >
-              {props.translated ? "About me" : "Sobre mí"}
-            </Link>
-          </li>
-        </ul>
+      <nav
+        className={
+          props.accesible
+            ? "landing__menu-projects landing__menu-projectsACC"
+            : "landing__menu-projects"
+        }
+      >
+        <Link
+          to="/projects"
+          title={props.translated ? "Projects" : "Proyectos"}
+          className={
+            props.accesible
+              ? "landingLink__menu-projects landingLink__menu-projectsACC"
+              : "landingLink__menu-projects"
+          }
+        >
+          {props.translated ? "Projects" : "Proyectos"}
+        </Link>
+      </nav>
+      <nav
+        className={
+          props.accesible
+            ? "landing__menu-contact landing__menu-contactACC"
+            : "landing__menu-contact"
+        }
+      >
+        <Link
+          title={props.translated ? "About me" : "Sobre mí"}
+          to="/contact"
+          className={
+            props.accesible
+              ? "landingLink__menu-contact landingLink__menu-contactACC"
+              : "landingLink__menu-contact"
+          }
+        >
+          {props.translated ? "About me" : "Sobre mí"}
+        </Link>
       </nav>
     </main>
   );

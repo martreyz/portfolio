@@ -1,0 +1,40 @@
+[
+    {
+        "id": 0,
+        "name": "Donut worry!",
+        "webpage": "https://codepen.io/martreyz/pen/vYyQVjZ",
+        "preview": "images/donutSH.PNG",
+        "selected": true,
+        "technologies" : "HTML//CSS//JAVASCRIPT",
+        "description": "CSS Donut with customizable toppings. Interactivity to shuffle toppings and eat the donut added with JS."
+    },
+    
+    {
+        "id": 1,
+        "name": "Watch",
+        "webpage": "https://codepen.io/martreyz/pen/KKgNZoY",
+        "preview": "images/watchSH.PNG",
+        "selected": false,
+        "technologies" : "HTML//CSS",
+        "description": "CSS Watch with moving needles, interacitivity have been added with CSS animations."
+    },
+    {
+        "id": 2,
+        "name": "Hawaii",
+        "webpage": "https://codepen.io/martreyz/pen/bGBqBJq",
+        "preview": "images/hawaiiSH.PNG",
+        "selected": false,
+        "technologies" : "HTML//CSS//JAVASCRIPT",
+        "description": "CSS Hawaiian lady dancing typical hawaiian dance. Interactivity is made with animations and activated with JS developed buttons."
+    },
+    {
+        "id": 3,
+        "name": "Castle",
+        "webpage": "https://codepen.io/martreyz/pen/zYKZxBb",
+        "preview": "images/castleSH.PNG",
+        "selected": false,
+        "technologies" : "HTML//CSS",
+        "description": "CSS project that shows a day to night scene in a castle, all interactivity have been added with CSS animations."
+    }
+    
+]

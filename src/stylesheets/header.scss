@@ -1,14 +1,20 @@
 @import "../stylesheets/variables.scss";
 
 .header {
-  height: 5vh;
+  height: 4vh;
   width: 100%;
   z-index: 999;
+  background-color: $color-neutral-lowOpacity;
+  display: flex;
+  align-items: center;
+  &ACC {
+    background-color: $color-tertiary;
+  }
 }
 
 .header__menu {
-  padding: 2.5vh 1.5vw;
-  height: 3vh;
+  padding: 0vh 1.5vw;
+  height: 5vh;
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -18,9 +24,9 @@
     background: transparent;
     border: none;
     text-transform: uppercase;
-    font-size: 2.8vh;
-    color: $color-secondary;
-    text-decoration: underline;
+    font-size: 1.3vw;
+    color: $color-secondary-fullOpacity;
+    text-decoration: none;
     transition: all ease 1s;
     outline: none;
     cursor: hand;
@@ -35,24 +41,30 @@
         color: #364a4e;
       }
     }
+    @media all and(max-width: 1024px) {
+      font-size: 3vh;
+    }
   }
   &-acc {
     background-image: url("../images/Menus/toggleOff.svg");
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: contain;
+    background-position-x: right;
     height: 3vh;
-    width: 4vh;
+    width: 5vh;
     outline: none;
     border: none;
     cursor: hand;
     cursor: pointer;
     &Active {
       background-color: #e3e4e5;
-      border-radius: 20%;
+      border-radius: 5px;
       height: 3vh;
-      padding: 0px 1vw;
-      font-size: 1vw;
+      width: auto;
+      padding: 0px 1vh;
+      margin-right: 1.5vh;
+      font-size: $font-textSize;
       box-shadow: 1px 1px 1px black;
       outline: none;
       border: none;

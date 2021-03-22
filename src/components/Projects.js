@@ -1,123 +1,138 @@
 import "../stylesheets/projects.scss";
 import { Link } from "react-router-dom";
-import Codepen from "react-codepen-embed";
-import previewOne from "../images/Projects/pacmanSH.png";
-import previewTwo from "../images/Projects/rickMortySH.png";
-import previewThree from "../images/Projects/seriesSH.png";
+import Project from "./Project";
+import CodepenProject from "./CodepenProject";
 
 const Projects = (props) => {
-  const handleCSSOnClick = () => {
-    const selectorApp = document.querySelector(
-      ".projects__containerSelectorApp"
-    );
-    const selectorCSS = document.querySelector(
-      ".projects__containerSelectorCSS"
-    );
-    const selectorContainer = document.querySelector(
-      ".projects__containerSelector-hexagonPlayground"
-    );
-    const selectorHexagon = document.querySelector(
-      ".projects__containerSelector-hexagon"
-    );
+  //FUNCTIONS REFERRED TO PROJECTS' SELECTOR:
 
+  //1-Function to select CSS proyects:
+  const handleCSSOnClick = (ev) => {
     const infoToShowCODEPEN = document.querySelector(
       ".projects__containerCODEPEN"
     );
     const infoToShowGITHUB = document.querySelector(
       ".projects__containerGITHUB"
     );
-
-    selectorCSS.classList.add("selectedByHexagon");
-    selectorApp.classList.remove("selectedByHexagon");
-    selectorContainer.classList.add("cointainerToCSS");
-    selectorHexagon.classList.add("toCSS");
-    selectorContainer.classList.remove("cointainerToApp");
-    selectorHexagon.classList.remove("toApp");
+    const buttonCODEPEN = document.querySelector(
+      ".projects__containerSelectorCSS"
+    );
+    const buttonAPP = document.querySelector(".projects__containerSelectorApp");
     infoToShowCODEPEN.classList.remove("hidden");
     infoToShowGITHUB.classList.add("hidden");
+    buttonCODEPEN.classList.add("projects__containerSelectorSelected");
+    buttonAPP.classList.remove("projects__containerSelectorSelected");
+    buttonCODEPEN.classList.add("projects__containerSelectorSelectedACC");
+    buttonAPP.classList.remove("projects__containerSelectorSelectedACC");
+
+    props.handleProjectClick(parseInt(0));
   };
 
-  const handleAppOnClick = () => {
-    const selectorApp = document.querySelector(
-      ".projects__containerSelectorApp"
-    );
-    const selectorCSS = document.querySelector(
-      ".projects__containerSelectorCSS"
-    );
-    const selectorContainer = document.querySelector(
-      ".projects__containerSelector-hexagonPlayground"
-    );
-    const selectorHexagon = document.querySelector(
-      ".projects__containerSelector-hexagon"
-    );
-
+  //2-Function to select WEBAPPs proyects:
+  const handleAppOnClick = (ev) => {
     const infoToShowCODEPEN = document.querySelector(
       ".projects__containerCODEPEN"
     );
     const infoToShowGITHUB = document.querySelector(
       ".projects__containerGITHUB"
     );
-    selectorCSS.classList.remove("selectedByHexagon");
-    selectorApp.classList.add("selectedByHexagon");
-    selectorContainer.classList.remove("cointainerToCSS");
-    selectorHexagon.classList.remove("toCSS");
-    selectorContainer.classList.add("cointainerToApp");
-    selectorHexagon.classList.add("toApp");
+    const buttonCODEPEN = document.querySelector(
+      ".projects__containerSelectorCSS"
+    );
+    const buttonAPP = document.querySelector(".projects__containerSelectorApp");
     infoToShowCODEPEN.classList.add("hidden");
     infoToShowGITHUB.classList.remove("hidden");
+    buttonAPP.classList.add("projects__containerSelectorSelected");
+    buttonCODEPEN.classList.remove("projects__containerSelectorSelected");
+    buttonAPP.classList.add("projects__containerSelectorSelectedACC");
+    buttonCODEPEN.classList.remove("projects__containerSelectorSelectedACC");
+
+    props.handleCSSProjectClick(parseInt(0));
   };
 
-  const handleClickonFirst = () => {
-    const projectOne = document.querySelector(".projectG__containerGITHUB-one");
-    const projectTwo = document.querySelector(".projectG__containerGITHUB-two");
-    const projectThree = document.querySelector(
-      ".projectG__containerGITHUB-three"
+  //Handles projects' click and calls handler APP function:
+  const handleProjectClick = (ev) => {
+    let target = ev.currentTarget.id;
+    props.handleProjectClick(parseInt(target));
+
+    //Triggers function to play animation each time that info to show changes:
+    showProjectInfoContainer();
+  };
+
+  //Handles CSS projects' click and calls handler APP function:
+  const handleCodepenProjectClick = (ev) => {
+    let target = ev.currentTarget.id;
+    props.handleCSSProjectClick(parseInt(target));
+
+    //Triggers function to play animation each time that info to show changes:
+    showCodepenProjectInfoContainer();
+  };
+
+  //Animates info container while showing up:
+
+  const showProjectInfoContainer = () => {
+    const projectInfo = document.querySelector(
+      ".projects__containerGITHUB-info"
     );
-    projectThree.classList.remove("bigProyect");
-    projectOne.classList.add("bigProyect");
-    projectOne.classList.remove("orderThree");
-    projectOne.classList.remove("orderOne");
-    projectTwo.classList.add("smallProyect");
-    projectThree.classList.add("smallProyect");
-
-    projectTwo.classList.add("orderThree");
-    projectTwo.classList.remove("orderOne");
-    projectThree.classList.add("orderOne");
+    projectInfo.classList.remove("projects__containerGITHUB-infoShow");
+    void projectInfo.offsetWidth;
+    projectInfo.classList.add("projects__containerGITHUB-infoShow");
   };
 
-  const handleClickOnThird = () => {
-    const projectOne = document.querySelector(".projectG__containerGITHUB-one");
-    const projectTwo = document.querySelector(".projectG__containerGITHUB-two");
-    const projectThree = document.querySelector(
-      ".projectG__containerGITHUB-three"
+  //Animates info CSS container while showing up:
+
+  const showCodepenProjectInfoContainer = () => {
+    const projectInfo = document.querySelector(
+      ".projects__containerCODEPEN-info"
     );
-    projectOne.classList.remove("bigProyect");
-    projectThree.classList.add("bigProyect");
-    projectTwo.classList.add("smallProyect");
-    projectTwo.classList.add("orderOne");
-    projectOne.classList.add("orderThree");
-    projectTwo.classList.remove("orderThree");
+    projectInfo.classList.remove("projects__containerCODEPEN-infoShow");
+    void projectInfo.offsetWidth;
+    projectInfo.classList.add("projects__containerCODEPEN-infoShow");
   };
 
-  const handleClickonSecond = () => {
-    const projectOne = document.querySelector(".projectG__containerGITHUB-one");
-    const projectTwo = document.querySelector(".projectG__containerGITHUB-two");
-    const projectThree = document.querySelector(
-      ".projectG__containerGITHUB-three"
+  //RENDERS ALL PROJECTS IN ARRAY:
+  let renderProjectsArray = props.projectsData.map((item) => {
+    return (
+      <li
+        id={item.id}
+        key={item.id}
+        onClick={handleProjectClick}
+        className={
+          props.accesible
+            ? item.selected
+              ? "projects__containerGITHUB-title projects__containerGITHUB-titleMain projects__containerGITHUB-titleACC projects__containerGITHUB-titleACCMain"
+              : "projects__containerGITHUB-title projects__containerGITHUB-titleACC"
+            : item.selected
+            ? "projects__containerGITHUB-title projects__containerGITHUB-titleMain"
+            : "projects__containerGITHUB-title"
+        }
+      >
+        {item.name}
+      </li>
     );
+  });
 
-    projectOne.classList.remove("bigProyect");
-    projectThree.classList.remove("bigProyect");
-
-    projectThree.classList.remove("orderOne");
-    projectThree.classList.remove("orderTwo");
-    projectOne.classList.remove("orderThree");
-    projectOne.classList.remove("orderTwo");
-    projectTwo.classList.remove("orderThree");
-    projectTwo.classList.remove("orderOne");
-
-    projectTwo.classList.remove("smallProyect");
-  };
+  //RENDERS ALL CODEPEN PROJECTS IN ARRAY:
+  let renderCodepenProjectsArray = props.codepenProjectsData.map((item) => {
+    return (
+      <li
+        id={item.id}
+        key={item.id}
+        onClick={handleCodepenProjectClick}
+        className={
+          props.accesible
+            ? item.selected
+              ? "projects__containerCODEPEN-title projects__containerCODEPEN-titleMain projects__containerCODEPEN-titleACC projects__containerCODEPEN-titleACCMain"
+              : "projects__containerCODEPEN-title projects__containerCODEPEN-titleACC"
+            : item.selected
+            ? "projects__containerCODEPEN-title projects__containerCODEPEN-titleMain"
+            : "projects__containerCODEPEN-title"
+        }
+      >
+        {item.name}
+      </li>
+    );
+  });
 
   return (
     <main className="projects">
@@ -132,194 +147,92 @@ const Projects = (props) => {
       </h1>
 
       <section className="projects__container">
-        <div className="projects__containerSelector">
-          <span
-            onClick={handleCSSOnClick}
-            className="projects__containerSelectorCSS"
-          >
-            {props.translated ? "CSS Projects" : "Proyectos CSS"}
-          </span>
-          <div className="projects__containerSelector-hexagonPlayground">
-            <div className="projects__containerSelector-hexagon"></div>
-          </div>
+        <div
+          className={
+            props.accesible
+              ? "projects__containerSelector projects__containerSelectorACC"
+              : "projects__containerSelector"
+          }
+        >
           <span
             onClick={handleAppOnClick}
-            className="projects__containerSelectorApp selectedByHexagon"
+            className={
+              props.accesible
+                ? "projects__containerSelectorApp projects__containerSelectorSelected projects__containerSelectorAppACC projects__containerSelectorSelectedACC"
+                : "projects__containerSelectorApp projects__containerSelectorSelected"
+            }
           >
             WebApps
           </span>
+          <span
+            onClick={handleCSSOnClick}
+            className={
+              props.accesible
+                ? "projects__containerSelectorCSS  projects__containerSelectorCSSACC "
+                : "projects__containerSelectorCSS "
+            }
+          >
+            {props.translated ? "CSS Projects" : "Proyectos CSS"}
+          </span>
         </div>
-        <div className="projects__containerGITHUB">
-          <div
-            onClick={handleClickonFirst}
-            className="projectG projectG__containerGITHUB-one"
-          >
-            <img
-              className="projectG_oneImg"
-              src={previewOne}
-              title={props.translated ? "Project preview" : "Previsualización"}
-              alt="Project preview"
-            />
-            <h3 className="projectG_oneTitle">
-              {props.translated
-                ? props.projectsDataEN[0].name
-                : props.projectsData[0].name}
-            </h3>
-            <nav className="projectG_oneNav">
-              <a
-                className="projectG_oneNavRepo"
-                href={props.projectsData[0].repository}
-                title="Access repository"
-                target="_blank"
-                rel="noreferrer"
-              >
-                .
-              </a>
-              <a
-                className="projectG_oneNavDemo"
-                href={props.projectsData[0].webpage}
-                title="Access demo"
-                target="_blank"
-                rel="noreferrer"
-              >
-                .
-              </a>
-            </nav>
-            <p className="projectG_oneText">
-              {props.translated
-                ? props.projectsDataEN[0].description
-                : props.projectsData[0].description}
-            </p>
+        <div
+          className={
+            props.accesible
+              ? "projects__containerGITHUB  projects__containerGITHUBACC "
+              : "projects__containerGITHUB "
+          }
+        >
+          <div className="projects__containerGITHUB-info">
+            {props.projectInfo ? (
+              <Project
+                accesible={props.accesible}
+                webpage={props.projectInfo.webpage}
+                repository={props.projectInfo.repository}
+                preview={props.projectInfo.preview}
+                technologies={props.projectInfo.technologies}
+                description={props.projectInfo.description}
+                id={props.projectInfo.id}
+              />
+            ) : null}
           </div>
-          <div
-            onClick={handleClickonSecond}
-            className="projectG projectG__containerGITHUB-two"
+          <ul
+            className={
+              props.accesible
+                ? "projects__containerGITHUB-list  projects__containerGITHUB-listACC "
+                : "projects__containerGITHUB-list "
+            }
           >
-            <img
-              className="projectG_twoImg"
-              src={previewTwo}
-              alt="Project preview"
-              title={props.translated ? "Project preview" : "Previsualización"}
-            />
-            <h3 className="projectG_twoTitle">
-              {props.translated
-                ? props.projectsDataEN[1].name
-                : props.projectsData[1].name}
-            </h3>
-            <nav className="projectG_twoNav">
-              <a
-                className="projectG_twoNavRepo"
-                href={props.projectsData[1].repository}
-                title="Access repository"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <div className="projectG_twoNavRepoIcon"></div>
-              </a>
-              <a
-                className="projectG_twoNavDemo"
-                href={props.projectsData[1].webpage}
-                title="Access demo"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <div className="projectG_twoNavDemoIcon"></div>
-              </a>
-            </nav>
-            <p className="projectG_twoText">
-              {props.translated
-                ? props.projectsDataEN[1].description
-                : props.projectsData[1].description}
-            </p>
-          </div>
-          <div
-            onClick={handleClickOnThird}
-            className="projectG projectG__containerGITHUB-three"
-          >
-            <img
-              className="projectG_threeImg"
-              src={previewThree}
-              alt="Project preview"
-              title={props.translated ? "Project preview" : "Previsualización"}
-            />
-            <h3 className="projectG_threeTitle">
-              {props.translated
-                ? props.projectsDataEN[2].name
-                : props.projectsData[2].name}
-            </h3>
-            <nav className="projectG_threeNav">
-              <a
-                className="projectG_threeNavRepo"
-                href={props.projectsData[2].repository}
-                title="Access repository"
-                target="_blank"
-                rel="noreferrer"
-              >
-                .
-              </a>
-              <a
-                className="projectG_threeNavDemo"
-                href={props.projectsData[2].webpage}
-                title="Access demo"
-                target="_blank"
-                rel="noreferrer"
-              >
-                .
-              </a>
-            </nav>
-            <p className="projectG_threeText">
-              {props.translated
-                ? props.projectsDataEN[2].description
-                : props.projectsData[2].description}
-            </p>
-          </div>
+            {renderProjectsArray}
+          </ul>{" "}
         </div>
-        <div className="projects__containerCODEPEN hidden">
-          <div className="projects__containerCODEPEN-one">
-            <Codepen
-              hash="bGBqBJq"
-              user="martreyz"
-              defaultTab="result"
-              title="Hawaii"
-            />
-            <a
-              href="https://codepen.io/martreyz/pen/bGBqBJq"
-              target="_blank"
-              rel="noreferrer"
-              title="View project"
-              className="projects__containerCODEPEN-oneLink"
-            ></a>
+        <div
+          className={
+            props.accesible
+              ? "projects__containerCODEPEN hidden  projects__containerCODEPENACC "
+              : "projects__containerCODEPEN hidden "
+          }
+        >
+          <div className="projects__containerCODEPEN-info">
+            {props.codepenProjectInfo ? (
+              <CodepenProject
+                accesible={props.accesible}
+                webpage={props.codepenProjectInfo.webpage}
+                preview={props.codepenProjectInfo.preview}
+                technologies={props.codepenProjectInfo.technologies}
+                description={props.codepenProjectInfo.description}
+                id={props.codepenProjectInfo.id}
+              />
+            ) : null}
           </div>
-          <div className="projects__containerCODEPEN-two">
-            <Codepen
-              hash="KKgNZoY"
-              user="martreyz"
-              defaultTab="result"
-              title="Watch"
-            />
-            <a
-              href="https://codepen.io/martreyz/pen/KKgNZoY"
-              target="_blank"
-              rel="noreferrer"
-              title="View project"
-              className="projects__containerCODEPEN-twoLink"
-            ></a>
-          </div>
-          <div className="projects__containerCODEPEN-three">
-            <Codepen
-              hash="zYKZxBb"
-              user="martreyz"
-              defaultTab="result"
-              title="Castle"
-            />
-            <a
-              href="https://codepen.io/martreyz/pen/zYKZxBb"
-              target="_blank"
-              rel="noreferrer"
-              title="View project"
-              className="projects__containerCODEPEN-threeLink"
-            ></a>
-          </div>
+          <ul
+            className={
+              props.accesible
+                ? "projects__containerCODEPEN-list  projects__containerCODEPEN-listACC "
+                : "projects__containerCODEPEN-list "
+            }
+          >
+            {renderCodepenProjectsArray}
+          </ul>{" "}
         </div>
       </section>
       <section className="projects__stack">
@@ -330,7 +243,13 @@ const Projects = (props) => {
               : "projects__stackTech"
           }
         >
-          <h2 className="projects__stackTechTitle">
+          <h2
+            className={
+              props.accesible
+                ? "projects__stackTechTitle projects__stackTechTitleACC"
+                : "projects__stackTechTitle"
+            }
+          >
             {props.translated ? "Technologies:" : "Tecnologías:"}
           </h2>
           <p className="projects__stackTechText">
@@ -370,7 +289,13 @@ const Projects = (props) => {
               : "projects__stackLang"
           }
         >
-          <h2 className="projects__stackLangTitle">
+          <h2
+            className={
+              props.accesible
+                ? "projects__stackLangTitle projects__stackLangTitleACC"
+                : "projects__stackLangTitle"
+            }
+          >
             {props.translated ? "Stack:" : "Lenguajes:"}
           </h2>
           <p className="projects__stackLangText">

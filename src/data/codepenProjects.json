@@ -1,0 +1,39 @@
+[
+    {
+        "id": 0,
+        "name": "Donut worry!",
+        "webpage": "https://codepen.io/martreyz/pen/vYyQVjZ",
+        "preview": "images/donutSH.PNG",
+        "selected": true,
+        "technologies" : "HTML//CSS//JAVASCRIPT",
+        "description": "Donut realizado en CSS con toppings customizables. La customización de los toppings, así como la acción de comerse el donut se ha programado con JS."
+    }, 
+    {
+        "id": 1,
+        "name": "Reloj",
+        "webpage": "https://codepen.io/martreyz/pen/KKgNZoY",
+        "preview": "images/watchSH.PNG",
+        "selected": false,
+        "technologies" : "HTML//CSS",
+        "description": "Reloj hecho con CSS. El movimiento de las agujas se ha implementado utilizando animaciones CSS."
+    },
+    {
+        "id": 2,
+        "name": "Hawaii",
+        "webpage": "https://codepen.io/martreyz/pen/bGBqBJq",
+        "preview": "images/hawaiiSH.PNG",
+        "selected": false,
+        "technologies" : "HTML//CSS//JAVASCRIPT",
+        "description": "Chica hawaiiana bailando hecha con CSS y animaciones CSS. Se han añadido dos botones para controlar las animaciones, programados con JS."
+    },
+    {
+        "id": 3,
+        "name": "Castillo",
+        "webpage": "https://codepen.io/martreyz/pen/zYKZxBb",
+        "preview": "images/castleSH.PNG",
+        "selected": false,
+        "technologies" : "HTML//CSS",
+        "description": "Proyecto que muestra la transición de día a noche en la escena de un castillo. Toda la interactividad se ha llevado a cabo con animaciones CSS."
+    }
+    
+]

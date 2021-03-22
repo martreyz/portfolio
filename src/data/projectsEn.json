@@ -4,7 +4,9 @@
         "name": "Retro games",
         "webpage": "https://martreyz.github.io/retro-games/",
         "repository": "https://github.com/martreyz/retro-games",
-        "preview": "'../portfolio/images/bodybg.png'",
+        "preview": "images/pacmanSH.png",
+        "selected": true,
+        "technologies" : "HTML//CSS//JAVASCRIPT",
         "description": "Project under construction: Development of a web app with retro games developed in pure JS. Layout in CSS and HTML, interactivity applied with JavaScript. Git and GitHub were used as a version control system."
     },
     {
@@ -12,7 +14,9 @@
         "name": "Rick and Morty",
         "webpage": "https://martreyz.github.io/modulo-3-evaluacion-final-martreyz/#/",
         "repository": "https://github.com/martreyz/modulo-3-evaluacion-final-martreyz",
-        "preview": "'../portfolio/images/images/rickmorty.png'",
+        "preview": "images/rickMortySH.png",
+        "selected": false,
+        "technologies" : "HTML//CSS//SASS//JAVASCRIPT//REACT JS",
         "description": "Web app for Rick and Morty's characters management, using React, JavaScript, HTML5, CSS3 and SASS. Git and GitHub were used as a version control system."
     },
     {
@@ -20,7 +24,9 @@
         "name": "Manage your series",
         "webpage": "https://martreyz.github.io/modulo-2-evaluacion-final-martreyz/",
         "repository": "https://github.com/martreyz/modulo-2-evaluacion-final-martreyz",
-        "preview": "../portfolio/images/preview.png",
+        "preview": "images/seriesSH.png",
+        "selected": false,
+        "technologies" : "HTML//CSS//SASS//JAVASCRIPT//REACT JS",
         "description": "Web application for series' management, using JavaScript, HTML5, CSS3 y SASS. Gulp was used as a task authomation tool and Git and GitHub as a version control system."
     }
 ]

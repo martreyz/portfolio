@@ -7,38 +7,48 @@
 
 .landing {
   height: 92vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 7vh 3vw 10vh 3vw;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: 30% 40% 30%;
+  padding: 4vh;
   &__container {
-    height: auto;
-    width: 60%;
+    width: 100%;
+    padding: 3vh;
+    grid-column: 2/3;
+    grid-row: 1/4;
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 15% 40% 30% 15%;
     grid-template-rows: 60% 40%;
+    border: 2px solid $color-tertiary;
+    border-radius: 15px;
   }
   &__photo {
     border-radius: 30%;
-    width: 20vw;
+    height: 80%;
     opacity: 0.8;
     grid-row: 1/3;
-    grid-column: 2/3;
+    grid-column: 3/4;
+    align-self: center;
+    justify-self: flex-end;
   }
   &__text {
     margin-left: 4vw;
     grid-row: 2/3;
-    grid-column: 1/2;
-    align-self: start;
+    grid-column: 2/3;
+    align-self: flex-start;
+    justify-self: flex-end;
   }
   &__title {
     color: $color-secondary;
-    line-height: 1.4;
     font-size: 18vw;
+    line-height: 0.8;
     grid-row: 1/2;
-    grid-column: 1/2;
-    align-self: center;
+    grid-column: 2/3;
+    align-self: flex-end;
+    justify-self: flex-start;
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
     &ACC {
       color: #37493d;
     }
@@ -47,10 +57,11 @@
   &__textOne {
     color: $color-secondary;
     font-weight: 700;
-    line-height: 1.3;
     display: block;
     font-size: 5vw;
     width: 150%;
+    margin-left: -2vw;
+
     &ACC {
       color: #537070;
     }
@@ -60,61 +71,130 @@
     font-weight: 700;
     line-height: 0.4;
     display: block;
-    font-size: 3vw;
-    margin-left: 2vw;
+    font-size: 2.8vw;
+    text-align: right;
     &ACC {
       color: #384d4d;
     }
   }
   &__menu-projects {
+    cursor: pointer;
     list-style-type: none;
     text-transform: uppercase;
-    background-image: url("../images/Menus/longArrowRight.svg");
-    background-repeat: no-repeat;
-    background-size: 1.5vw;
-    background-position-x: 90%;
-    background-position-y: 100%;
-    padding-right: 1.5vw;
-    padding-bottom: 2vh;
+    grid-column: 3/4;
+    grid-row: 1/4;
     transition: all ease 1s;
+    background-color: $color-neutral-lowOpacity;
+    border-radius: 15px;
     height: min-content;
-    &ACC {
-      background-image: url("../images/Menus/longArrowRightACC.svg");
-    }
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    justify-self: flex-end;
     &:hover {
-      transform: scale(1.2);
+      transform: scaleX(1.2);
+      background-color: $color-secondary;
+    }
+
+    &ACC {
+      color: $color-dark;
+      background-color: $color-neutral-lowOpacity;
+      border: 3px solid $color-tertiary;
+      &:hover {
+        color: $color-dark;
+        background-color: $color-tertiary;
+        border: 3px solid transparent;
+      }
     }
   }
   &__menu-contact {
+    cursor: pointer;
     list-style-type: none;
     text-transform: uppercase;
-    background-image: url("../images/Menus/longArrowLeft.svg");
-    background-repeat: no-repeat;
-    background-size: 1.5vw;
-    background-position-y: 100%;
-    background-position-x: 10%;
-    padding-left: 1.5vw;
-    padding-bottom: 2vh;
+    grid-column: 1/2;
+    grid-row: 1/4;
     transition: all ease 1s;
+    background-color: $color-neutral-lowOpacity;
+    border-radius: 15px;
     height: min-content;
-    &ACC {
-      background-image: url("../images/Menus/longArrowLeftACC.svg");
-    }
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    justify-self: flex-start;
     &:hover {
-      transform: scale(1.2);
+      transform: scaleX(1.2);
+      background-color: $color-secondary;
+    }
+
+    &ACC {
+      color: $color-dark;
+      background-color: $color-neutral-lowOpacity;
+      border: 3px solid $color-tertiary;
+      &:hover {
+        color: $color-dark;
+        background-color: $color-tertiary;
+        border: 3px solid transparent;
+      }
     }
   }
 }
 
-.landingLink__menu-projects,
+.landingLink__menu-projects {
+  cursor: pointer;
+  text-decoration: none;
+  color: $color-secondary;
+  font-weight: 700;
+  font-size: 2vw;
+  background-image: url("../images/Menus/longArrowRight.svg");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-size: 5vh;
+  background-position-y: 53vh;
+  padding-right: 2vw;
+  padding: 50vh 1.5vw 50vh 0px;
+  &:hover {
+    color: $color-neutral-auxiliar;
+    background-image: url("../images/Menus/longArrowRightHover.svg");
+  }
+  &ACC {
+    color: $color-tertiary-dark;
+    background-image: url("../images/Menus/longArrowRightACC.svg");
+    &:hover {
+      color: $color-tertiary-dark;
+      background-image: url("../images/Menus/longArrowRightACC.svg");
+    }
+  }
+}
+
 .landingLink__menu-contact {
   cursor: pointer;
   text-decoration: none;
   color: $color-secondary;
   font-weight: 700;
-  font-size: 1.5vw;
+  font-size: 2vw;
+  background-image: url("../images/Menus/longArrowLeft.svg");
+  background-repeat: no-repeat;
+  background-position-x: 5%;
+  background-size: 5vh;
+  background-position-y: 53vh;
+  padding: 50vh 0px 50vh 1.5vw;
+  &:hover {
+    color: $color-neutral-auxiliar;
+    background-image: url("../images/Menus/longArrowLeftHover.svg");
+  }
   &ACC {
     color: $color-tertiary-dark;
+    background-image: url("../images/Menus/longArrowLeftACC.svg");
+    &:hover {
+      color: $color-tertiary-dark;
+      background-image: url("../images/Menus/longArrowLeftACC.svg");
+    }
   }
 }
 
@@ -135,54 +215,44 @@
 
 @media all and (max-width: 1024px) {
   .landing {
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 15% 70% 15%;
     &__container {
-      height: 65vw;
-      margin: 17.5vh 0px;
-      grid-template-columns: 100%;
-      grid-template-rows: auto;
-    }
-    &__photo {
-      width: 50%;
-      grid-row: 1/2;
-      grid-column: 1/2;
-      align-self: end;
-      justify-self: end;
-    }
-    &__text {
-      grid-row: 3/4;
-      justify-self: end;
-      grid-column: 1/2;
-    }
-    &__title {
-      font-size: 20vw;
+      height: 90%;
+      grid-column: 1/6;
+      align-self: center;
       grid-row: 2/3;
-      align-self: start;
-      grid-column: 1/2;
-      line-height: 0.7;
-    }
-
-    &__textOne {
-      font-size: 8vw;
-    }
-    &__textTwo {
-      width: 110%;
-      font-size: 5vw;
-      margin-left: 2vw;
+      grid-template-columns: 10% 40% 40% 10%;
     }
     &__menu-projects {
+      height: 100%;
+      width: 100%;
       background-size: 5vw;
-      padding-right: 5vw;
-      align-self: flex-end;
+
+      grid-column: 3/6;
+      grid-row: 3/4;
     }
     &__menu-contact {
+      grid-column: 1/4;
+      grid-row: 1/2;
+      height: 100%;
+      width: 100%;
       background-size: 5vw;
-      padding-left: 5vw;
     }
   }
 
-  .landingLink__menu-projects,
+  .landingLink__menu-projects {
+    font-size: 6vw;
+    background-position-x: 28vw;
+    background-position-y: 8vh;
+    padding: 5vh 15vw 5vh 15vw;
+  }
+
   .landingLink__menu-contact {
     font-size: 6vw;
+    background-position-x: 11vw;
+    background-position-y: 8vh;
+    padding: 5vh 15vw 5vh 15vw;
   }
 
   .nav__menu {
@@ -197,7 +267,46 @@
 @media all and (max-width: 420px) {
   .landing {
     &__container {
-      height: 25vh;
+      grid-template-columns: 0% 60% 40% 0%;
+      grid-template-rows: 50% 10% 20% 20%;
     }
+    &__photo {
+      height: 100%;
+      grid-row: 1/2;
+    }
+    &__text {
+      grid-row: 4/5;
+      grid-column: 2/4;
+      justify-self: center;
+    }
+    &__title {
+      font-size: 25vw;
+      grid-row: 3/4;
+      grid-column: 2/3;
+      align-self: flex-start;
+      &ACC {
+        color: #37493d;
+      }
+    }
+    &__textOne {
+      font-size: 10vw;
+      &ACC {
+        color: #537070;
+      }
+    }
+    &__textTwo {
+      font-size: 5vw;
+      &ACC {
+        color: #384d4d;
+      }
+    }
+  }
+
+  .landingLink__menu-projects {
+    background-position-y: 6.5vh;
+  }
+
+  .landingLink__menu-contact {
+    background-position-y: 6.5vh;
   }
 }
