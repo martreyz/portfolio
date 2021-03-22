@@ -41,6 +41,10 @@
       background-color: $color-tertiary;
       border-radius: 15px;
       overflow: hidden;
+      &ACC {
+        background-color: transparent;
+        border: 3px solid $color-tertiary;
+      }
       &-info {
         grid-column: 2/3;
         display: grid;
@@ -60,6 +64,8 @@
           justify-content: space-between;
           align-items: center;
           width: 100%;
+          height: 95%;
+          align-self: flex-start;
         }
       }
       &-list {
@@ -80,11 +86,15 @@
         border-right: dotted $color-secondary-fullOpacity 0.3vh;
         border-top-left-radius: 15px;
         border-bottom-left-radius: 15px;
+        &ACC {
+          border-right: dotted $color-tertiary 0.3vh;
+          background-color: transparent;
+        }
       }
       &-title {
         width: 100%;
         position: relative;
-        font-size: 2vw;
+        font-size: $font-titleSize;
         box-sizing: content-box;
         text-decoration: none;
         list-style-type: none;
@@ -97,11 +107,26 @@
           color: $color-neutral-auxiliar;
           border-right: solid $color-secondary-fullOpacity 8px;
         }
+        &ACC {
+          color: $color-dark;
+          background-color: $color-neutral-lowOpacity;
+          &Main {
+            color: $color-dark;
+            background-color: $color-tertiary;
+            border-right: solid $color-dark 8px;
+          }
+          &:hover {
+            color: $color-dark;
+            background-color: $color-tertiary;
+            border-right: solid $color-dark 8px;
+          }
+        }
       }
       &-img {
         opacity: 0.8;
         display: block;
         width: 100%;
+        border-radius: 15px;
         &Container {
           grid-column: 1/3;
           grid-row: 1/2;
@@ -125,7 +150,7 @@
         }
       }
       &-description {
-        font-size: 2vh;
+        font-size: $font-textSize;
         font-weight: 300;
         color: $color-secondary-fullOpacity;
         grid-column: 1/3;
@@ -138,15 +163,20 @@
         justify-self: center;
         align-self: center;
         font-family: "Architects Daughter", cursive;
+        &ACC {
+          color: $color-dark;
+          border: 3px solid $color-tertiary;
+        }
       }
       &-technologies {
-        font-size: 2vh;
+        font-size: $font-textSize;
         color: $color-tertiary-dark;
         border-radius: 15px;
         padding: 1vh;
         transition: all ease 3s;
         text-align: right;
         font-family: "Architects Daughter", cursive;
+        word-break: break-all;
       }
       &-links {
         color: transparent;
@@ -166,7 +196,6 @@
       &-linkOne {
         text-decoration: none;
         color: transparent;
-
         background-image: url("../images/Projects/demo.svg");
         background-size: contain;
         background-repeat: no-repeat;
@@ -174,7 +203,6 @@
         &:hover {
           background-image: url("../images/Projects/demoHover.svg");
         }
-
         &Logo {
           width: 7vh;
           height: 70%;
@@ -190,11 +218,26 @@
             transform: scale(1.2);
             background-color: $color-secondary;
           }
+          &ACC {
+            border: 3px solid $color-tertiary;
+            &:hover {
+              border: 3px solid transparent;
+              background-color: $color-tertiary;
+            }
+          }
+        }
+        &ACC {
+          background-image: url("../images/Projects/demoACC.svg");
+          &:hover {
+            background-image: url("../images/Projects/demoACC.svg");
+          }
         }
       }
       &-linkTwo {
         text-decoration: none;
         color: transparent;
+        overflow: hidden;
+        width: 7vh;
         background-image: url("../images/Projects/repository.svg");
         background-size: contain;
         background-repeat: no-repeat;
@@ -205,7 +248,6 @@
         &Logo {
           width: 7vh;
           height: 70%;
-          margin-right: 2vh;
           background-color: $color-neutral-auxiliar;
           padding: 1vh;
           border-radius: 15px;
@@ -216,6 +258,19 @@
           &:hover {
             transform: scale(1.2);
             background-color: $color-secondary;
+          }
+          &ACC {
+            border: 3px solid $color-tertiary;
+            &:hover {
+              border: 3px solid transparent;
+              background-color: $color-tertiary;
+            }
+          }
+        }
+        &ACC {
+          background-image: url("../images/Projects/repositoryACC.svg");
+          &:hover {
+            background-image: url("../images/Projects/repositoryACC.svg");
           }
         }
       }
@@ -231,6 +286,10 @@
       grid-template-rows: 100%;
       border-radius: 15px;
       overflow: hidden;
+      &ACC {
+        background-color: transparent;
+        border: 3px solid $color-tertiary;
+      }
       &-info {
         grid-column: 1/2;
         display: grid;
@@ -249,6 +308,8 @@
           justify-content: space-between;
           align-items: center;
           width: 100%;
+          height: 95%;
+          align-self: flex-start;
         }
       }
       &-list {
@@ -268,11 +329,15 @@
         border-left: dotted $color-secondary-fullOpacity 0.3vh;
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
+        &ACC {
+          border-left: dotted $color-tertiary 0.3vh;
+          background-color: transparent;
+        }
       }
       &-title {
         width: 100%;
         position: relative;
-        font-size: 2vw;
+        font-size: $font-titleSize;
         box-sizing: content-box;
         text-decoration: none;
         list-style-type: none;
@@ -285,20 +350,34 @@
           color: $color-neutral-auxiliar;
           border-left: solid $color-secondary-fullOpacity 8px;
         }
+        &ACC {
+          color: $color-dark;
+          background-color: $color-neutral-lowOpacity;
+          &Main {
+            color: $color-dark;
+            background-color: $color-tertiary;
+            border-left: solid $color-dark 8px;
+          }
+          &:hover {
+            color: $color-dark;
+            background-color: $color-tertiary;
+            border-left: solid $color-dark 8px;
+          }
+        }
       }
       &-img {
         opacity: 0.8;
         display: block;
         width: 100%;
+        border-radius: 15px;
         &Container {
           grid-column: 1/3;
           grid-row: 1/2;
           overflow: hidden;
           width: 100%;
-          border: 3px solid $color-secondary;
           border-radius: 15px;
+          border: 3px solid $color-tertiary;
           display: flex;
-          padding: 1vh;
           justify-content: center;
           align-items: flex-start;
           height: 95%;
@@ -314,7 +393,7 @@
         }
       }
       &-description {
-        font-size: 2.3vh;
+        font-size: $font-textSize;
         font-weight: 300;
         color: $color-secondary-fullOpacity;
         grid-column: 1/3;
@@ -327,15 +406,20 @@
         justify-self: center;
         align-self: center;
         font-family: "Architects Daughter", cursive;
+        &ACC {
+          color: $color-dark;
+          border: 3px solid $color-tertiary;
+        }
       }
       &-technologies {
-        font-size: 2vh;
+        font-size: $font-textSize;
         color: $color-tertiary-dark;
         border-radius: 15px;
         padding: 1vh;
         transition: all ease 3s;
         text-align: right;
         font-family: "Architects Daughter", cursive;
+        word-break: break-all;
       }
       &-links {
         color: transparent;
@@ -356,22 +440,42 @@
         text-decoration: none;
         color: transparent;
         background-image: url("../images/Projects/demo.svg");
-        background-size: 80%;
-        background-repeat: no-repeat;
-        background-position: center;
-        border: 3px solid $color-neutral-lowOpacity;
-        &:hover {
-          transform: scale(1.2);
-        }
-      }
-      &-linkTwo {
-        text-decoration: none;
-        color: transparent;
-        background-image: url("../images/Projects/repository.svg");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        border: 3px solid $color-neutral-lowOpacity;
+        &:hover {
+          background-image: url("../images/Projects/demoHover.svg");
+        }
+        &Logo {
+          width: 7vh;
+          height: 70%;
+          padding: 1vh;
+          margin-right: 2vh;
+          background-color: $color-neutral-auxiliar;
+          border-radius: 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+          transition: 1s ease all;
+          &:hover {
+            transform: scale(1.2);
+            background-color: $color-secondary;
+          }
+          &ACC {
+            border: 3px solid $color-tertiary;
+            &:hover {
+              border: 3px solid transparent;
+              background-color: $color-tertiary;
+            }
+          }
+        }
+        &ACC {
+          background-image: url("../images/Projects/demoACC.svg");
+          &:hover {
+            background-image: url("../images/Projects/demoACC.svg");
+          }
+        }
       }
     }
   }
@@ -382,6 +486,7 @@
     text-align: center;
     line-height: 1;
     width: 100%;
+    height: 100%;
     grid-row: 1/2;
     grid-column: 1/6;
     align-self: center;
@@ -393,37 +498,62 @@
 }
 
 .projects__menu-home {
+  cursor: pointer;
   list-style-type: none;
   text-transform: uppercase;
   grid-column: 1/2;
   grid-row: 4/5;
   transition: all ease 1s;
-  background-image: url("../images/Menus/longArrowLeft.svg");
   background-color: $color-neutral-lowOpacity;
   border-radius: 15px;
-  background-repeat: no-repeat;
-  background-position-x: 10%;
-  background-position-y: 100%;
-  padding-left: 1.5vw;
-  padding-bottom: 2vh;
-  background-size: 1.5vw;
+  height: min-content;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  justify-self: flex-start;
   &:hover {
-    transform: scale(1.2);
+    transform: scaleX(1.2);
+    background-color: $color-secondary;
+    color: $color-neutral-auxiliar;
   }
 
   &ACC {
-    background-image: url("../images/Menus/longArrowLeftACC.svg");
+    color: $color-dark;
+    background-color: $color-neutral-lowOpacity;
+    border: 3px solid $color-tertiary;
+    &:hover {
+      color: $color-dark;
+      background-color: $color-tertiary;
+      border: 3px solid transparent;
+    }
   }
 }
 
 .projectsLink__menu-home {
-  cursor: pointer;
   text-decoration: none;
   color: $color-secondary;
-  font-weight: 700;
-  font-size: 2vw;
+  font-size: $font-titleSize;
+  background-image: url("../images/Menus/longArrowLeft.svg");
+  background-repeat: no-repeat;
+  background-position-x: 5%;
+  background-size: 5vh;
+  background-position-y: 23vh;
+  padding-right: 2vw;
+  padding: 20vh 0px 20vh 1.5vw;
+  &:hover {
+    color: $color-neutral-auxiliar;
+    background-image: url("../images/Menus/longArrowLeftHover.svg");
+  }
   &ACC {
     color: $color-tertiary-dark;
+    background-image: url("../images/Menus/longArrowLeftACC.svg");
+    &:hover {
+      color: $color-tertiary-dark;
+      background-image: url("../images/Menus/longArrowLeftACC.svg");
+    }
   }
 }
 
@@ -433,7 +563,7 @@
   justify-content: space-between;
   justify-self: flex-start;
   position: relative;
-  font-size: 4vh;
+  font-size: $font-titleSize;
   margin-bottom: 1vh;
   &App {
     cursor: pointer;
@@ -451,6 +581,16 @@
     &:hover {
       color: $color-neutral-auxiliar;
       background-color: $color-secondary;
+    }
+    &ACC {
+      color: $color-dark;
+      background-color: $color-neutral-lowOpacity;
+      border: 3px solid $color-tertiary;
+      &:hover {
+        color: $color-dark;
+        background-color: $color-tertiary;
+        border: 3px solid transparent;
+      }
     }
   }
   &CSS {
@@ -470,11 +610,26 @@
       color: $color-neutral-auxiliar;
       background-color: $color-secondary;
     }
+    &ACC {
+      color: $color-dark;
+      background-color: $color-neutral-lowOpacity;
+      border: 3px solid $color-tertiary;
+      &:hover {
+        color: $color-dark;
+        background-color: $color-tertiary;
+        border: 3px solid transparent;
+      }
+    }
   }
   &Selected {
     color: $color-neutral-auxiliar;
     background-color: $color-secondary;
     z-index: 99;
+    &ACC {
+      color: $color-dark;
+      background-color: $color-tertiary;
+      border: 3px solid transparent;
+    }
   }
 }
 
@@ -497,7 +652,6 @@
 
 .projects__stackTech {
   color: #f2e0d5;
-  font-size: 1vw;
   align-self: flex-start;
   text-align: center;
   width: 50%;
@@ -510,7 +664,7 @@
   border: 3px solid $color-tertiary;
   border-radius: 15px;
   &Title {
-    font-size: 4vh;
+    font-size: $font-titleSize;
     width: 100%;
     height: min-content;
     color: $color-tertiary-dark;
@@ -580,7 +734,6 @@
 
 .projects__stackLang {
   color: #f2e0d5;
-  font-size: 1vw;
   text-align: center;
   width: 45%;
   height: 100%;
@@ -592,8 +745,12 @@
   justify-content: space-between;
   background-color: $color-tertiary;
   border-radius: 15px;
+  &ACC {
+    background-color: transparent;
+    border: 3px solid $color-tertiary;
+  }
   &Title {
-    font-size: 4vh;
+    font-size: $font-titleSize;
     width: 100%;
     height: min-content;
     color: $color-tertiary-dark;
@@ -654,92 +811,76 @@
 
 @media all and (max-width: 1024px) {
   .projects {
-    padding: 0px 3vw 0vh 5vw;
-    grid-template-rows: 25% 50% 25%;
-    grid-template-columns: 100%;
+    padding: 1vh 3vw;
+    grid-template-rows: 15% 65% 20%;
+    grid-template-columns: 30% 35% 35%;
     &__container {
       grid-row: 2/3;
-      grid-column: 1/2;
+      grid-column: 1/4;
+      padding: 1vh;
       align-self: start;
-      height: 100%;
-      justify-content: flex-start;
+      height: 98%;
       &GITHUB {
         flex-grow: 1;
         &-technologies {
-          font-size: 1.4vh;
+          font-size: $font-textSizeM;
         }
         &-description {
-          font-size: 1.7vh;
+          font-size: $font-textSizeM;
         }
         &-list {
-          border-left: 0.2vw dotted $color-secondary-fullOpacity;
+          border-right: 0.2vw dotted $color-secondary-fullOpacity;
+          &ACC {
+            border-right: 0.2vw dotted $color-dark;
+          }
         }
         &-title {
-          font-size: 3vh;
+          font-size: $font-titleSizeM;
         }
       }
       &CODEPEN {
         flex-grow: 1;
         &-technologies {
-          font-size: 1.4vh;
+          font-size: $font-textSizeM;
         }
         &-description {
-          font-size: 1.7vh;
+          font-size: $font-textSizeM;
+        }
+        &-list {
+          border-left: 0.2vw dotted $color-secondary-fullOpacity;
+          &ACC {
+            border-left: 0.2vw dotted $color-dark;
+          }
+        }
+        &-title {
+          font-size: $font-titleSizeM;
         }
       }
     }
     &__title {
       font-size: 11vh;
       margin-left: 0vw;
+      height: 95%;
+      align-self: flex-start;
       margin-top: 0vh;
       text-align: center;
     }
   }
 
   .projects__menu-home {
-    top: 0px;
-    left: 7vw;
-    width: 15vw;
-    height: 10%;
-    background-size: 5vw;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    grid-row: 3/4;
+    grid-column: 1/2;
   }
 
   .projectsLink__menu-home {
     font-size: 6vw;
+    background-position-x: 7vw;
+    background-position-y: 9vh;
+    padding: 6vh 10vw 6vh 10vw;
   }
 
   .projects__containerSelector {
     font-size: 3vh;
-    &App {
-      border-right: 2vh solid transparent;
-      border-left: 2vh solid transparent;
-      border-bottom: 4vh solid $color-neutral-lowOpacity;
-      &:active {
-        border-bottom: 4vh solid #b38c91;
-      }
-      &:hover {
-        border-bottom: 4vh solid #b38c91;
-      }
-    }
-    &CSS {
-      border-right: 2vh solid transparent;
-      border-left: 2vh solid transparent;
-      border-bottom: 4vh solid $color-neutral-lowOpacity;
-      &:active {
-        border-bottom: 4vh solid #b38c91;
-      }
-      &:hover {
-        border-bottom: 4vh solid #b38c91;
-      }
-    }
-    &Selected {
-      color: $color-neutral-auxiliar;
-      border-bottom: 4vh solid #b38c91;
-      z-index: 99;
-    }
   }
 
   .projects__stack {
@@ -747,21 +888,18 @@
     width: 100%;
     margin-left: 0vw;
     margin-bottom: 0vh;
-    padding: 2vh 0px;
+    padding: 0vh 0px;
     grid-row: 3/4;
-    grid-column: 1/2;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    grid-column: 2/4;
     justify-self: center;
-    align-self: center;
+    align-self: flex-start;
   }
 
   .projects__stackTech {
-    padding: 0px;
+    padding: 1vh;
     align-self: center;
     &Title {
-      font-size: 3vh;
+      font-size: $font-titleSizeM;
     }
     &Text {
       &-itemA {
@@ -795,10 +933,10 @@
   }
 
   .projects__stackLang {
-    padding: 0px;
+    padding: 1vh;
     align-self: center;
     &Title {
-      font-size: 3vh;
+      font-size: $font-titleSizeM;
     }
     &Text {
       &-itemA {
@@ -829,85 +967,190 @@
 @media all and (max-width: 420px) {
   .projects {
     &__container {
-      grid-row: 2/3;
-      grid-column: 1/2;
-      align-self: start;
-      height: 100%;
-      justify-content: flex-start;
       &Selector {
-        width: 90%;
         &App {
-          font-size: 3vh;
+          font-size: $font-titleSizeS;
         }
         &CSS {
-          font-size: 3vh;
+          font-size: $font-titleSizeS;
         }
         &Selected {
-          color: $color-neutral-auxiliar;
-          border-bottom: 4vh solid #b38c91;
-          z-index: 99;
+          font-size: $font-titleSizeS;
         }
       }
       &GITHUB {
-        height: 70%;
-        width: 90%;
+        &-info {
+          grid-template-rows: 45% 10% 45%;
+          grid-template-columns: 100%;
+          padding: 1vh;
+        }
         &-technologies {
-          font-size: 1vh;
+          font-size: $font-textSizeS;
         }
         &-description {
-          font-size: 1.3vh;
+          align-self: flex-start;
+          height: 100%;
+          font-size: $font-textSizeS;
         }
-        &-info {
-          width: 95%;
-          justify-self: flex-start;
-          grid-template-rows: 57% 13% 30%;
-          &Banner {
-            flex-direction: column;
-            justify-content: center;
+        &-img {
+          &Container {
+            align-items: center;
           }
         }
-        &-imgContainer {
-          align-self: center;
-          display: flex;
-          align-items: center;
-        }
         &-title {
-          font-size: 2.3vh;
+          font-size: $font-titleSizeS;
+          border-right: solid transparent 5px;
+          &Main {
+            border-right: solid $color-secondary-fullOpacity 5px;
+          }
+          &ACC {
+            color: $color-dark;
+            background-color: $color-neutral-lowOpacity;
+            &Main {
+              color: $color-dark;
+              background-color: $color-tertiary;
+              border-right: solid $color-dark 5px;
+            }
+            &:hover {
+              color: $color-dark;
+              background-color: $color-tertiary;
+              border-right: solid $color-dark 5px;
+            }
+          }
         }
-        &-links {
-          color: transparent;
-          transition: all ease 3s;
-          height: min-content;
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-          font-family: "Architects Daughter", cursive;
+
+        &-linkOne {
+          background-size: 50%;
+          &Logo {
+            width: 5vh;
+            height: 50%;
+            margin-right: 1vh;
+          }
         }
-        &-linkOneLogo {
-          background-size: 2vh;
-          width: 3vh;
-        }
-        &-linkTwoLogo {
-          background-size: 2vh;
-          width: 3vh;
+        &-linkTwo {
+          background-size: 50%;
+          &Logo {
+            width: 5vh;
+            height: 50%;
+          }
         }
       }
       &CODEPEN {
-        width: 90%;
-        height: min-content;
-        &-description {
-          font-size: 1.4vh;
+        &-img {
+          &Container {
+            align-items: center;
+          }
         }
-        &-imgContainer {
-          align-self: center;
-          display: flex;
-          align-items: center;
+        &-info {
+          grid-template-rows: 45% 10% 45%;
+          grid-template-columns: 100%;
+          padding: 1vh;
+        }
+        &-technologies {
+          font-size: $font-textSizeS;
+        }
+        &-description {
+          align-self: flex-start;
+          height: 100%;
+          font-size: $font-textSizeS;
+        }
+        &-title {
+          font-size: $font-titleSizeS;
+          border-left: solid transparent 5px;
+          &Main {
+            border-left: solid $color-secondary-fullOpacity 5px;
+          }
+          &ACC {
+            color: $color-dark;
+            background-color: $color-neutral-lowOpacity;
+            &Main {
+              color: $color-dark;
+              background-color: $color-tertiary;
+              border-right: solid $color-dark 5px;
+            }
+            &:hover {
+              color: $color-dark;
+              background-color: $color-tertiary;
+              border-right: solid $color-dark 5px;
+            }
+          }
+        }
+        &-linkOne {
+          background-size: 50%;
+          &Logo {
+            width: 5vh;
+            height: 50%;
+          }
         }
       }
     }
   }
 
-  .projects__containerSelector {
-    font-size: 3vw;
+  .projects__stackTech {
+    padding: 1vh;
+    align-self: center;
+    &Title {
+      font-size: $font-titleSizeS;
+    }
+    &Text {
+      &-itemA {
+        font-size: $font-midTitleSizeS;
+      }
+      &-itemB {
+        font-size: $font-midTitleSizeS;
+      }
+      &-itemC {
+        font-size: $font-midTitleSizeS;
+      }
+      &-itemD {
+        font-size: $font-midTitleSizeS;
+      }
+      &-itemE {
+        font-size: $font-midTitleSizeS;
+      }
+      &-itemF {
+        font-size: $font-midTitleSizeS;
+      }
+      &-itemG {
+        font-size: $font-midTitleSizeS;
+      }
+      &-itemH {
+        font-size: $font-midTitleSizeS;
+      }
+      &-itemI {
+        font-size: $font-midTitleSizeS;
+      }
+    }
+  }
+
+  .projects__stackLang {
+    padding: 1vh;
+    align-self: center;
+    &Title {
+      font-size: $font-titleSizeS;
+    }
+    &Text {
+      &-itemA {
+        font-size: $font-midTitleSizeS;
+      }
+      &-itemB {
+        font-size: $font-midTitleSizeS;
+      }
+      &-itemC {
+        font-size: $font-midTitleSizeS;
+      }
+      &-itemD {
+        font-size: $font-midTitleSizeS;
+      }
+      &-itemE {
+        font-size: $font-midTitleSizeS;
+      }
+      &-itemF {
+        font-size: $font-midTitleSizeS;
+      }
+      &-itemG {
+        font-size: $font-midTitleSizeS;
+      }
+    }
   }
 }

@@ -15,7 +15,7 @@ const Header = (props) => {
   };
 
   return (
-    <header className="header">
+    <header className={accesible ? "headerACC header" : "header"}>
       <nav className="header__menu">
         <button
           title={translate ? "Back to spanish" : "Cambiar a inglés"}

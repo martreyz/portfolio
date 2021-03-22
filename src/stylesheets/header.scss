@@ -7,6 +7,9 @@
   background-color: $color-neutral-lowOpacity;
   display: flex;
   align-items: center;
+  &ACC {
+    background-color: $color-tertiary;
+  }
 }
 
 .header__menu {
@@ -47,18 +50,21 @@
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: contain;
+    background-position-x: right;
     height: 3vh;
-    width: 4vh;
+    width: 5vh;
     outline: none;
     border: none;
     cursor: hand;
     cursor: pointer;
     &Active {
       background-color: #e3e4e5;
-      border-radius: 20%;
+      border-radius: 5px;
       height: 3vh;
-      padding: 0px 1vw;
-      font-size: 1vw;
+      width: auto;
+      padding: 0px 1vh;
+      margin-right: 1.5vh;
+      font-size: $font-textSize;
       box-shadow: 1px 1px 1px black;
       outline: none;
       border: none;

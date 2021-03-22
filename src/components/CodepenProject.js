@@ -2,17 +2,32 @@ const CodepenProject = (props) => {
   return (
     <>
       <div className="projects__containerCODEPEN-infoBanner">
-        <a
-          className="projects__containerCODEPEN-linkOne"
-          href={props.webpage}
-          target="_blank"
-          title={
-            props.translated ? "Go to projects demo" : "Ir a demo del proyecto"
+        <nav
+          className={
+            props.accesible
+              ? "projects__containerCODEPEN-linkOneLogo  projects__containerCODEPEN-linkOneLogoACC "
+              : "projects__containerCODEPEN-linkOneLogo "
           }
-          rel="noreferrer"
         >
-          Demo
-        </a>
+          <a
+            className={
+              props.accesible
+                ? "projects__containerCODEPEN-linkOne  projects__containerCODEPEN-linkOneACC "
+                : "projects__containerCODEPEN-linkOne "
+            }
+            href={props.webpage}
+            target="_blank"
+            title={
+              props.translated
+                ? "Go to projects demo"
+                : "Ir a demo del proyecto"
+            }
+            rel="noreferrer"
+          >
+            Demo
+          </a>
+        </nav>
+
         <p className="projects__containerCODEPEN-technologies">
           {props.technologies}
         </p>
@@ -25,7 +40,13 @@ const CodepenProject = (props) => {
           src={props.preview}
         />
       </div>
-      <p className="projects__containerCODEPEN-description">
+      <p
+        className={
+          props.accesible
+            ? "projects__containerCODEPEN-description  projects__containerCODEPEN-descriptionACC "
+            : "projects__containerCODEPEN-description "
+        }
+      >
         {props.description}
       </p>
     </>

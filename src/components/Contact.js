@@ -21,13 +21,13 @@ const Contact = (props) => {
     //user's hover handler:
     const showTrajectoryContentOnHover = (ev) => {
       setIsHovered(true);
-      props.handleTrajectoryClick(parseInt(ev.currentTarget.id));
+      props.handleTrajectoryClick(parseInt(ev.currentTarget.id), "user");
       trajectoryArray[props.counterTrajectory].classList.remove("item_hovered");
     };
 
     //autohover handler:
-    const showTrajectoryContentOnClick = (ev) => {
-      props.handleTrajectoryClick(parseInt(ev.currentTarget.id));
+    const showTrajectoryContentAutoHover = (id) => {
+      props.handleTrajectoryClick(id);
     };
 
     //Listener loop in order to listen all array elements:
@@ -38,7 +38,7 @@ const Contact = (props) => {
       );
       trajectoryArray[i].addEventListener(
         "click",
-        showTrajectoryContentOnClick
+        showTrajectoryContentOnHover
       );
     }
 
@@ -46,17 +46,25 @@ const Contact = (props) => {
     const autoHover = () => {
       if (!isHovered) {
         if (props.counterTrajectory === 9) {
-          trajectoryArray[0].click();
+          showTrajectoryContentAutoHover(0);
           trajectoryArray[9].classList.remove("item_hovered");
           trajectoryArray[0].classList.add("item_hovered");
         } else {
-          trajectoryArray[props.counterTrajectory + 1].click();
+          showTrajectoryContentAutoHover(props.counterTrajectory + 1);
           trajectoryArray[props.counterTrajectory + 1].classList.add(
             "item_hovered"
           );
           trajectoryArray[props.counterTrajectory].classList.remove(
+            "item_hoveredACC"
+          );
+          trajectoryArray[props.counterTrajectory].classList.remove(
             "item_hovered"
           );
+          if (props.accesible) {
+            trajectoryArray[props.counterTrajectory + 1].classList.add(
+              "item_hoveredACC"
+            );
+          }
         }
       }
     };
@@ -75,7 +83,13 @@ const Contact = (props) => {
       >
         {props.translated ? "About me:" : "Sobre mí:"}
       </h1>
-      <section className="contact_trajectory">
+      <section
+        className={
+          props.accesible
+            ? "contact_trajectory contact_trajectoryACC"
+            : "contact_trajectory"
+        }
+      >
         <h2
           className={
             props.accesible

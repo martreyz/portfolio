@@ -3,9 +3,19 @@ const Project = (props) => {
     <>
       <div className="projects__containerGITHUB-infoBanner">
         <ul className="projects__containerGITHUB-links">
-          <li className="projects__containerGITHUB-linkOneLogo">
+          <li
+            className={
+              props.accesible
+                ? "projects__containerGITHUB-linkOneLogo  projects__containerGITHUB-linkOneLogoACC "
+                : "projects__containerGITHUB-linkOneLogo "
+            }
+          >
             <a
-              className="projects__containerGITHUB-linkOne"
+              className={
+                props.accesible
+                  ? "projects__containerGITHUB-linkOne  projects__containerGITHUB-linkOneACC "
+                  : "projects__containerGITHUB-linkOne "
+              }
               href={props.webpage}
               target="_blank"
               title={
@@ -18,9 +28,19 @@ const Project = (props) => {
               Demo
             </a>
           </li>
-          <li className="projects__containerGITHUB-linkTwoLogo">
+          <li
+            className={
+              props.accesible
+                ? "projects__containerGITHUB-linkTwoLogo  projects__containerGITHUB-linkTwoLogoACC "
+                : "projects__containerGITHUB-linkTwoLogo "
+            }
+          >
             <a
-              className="projects__containerGITHUB-linkTwo"
+              className={
+                props.accesible
+                  ? "projects__containerGITHUB-linkTwo  projects__containerGITHUB-linkTwoACC "
+                  : "projects__containerGITHUB-linkTwo "
+              }
               href={props.repository}
               target="_blank"
               title={
@@ -46,7 +66,13 @@ const Project = (props) => {
           src={props.preview}
         />
       </div>
-      <p className="projects__containerGITHUB-description">
+      <p
+        className={
+          props.accesible
+            ? "projects__containerGITHUB-description  projects__containerGITHUB-descriptionACC "
+            : "projects__containerGITHUB-description "
+        }
+      >
         {props.description}
       </p>
     </>

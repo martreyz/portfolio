@@ -22,6 +22,8 @@ const Projects = (props) => {
     infoToShowGITHUB.classList.add("hidden");
     buttonCODEPEN.classList.add("projects__containerSelectorSelected");
     buttonAPP.classList.remove("projects__containerSelectorSelected");
+    buttonCODEPEN.classList.add("projects__containerSelectorSelectedACC");
+    buttonAPP.classList.remove("projects__containerSelectorSelectedACC");
 
     props.handleProjectClick(parseInt(0));
   };
@@ -42,6 +44,8 @@ const Projects = (props) => {
     infoToShowGITHUB.classList.remove("hidden");
     buttonAPP.classList.add("projects__containerSelectorSelected");
     buttonCODEPEN.classList.remove("projects__containerSelectorSelected");
+    buttonAPP.classList.add("projects__containerSelectorSelectedACC");
+    buttonCODEPEN.classList.remove("projects__containerSelectorSelectedACC");
 
     props.handleCSSProjectClick(parseInt(0));
   };
@@ -94,7 +98,11 @@ const Projects = (props) => {
         key={item.id}
         onClick={handleProjectClick}
         className={
-          item.selected
+          props.accesible
+            ? item.selected
+              ? "projects__containerGITHUB-title projects__containerGITHUB-titleMain projects__containerGITHUB-titleACC projects__containerGITHUB-titleACCMain"
+              : "projects__containerGITHUB-title projects__containerGITHUB-titleACC"
+            : item.selected
             ? "projects__containerGITHUB-title projects__containerGITHUB-titleMain"
             : "projects__containerGITHUB-title"
         }
@@ -112,7 +120,11 @@ const Projects = (props) => {
         key={item.id}
         onClick={handleCodepenProjectClick}
         className={
-          item.selected
+          props.accesible
+            ? item.selected
+              ? "projects__containerCODEPEN-title projects__containerCODEPEN-titleMain projects__containerCODEPEN-titleACC projects__containerCODEPEN-titleACCMain"
+              : "projects__containerCODEPEN-title projects__containerCODEPEN-titleACC"
+            : item.selected
             ? "projects__containerCODEPEN-title projects__containerCODEPEN-titleMain"
             : "projects__containerCODEPEN-title"
         }
@@ -135,24 +147,45 @@ const Projects = (props) => {
       </h1>
 
       <section className="projects__container">
-        <div className="projects__containerSelector">
+        <div
+          className={
+            props.accesible
+              ? "projects__containerSelector projects__containerSelectorACC"
+              : "projects__containerSelector"
+          }
+        >
           <span
             onClick={handleAppOnClick}
-            className="projects__containerSelectorApp projects__containerSelectorSelected"
+            className={
+              props.accesible
+                ? "projects__containerSelectorApp projects__containerSelectorSelected projects__containerSelectorAppACC projects__containerSelectorSelectedACC"
+                : "projects__containerSelectorApp projects__containerSelectorSelected"
+            }
           >
             WebApps
           </span>
           <span
             onClick={handleCSSOnClick}
-            className="projects__containerSelectorCSS"
+            className={
+              props.accesible
+                ? "projects__containerSelectorCSS  projects__containerSelectorCSSACC "
+                : "projects__containerSelectorCSS "
+            }
           >
             {props.translated ? "CSS Projects" : "Proyectos CSS"}
           </span>
         </div>
-        <div className="projects__containerGITHUB">
+        <div
+          className={
+            props.accesible
+              ? "projects__containerGITHUB  projects__containerGITHUBACC "
+              : "projects__containerGITHUB "
+          }
+        >
           <div className="projects__containerGITHUB-info">
             {props.projectInfo ? (
               <Project
+                accesible={props.accesible}
                 webpage={props.projectInfo.webpage}
                 repository={props.projectInfo.repository}
                 preview={props.projectInfo.preview}
@@ -162,14 +195,27 @@ const Projects = (props) => {
               />
             ) : null}
           </div>
-          <ul className="projects__containerGITHUB-list">
+          <ul
+            className={
+              props.accesible
+                ? "projects__containerGITHUB-list  projects__containerGITHUB-listACC "
+                : "projects__containerGITHUB-list "
+            }
+          >
             {renderProjectsArray}
           </ul>{" "}
         </div>
-        <div className="projects__containerCODEPEN hidden">
+        <div
+          className={
+            props.accesible
+              ? "projects__containerCODEPEN hidden  projects__containerCODEPENACC "
+              : "projects__containerCODEPEN hidden "
+          }
+        >
           <div className="projects__containerCODEPEN-info">
             {props.codepenProjectInfo ? (
               <CodepenProject
+                accesible={props.accesible}
                 webpage={props.codepenProjectInfo.webpage}
                 preview={props.codepenProjectInfo.preview}
                 technologies={props.codepenProjectInfo.technologies}
@@ -178,7 +224,13 @@ const Projects = (props) => {
               />
             ) : null}
           </div>
-          <ul className="projects__containerCODEPEN-list">
+          <ul
+            className={
+              props.accesible
+                ? "projects__containerCODEPEN-list  projects__containerCODEPEN-listACC "
+                : "projects__containerCODEPEN-list "
+            }
+          >
             {renderCodepenProjectsArray}
           </ul>{" "}
         </div>

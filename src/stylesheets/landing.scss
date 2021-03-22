@@ -100,7 +100,14 @@
     }
 
     &ACC {
-      background-image: url("../images/Menus/longArrowRightACC.svg");
+      color: $color-dark;
+      background-color: $color-neutral-lowOpacity;
+      border: 3px solid $color-tertiary;
+      &:hover {
+        color: $color-dark;
+        background-color: $color-tertiary;
+        border: 3px solid transparent;
+      }
     }
   }
   &__menu-contact {
@@ -126,7 +133,14 @@
     }
 
     &ACC {
-      background-image: url("../images/Menus/longArrowRightACC.svg");
+      color: $color-dark;
+      background-color: $color-neutral-lowOpacity;
+      border: 3px solid $color-tertiary;
+      &:hover {
+        color: $color-dark;
+        background-color: $color-tertiary;
+        border: 3px solid transparent;
+      }
     }
   }
 }
@@ -150,6 +164,11 @@
   }
   &ACC {
     color: $color-tertiary-dark;
+    background-image: url("../images/Menus/longArrowRightACC.svg");
+    &:hover {
+      color: $color-tertiary-dark;
+      background-image: url("../images/Menus/longArrowRightACC.svg");
+    }
   }
 }
 
@@ -171,6 +190,11 @@
   }
   &ACC {
     color: $color-tertiary-dark;
+    background-image: url("../images/Menus/longArrowLeftACC.svg");
+    &:hover {
+      color: $color-tertiary-dark;
+      background-image: url("../images/Menus/longArrowLeftACC.svg");
+    }
   }
 }
 
@@ -191,64 +215,44 @@
 
 @media all and (max-width: 1024px) {
   .landing {
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 15% 70% 15%;
     &__container {
-      height: 65vw;
-      margin: 17.5vh 0px;
-      grid-template-columns: 100%;
-      grid-template-rows: auto;
-    }
-    &__photo {
-      width: 50%;
-      grid-row: 1/2;
-      grid-column: 1/2;
-      align-self: end;
-      justify-self: end;
-    }
-    &__text {
-      grid-row: 3/4;
-      justify-self: end;
-      grid-column: 1/2;
-    }
-    &__title {
-      font-size: 20vw;
+      height: 90%;
+      grid-column: 1/6;
+      align-self: center;
       grid-row: 2/3;
-      align-self: start;
-      grid-column: 1/2;
-      line-height: 0.7;
-    }
-
-    &__textOne {
-      font-size: 8vw;
-    }
-    &__textTwo {
-      width: 110%;
-      font-size: 5vw;
-      margin-left: 2vw;
+      grid-template-columns: 10% 40% 40% 10%;
     }
     &__menu-projects {
-      top: 0px;
-      right: 7vw;
-      width: 21vw;
-      height: 91%;
+      height: 100%;
+      width: 100%;
       background-size: 5vw;
-      display: flex;
-      align-items: flex-end;
+
+      grid-column: 3/6;
+      grid-row: 3/4;
     }
     &__menu-contact {
-      top: 0px;
-      left: 7vw;
-      width: 19vw;
-      height: 10%;
+      grid-column: 1/4;
+      grid-row: 1/2;
+      height: 100%;
+      width: 100%;
       background-size: 5vw;
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-end;
     }
   }
 
-  .landingLink__menu-projects,
+  .landingLink__menu-projects {
+    font-size: 6vw;
+    background-position-x: 28vw;
+    background-position-y: 8vh;
+    padding: 5vh 15vw 5vh 15vw;
+  }
+
   .landingLink__menu-contact {
     font-size: 6vw;
+    background-position-x: 11vw;
+    background-position-y: 8vh;
+    padding: 5vh 15vw 5vh 15vw;
   }
 
   .nav__menu {
@@ -263,7 +267,46 @@
 @media all and (max-width: 420px) {
   .landing {
     &__container {
-      height: 25vh;
+      grid-template-columns: 0% 60% 40% 0%;
+      grid-template-rows: 50% 10% 20% 20%;
     }
+    &__photo {
+      height: 100%;
+      grid-row: 1/2;
+    }
+    &__text {
+      grid-row: 4/5;
+      grid-column: 2/4;
+      justify-self: center;
+    }
+    &__title {
+      font-size: 25vw;
+      grid-row: 3/4;
+      grid-column: 2/3;
+      align-self: flex-start;
+      &ACC {
+        color: #37493d;
+      }
+    }
+    &__textOne {
+      font-size: 10vw;
+      &ACC {
+        color: #537070;
+      }
+    }
+    &__textTwo {
+      font-size: 5vw;
+      &ACC {
+        color: #384d4d;
+      }
+    }
+  }
+
+  .landingLink__menu-projects {
+    background-position-y: 6.5vh;
+  }
+
+  .landingLink__menu-contact {
+    background-position-y: 6.5vh;
   }
 }

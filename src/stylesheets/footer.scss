@@ -4,11 +4,12 @@
   display: flex;
   justify-content: space-between;
   padding: 0.5vh 1.5vw;
+  justify-self: flex-end;
   background-color: $color-neutral-lowOpacity;
   height: 4vh;
   width: 100%;
   &ACC {
-    border-top: 1.3px solid $color-tertiary-dark;
+    background-color: $color-tertiary;
   }
   &__menuList {
     display: flex;
@@ -114,7 +115,7 @@
     }
   }
   &__small {
-    color: $color-secondary-fullOpacity;
+    color: $color-secondary;
     font-size: 1.2vw;
     display: flex;
     line-height: 1.2;
