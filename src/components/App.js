@@ -27,10 +27,12 @@ function App() {
   const [codepenProjectsDataEN] = useState(CodepenProjectsDataEN);
   const [codepenProjectOnScreen, setCodepenProjectOnScreen] = useState(0);
 
+  //Toggles translation state to manage information's language:
   const handleLangClick = () => {
     setTranslated(!translated);
   };
 
+  //Toggles accesible state to manage high contrast mode:
   const handleAccClick = () => {
     setAccesible(!accesible);
   };

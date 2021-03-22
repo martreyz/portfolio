@@ -5,11 +5,11 @@
   justify-content: space-between;
   padding: 0.5vh 1.5vw;
   justify-self: flex-end;
-  background-color: $color-neutral-lowOpacity;
+  background-color: $color-tertiary;
   height: 4vh;
   width: 100%;
   &ACC {
-    background-color: $color-tertiary;
+    background-color: $color-primary;
   }
   &__menuList {
     display: flex;

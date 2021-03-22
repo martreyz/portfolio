@@ -4,11 +4,11 @@
   height: 4vh;
   width: 100%;
   z-index: 999;
-  background-color: $color-neutral-lowOpacity;
+  background-color: $color-tertiary;
   display: flex;
   align-items: center;
   &ACC {
-    background-color: $color-tertiary;
+    background-color: $color-primary;
   }
 }
 

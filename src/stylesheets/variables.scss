@@ -1,18 +1,23 @@
-$color-primary: #627577;
+//Low opacity colors:
+$color-primary: #b0d9cd91;
 $color-secondary: #a65b698e;
-$color-tertiary: #b0d9cd91;
+$color-tertiary: #f2e0d5bb;
 
-$color-tertiary-dark: #2f6868;
-$color-dark: #183d3d;
-$color-neutral-auxiliar: #f2e0d5;
-$color-neutral-lowOpacity: #f2e0d5bb;
+//Full opacity colors:
+$color-primary-fullOpacity: #b0d9cd;
 $color-secondary-fullOpacity: #a65b69;
-$color-tertiary-fullOpacity: #87adb1;
+$color-tertiary-fullOpacity: #f2e0d5;
 
-$font-texts: "Montserrat Alternates", sans-serif;
+//Dark colors:
+$color-primary-dark: #356d5b;
+$color-dark: #183d3d;
 
-//Font sizes
+//GENERAL STYLES
+$border-radius-gr: 15px;
 
+//FONTS
+
+//Font sizes:
 //Desktop:
 $font-textSize: 2vh;
 $font-titleSize: 4vh;
@@ -23,6 +28,17 @@ $font-textSizeM: 1.6vh;
 $font-titleSizeM: 2.9vh;
 $font-midTitleSizeM: 2.4vh;
 
+//Mobile (to 420px width):
 $font-textSizeS: 1.3vh;
 $font-titleSizeS: 2.8vh;
 $font-midTitleSizeS: 2.25vh;
+
+//Font families:
+$font-titles: "Amatic SC", cursive;
+$font-texts: "Architects Daughter", cursive;
+
+//SPACING:
+//Padding:
+$padding-mini: 1vh;
+$padding-medium: 3vh;
+$padding-large: 4vh;

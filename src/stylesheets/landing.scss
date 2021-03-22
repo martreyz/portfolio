@@ -10,17 +10,17 @@
   display: grid;
   grid-template-columns: 10% 80% 10%;
   grid-template-rows: 30% 40% 30%;
-  padding: 4vh;
+  padding: $padding-large;
   &__container {
     width: 100%;
-    padding: 3vh;
+    padding: $padding-medium;
     grid-column: 2/3;
     grid-row: 1/4;
     display: grid;
     grid-template-columns: 15% 40% 30% 15%;
     grid-template-rows: 60% 40%;
-    border: 2px solid $color-tertiary;
-    border-radius: 15px;
+    border: 2px solid $color-primary;
+    border-radius: $border-radius-gr;
   }
   &__photo {
     border-radius: 30%;
@@ -61,7 +61,6 @@
     font-size: 5vw;
     width: 150%;
     margin-left: -2vw;
-
     &ACC {
       color: #537070;
     }
@@ -84,8 +83,8 @@
     grid-column: 3/4;
     grid-row: 1/4;
     transition: all ease 1s;
-    background-color: $color-neutral-lowOpacity;
-    border-radius: 15px;
+    background-color: $color-tertiary;
+    border-radius: $border-radius-gr;
     height: min-content;
     width: 90%;
     height: 100%;
@@ -101,11 +100,11 @@
 
     &ACC {
       color: $color-dark;
-      background-color: $color-neutral-lowOpacity;
-      border: 3px solid $color-tertiary;
+      background-color: $color-tertiary;
+      border: 3px solid $color-primary;
       &:hover {
         color: $color-dark;
-        background-color: $color-tertiary;
+        background-color: $color-primary;
         border: 3px solid transparent;
       }
     }
@@ -117,8 +116,8 @@
     grid-column: 1/2;
     grid-row: 1/4;
     transition: all ease 1s;
-    background-color: $color-neutral-lowOpacity;
-    border-radius: 15px;
+    background-color: $color-tertiary;
+    border-radius: $border-radius-gr;
     height: min-content;
     width: 90%;
     height: 100%;
@@ -134,11 +133,11 @@
 
     &ACC {
       color: $color-dark;
-      background-color: $color-neutral-lowOpacity;
-      border: 3px solid $color-tertiary;
+      background-color: $color-tertiary;
+      border: 3px solid $color-primary;
       &:hover {
         color: $color-dark;
-        background-color: $color-tertiary;
+        background-color: $color-primary;
         border: 3px solid transparent;
       }
     }
@@ -159,14 +158,14 @@
   padding-right: 2vw;
   padding: 50vh 1.5vw 50vh 0px;
   &:hover {
-    color: $color-neutral-auxiliar;
+    color: $color-tertiary-fullOpacity;
     background-image: url("../images/Menus/longArrowRightHover.svg");
   }
   &ACC {
-    color: $color-tertiary-dark;
+    color: $color-primary-dark;
     background-image: url("../images/Menus/longArrowRightACC.svg");
     &:hover {
-      color: $color-tertiary-dark;
+      color: $color-primary-dark;
       background-image: url("../images/Menus/longArrowRightACC.svg");
     }
   }
@@ -185,14 +184,14 @@
   background-position-y: 53vh;
   padding: 50vh 0px 50vh 1.5vw;
   &:hover {
-    color: $color-neutral-auxiliar;
+    color: $color-tertiary-fullOpacity;
     background-image: url("../images/Menus/longArrowLeftHover.svg");
   }
   &ACC {
-    color: $color-tertiary-dark;
+    color: $color-primary-dark;
     background-image: url("../images/Menus/longArrowLeftACC.svg");
     &:hover {
-      color: $color-tertiary-dark;
+      color: $color-primary-dark;
       background-image: url("../images/Menus/longArrowLeftACC.svg");
     }
   }
@@ -228,7 +227,6 @@
       height: 100%;
       width: 100%;
       background-size: 5vw;
-
       grid-column: 3/6;
       grid-row: 3/4;
     }

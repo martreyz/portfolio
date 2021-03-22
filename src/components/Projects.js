@@ -6,7 +6,7 @@ import CodepenProject from "./CodepenProject";
 const Projects = (props) => {
   //FUNCTIONS REFERRED TO PROJECTS' SELECTOR:
 
-  //1-Function to select CSS proyects:
+  //1-Function to select CSS proyects style, also send information to App (mother) component to manage information:
   const handleCSSOnClick = (ev) => {
     const infoToShowCODEPEN = document.querySelector(
       ".projects__containerCODEPEN"
@@ -22,13 +22,16 @@ const Projects = (props) => {
     infoToShowGITHUB.classList.add("hidden");
     buttonCODEPEN.classList.add("projects__containerSelectorSelected");
     buttonAPP.classList.remove("projects__containerSelectorSelected");
-    buttonCODEPEN.classList.add("projects__containerSelectorSelectedACC");
     buttonAPP.classList.remove("projects__containerSelectorSelectedACC");
+
+    if (props.accesible) {
+      buttonCODEPEN.classList.add("projects__containerSelectorSelectedACC");
+    }
 
     props.handleProjectClick(parseInt(0));
   };
 
-  //2-Function to select WEBAPPs proyects:
+  //1-Function to select WEBAPPs proyects style, also send information to App (mother) component to manage information:
   const handleAppOnClick = (ev) => {
     const infoToShowCODEPEN = document.querySelector(
       ".projects__containerCODEPEN"
@@ -44,8 +47,10 @@ const Projects = (props) => {
     infoToShowGITHUB.classList.remove("hidden");
     buttonAPP.classList.add("projects__containerSelectorSelected");
     buttonCODEPEN.classList.remove("projects__containerSelectorSelected");
-    buttonAPP.classList.add("projects__containerSelectorSelectedACC");
     buttonCODEPEN.classList.remove("projects__containerSelectorSelectedACC");
+    if (props.accesible) {
+      buttonAPP.classList.add("projects__containerSelectorSelectedACC");
+    }
 
     props.handleCSSProjectClick(parseInt(0));
   };

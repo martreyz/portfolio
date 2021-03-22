@@ -251,8 +251,8 @@ const Contact = (props) => {
         <h2
           className={
             props.accesible
-              ? "contact__subtitle contact__subtitleACC"
-              : "contact__subtitle"
+              ? "contact__sectionSubtitle contact__sectionSubtitleACC"
+              : "contact__sectionSubtitle"
           }
         >
           {props.translated
@@ -261,7 +261,9 @@ const Contact = (props) => {
         </h2>
         <p
           className={
-            props.accesible ? "contact__text contact__textACC" : "contact__text"
+            props.accesible
+              ? "contact__sectionText contact__sectionTextACC"
+              : "contact__sectionText"
           }
         >
           {props.translated
@@ -270,23 +272,25 @@ const Contact = (props) => {
         </p>
         <ul
           className={
-            props.accesible ? "contact__list contact__listACC" : "contact__list"
+            props.accesible
+              ? "contact__sectionList contact__sectionListACC"
+              : "contact__sectionList"
           }
         >
-          <li className="contact__listItem contact__listGithub">
+          <li className="contact__sectionListItem contact__sectionListGithub">
             <a
               target="_blank"
               rel="noreferrer"
               className={
                 props.accesible
-                  ? "contact__menuList-access contact__menuList-accessACC"
-                  : "contact__menuList-access"
+                  ? "contact__sectionMenuList-access contact__sectionMenuList-accessACC"
+                  : "contact__sectionMenuList-access"
               }
               href="https://github.com/martreyz"
               title="Access GitHub"
             >
               <img
-                className="contact__logoImg"
+                className="contact__sectionLogoImg"
                 src={props.accesible ? GithubACC : Github}
                 alt="View GitHub"
                 title="Logo GitHub"
@@ -294,20 +298,20 @@ const Contact = (props) => {
               martreyz
             </a>
           </li>
-          <li className="contact__listItem contact__listLinkedin">
+          <li className="contact__sectionListItem contact__sectionListLinkedin">
             <a
               target="_blank"
               rel="noreferrer"
               className={
                 props.accesible
-                  ? "contact__menuList-access contact__menuList-accessACC"
-                  : "contact__menuList-access"
+                  ? "contact__sectionMenuList-access contact__sectionMenuList-accessACC"
+                  : "contact__sectionMenuList-access"
               }
               href="https://www.linkedin.com/in/martareyrodriguez/"
               title="Access Linkedin"
             >
               <img
-                className="contact__logoImg"
+                className="contact__sectionLogoImg"
                 src={props.accesible ? LinkedinACC : Linkedin}
                 alt="View Linkedin"
                 title="Logo Linkedin"
@@ -315,20 +319,20 @@ const Contact = (props) => {
               marta.rey.rodriguez
             </a>
           </li>
-          <li className="contact__listItem contact__listMail">
+          <li className="contact__sectionListItem contact__sectionListMail">
             <a
               target="_blank"
               rel="noreferrer"
               className={
                 props.accesible
-                  ? "contact__menuList-access contact__menuList-accessACC"
-                  : "contact__menuList-access"
+                  ? "contact__sectionMenuList-access contact__sectionMenuList-accessACC"
+                  : "contact__sectionMenuList-access"
               }
               href="mailto: martreyz@gmail.com"
               title="Send email"
             >
               <img
-                className="contact__logoImg"
+                className="contact__sectionLogoImg"
                 src={props.accesible ? MailACC : Mail}
                 alt="Send e-mail"
                 title="Logo email"
@@ -336,20 +340,22 @@ const Contact = (props) => {
               martreyz@gmail.com
             </a>
           </li>
-          <li className={"contact__listItem contact__listTwitter"}>
+          <li
+            className={"contact__sectionListItem contact__sectionListTwitter"}
+          >
             <a
               target="_blank"
               rel="noreferrer"
               className={
                 props.accesible
-                  ? "contact__menuList-access contact__menuList-accessACC"
-                  : "contact__menuList-access"
+                  ? "contact__sectionMenuList-access contact__sectionMenuList-accessACC"
+                  : "contact__sectionMenuList-access"
               }
               href="https://twitter.com/im_martreyz"
               title="Access Twitter"
             >
               <img
-                className="contact__logoImg"
+                className="contact__sectionLogoImg"
                 src={props.accesible ? TwitterACC : Twitter}
                 alt="View Twitter"
                 title="Logo Twitter"

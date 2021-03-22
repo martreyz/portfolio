@@ -11,7 +11,7 @@
 }
 
 .projects {
-  padding: 4vh;
+  padding: $padding-large;
   height: 92vh;
   width: 100%;
   display: grid;
@@ -24,8 +24,8 @@
     width: 100%;
     height: 100%;
     justify-content: space-between;
-    border: 3px solid $color-tertiary;
-    border-radius: 15px;
+    border: 3px solid $color-primary;
+    border-radius: $border-radius-gr;
     padding: 2vh;
     grid-row: 3/5;
     grid-column: 3/4;
@@ -33,17 +33,16 @@
     &GITHUB {
       height: 85%;
       width: 100%;
-      padding: 1vh;
-      position: relative;
+      padding: $padding-mini;
       display: grid;
       grid-template-columns: 20% 80%;
       grid-template-rows: 100%;
-      background-color: $color-tertiary;
-      border-radius: 15px;
+      background-color: $color-primary;
+      border-radius: $border-radius-gr;
       overflow: hidden;
       &ACC {
         background-color: transparent;
-        border: 3px solid $color-tertiary;
+        border: 3px solid $color-primary;
       }
       &-info {
         grid-column: 2/3;
@@ -53,7 +52,6 @@
         grid-template-rows: 60% 10% 30%;
         grid-template-columns: 100%;
         justify-self: flex-end;
-
         &Show {
           animation: showProjectInfo ease 1s;
         }
@@ -65,7 +63,6 @@
           align-items: center;
           width: 100%;
           height: 95%;
-          align-self: flex-start;
         }
       }
       &-list {
@@ -81,13 +78,13 @@
         height: 100%;
         width: 100%;
         box-sizing: content-box;
-        padding: 1vh;
-        background-color: $color-neutral-lowOpacity;
+        padding: $padding-mini;
+        background-color: $color-tertiary;
         border-right: dotted $color-secondary-fullOpacity 0.3vh;
         border-top-left-radius: 15px;
         border-bottom-left-radius: 15px;
         &ACC {
-          border-right: dotted $color-tertiary 0.3vh;
+          border-right: dotted $color-primary 0.3vh;
           background-color: transparent;
         }
       }
@@ -100,24 +97,24 @@
         list-style-type: none;
         color: $color-secondary;
         border-right: solid transparent 8px;
-        padding: 1vh;
+        padding: $padding-mini;
         cursor: pointer;
         &Main {
           background-color: $color-secondary;
-          color: $color-neutral-auxiliar;
+          color: $color-tertiary-fullOpacity;
           border-right: solid $color-secondary-fullOpacity 8px;
         }
         &ACC {
           color: $color-dark;
-          background-color: $color-neutral-lowOpacity;
+          background-color: $color-tertiary;
           &Main {
             color: $color-dark;
-            background-color: $color-tertiary;
+            background-color: $color-primary;
             border-right: solid $color-dark 8px;
           }
           &:hover {
             color: $color-dark;
-            background-color: $color-tertiary;
+            background-color: $color-primary;
             border-right: solid $color-dark 8px;
           }
         }
@@ -126,14 +123,14 @@
         opacity: 0.8;
         display: block;
         width: 100%;
-        border-radius: 15px;
+        border-radius: $border-radius-gr;
         &Container {
           grid-column: 1/3;
           grid-row: 1/2;
           overflow: hidden;
           width: 100%;
-          border-radius: 15px;
-          border: 3px solid $color-tertiary;
+          border-radius: $border-radius-gr;
+          border: 3px solid $color-primary;
           display: flex;
           justify-content: center;
           align-items: flex-start;
@@ -157,25 +154,25 @@
         grid-row: 3/4;
         transition: all ease 3s;
         border: 3px solid $color-secondary;
-        padding: 1vh;
-        border-radius: 15px;
+        padding: $padding-mini;
+        border-radius: $border-radius-gr;
         width: 100%;
         justify-self: center;
         align-self: center;
-        font-family: "Architects Daughter", cursive;
+        font-family: $font-texts;
         &ACC {
           color: $color-dark;
-          border: 3px solid $color-tertiary;
+          border: 3px solid $color-primary;
         }
       }
       &-technologies {
         font-size: $font-textSize;
-        color: $color-tertiary-dark;
-        border-radius: 15px;
-        padding: 1vh;
+        color: $color-primary-dark;
+        border-radius: $border-radius-gr;
+        padding: $padding-mini;
         transition: all ease 3s;
         text-align: right;
-        font-family: "Architects Daughter", cursive;
+        font-family: $font-texts;
         word-break: break-all;
       }
       &-links {
@@ -185,7 +182,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        font-family: "Architects Daughter", cursive;
+        font-family: $font-texts;
         & > li {
           transition: all ease 1s;
           &:hover {
@@ -206,10 +203,10 @@
         &Logo {
           width: 7vh;
           height: 70%;
-          padding: 1vh;
+          padding: $padding-mini;
           margin-right: 2vh;
-          background-color: $color-neutral-auxiliar;
-          border-radius: 15px;
+          background-color: $color-tertiary-fullOpacity;
+          border-radius: $border-radius-gr;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -219,10 +216,10 @@
             background-color: $color-secondary;
           }
           &ACC {
-            border: 3px solid $color-tertiary;
+            border: 3px solid $color-primary;
             &:hover {
               border: 3px solid transparent;
-              background-color: $color-tertiary;
+              background-color: $color-primary;
             }
           }
         }
@@ -248,9 +245,9 @@
         &Logo {
           width: 7vh;
           height: 70%;
-          background-color: $color-neutral-auxiliar;
-          padding: 1vh;
-          border-radius: 15px;
+          background-color: $color-tertiary-fullOpacity;
+          padding: $padding-mini;
+          border-radius: $border-radius-gr;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -260,10 +257,10 @@
             background-color: $color-secondary;
           }
           &ACC {
-            border: 3px solid $color-tertiary;
+            border: 3px solid $color-primary;
             &:hover {
               border: 3px solid transparent;
-              background-color: $color-tertiary;
+              background-color: $color-primary;
             }
           }
         }
@@ -281,14 +278,14 @@
       position: relative;
       display: grid;
       grid-template-columns: 80% 20%;
-      background-color: $color-tertiary;
-      padding: 1vh;
+      background-color: $color-primary;
+      padding: $padding-mini;
       grid-template-rows: 100%;
-      border-radius: 15px;
+      border-radius: $border-radius-gr;
       overflow: hidden;
       &ACC {
         background-color: transparent;
-        border: 3px solid $color-tertiary;
+        border: 3px solid $color-primary;
       }
       &-info {
         grid-column: 1/2;
@@ -324,13 +321,13 @@
         height: 100%;
         width: 100%;
         box-sizing: content-box;
-        padding: 1vh;
-        background-color: $color-neutral-lowOpacity;
+        padding: $padding-mini;
+        background-color: $color-tertiary;
         border-left: dotted $color-secondary-fullOpacity 0.3vh;
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
         &ACC {
-          border-left: dotted $color-tertiary 0.3vh;
+          border-left: dotted $color-primary 0.3vh;
           background-color: transparent;
         }
       }
@@ -343,24 +340,24 @@
         list-style-type: none;
         color: $color-secondary;
         border-left: solid transparent 8px;
-        padding: 1vh;
+        padding: $padding-mini;
         cursor: pointer;
         &Main {
           background-color: $color-secondary;
-          color: $color-neutral-auxiliar;
+          color: $color-tertiary-fullOpacity;
           border-left: solid $color-secondary-fullOpacity 8px;
         }
         &ACC {
           color: $color-dark;
-          background-color: $color-neutral-lowOpacity;
+          background-color: $color-tertiary;
           &Main {
             color: $color-dark;
-            background-color: $color-tertiary;
+            background-color: $color-primary;
             border-left: solid $color-dark 8px;
           }
           &:hover {
             color: $color-dark;
-            background-color: $color-tertiary;
+            background-color: $color-primary;
             border-left: solid $color-dark 8px;
           }
         }
@@ -369,14 +366,14 @@
         opacity: 0.8;
         display: block;
         width: 100%;
-        border-radius: 15px;
+        border-radius: $border-radius-gr;
         &Container {
           grid-column: 1/3;
           grid-row: 1/2;
           overflow: hidden;
           width: 100%;
-          border-radius: 15px;
-          border: 3px solid $color-tertiary;
+          border-radius: $border-radius-gr;
+          border: 3px solid $color-primary;
           display: flex;
           justify-content: center;
           align-items: flex-start;
@@ -400,25 +397,25 @@
         grid-row: 3/4;
         transition: all ease 3s;
         border: 3px solid $color-secondary;
-        padding: 1vh;
-        border-radius: 15px;
+        padding: $padding-mini;
+        border-radius: $border-radius-gr;
         width: 100%;
         justify-self: center;
         align-self: center;
-        font-family: "Architects Daughter", cursive;
+        font-family: $font-texts;
         &ACC {
           color: $color-dark;
-          border: 3px solid $color-tertiary;
+          border: 3px solid $color-primary;
         }
       }
       &-technologies {
         font-size: $font-textSize;
-        color: $color-tertiary-dark;
-        border-radius: 15px;
-        padding: 1vh;
+        color: $color-primary-dark;
+        border-radius: $border-radius-gr;
+        padding: $padding-mini;
         transition: all ease 3s;
         text-align: right;
-        font-family: "Architects Daughter", cursive;
+        font-family: $font-texts;
         word-break: break-all;
       }
       &-links {
@@ -428,7 +425,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-family: "Architects Daughter", cursive;
+        font-family: $font-texts;
         & > li {
           transition: all ease 1s;
           &:hover {
@@ -449,10 +446,10 @@
         &Logo {
           width: 7vh;
           height: 70%;
-          padding: 1vh;
+          padding: $padding-mini;
           margin-right: 2vh;
-          background-color: $color-neutral-auxiliar;
-          border-radius: 15px;
+          background-color: $color-tertiary-fullOpacity;
+          border-radius: $border-radius-gr;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -463,10 +460,10 @@
             background-color: $color-secondary;
           }
           &ACC {
-            border: 3px solid $color-tertiary;
+            border: 3px solid $color-primary;
             &:hover {
               border: 3px solid transparent;
-              background-color: $color-tertiary;
+              background-color: $color-primary;
             }
           }
         }
@@ -478,10 +475,85 @@
         }
       }
     }
+    &Selector {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      justify-self: flex-start;
+      position: relative;
+      font-size: $font-titleSize;
+      margin-bottom: 1vh;
+      &App {
+        cursor: pointer;
+        transition: all ease 1s;
+        color: $color-secondary;
+        width: fit-content;
+        background-color: $color-tertiary;
+        padding: $padding-mini;
+        border-radius: $border-radius-gr;
+        text-align: center;
+        &:active {
+          color: $color-tertiary-fullOpacity;
+          background-color: $color-secondary;
+        }
+        &:hover {
+          color: $color-tertiary-fullOpacity;
+          background-color: $color-secondary;
+        }
+        &ACC {
+          color: $color-dark;
+          background-color: $color-tertiary;
+          border: 3px solid $color-primary;
+          &:hover {
+            color: $color-dark;
+            background-color: $color-primary;
+            border: 3px solid transparent;
+          }
+        }
+      }
+      &CSS {
+        cursor: pointer;
+        transition: all ease 1s;
+        color: $color-secondary;
+        width: fit-content;
+        background-color: $color-tertiary;
+        padding: $padding-mini;
+        border-radius: $border-radius-gr;
+        text-align: center;
+        &:active {
+          color: $color-tertiary-fullOpacity;
+          background-color: $color-secondary;
+        }
+        &:hover {
+          color: $color-tertiary-fullOpacity;
+          background-color: $color-secondary;
+        }
+        &ACC {
+          color: $color-dark;
+          background-color: $color-tertiary;
+          border: 3px solid $color-primary;
+          &:hover {
+            color: $color-dark;
+            background-color: $color-primary;
+            border: 3px solid transparent;
+          }
+        }
+      }
+      &Selected {
+        color: $color-tertiary-fullOpacity;
+        background-color: $color-secondary;
+        z-index: 99;
+        &ACC {
+          color: $color-dark;
+          background-color: $color-primary;
+          border: 3px solid transparent;
+        }
+      }
+    }
   }
   &__title {
     color: $color-secondary;
-    border: 3px solid $color-tertiary;
+    border: 3px solid $color-primary;
     font-size: 15vh;
     text-align: center;
     line-height: 1;
@@ -490,9 +562,176 @@
     grid-row: 1/2;
     grid-column: 1/6;
     align-self: center;
-    border-radius: 15px;
+    border-radius: $border-radius-gr;
     &ACC {
       color: #37493d;
+    }
+  }
+  &__stack {
+    height: 90%;
+    width: 95%;
+    grid-row: 3/4;
+    grid-column: 1/3;
+    position: relative;
+    justify-self: flex-start;
+    align-self: flex-start;
+    display: flex;
+    justify-content: space-between;
+    &Tech {
+      color: #f2e0d5;
+      align-self: flex-start;
+      text-align: center;
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2vh;
+      justify-content: space-between;
+      border: 3px solid $color-primary;
+      border-radius: $border-radius-gr;
+      &Title {
+        font-size: $font-titleSize;
+        width: 100%;
+        height: min-content;
+        color: $color-primary-dark;
+        &ACC {
+          color: black;
+        }
+      }
+      &Text {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        &-itemA {
+          font-size: 1.6vw;
+          color: $color-dark;
+          margin-right: 1vw;
+          align-self: flex-start;
+        }
+        &-itemB {
+          font-size: 1.9vw;
+          color: $color-primary-dark;
+          margin-right: 1vw;
+        }
+        &-itemC {
+          font-size: 1.5vw;
+          color: $color-secondary-fullOpacity;
+          margin-right: 1vw;
+          align-self: flex-start;
+        }
+        &-itemD {
+          font-size: 1.8vw;
+          color: $color-primary-dark;
+          margin-right: 1vw;
+          align-self: flex-end;
+        }
+        &-itemE {
+          font-size: 1.7vw;
+          color: $color-secondary-fullOpacity;
+          margin-right: 1vw;
+          align-self: flex-start;
+        }
+        &-itemF {
+          font-size: 1.9vw;
+          color: $color-dark;
+          margin-right: 1vw;
+          align-self: flex-end;
+        }
+        &-itemG {
+          font-size: 1.5vw;
+          color: $color-secondary-fullOpacity;
+          margin-right: 1vw;
+          align-self: flex-start;
+        }
+        &-itemH {
+          font-size: 1.9vw;
+          color: $color-primary-dark;
+          margin-right: 1vw;
+        }
+        &-itemI {
+          font-size: 1.7vw;
+          color: $color-dark;
+          margin-right: 1vw;
+        }
+      }
+    }
+    &Lang {
+      text-align: center;
+      width: 45%;
+      height: 100%;
+      align-self: flex-start;
+      display: flex;
+      flex-direction: column;
+      padding: 2vh;
+      align-items: center;
+      justify-content: space-between;
+      background-color: $color-primary;
+      border-radius: $border-radius-gr;
+      &ACC {
+        background-color: transparent;
+        border: 3px solid $color-primary;
+      }
+      &Title {
+        font-size: $font-titleSize;
+        width: 100%;
+        height: min-content;
+        color: $color-primary-dark;
+        &ACC {
+          color: black;
+        }
+      }
+      &Text {
+        display: flex;
+        height: min-content;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        &-itemA {
+          font-size: 1.5vw;
+          color: $color-dark;
+          margin-right: 1vw;
+          align-self: flex-start;
+        }
+        &-itemB {
+          font-size: 1.9vw;
+          color: $color-primary-dark;
+          margin-right: 1vw;
+        }
+        &-itemC {
+          font-size: 1.6vw;
+          color: $color-secondary-fullOpacity;
+          margin-right: 1vw;
+          align-self: flex-start;
+        }
+        &-itemD {
+          font-size: 1.8vw;
+          color: $color-primary-dark;
+          margin-right: 1vw;
+          align-self: flex-end;
+        }
+        &-itemE {
+          font-size: 1.5vw;
+          color: $color-secondary-fullOpacity;
+          margin-right: 1vw;
+          align-self: flex-start;
+        }
+        &-itemF {
+          font-size: 1.9vw;
+          color: $color-dark;
+          margin-right: 1vw;
+          align-self: flex-end;
+        }
+        &-itemG {
+          font-size: 1.8vw;
+          color: $color-secondary-fullOpacity;
+          margin-right: 1vw;
+          align-self: flex-start;
+        }
+      }
     }
   }
 }
@@ -504,8 +743,8 @@
   grid-column: 1/2;
   grid-row: 4/5;
   transition: all ease 1s;
-  background-color: $color-neutral-lowOpacity;
-  border-radius: 15px;
+  background-color: $color-tertiary;
+  border-radius: $border-radius-gr;
   height: min-content;
   width: 90%;
   height: 100%;
@@ -517,16 +756,15 @@
   &:hover {
     transform: scaleX(1.2);
     background-color: $color-secondary;
-    color: $color-neutral-auxiliar;
+    color: $color-tertiary-fullOpacity;
   }
-
   &ACC {
     color: $color-dark;
-    background-color: $color-neutral-lowOpacity;
-    border: 3px solid $color-tertiary;
+    background-color: $color-tertiary;
+    border: 3px solid $color-primary;
     &:hover {
       color: $color-dark;
-      background-color: $color-tertiary;
+      background-color: $color-primary;
       border: 3px solid transparent;
     }
   }
@@ -544,91 +782,15 @@
   padding-right: 2vw;
   padding: 20vh 0px 20vh 1.5vw;
   &:hover {
-    color: $color-neutral-auxiliar;
+    color: $color-tertiary-fullOpacity;
     background-image: url("../images/Menus/longArrowLeftHover.svg");
   }
   &ACC {
-    color: $color-tertiary-dark;
+    color: $color-primary-dark;
     background-image: url("../images/Menus/longArrowLeftACC.svg");
     &:hover {
-      color: $color-tertiary-dark;
+      color: $color-primary-dark;
       background-image: url("../images/Menus/longArrowLeftACC.svg");
-    }
-  }
-}
-
-.projects__containerSelector {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  justify-self: flex-start;
-  position: relative;
-  font-size: $font-titleSize;
-  margin-bottom: 1vh;
-  &App {
-    cursor: pointer;
-    transition: all ease 1s;
-    color: $color-secondary;
-    width: fit-content;
-    background-color: $color-neutral-lowOpacity;
-    padding: 1vh;
-    border-radius: 15px;
-    text-align: center;
-    &:active {
-      color: $color-neutral-auxiliar;
-      background-color: $color-secondary;
-    }
-    &:hover {
-      color: $color-neutral-auxiliar;
-      background-color: $color-secondary;
-    }
-    &ACC {
-      color: $color-dark;
-      background-color: $color-neutral-lowOpacity;
-      border: 3px solid $color-tertiary;
-      &:hover {
-        color: $color-dark;
-        background-color: $color-tertiary;
-        border: 3px solid transparent;
-      }
-    }
-  }
-  &CSS {
-    cursor: pointer;
-    transition: all ease 1s;
-    color: $color-secondary;
-    width: fit-content;
-    background-color: $color-neutral-lowOpacity;
-    padding: 1vh;
-    border-radius: 15px;
-    text-align: center;
-    &:active {
-      color: $color-neutral-auxiliar;
-      background-color: $color-secondary;
-    }
-    &:hover {
-      color: $color-neutral-auxiliar;
-      background-color: $color-secondary;
-    }
-    &ACC {
-      color: $color-dark;
-      background-color: $color-neutral-lowOpacity;
-      border: 3px solid $color-tertiary;
-      &:hover {
-        color: $color-dark;
-        background-color: $color-tertiary;
-        border: 3px solid transparent;
-      }
-    }
-  }
-  &Selected {
-    color: $color-neutral-auxiliar;
-    background-color: $color-secondary;
-    z-index: 99;
-    &ACC {
-      color: $color-dark;
-      background-color: $color-tertiary;
-      border: 3px solid transparent;
     }
   }
 }
@@ -636,177 +798,6 @@
 .hidden {
   display: none;
   opacity: 0;
-}
-
-.projects__stack {
-  height: 90%;
-  width: 95%;
-  grid-row: 3/4;
-  grid-column: 1/3;
-  position: relative;
-  justify-self: flex-start;
-  align-self: flex-start;
-  display: flex;
-  justify-content: space-between;
-}
-
-.projects__stackTech {
-  color: #f2e0d5;
-  align-self: flex-start;
-  text-align: center;
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2vh;
-  justify-content: space-between;
-  border: 3px solid $color-tertiary;
-  border-radius: 15px;
-  &Title {
-    font-size: $font-titleSize;
-    width: 100%;
-    height: min-content;
-    color: $color-tertiary-dark;
-    &ACC {
-      color: black;
-    }
-  }
-  &Text {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    &-itemA {
-      font-size: 1.6vw;
-      color: $color-primary;
-      margin-right: 1vw;
-      align-self: flex-start;
-    }
-    &-itemB {
-      font-size: 1.9vw;
-      color: $color-tertiary-dark;
-      margin-right: 1vw;
-    }
-    &-itemC {
-      font-size: 1.5vw;
-      color: $color-secondary-fullOpacity;
-      margin-right: 1vw;
-      align-self: flex-start;
-    }
-    &-itemD {
-      font-size: 1.8vw;
-      color: $color-tertiary-dark;
-      margin-right: 1vw;
-      align-self: flex-end;
-    }
-    &-itemE {
-      font-size: 1.7vw;
-      color: $color-secondary-fullOpacity;
-      margin-right: 1vw;
-      align-self: flex-start;
-    }
-    &-itemF {
-      font-size: 1.9vw;
-      color: $color-primary;
-      margin-right: 1vw;
-      align-self: flex-end;
-    }
-    &-itemG {
-      font-size: 1.5vw;
-      color: $color-secondary-fullOpacity;
-      margin-right: 1vw;
-      align-self: flex-start;
-    }
-    &-itemH {
-      font-size: 1.9vw;
-      color: $color-tertiary-dark;
-      margin-right: 1vw;
-    }
-    &-itemI {
-      font-size: 1.7vw;
-      color: $color-primary;
-      margin-right: 1vw;
-    }
-  }
-}
-
-.projects__stackLang {
-  color: #f2e0d5;
-  text-align: center;
-  width: 45%;
-  height: 100%;
-  align-self: flex-start;
-  display: flex;
-  flex-direction: column;
-  padding: 2vh;
-  align-items: center;
-  justify-content: space-between;
-  background-color: $color-tertiary;
-  border-radius: 15px;
-  &ACC {
-    background-color: transparent;
-    border: 3px solid $color-tertiary;
-  }
-  &Title {
-    font-size: $font-titleSize;
-    width: 100%;
-    height: min-content;
-    color: $color-tertiary-dark;
-    &ACC {
-      color: black;
-    }
-  }
-  &Text {
-    display: flex;
-    height: min-content;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    &-itemA {
-      font-size: 1.5vw;
-      color: $color-primary;
-      margin-right: 1vw;
-      align-self: flex-start;
-    }
-    &-itemB {
-      font-size: 1.9vw;
-      color: $color-tertiary-dark;
-      margin-right: 1vw;
-    }
-    &-itemC {
-      font-size: 1.6vw;
-      color: $color-secondary-fullOpacity;
-      margin-right: 1vw;
-      align-self: flex-start;
-    }
-    &-itemD {
-      font-size: 1.8vw;
-      color: $color-tertiary-dark;
-      margin-right: 1vw;
-      align-self: flex-end;
-    }
-    &-itemE {
-      font-size: 1.5vw;
-      color: $color-secondary-fullOpacity;
-      margin-right: 1vw;
-      align-self: flex-start;
-    }
-    &-itemF {
-      font-size: 1.9vw;
-      color: $color-primary;
-      margin-right: 1vw;
-      align-self: flex-end;
-    }
-    &-itemG {
-      font-size: 1.8vw;
-      color: $color-secondary-fullOpacity;
-      margin-right: 1vw;
-      align-self: flex-start;
-    }
-  }
 }
 
 @media all and (max-width: 1024px) {
@@ -817,7 +808,7 @@
     &__container {
       grid-row: 2/3;
       grid-column: 1/4;
-      padding: 1vh;
+      padding: $padding-mini;
       align-self: start;
       height: 98%;
       &GITHUB {
@@ -856,6 +847,9 @@
           font-size: $font-titleSizeM;
         }
       }
+      &Selector {
+        font-size: $font-titleSizeM;
+      }
     }
     &__title {
       font-size: 11vh;
@@ -864,6 +858,83 @@
       align-self: flex-start;
       margin-top: 0vh;
       text-align: center;
+    }
+    &__stack {
+      height: 100%;
+      width: 100%;
+      margin-left: 0vw;
+      margin-bottom: 0vh;
+      padding: 0vh 0px;
+      grid-row: 3/4;
+      grid-column: 2/4;
+      justify-self: center;
+      align-self: flex-start;
+      &Tech {
+        padding: $padding-mini;
+        align-self: center;
+        &Title {
+          font-size: $font-titleSizeM;
+        }
+        &Text {
+          &-itemA {
+            font-size: 2.5vh;
+          }
+          &-itemB {
+            font-size: 2.4vh;
+          }
+          &-itemC {
+            font-size: 2.4vh;
+          }
+          &-itemD {
+            font-size: 2.9vh;
+          }
+          &-itemE {
+            font-size: 2.3vh;
+          }
+          &-itemF {
+            font-size: 2.9vh;
+          }
+          &-itemG {
+            font-size: 2.5vh;
+          }
+          &-itemH {
+            font-size: 2.9vh;
+          }
+          &-itemI {
+            font-size: 2.9vh;
+          }
+        }
+      }
+      &Lang {
+        padding: $padding-mini;
+        align-self: center;
+        &Title {
+          font-size: $font-titleSizeM;
+        }
+        &Text {
+          &-itemA {
+            font-size: 2.5vh;
+          }
+          &-itemB {
+            font-size: 2.4vh;
+          }
+          &-itemC {
+            font-size: 2.4vh;
+          }
+          &-itemD {
+            font-size: 2.9vh;
+          }
+          &-itemE {
+            font-size: 2.3vh;
+          }
+          &-itemF {
+            font-size: 2.9vh;
+          }
+          &-itemG {
+            font-size: 2.5vh;
+          }
+        }
+      }
     }
   }
 
@@ -877,90 +948,6 @@
     background-position-x: 7vw;
     background-position-y: 9vh;
     padding: 6vh 10vw 6vh 10vw;
-  }
-
-  .projects__containerSelector {
-    font-size: 3vh;
-  }
-
-  .projects__stack {
-    height: 100%;
-    width: 100%;
-    margin-left: 0vw;
-    margin-bottom: 0vh;
-    padding: 0vh 0px;
-    grid-row: 3/4;
-    grid-column: 2/4;
-    justify-self: center;
-    align-self: flex-start;
-  }
-
-  .projects__stackTech {
-    padding: 1vh;
-    align-self: center;
-    &Title {
-      font-size: $font-titleSizeM;
-    }
-    &Text {
-      &-itemA {
-        font-size: 2.5vh;
-      }
-      &-itemB {
-        font-size: 2.4vh;
-      }
-      &-itemC {
-        font-size: 2.4vh;
-      }
-      &-itemD {
-        font-size: 2.9vh;
-      }
-      &-itemE {
-        font-size: 2.3vh;
-      }
-      &-itemF {
-        font-size: 2.9vh;
-      }
-      &-itemG {
-        font-size: 2.5vh;
-      }
-      &-itemH {
-        font-size: 2.9vh;
-      }
-      &-itemI {
-        font-size: 2.9vh;
-      }
-    }
-  }
-
-  .projects__stackLang {
-    padding: 1vh;
-    align-self: center;
-    &Title {
-      font-size: $font-titleSizeM;
-    }
-    &Text {
-      &-itemA {
-        font-size: 2.5vh;
-      }
-      &-itemB {
-        font-size: 2.4vh;
-      }
-      &-itemC {
-        font-size: 2.4vh;
-      }
-      &-itemD {
-        font-size: 2.9vh;
-      }
-      &-itemE {
-        font-size: 2.3vh;
-      }
-      &-itemF {
-        font-size: 2.9vh;
-      }
-      &-itemG {
-        font-size: 2.5vh;
-      }
-    }
   }
 }
 
@@ -982,7 +969,7 @@
         &-info {
           grid-template-rows: 45% 10% 45%;
           grid-template-columns: 100%;
-          padding: 1vh;
+          padding: $padding-mini;
         }
         &-technologies {
           font-size: $font-textSizeS;
@@ -1005,15 +992,15 @@
           }
           &ACC {
             color: $color-dark;
-            background-color: $color-neutral-lowOpacity;
+            background-color: $color-tertiary;
             &Main {
               color: $color-dark;
-              background-color: $color-tertiary;
+              background-color: $color-primary;
               border-right: solid $color-dark 5px;
             }
             &:hover {
               color: $color-dark;
-              background-color: $color-tertiary;
+              background-color: $color-primary;
               border-right: solid $color-dark 5px;
             }
           }
@@ -1044,7 +1031,7 @@
         &-info {
           grid-template-rows: 45% 10% 45%;
           grid-template-columns: 100%;
-          padding: 1vh;
+          padding: $padding-mini;
         }
         &-technologies {
           font-size: $font-textSizeS;
@@ -1062,15 +1049,15 @@
           }
           &ACC {
             color: $color-dark;
-            background-color: $color-neutral-lowOpacity;
+            background-color: $color-tertiary;
             &Main {
               color: $color-dark;
-              background-color: $color-tertiary;
+              background-color: $color-primary;
               border-right: solid $color-dark 5px;
             }
             &:hover {
               color: $color-dark;
-              background-color: $color-tertiary;
+              background-color: $color-primary;
               border-right: solid $color-dark 5px;
             }
           }
@@ -1084,72 +1071,72 @@
         }
       }
     }
-  }
-
-  .projects__stackTech {
-    padding: 1vh;
-    align-self: center;
-    &Title {
-      font-size: $font-titleSizeS;
-    }
-    &Text {
-      &-itemA {
-        font-size: $font-midTitleSizeS;
+    &__stack {
+      &Tech {
+        padding: $padding-mini;
+        align-self: center;
+        &Title {
+          font-size: $font-titleSizeS;
+        }
+        &Text {
+          &-itemA {
+            font-size: $font-midTitleSizeS;
+          }
+          &-itemB {
+            font-size: $font-midTitleSizeS;
+          }
+          &-itemC {
+            font-size: $font-midTitleSizeS;
+          }
+          &-itemD {
+            font-size: $font-midTitleSizeS;
+          }
+          &-itemE {
+            font-size: $font-midTitleSizeS;
+          }
+          &-itemF {
+            font-size: $font-midTitleSizeS;
+          }
+          &-itemG {
+            font-size: $font-midTitleSizeS;
+          }
+          &-itemH {
+            font-size: $font-midTitleSizeS;
+          }
+          &-itemI {
+            font-size: $font-midTitleSizeS;
+          }
+        }
       }
-      &-itemB {
-        font-size: $font-midTitleSizeS;
-      }
-      &-itemC {
-        font-size: $font-midTitleSizeS;
-      }
-      &-itemD {
-        font-size: $font-midTitleSizeS;
-      }
-      &-itemE {
-        font-size: $font-midTitleSizeS;
-      }
-      &-itemF {
-        font-size: $font-midTitleSizeS;
-      }
-      &-itemG {
-        font-size: $font-midTitleSizeS;
-      }
-      &-itemH {
-        font-size: $font-midTitleSizeS;
-      }
-      &-itemI {
-        font-size: $font-midTitleSizeS;
-      }
-    }
-  }
-
-  .projects__stackLang {
-    padding: 1vh;
-    align-self: center;
-    &Title {
-      font-size: $font-titleSizeS;
-    }
-    &Text {
-      &-itemA {
-        font-size: $font-midTitleSizeS;
-      }
-      &-itemB {
-        font-size: $font-midTitleSizeS;
-      }
-      &-itemC {
-        font-size: $font-midTitleSizeS;
-      }
-      &-itemD {
-        font-size: $font-midTitleSizeS;
-      }
-      &-itemE {
-        font-size: $font-midTitleSizeS;
-      }
-      &-itemF {
-        font-size: $font-midTitleSizeS;
-      }
-      &-itemG {
-        font-size: $font-midTitleSizeS;
+      &Lang {
+        padding: $padding-mini;
+        align-self: center;
+        &Title {
+          font-size: $font-titleSizeS;
+        }
+        &Text {
+          &-itemA {
+            font-size: $font-midTitleSizeS;
+          }
+          &-itemB {
+            font-size: $font-midTitleSizeS;
+          }
+          &-itemC {
+            font-size: $font-midTitleSizeS;
+          }
+          &-itemD {
+            font-size: $font-midTitleSizeS;
+          }
+          &-itemE {
+            font-size: $font-midTitleSizeS;
+          }
+          &-itemF {
+            font-size: $font-midTitleSizeS;
+          }
+          &-itemG {
+            font-size: $font-midTitleSizeS;
+          }
+        }
       }
     }
   }

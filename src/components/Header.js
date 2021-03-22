@@ -2,13 +2,17 @@ import "../stylesheets/header.scss";
 import { useState } from "react";
 
 const Header = (props) => {
+  //Declare state to save translation and high contrast mode information in this component:
   const [translate, setTranslate] = useState(false);
   const [accesible, setAccesible] = useState(false);
+
+  //Handler to send translation information to App (mother) component:
   const handleLangClick = () => {
     setTranslate(!translate);
     props.handleLangClick();
   };
 
+  //Handler to send high contrast mode information to App (mother) component:
   const handleAccClick = () => {
     setAccesible(!accesible);
     props.handleAccClick();
