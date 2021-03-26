@@ -9,6 +9,11 @@
   background-color: $color-primary;
   z-index: -1;
 }
+@media all and (max-width: 1024px) {
+  .decorativeBackground {
+    height: 93vh;
+  }
+}
 
 .decorativePolygon {
   background-image: url("../images/Hexagons/hexagonLight.svg");
