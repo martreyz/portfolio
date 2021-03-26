@@ -302,6 +302,7 @@
 
 @media all and (max-width: 1024px) {
   .contact {
+    height: 85vh;
     grid-template-columns: 70% 30%;
     grid-template-rows: 15% 48.5% 16.5% 20%;
     padding: 0px 3vw;

@@ -214,6 +214,7 @@
 
 @media all and (max-width: 1024px) {
   .landing {
+    height: 85vh;
     grid-template-columns: 20% 20% 20% 20% 20%;
     grid-template-rows: 15% 70% 15%;
     &__container {

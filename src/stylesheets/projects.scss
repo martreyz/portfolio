@@ -820,6 +820,7 @@
 
 @media all and (max-width: 1024px) {
   .projects {
+    height: 85vh;
     padding: 1vh 3vw;
     grid-template-rows: 15% 65% 20%;
     grid-template-columns: 30% 35% 35%;
