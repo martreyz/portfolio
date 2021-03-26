@@ -25,19 +25,20 @@ Para la realización de este proyecto se han seguido las siguientes fases:
 #### Landing
 
 
-![Portfoliolanding](https://user-images.githubusercontent.com/69849664/103347111-55cd4d80-4a96-11eb-9e31-f479495b7f29.png)
+![portfolioA](https://user-images.githubusercontent.com/69849664/112625294-00070800-8e2f-11eb-97da-ffbd8746ac4d.png)
+
 
 
 #### Proyectos
 
 
-![portfolioproyectos](https://user-images.githubusercontent.com/69849664/103347126-6251a600-4a96-11eb-8739-95347a86a9cc.png)
+![portfolioC](https://user-images.githubusercontent.com/69849664/112625299-01383500-8e2f-11eb-94b8-0a03deb3b4f0.png)
 
 
-#### Contacto
+#### Sobre mí
 
 
-![portfoliocontacto](https://user-images.githubusercontent.com/69849664/103347143-709fc200-4a96-11eb-9bd3-3f28fa48eaef.png)
+![portfolioB](https://user-images.githubusercontent.com/69849664/112625298-009f9e80-8e2f-11eb-8cb6-199f5aad84f7.png)
 
 
 
@@ -104,19 +105,20 @@ The different steps for the realization of this portfolio have been:
 #### Landing
 
 
-![landing](https://user-images.githubusercontent.com/69849664/103347822-6b437700-4a98-11eb-98b7-77013d9adf0e.png)
+![portfolioA](https://user-images.githubusercontent.com/69849664/112625294-00070800-8e2f-11eb-97da-ffbd8746ac4d.png)
+
 
 
 #### Projects
 
 
-![projects](https://user-images.githubusercontent.com/69849664/103347823-6b437700-4a98-11eb-9b95-521684a605dc.png)
+![portfolioC](https://user-images.githubusercontent.com/69849664/112625299-01383500-8e2f-11eb-94b8-0a03deb3b4f0.png)
 
 
-#### Contact
+#### About me
 
 
-![contact](https://user-images.githubusercontent.com/69849664/103347821-6aaae080-4a98-11eb-893f-0553cca54a09.png)
+![portfolioB](https://user-images.githubusercontent.com/69849664/112625298-009f9e80-8e2f-11eb-8cb6-199f5aad84f7.png)
 
 
 
