@@ -37,7 +37,6 @@ function App() {
     setAccesible(!accesible);
   };
   const handleTrajectoryClick = (id) => {
-    console.log(id);
     setCounterTrajectory(id);
   };
 
