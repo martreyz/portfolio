@@ -35,6 +35,12 @@
     justify-self: flex-end;
     align-self: flex-end;
     height: 100%;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
     &Subtitle {
       color: $color-primary-dark;
       font-size: $font-titleSize;
@@ -102,6 +108,7 @@
     width: 100%;
     padding: $padding-medium;
     overflow: hidden;
+
     &ACC {
       background-color: transparent;
       border: 3px solid $color-primary;
@@ -159,6 +166,12 @@
       margin-top: 2vh;
       padding: 2vh;
       border: 2px solid $color-secondary;
+      overflow: scroll;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
       &ACC {
         border: 2px solid $color-dark;
         color: black;
@@ -182,7 +195,12 @@
     padding: $padding-medium;
     width: 95%;
     height: 90%;
-    overflow: hidden;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
     &Title {
       color: $color-primary-dark;
       font-size: 4vh;
@@ -306,9 +324,11 @@
       justify-content: center;
       &Subtitle {
         font-size: $font-titleSizeM;
+        margin-bottom: 0px;
       }
       &Text {
         font-size: $font-textSizeM;
+        margin-bottom: 0px;
       }
       &List {
         width: 90%;

@@ -160,6 +160,12 @@
         justify-self: center;
         align-self: center;
         font-family: $font-texts;
+        overflow: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+          display: none;
+        }
         &ACC {
           color: $color-dark;
           border: 3px solid $color-primary;
@@ -590,6 +596,12 @@
       justify-content: space-between;
       border: 3px solid $color-primary;
       border-radius: $border-radius-gr;
+      overflow: scroll;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
       &Title {
         font-size: $font-titleSize;
         width: 100%;
@@ -670,6 +682,12 @@
       justify-content: space-between;
       background-color: $color-primary;
       border-radius: $border-radius-gr;
+      overflow: scroll;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
       &ACC {
         background-color: transparent;
         border: 3px solid $color-primary;
