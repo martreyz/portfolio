@@ -11,6 +11,16 @@
     },
     {
         "id": 1,
+        "name": "Cronómetro",
+        "webpage": "https://martreyz.github.io/redux-sports-watch/",
+        "repository": "https://github.com/martreyz/redux-sports-watch",
+        "preview": "images/stopwatchSH.png",
+        "selected": false,
+        "technologies" : "HTML//CSS//JAVASCRIPT//REACTJS//REDUX",
+        "description": "Aplicación web con un cronómetro simple con funciones de start/stop y lapping; todo ello desarrollado en JS y ReactJS, ayudándonos de Redux como librería de gestión de estado."
+    },
+    {
+        "id": 2,
         "name": "Rick y Morty",
         "webpage": "https://martreyz.github.io/modulo-3-evaluacion-final-martreyz/#/",
         "repository": "https://github.com/martreyz/modulo-3-evaluacion-final-martreyz",
@@ -20,7 +30,7 @@
         "description": "Aplicación web de gestión de personajes de Rick y Morty, utilizando React, JavaScript, HTML5, CSS3 y SASS. Además se utilizaron Git y GitHub para el control de versiones."
     },
     {
-        "id": 2,
+        "id": 3,
         "name": "Gestiona tus series",
         "webpage": "https://martreyz.github.io/modulo-2-evaluacion-final-martreyz/",
         "repository": "https://github.com/martreyz/modulo-2-evaluacion-final-martreyz",

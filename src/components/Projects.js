@@ -319,6 +319,9 @@ const Projects = (props) => {
             <span className="projects__stackLangText-item projects__stackLangText-itemE">
               React JS
             </span>
+            <span className="projects__stackLangText-item projects__stackLangText-itemE">
+              Redux
+            </span>
             <span className="projects__stackLangText-item projects__stackLangText-itemF">
               jQuery
             </span>

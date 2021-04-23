@@ -11,6 +11,16 @@
     },
     {
         "id": 1,
+        "name": "Stopwatch",
+        "webpage": "https://martreyz.github.io/redux-sports-watch/",
+        "repository": "https://github.com/martreyz/redux-sports-watch",
+        "preview": "images/stopwatchSH.png",
+        "selected": false,
+        "technologies" : "HTML//CSS//JAVASCRIPT//REACTJS//REDUX",
+        "description": "Simple stopwatch web app with start/stop and lapping functions. Developed with JS and ReactJS, using also Redux for the state management."
+    },
+    {
+        "id": 2,
         "name": "Rick and Morty",
         "webpage": "https://martreyz.github.io/modulo-3-evaluacion-final-martreyz/#/",
         "repository": "https://github.com/martreyz/modulo-3-evaluacion-final-martreyz",
@@ -20,7 +30,7 @@
         "description": "Web app for Rick and Morty's characters management, using React, JavaScript, HTML5, CSS3 and SASS. Git and GitHub were used as a version control system."
     },
     {
-        "id": 2,
+        "id": 3,
         "name": "Manage your series",
         "webpage": "https://martreyz.github.io/modulo-2-evaluacion-final-martreyz/",
         "repository": "https://github.com/martreyz/modulo-2-evaluacion-final-martreyz",
